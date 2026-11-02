@@ -50,9 +50,10 @@ describe("lazy animated icon", () => {
 		const hub = createAnimatedIconHub();
 		hub.emit("open");
 
-		renderIn(hub, Icon);
+		const { container } = renderIn(hub, Icon);
 
-		await waitFor(() => expect(loader).toHaveBeenCalledTimes(1), { timeout: 5000 });
+		await waitFor(() => expect(isLive(container)).toBe(true), { timeout: 5000 });
+		expect(loader).toHaveBeenCalledTimes(1);
 	});
 
 	test("getLazyAnimatedIcon returns one component per name", () => {

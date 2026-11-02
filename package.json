@@ -8,7 +8,7 @@
 		"type": "git",
 		"url": "git+https://github.com/Gaurussel/lucide-animated-icons.git"
 	},
-	"homepage": "https://github.com/Gaurussel/lucide-animated-icons#readme",
+	"homepage": "https://gaurussel.github.io/lucide-animated-icons/",
 	"bugs": "https://github.com/Gaurussel/lucide-animated-icons/issues",
 	"type": "module",
 	"sideEffects": false,

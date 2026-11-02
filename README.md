@@ -11,6 +11,8 @@ a plane flies off and comes back, an eye blinks and looks around — and always 
   actually hovered.
 - Respects `prefers-reduced-motion`.
 
+**[Demo: all icons →](https://gaurussel.github.io/lucide-animated-icons/)**
+
 ## Install
 
 ```sh
@@ -98,7 +100,7 @@ export const Flag = createAnimatedIcon({
 
 ```sh
 bun install
-bun run demo       # gallery of all icons at http://localhost:5173
+bun run demo       # gallery of all icons at http://localhost:5173, deployed to GitHub Pages from main
 bun run test       # geometry, continuity and runtime tests
 bun run lint
 bun run typecheck

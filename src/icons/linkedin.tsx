@@ -1,19 +1,19 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, edge, pose } from "../helpers.ts";
+import { edge, pose, snap, springy } from "../helpers.ts";
 
-const stem = pose({ scaleY: [1, 0.2, 1] }, { duration: 0.5, times: [0, 0.45, 1] });
-const dot = pose({ scale: [1, 0.1, 1] }, { duration: 0.45, delay: 0.1, times: [0, 0.45, 1] });
-const body = pose({ scaleY: [1, 0.35, 1] }, { duration: 0.5, delay: 0.2, times: [0, 0.45, 1] });
+const hopIn = (delay: number) =>
+	pose({ y: [0, -5, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+const nod = pose({ rotate: [0, -12, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "linkedin",
 	render: (part) => (
 		<>
-			<motion.rect {...part(stem)} height="12" style={edge(0.5, 1)} width="4" x="2" y="9" />
-			<motion.circle {...part(dot)} cx="4" cy="4" r="2" style={centered} />
+			<motion.circle {...part(hopIn(0))} cx="4" cy="4" r="2" />
+			<motion.rect {...part(hopIn(0.08))} height="12" width="4" x="2" y="9" />
 			<motion.path
-				{...part(body)}
+				{...part(nod)}
 				d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
 				style={edge(0.5, 1)}
 			/>

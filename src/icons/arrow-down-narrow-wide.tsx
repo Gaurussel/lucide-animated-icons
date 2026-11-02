@@ -1,30 +1,23 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pose, redraw, springy } from "../helpers.ts";
+
+const dash = pose(
+	{ y: [0, -2, 10, -8, 0], opacity: [1, 1, 0, 0, 1] },
+	{ duration: 0.65, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
+);
 
 export default createAnimatedIcon({
 	name: "arrow-down-narrow-wide",
 	render: (part) => (
 		<>
-			<motion.g {...part(pose({ y: [0, -1.5, 3, 0] }, { duration: 0.75, times: [0, 0.25, 0.6, 1] }))}>
+			<motion.g {...part(dash)}>
 				<path d="m3 16 4 4 4-4" />
 				<path d="M7 20V4" />
 			</motion.g>
-			<motion.path
-				{...part(pose({ scaleX: [1, 0.35, 1] }, { duration: 0.75, times: [0, 0.4, 1] }))}
-				d="M11 4h4"
-				style={edge(0, 0.5)}
-			/>
-			<motion.path
-				{...part(pose({ scaleX: [1, 0.35, 1] }, { duration: 0.75, delay: 0.08, times: [0, 0.4, 1] }))}
-				d="M11 8h7"
-				style={edge(0, 0.5)}
-			/>
-			<motion.path
-				{...part(pose({ scaleX: [1, 0.35, 1] }, { duration: 0.75, delay: 0.16, times: [0, 0.4, 1] }))}
-				d="M11 12h10"
-				style={edge(0, 0.5)}
-			/>
+			<motion.path {...part(redraw(0.1, 0.4))} d="M11 4h4" />
+			<motion.path {...part(redraw(0.18, 0.4))} d="M11 8h7" />
+			<motion.path {...part(redraw(0.26, 0.4))} d="M11 12h10" />
 		</>
 	),
 });

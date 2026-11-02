@@ -1,39 +1,27 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { pivot, pose, snap, springy } from "../helpers.ts";
+
+const turn = pose(
+	{ rotate: [0, -30, 360], scale: [1, 1.2, 1] },
+	{ duration: 0.72, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
+);
+const open = (direction: number) =>
+	pose({ y: [0, 2 * direction, 0] }, { duration: 0.72, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "server-cog",
 	render: (part) => (
 		<>
-			<motion.g {...part(pose({ y: [0, -1.2, -1.2, 0] }, { duration: 1, times: [0, 0.15, 0.7, 1] }))}>
+			<motion.g {...part(open(-1))}>
 				<path d="M4.5 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-.5" />
-				<motion.path
-					{...part(
-						pose(
-							{ opacity: [1, 1, 0.15, 1, 0.15, 1, 1] },
-							{ duration: 1, times: [0, 0.2, 0.3, 0.5, 0.6, 0.8, 1] },
-						),
-					)}
-					d="M6 6h.01"
-				/>
+				<path d="M6 6h.01" />
 			</motion.g>
-			<motion.g {...part(pose({ y: [0, 1.2, 1.2, 0] }, { duration: 1, times: [0, 0.15, 0.7, 1] }))}>
+			<motion.g {...part(open(1))}>
 				<path d="M4.5 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-.5" />
-				<motion.path
-					{...part(
-						pose(
-							{ opacity: [1, 1, 0.15, 1, 0.15, 1, 1] },
-							{ duration: 1, times: [0, 0.35, 0.45, 0.65, 0.75, 0.9, 1] },
-						),
-					)}
-					d="M6 18h.01"
-				/>
+				<path d="M6 18h.01" />
 			</motion.g>
-			<motion.g
-				{...part(pose({ rotate: [0, -10, 360] }, { duration: 1, times: [0, 0.1, 1], reset: true }))}
-				style={centered}
-			>
+			<motion.g {...part(turn)} style={pivot(12, 12)}>
 				<path d="m10.852 14.772-.383.923" />
 				<path d="M13.148 14.772a3 3 0 1 0-2.296-5.544l-.383-.923" />
 				<path d="m13.148 9.228.383-.923" />

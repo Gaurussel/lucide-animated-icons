@@ -1,21 +1,20 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose } from "../helpers.ts";
+import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const times = [0, 0.3, 0.7, 1];
+const turn = pose({ rotate: [0, -14, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
+const look = pose(
+	{ x: [0, -3, 3, 0] },
+	{ duration: 0.7, times: [0, 0.18, 0.42, 1], ease: [snap, "easeInOut", springy] },
+);
 
 export default createAnimatedIcon({
 	name: "webcam",
 	render: (part) => (
 		<>
-			<motion.g {...part(pose({ rotate: [0, -6, 6, 0] }, { duration: 0.85, times }))} style={pivot(12, 18)}>
+			<motion.g {...part(turn)} style={pivot(12, 18)}>
 				<circle cx="12" cy="10" r="8" />
-				<motion.circle
-					{...part(pose({ x: [0, -1.5, 1.5, 0], y: [0, 0.5, 0.5, 0] }, { duration: 0.85, times }))}
-					cx="12"
-					cy="10"
-					r="3"
-				/>
+				<motion.circle {...part(look)} cx="12" cy="10" r="3" />
 			</motion.g>
 			<path d="M7 22h10" />
 			<path d="M12 22v-4" />

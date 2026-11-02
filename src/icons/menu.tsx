@@ -1,30 +1,17 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pose, snap, springy } from "../helpers.ts";
+
+const slat = (x: number, delay: number) =>
+	pose({ x: [0, x, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "menu",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ scaleX: [1, 0.2, 1], x: [0, 2, 0] }, { duration: 0.6, times: [0, 0.5, 1] }))}
-				d="M4 6h16"
-				style={edge(0, 0.5)}
-			/>
-			<motion.path
-				{...part(
-					pose({ scaleX: [1, 0.2, 1], x: [0, -2, 0] }, { duration: 0.6, times: [0, 0.5, 1], delay: 0.12 }),
-				)}
-				d="M4 12h16"
-				style={edge(1, 0.5)}
-			/>
-			<motion.path
-				{...part(
-					pose({ scaleX: [1, 0.2, 1], x: [0, 2, 0] }, { duration: 0.6, times: [0, 0.5, 1], delay: 0.24 }),
-				)}
-				d="M4 18h16"
-				style={edge(0, 0.5)}
-			/>
+			<motion.path {...part(slat(-5.5, 0))} d="M4 6h16" />
+			<motion.path {...part(slat(5.5, 0.07))} d="M4 12h16" />
+			<motion.path {...part(slat(-5.5, 0.14))} d="M4 18h16" />
 		</>
 	),
 });

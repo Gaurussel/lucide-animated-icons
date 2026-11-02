@@ -1,15 +1,19 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, springy } from "../helpers.ts";
 
-const timing = { duration: 0.65, times: [0, 0.25, 0.6, 1] };
+const dash = (delay: number) =>
+	pose(
+		{ x: [0, 2, -8, 6, 0], opacity: [1, 1, 0, 0, 1] },
+		{ duration: 0.62, delay, times: [0, 0.15, 0.38, 0.39, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "reply",
 	render: (part) => (
 		<>
-			<motion.path {...part(pose({ x: [0, 0.8, -1, 0] }, timing))} d="M20 18v-2a4 4 0 0 0-4-4H4" />
-			<motion.path {...part(pose({ x: [0, 1.5, -2.5, 0] }, timing))} d="m9 17-5-5 5-5" />
+			<motion.path {...part(dash(0.08))} d="M20 18v-2a4 4 0 0 0-4-4H4" />
+			<motion.path {...part(dash(0))} d="m9 17-5-5 5-5" />
 		</>
 	),
 });

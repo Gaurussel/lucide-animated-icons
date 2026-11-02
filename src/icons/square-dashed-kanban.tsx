@@ -1,34 +1,21 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, edge, pose } from "../helpers.ts";
+import { jelly, pivot, pose, springy } from "../helpers.ts";
+
+const drop = (delay: number) =>
+	pose(
+		{ y: [0, -7, 0], opacity: [1, 0, 1] },
+		{ duration: 0.6, delay, times: [0, 0.2, 1], ease: ["easeInOut", springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "square-dashed-kanban",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ scaleY: [1, 0.45, 0.45, 1] }, { duration: 0.75, times: [0, 0.35, 0.6, 1] }))}
-				d="M8 7v7"
-				style={edge(0.5, 0)}
-			/>
-			<motion.path
-				{...part(
-					pose({ scaleY: [1, 0.45, 0.45, 1] }, { duration: 0.75, times: [0, 0.35, 0.6, 1], delay: 0.1 }),
-				)}
-				d="M12 7v4"
-				style={edge(0.5, 0)}
-			/>
-			<motion.path
-				{...part(
-					pose({ scaleY: [1, 0.45, 0.45, 1] }, { duration: 0.75, times: [0, 0.35, 0.6, 1], delay: 0.2 }),
-				)}
-				d="M16 7v9"
-				style={edge(0.5, 0)}
-			/>
-			<motion.g
-				{...part(pose({ scale: [1, 0.94, 1, 1] }, { duration: 0.75, times: [0, 0.25, 0.5, 1] }))}
-				style={centered}
-			>
+			<motion.path {...part(drop(0))} d="M8 7v7" />
+			<motion.path {...part(drop(0.08))} d="M12 7v4" />
+			<motion.path {...part(drop(0.16))} d="M16 7v9" />
+			<motion.g {...part(jelly(0.3, 0.7))} style={pivot(12, 12)}>
 				<path d="M5 3a2 2 0 0 0-2 2" />
 				<path d="M9 3h1" />
 				<path d="M14 3h1" />

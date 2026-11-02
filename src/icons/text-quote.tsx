@@ -1,27 +1,19 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, redraw, snap, springy } from "../helpers.ts";
+
+const indent = pose({ x: [0, 4, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "text-quote",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.7, delay: 0.1, times: [0, 0.25, 0.45, 1] }))}
-				d="M17 6H3"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.7, delay: 0.2, times: [0, 0.25, 0.45, 1] }))}
-				d="M21 12H8"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.7, delay: 0.3, times: [0, 0.25, 0.45, 1] }))}
-				d="M21 18H8"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.7, times: [0, 0.25, 0.45, 1] }))}
-				d="M3 12v6"
-			/>
+			<path d="M17 6H3" />
+			<motion.g {...part(indent)}>
+				<path d="M21 12H8" />
+				<path d="M21 18H8" />
+				<motion.path {...part(redraw(0.1, 0.55))} d="M3 12v6" />
+			</motion.g>
 		</>
 	),
 });

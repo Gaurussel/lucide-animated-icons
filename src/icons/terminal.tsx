@@ -1,19 +1,15 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, redraw, snap, springy } from "../helpers.ts";
+
+const prompt = pose({ x: [0, 4, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "terminal",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.7, times: [0, 0.4, 0.55, 1] }))}
-				d="M12 19h8"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.7, times: [0, 0.2, 0.3, 0.6] }))}
-				d="m4 17 6-6-6-6"
-			/>
+			<motion.path {...part(redraw(0.12, 0.58))} d="M12 19h8" />
+			<motion.path {...part(prompt)} d="m4 17 6-6-6-6" />
 		</>
 	),
 });

@@ -1,19 +1,17 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { pose, redraw, ring } from "../helpers.ts";
+
+const press = pose(
+	{ y: [0, -1.5, 3, 0] },
+	{ duration: 0.65, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", "easeIn", ring] },
+);
 
 export default createAnimatedIcon({
 	name: "space",
 	render: (part) => (
-		<>
-			<motion.g
-				{...part(
-					pose({ y: [0, -1, 1.5, 0], scaleX: [1, 1, 0.94, 1] }, { duration: 0.6, times: [0, 0.25, 0.6, 1] }),
-				)}
-				style={centered}
-			>
-				<path d="M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" />
-			</motion.g>
-		</>
+		<motion.g {...part(press)}>
+			<motion.path {...part(redraw(0.22, 0.45))} d="M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" />
+		</motion.g>
 	),
 });

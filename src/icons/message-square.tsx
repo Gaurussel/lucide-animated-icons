@@ -1,14 +1,20 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
+
+const speak = pose(
+	{ scale: [1, 0.82, 1.15, 1], rotate: [0, 6, -10, 0] },
+	{ duration: 0.7, times: [0, 0.14, 0.3, 1], ease: ["easeInOut", snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "message-square",
 	render: (part) => (
-		<motion.path
-			{...part(pose({ scale: [1, 0.92, 1.06, 1] }, { duration: 0.6, times: [0, 0.25, 0.6, 1] }))}
-			d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-			style={edge(0, 1)}
-		/>
+		<motion.g {...part(speak)} style={pivot(3, 21)}>
+			<motion.path
+				{...part(redraw(0.14, 0.5))}
+				d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+			/>
+		</motion.g>
 	),
 });

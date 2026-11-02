@@ -1,19 +1,24 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, ring, snap, springy } from "../helpers.ts";
+
+const hit = pose(
+	{ x: [0, -3.6, 4, -1.6, 0] },
+	{ duration: 0.7, times: [0, 0.22, 0.38, 0.52, 1], ease: ["easeInOut", "easeIn", "easeOut", springy] },
+);
+const lag = pose(
+	{ x: [0, -3.6, 4, -1.6, 0] },
+	{ duration: 0.7, delay: 0.06, times: [0, 0.22, 0.38, 0.52, 1], ease: ["easeInOut", "easeIn", "easeOut", springy] },
+);
+const give = pose({ x: [0, 0, 2.4, 0] }, { duration: 0.7, times: [0, 0.36, 0.44, 1], ease: ["easeInOut", snap, ring] });
 
 export default createAnimatedIcon({
 	name: "arrow-right-to-line",
 	render: (part) => (
 		<>
-			<motion.g {...part(pose({ x: [0, -2, 3, 3, 0] }, { duration: 0.7, times: [0, 0.2, 0.45, 0.6, 1] }))}>
-				<path d="M17 12H3" />
-				<path d="m11 18 6-6-6-6" />
-			</motion.g>
-			<motion.path
-				{...part(pose({ x: [0, 0, 1.5, 0] }, { duration: 0.7, times: [0, 0.4, 0.55, 1] }))}
-				d="M21 5v14"
-			/>
+			<motion.path {...part(hit)} d="m11 18 6-6-6-6" />
+			<motion.path {...part(lag)} d="M17 12H3" />
+			<motion.path {...part(give)} d="M21 5v14" />
 		</>
 	),
 });

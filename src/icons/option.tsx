@@ -1,20 +1,15 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pose, redraw, snap, springy } from "../helpers.ts";
+
+const toggle = pose({ x: [0, 5, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "option",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 1] }, { duration: 0.6, times: [0, 0.35, 1] }))}
-				d="M3 3h6l6 18h6"
-			/>
-			<motion.path
-				{...part(pose({ scaleX: [1, 0.3, 1] }, { duration: 0.4, delay: 0.3 }))}
-				d="M14 3h7"
-				style={edge(1, 0.5)}
-			/>
+			<motion.path {...part(redraw(0, 0.6))} d="M3 3h6l6 18h6" />
+			<motion.path {...part(toggle)} d="M14 3h7" />
 		</>
 	),
 });

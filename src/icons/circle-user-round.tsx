@@ -1,27 +1,16 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose } from "../helpers.ts";
+import { edge, pose, snap, springy } from "../helpers.ts";
+
+const nod = pose({ y: [0, -3, 0], rotate: [0, -15, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const shoulders = pose({ y: [0, 1.5, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "circle-user-round",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ y: [0, -2, -2, 0] }, { duration: 0.7, delay: 0.08, times: [0, 0.35, 0.6, 1] }))}
-				d="M18 20a6 6 0 0 0-12 0"
-			/>
-			<motion.circle
-				{...part(
-					pose(
-						{ y: [0, -4, -4, -4, 0], rotate: [0, 0, -25, 20, 0] },
-						{ duration: 0.75, times: [0, 0.3, 0.5, 0.7, 1] },
-					),
-				)}
-				cx="12"
-				cy="10"
-				r="4"
-				style={pivot(12, 14)}
-			/>
+			<motion.path {...part(shoulders)} d="M18 20a6 6 0 0 0-12 0" />
+			<motion.circle {...part(nod)} cx="12" cy="10" r="4" style={edge(0.5, 1)} />
 			<circle cx="12" cy="12" r="10" />
 		</>
 	),

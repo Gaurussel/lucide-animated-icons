@@ -1,23 +1,22 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
+
+const scan = pose(
+	{ x: [0, 1, -7, 0], y: [0, 0, -3, 0], rotate: [0, 8, -15, 0] },
+	{ duration: 0.75, times: [0, 0.12, 0.4, 1], ease: ["easeInOut", "easeInOut", rubber] },
+);
+const found = (at: number) =>
+	pose({ x: [0, 0, -2.5, 0] }, { duration: 0.75, times: [0, at, at + 0.12, 1], ease: ["easeInOut", snap, springy] });
 
 export default createAnimatedIcon({
 	name: "text-search",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ pathLength: [1, 1, 0.6, 1] }, { duration: 0.8, times: [0, 0.3, 0.6, 1] }))}
-				d="M21 6H3"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 1, 0.3, 1] }, { duration: 0.8, times: [0, 0.3, 0.6, 1] }))}
-				d="M10 12H3"
-			/>
-			<path d="M10 18H3" />
-			<motion.g
-				{...part(pose({ x: [0, -3, -3, 0], y: [0, -3, -3, 0] }, { duration: 0.8, times: [0, 0.3, 0.6, 1] }))}
-			>
+			<path d="M21 6H3" />
+			<motion.path {...part(found(0.3))} d="M10 12H3" />
+			<motion.path {...part(found(0.22))} d="M10 18H3" />
+			<motion.g {...part(scan)} style={pivot(17, 15)}>
 				<circle cx="17" cy="15" r="3" />
 				<path d="m21 19-1.9-1.9" />
 			</motion.g>

@@ -1,9 +1,9 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose } from "../helpers.ts";
+import { pivot, pose, ring, snap } from "../helpers.ts";
 
-const swing = pose({ rotate: [0, -14, 12, -7, 0] }, { duration: 0.7, times: [0, 0.2, 0.45, 0.7, 1] });
-const clapper = pose({ x: [0, 2, -2, 1, 0] }, { duration: 0.7, delay: 0.05, times: [0, 0.2, 0.45, 0.7, 1] });
+const swing = pose({ rotate: [0, -30, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
+const clapper = pose({ x: [0, -3, 0] }, { duration: 0.75, times: [0, 0.14, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "bell",

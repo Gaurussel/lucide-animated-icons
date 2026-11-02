@@ -1,16 +1,16 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, snap, springy } from "../helpers.ts";
 
-const move = (direction: number, delay: number) =>
-	pose({ y: [0, -direction, direction * 2.5, 0] }, { duration: 0.55, delay, times: [0, 0.25, 0.6, 1] });
+const nudge = (x: number, y: number, delay = 0) =>
+	pose({ x: [0, x, 0], y: [0, y, 0] }, { duration: 0.65, delay, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "chevrons-down-up",
 	render: (part) => (
 		<>
-			<motion.path {...part(move(1, 0))} d="m7 4 5 5 5-5" />
-			<motion.path {...part(move(-1, 0.08))} d="m7 20 5-5 5 5" />
+			<motion.path {...part(nudge(0, -3.5))} d="m7 20 5-5 5 5" />
+			<motion.path {...part(nudge(0, 3.5))} d="m7 4 5 5 5-5" />
 		</>
 	),
 });

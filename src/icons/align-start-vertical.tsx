@@ -1,30 +1,24 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pose, snap, springy } from "../helpers.ts";
+
+const align = (x: number, y: number, delay = 0) =>
+	pose(
+		{ ...(x ? { x: [0, x, 0] } : {}), ...(y ? { y: [0, y, 0] } : {}) },
+		{ duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] },
+	);
+const plate = pose(
+	{ x: [0, 0, -1.5, 0] },
+	{ duration: 0.7, times: [0, 0.3, 0.4, 1], ease: ["easeInOut", snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "align-start-vertical",
 	render: (part) => (
 		<>
-			<motion.rect
-				{...part(pose({ scaleX: [1, 0.5, 1] }, { duration: 0.7, times: [0, 0.4, 1] }))}
-				height="6"
-				rx="2"
-				style={edge(0, 0.5)}
-				width="9"
-				x="6"
-				y="14"
-			/>
-			<motion.rect
-				{...part(pose({ scaleX: [1, 0.5, 1] }, { duration: 0.7, delay: 0.1, times: [0, 0.4, 1] }))}
-				height="6"
-				rx="2"
-				style={edge(0, 0.5)}
-				width="16"
-				x="6"
-				y="4"
-			/>
-			<path d="M2 2v20" />
+			<motion.rect {...part(align(4, 0))} height="6" rx="2" width="16" x="6" y="4" />
+			<motion.rect {...part(align(4, 0, 0.08))} height="6" rx="2" width="9" x="6" y="14" />
+			<motion.path {...part(plate)} d="M2 2v20" />
 		</>
 	),
 });

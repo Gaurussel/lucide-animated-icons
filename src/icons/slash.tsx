@@ -1,16 +1,17 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { centered, pose, redraw, ring } from "../helpers.ts";
+
+const swipe = pose(
+	{ rotate: [0, 12, -22, 0] },
+	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", "easeIn", ring] },
+);
 
 export default createAnimatedIcon({
 	name: "slash",
 	render: (part) => (
-		<>
-			<motion.g
-				{...part(pose({ x: [0, 3, -4, 0], y: [0, 3, -4, 0] }, { duration: 0.7, times: [0, 0.25, 0.65, 1] }))}
-			>
-				<path d="M22 2 2 22" />
-			</motion.g>
-		</>
+		<motion.g {...part(swipe)} style={centered}>
+			<motion.path {...part(redraw(0.1, 0.4))} d="M22 2 2 22" />
+		</motion.g>
 	),
 });

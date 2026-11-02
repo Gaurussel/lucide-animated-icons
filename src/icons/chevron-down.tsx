@@ -1,22 +1,18 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, quick } from "../helpers.ts";
+import { pose, redraw, springy } from "../helpers.ts";
+
+const dash = (x: number, y: number) =>
+	pose(
+		{ x: [0, -x * 0.25, x, -x, 0], y: [0, -y * 0.25, y, -y, 0], opacity: [1, 1, 0, 0, 1] },
+		{ duration: 0.7, times: [0, 0.15, 0.32, 0.33, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "chevron-down",
 	render: (part) => (
-		<motion.path
-			{...part({
-				rest: { y: 0, rotate: 0, transition: quick },
-				active: {
-					y: [0, -1, 2.5, 0],
-					rotate: [0, 0, 0, 0],
-					transition: { duration: 0.5, times: [0, 0.25, 0.6, 1], ease: "easeInOut" },
-				},
-				open: { y: 0, rotate: 180, transition: { duration: 0.25, ease: "easeOut" } },
-			})}
-			d="m6 9 6 6 6-6"
-			style={centered}
-		/>
+		<motion.g {...part(dash(0, 8))}>
+			<motion.path {...part(redraw(0.24, 0.45))} d="m6 9 6 6 6-6" />
+		</motion.g>
 	),
 });

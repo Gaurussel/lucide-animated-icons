@@ -1,31 +1,18 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pivot, pose, redraw, rubber, snap } from "../helpers.ts";
+
+const nod = pose({ y: [0, 3, 0], rotate: [0, -12, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, rubber] });
 
 export default createAnimatedIcon({
 	name: "eye-closed",
 	render: (part) => (
-		<>
-			<motion.g
-				{...part(pose({ scaleY: [1, 0.4, 1] }, { duration: 0.5, delay: 0.2, times: [0, 0.4, 1] }))}
-				style={edge(0.5, 0)}
-			>
-				<path d="m15 18-.722-3.25" />
-				<path d="m9 18 .722-3.25" />
-			</motion.g>
-			<motion.g
-				{...part(pose({ scaleY: [1, 0.6, 1] }, { duration: 0.7, times: [0, 0.4, 1] }))}
-				style={edge(0.5, 0)}
-			>
-				<path d="M2 8a10.645 10.645 0 0 0 20 0" />
-			</motion.g>
-			<motion.g
-				{...part(pose({ scaleY: [1, 0.4, 1] }, { duration: 0.5, delay: 0.05, times: [0, 0.4, 1] }))}
-				style={edge(0.5, 0)}
-			>
-				<path d="m4 15 1.726-2.05" />
-				<path d="m20 15-1.726-2.05" />
-			</motion.g>
-		</>
+		<motion.g {...part(nod)} style={pivot(12, 12)}>
+			<path d="M2 8a10.645 10.645 0 0 0 20 0" />
+			<motion.path {...part(redraw(0.1, 0.45))} d="m4 15 1.726-2.05" />
+			<motion.path {...part(redraw(0.15, 0.45))} d="m9 18 .722-3.25" />
+			<motion.path {...part(redraw(0.2, 0.45))} d="m15 18-.722-3.25" />
+			<motion.path {...part(redraw(0.25, 0.45))} d="m20 15-1.726-2.05" />
+		</motion.g>
 	),
 });

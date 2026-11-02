@@ -1,36 +1,22 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
+
+const click = pose({ y: [0, 3, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
+const tilt = pose(
+	{ rotate: [0, 0, -9, 0] },
+	{ duration: 0.7, times: [0, 0.14, 0.28, 1], ease: ["easeInOut", snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "touchpad",
 	render: (part) => (
-		<>
-			<motion.rect
-				{...part(
-					pose({ scaleY: [1, 0.88, 1, 1, 0.88, 1] }, { duration: 0.8, times: [0, 0.2, 0.35, 0.55, 0.75, 1] }),
-				)}
-				height="16"
-				rx="2"
-				style={edge(0.5, 1)}
-				width="20"
-				x="2"
-				y="4"
-			/>
-			<motion.path
-				{...part(pose({ y: [0, 1.6, 0, 0, 1.6, 0] }, { duration: 0.8, times: [0, 0.2, 0.35, 0.55, 0.75, 1] }))}
-				d="M2 14h20"
-			/>
-			<motion.path
-				{...part(
-					pose(
-						{ y: [0, 1.6, 0, 0, 1.6, 0], scaleY: [1, 0.1, 1, 1, 0.1, 1] },
-						{ duration: 0.8, times: [0, 0.2, 0.35, 0.55, 0.75, 1] },
-					),
-				)}
-				d="M12 20v-6"
-				style={edge(0.5, 0)}
-			/>
-		</>
+		<motion.g {...part(tilt)} style={pivot(12, 20)}>
+			<rect height="16" rx="2" width="20" x="2" y="4" />
+			<motion.g {...part(click)}>
+				<path d="M2 14h20" />
+				<motion.path {...part(redraw(0.2, 0.4))} d="M12 20v-6" />
+			</motion.g>
+		</motion.g>
 	),
 });

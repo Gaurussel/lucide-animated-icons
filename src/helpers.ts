@@ -1,12 +1,27 @@
-import type { Easing, TargetAndTransition, Transition, Variants } from "motion/react";
+import type { Easing, EasingFunction, TargetAndTransition, Transition, Variants } from "motion/react";
 
 export const quick: Transition = { duration: 0.2, ease: "easeOut" };
+export const snap: Easing = [0.2, 0.9, 0.3, 1];
+
+export const spring = (damping: number, oscillations: number): EasingFunction => {
+	const damped = oscillations * 2 * Math.PI;
+	const natural = damped / Math.sqrt(1 - damping * damping);
+	return (t) => {
+		if (t >= 1) return 1;
+		const decay = Math.exp(-damping * natural * t) * (1 - t) ** 2;
+		return 1 - decay * (Math.cos(damped * t) + ((damping * natural) / damped) * Math.sin(damped * t));
+	};
+};
+
+export const springy = spring(0.3, 2.2);
+export const ring = spring(0.16, 3.2);
+export const rubber = spring(0.22, 2.6);
 export const centered = { originX: 0.5, originY: 0.5, transformBox: "fill-box" } as const;
 export const edge = (originX: number, originY: number) => ({ originX, originY, transformBox: "fill-box" }) as const;
 export const pivot = (x: number, y: number) =>
 	({ originX: `${x}px`, originY: `${y}px`, transformBox: "view-box" }) as const;
 
-interface PoseOptions {
+export interface PoseOptions {
 	duration?: number;
 	delay?: number;
 	ease?: Easing | Easing[];
@@ -44,3 +59,15 @@ export const draw = (delay = 0, duration = 0.3) =>
 export const spin = (degrees: number) => pose({ rotate: degrees }, { duration: 0.4, ease: "easeInOut", reset: true });
 
 export const wiggle = (degrees = 8) => pose({ rotate: [0, -degrees, degrees * 0.6, 0] }, { duration: 0.3 });
+
+export const jelly = (at: number, duration: number) =>
+	pose(
+		{ scaleX: [1, 1, 1.16, 0.92, 1.04, 1], scaleY: [1, 1, 0.84, 1.08, 0.96, 1] },
+		{ duration, times: [0, at, at + 0.1, at + 0.22, at + 0.34, 1] },
+	);
+
+export const hop = (duration: number) =>
+	pose({ scale: [1, 1.18, 1] }, { duration, times: [0, 0.15, 1], ease: [snap, springy] });
+
+export const redraw = (delay: number, duration: number) =>
+	pose({ pathLength: [1, 0, 1] }, { duration, delay, times: [0, 0.01, 1], ease: ["easeInOut", snap] });

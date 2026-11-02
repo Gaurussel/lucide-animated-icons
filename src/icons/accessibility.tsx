@@ -1,25 +1,28 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose } from "../helpers.ts";
+import { pivot, pose, snap, springy } from "../helpers.ts";
+
+const roll = pose(
+	{ x: [0, -1.5, 3, 0] },
+	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeInOut", springy] },
+);
+const wheel = pose(
+	{ rotate: [0, -30, 360] },
+	{ duration: 0.7, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
+);
+const wave = pose({ rotate: [0, -25, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "accessibility",
 	render: (part) => (
-		<>
-			<motion.circle
-				{...part(pose({ y: [0, -1.5, 0] }, { duration: 0.8, times: [0, 0.35, 1] }))}
-				cx="16"
-				cy="4"
-				r="1"
-			/>
-			<motion.g {...part(pose({ x: [0, 1, 0] }, { duration: 0.8, times: [0, 0.4, 1] }))}>
-				<path d="m18 19 1-7-6 1" />
-				<path d="m5 8 3-3 5.5 3-2.36 3.5" />
-			</motion.g>
-			<motion.g {...part(pose({ rotate: 360 }, { duration: 0.7, delay: 0.1, reset: true }))} style={pivot(9, 16)}>
+		<motion.g {...part(roll)}>
+			<circle cx="16" cy="4" r="1" />
+			<path d="m18 19 1-7-6 1" />
+			<motion.path {...part(wave)} d="m5 8 3-3 5.5 3-2.36 3.5" style={pivot(11, 11)} />
+			<motion.g {...part(wheel)} style={pivot(9, 16)}>
 				<path d="M4.24 14.5a5 5 0 0 0 6.88 6" />
 				<path d="M13.76 17.5a5 5 0 0 0-6.88-6" />
 			</motion.g>
-		</>
+		</motion.g>
 	),
 });

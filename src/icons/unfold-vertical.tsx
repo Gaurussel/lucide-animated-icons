@@ -1,26 +1,28 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, rubber, snap } from "../helpers.ts";
 
-const times = [0, 0.2, 0.5, 0.7, 1];
-const options = { duration: 0.75, times };
-const down = pose({ y: [0, -1, 2.5, 2.5, 0] }, options);
-const up = pose({ y: [0, 1, -2.5, -2.5, 0] }, options);
+const push = (y: number) =>
+	pose({ y: [0, -y / 3, y, 0] }, { duration: 0.72, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, rubber] });
+const spread = (x: number) =>
+	pose({ x: [0, 0, x, 0] }, { duration: 0.72, times: [0, 0.22, 0.36, 1], ease: ["easeInOut", snap, rubber] });
 
 export default createAnimatedIcon({
 	name: "unfold-vertical",
 	render: (part) => (
 		<>
-			<motion.path {...part(down)} d="M12 22v-6" />
-			<motion.path {...part(up)} d="M12 8V2" />
-			<motion.g {...part(pose({ opacity: [1, 1, 0.3, 0.3, 1] }, options))}>
-				<path d="M4 12H2" />
-				<path d="M10 12H8" />
-				<path d="M16 12h-2" />
-				<path d="M22 12h-2" />
+			<motion.g {...part(push(3.5))}>
+				<path d="M12 22v-6" />
+				<path d="m15 19-3 3-3-3" />
 			</motion.g>
-			<motion.path {...part(down)} d="m15 19-3 3-3-3" />
-			<motion.path {...part(up)} d="m15 5-3-3-3 3" />
+			<motion.g {...part(push(-3.5))}>
+				<path d="M12 8V2" />
+				<path d="m15 5-3-3-3 3" />
+			</motion.g>
+			<motion.path {...part(spread(-1.5))} d="M4 12H2" />
+			<motion.path {...part(spread(-0.8))} d="M10 12H8" />
+			<motion.path {...part(spread(0.8))} d="M16 12h-2" />
+			<motion.path {...part(spread(1.5))} d="M22 12h-2" />
 		</>
 	),
 });

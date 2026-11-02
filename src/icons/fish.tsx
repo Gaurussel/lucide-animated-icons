@@ -1,16 +1,22 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose } from "../helpers.ts";
+import { pivot, pose, ring, snap, springy } from "../helpers.ts";
+
+const swim = pose(
+	{ x: [0, -2, 3, 0], rotate: [0, 4, -6, 0] },
+	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", snap, springy] },
+);
+const wag = pose({ rotate: [0, 28, 0] }, { duration: 0.7, times: [0, 0.15, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "fish",
 	render: (part) => (
-		<motion.g {...part(pose({ x: [0, -1, 2.5, 0] }, { duration: 0.8, times: [0, 0.2, 0.6, 1] }))}>
+		<motion.g {...part(swim)} style={pivot(14, 12)}>
 			<path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z" />
 			<path d="M18 12v.5" />
 			<path d="M16 17.93a9.77 9.77 0 0 1 0-11.86" />
 			<motion.path
-				{...part(pose({ rotate: [0, -12, 12, 0] }, { duration: 0.8, times: [0, 0.25, 0.55, 1] }))}
+				{...part(wag)}
 				d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"
 				style={pivot(7, 12)}
 			/>

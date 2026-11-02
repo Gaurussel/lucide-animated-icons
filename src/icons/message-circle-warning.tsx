@@ -1,21 +1,19 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pivot, pose } from "../helpers.ts";
+import { pivot, pose, ring, snap, springy } from "../helpers.ts";
+
+const talk = pose(
+	{ y: [0, -3, 0], rotate: [0, -10, 0], scale: [1, 1.1, 1] },
+	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
+);
+const alarm = pose({ rotate: [0, -25, 0] }, { duration: 0.7, times: [0, 0.15, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "message-circle-warning",
 	render: (part) => (
-		<motion.g
-			{...part(pose({ scale: [1, 0.92, 1, 1] }, { duration: 0.8, times: [0, 0.25, 0.5, 1] }))}
-			style={pivot(2, 22)}
-		>
+		<motion.g {...part(talk)} style={pivot(2, 22)}>
 			<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-			<motion.g
-				{...part(
-					pose({ rotate: [0, 0, -12, 10, -5, 0] }, { duration: 0.8, times: [0, 0.4, 0.52, 0.66, 0.82, 1] }),
-				)}
-				style={centered}
-			>
+			<motion.g {...part(alarm)} style={pivot(12, 16)}>
 				<path d="M12 8v4" />
 				<path d="M12 16h.01" />
 			</motion.g>

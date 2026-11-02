@@ -1,16 +1,17 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
+
+const flap = pose(
+	{ rotate: [0, 0, -10, 0] },
+	{ duration: 0.75, times: [0, 0.42, 0.52, 1], ease: ["easeInOut", snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "flag-triangle-right",
 	render: (part) => (
-		<>
-			<motion.path
-				{...part(pose({ scaleX: [1, 0.7, 1], rotate: [0, 5, 0] }, { duration: 0.8, times: [0, 0.4, 1] }))}
-				d="M7 22V2l10 5-10 5"
-				style={edge(0, 1)}
-			/>
-		</>
+		<motion.g {...part(flap)} style={pivot(7, 22)}>
+			<motion.path {...part(redraw(0, 0.45))} d="M7 22V2l10 5-10 5" />
+		</motion.g>
 	),
 });

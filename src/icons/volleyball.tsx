@@ -1,15 +1,21 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose } from "../helpers.ts";
+import { pivot, pose, snap, springy } from "../helpers.ts";
+
+const bounce = pose(
+	{ y: [0, 1, -5, 0] },
+	{ duration: 0.72, times: [0, 0.12, 0.32, 1], ease: ["easeInOut", snap, springy] },
+);
+const spin = pose(
+	{ rotate: [0, 0, 200, 360] },
+	{ duration: 0.72, times: [0, 0.12, 0.4, 1], ease: ["easeInOut", snap, springy], reset: true },
+);
 
 export default createAnimatedIcon({
 	name: "volleyball",
 	render: (part) => (
-		<motion.g {...part(pose({ y: [0, 1, -3, 0] }, { duration: 0.8, times: [0, 0.2, 0.6, 1] }))}>
-			<motion.g
-				{...part(pose({ rotate: [0, 0, 90, 0] }, { duration: 0.8, times: [0, 0.2, 0.6, 1] }))}
-				style={pivot(12, 12)}
-			>
+		<motion.g {...part(bounce)}>
+			<motion.g {...part(spin)} style={pivot(12, 12)}>
 				<path d="M11.1 7.1a16.55 16.55 0 0 1 10.9 4" />
 				<path d="M12 12a12.6 12.6 0 0 1-8.7 5" />
 				<path d="M16.8 13.6a16.55 16.55 0 0 1-9 7.5" />

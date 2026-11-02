@@ -1,44 +1,29 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose } from "../helpers.ts";
+import { pivot, pose, springy } from "../helpers.ts";
+
+const snip = (degrees: number) =>
+	pose(
+		{ rotate: [0, degrees, 0, degrees, 0] },
+		{ duration: 0.7, times: [0, 0.12, 0.24, 0.36, 1], ease: ["easeInOut", "easeInOut", "easeInOut", springy] },
+	);
+const advance = pose({ x: [0, -2, 0] }, { duration: 0.7, times: [0, 0.36, 1], ease: ["easeInOut", springy] });
 
 export default createAnimatedIcon({
 	name: "scissors-line-dashed",
 	render: (part) => (
 		<>
-			<motion.g
-				{...part(
-					pose(
-						{ x: [0, 0, 0.5, 1.6, 2, 1.68, 1, 0], rotate: [0, 5, 10, 0, 3.5, 7, 0, 0] },
-						{ duration: 0.9, times: [0, 0.1, 0.2, 0.42, 0.5, 0.58, 0.75, 1] },
-					),
-				)}
-				style={pivot(9, 13)}
-			>
-				<circle cx="4" cy="8" r="2" />
+			<motion.g {...part(snip(-16))} style={pivot(8, 12)}>
 				<path d="M5.42 9.42 8 12" />
+				<circle cx="4" cy="8" r="2" />
 				<path d="M10.8 14.8 14 18" />
 			</motion.g>
-			<motion.g
-				{...part(
-					pose(
-						{ x: [0, 0, 0.5, 1.6, 2, 1.68, 1, 0], rotate: [0, -5, -10, 0, -3.5, -7, 0, 0] },
-						{ duration: 0.9, times: [0, 0.1, 0.2, 0.42, 0.5, 0.58, 0.75, 1] },
-					),
-				)}
-				style={pivot(9, 13)}
-			>
-				<circle cx="4" cy="16" r="2" />
+			<motion.g {...part(snip(16))} style={pivot(8, 12)}>
 				<path d="m14 6-8.58 8.58" />
+				<circle cx="4" cy="16" r="2" />
 			</motion.g>
-			<motion.path
-				{...part(pose({ opacity: [1, 1, 0.15, 1, 1] }, { duration: 0.9, times: [0, 0.45, 0.55, 0.8, 1] }))}
-				d="M16 12h-2"
-			/>
-			<motion.path
-				{...part(pose({ opacity: [1, 1, 0.15, 1, 1] }, { duration: 0.9, times: [0, 0.6, 0.7, 0.9, 1] }))}
-				d="M22 12h-2"
-			/>
+			<motion.path {...part(advance)} d="M16 12h-2" />
+			<motion.path {...part(advance)} d="M22 12h-2" />
 		</>
 	),
 });

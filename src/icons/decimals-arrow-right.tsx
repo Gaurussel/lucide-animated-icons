@@ -1,22 +1,22 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { centered, pose, redraw, snap, springy } from "../helpers.ts";
+
+const shove = (x: number, delay: number) =>
+	pose({ x: [0, x, 0] }, { duration: 0.65, delay, times: [0, 0.28, 1], ease: [snap, springy] });
+const dot = pose({ scale: [1, 2, 1] }, { duration: 0.6, delay: 0.1, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "decimals-arrow-right",
 	render: (part) => (
 		<>
-			<motion.g {...part(pose({ x: [0, -1.5, 3, 0] }, { duration: 0.75, times: [0, 0.2, 0.55, 1] }))}>
-				<path d="M10 18h10" />
+			<motion.g {...part(shove(4, 0))}>
+				<motion.path {...part(redraw(0.05, 0.4))} d="M10 18h10" />
 				<path d="m17 21 3-3-3-3" />
 			</motion.g>
-			<motion.g {...part(pose({ x: [0, 0, 2, 0] }, { duration: 0.75, times: [0, 0.3, 0.6, 1] }))}>
-				<path d="M3 11h.01" />
-			</motion.g>
-			<motion.g {...part(pose({ x: [0, 0, 2, 0] }, { duration: 0.75, times: [0, 0.35, 0.65, 1] }))}>
-				<rect height="8" rx="2.5" width="5" x="15" y="3" />
-				<rect height="8" rx="2.5" width="5" x="6" y="3" />
-			</motion.g>
+			<rect height="8" rx="2.5" width="5" x="6" y="3" />
+			<motion.rect {...part(redraw(0.12, 0.4))} height="8" rx="2.5" width="5" x="15" y="3" />
+			<motion.path {...part(dot)} d="M3 11h.01" style={centered} />
 		</>
 	),
 });

@@ -1,18 +1,27 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { centered, pose, ring, snap, springy } from "../helpers.ts";
+
+const toss = pose(
+	{ y: [0, 1.5, -4, 0] },
+	{ duration: 0.7, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", "easeOut", springy] },
+);
+const flip = pose(
+	{ scaleY: [1, 1, -1, 1.12, 1] },
+	{ duration: 0.7, times: [0, 0.12, 0.4, 0.52, 1], ease: ["easeInOut", "easeIn", "easeOut", springy] },
+);
+const tilt = pose(
+	{ rotate: [0, 0, -12, 0] },
+	{ duration: 0.75, times: [0, 0.35, 0.45, 1], ease: ["easeInOut", snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "rectangle-horizontal",
 	render: (part) => (
-		<motion.rect
-			{...part(pose({ rotate: [0, 90, 90, 0] }, { duration: 0.8, times: [0, 0.4, 0.6, 1] }))}
-			height="12"
-			rx="2"
-			style={centered}
-			width="20"
-			x="2"
-			y="6"
-		/>
+		<motion.g {...part(toss)}>
+			<motion.g {...part(tilt)} style={centered}>
+				<motion.rect {...part(flip)} height="12" rx="2" style={centered} width="20" x="2" y="6" />
+			</motion.g>
+		</motion.g>
 	),
 });

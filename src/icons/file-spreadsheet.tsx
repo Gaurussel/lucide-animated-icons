@@ -1,29 +1,22 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
+
+const lift = pose(
+	{ y: [0, 1, -4, 0], rotate: [0, 0, -5, 0] },
+	{ duration: 0.75, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "file-spreadsheet",
 	render: (part) => (
-		<motion.g {...part(pose({ y: [0, -2.5, -2.5, 0] }, { duration: 0.8, times: [0, 0.3, 0.65, 1] }))}>
+		<motion.g {...part(lift)} style={pivot(12, 22)}>
+			<motion.path {...part(redraw(0.22, 0.35))} d="M14 2v4a2 2 0 0 0 2 2h4" />
 			<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-			<path d="M14 2v4a2 2 0 0 0 2 2h4" />
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.8, times: [0, 0.3, 0.5, 1] }))}
-				d="M8 13h2"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.8, times: [0, 0.3, 0.5, 1] }))}
-				d="M14 13h2"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.8, delay: 0.12, times: [0, 0.3, 0.5, 1] }))}
-				d="M8 17h2"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.8, delay: 0.12, times: [0, 0.3, 0.5, 1] }))}
-				d="M14 17h2"
-			/>
+			<motion.path {...part(redraw(0.08, 0.3))} d="M8 13h2" />
+			<motion.path {...part(redraw(0.13, 0.3))} d="M14 13h2" />
+			<motion.path {...part(redraw(0.18, 0.3))} d="M8 17h2" />
+			<motion.path {...part(redraw(0.23, 0.3))} d="M14 17h2" />
 		</motion.g>
 	),
 });

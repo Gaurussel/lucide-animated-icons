@@ -1,8 +1,11 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { centered, pose, springy } from "../helpers.ts";
 
-const turn = pose({ rotate: [0, -20, 360] }, { duration: 0.8, times: [0, 0.15, 1], reset: true });
+const turn = pose(
+	{ rotate: [0, -30, 360] },
+	{ duration: 0.7, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
+);
 
 export default createAnimatedIcon({
 	name: "refresh-cw",

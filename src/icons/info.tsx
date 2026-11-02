@@ -1,22 +1,19 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, edge, pose } from "../helpers.ts";
+import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const timing = { duration: 0.7, times: [0, 0.35, 0.6, 1] };
+const bounce = (height: number, delay: number) =>
+	pose({ y: [0, -height, 0] }, { duration: 0.65, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+
+const body = pose({ y: [0, -2, 0], rotate: [0, -10, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "info",
 	render: (part) => (
-		<>
-			<motion.circle
-				{...part(pose({ scale: [1, 1, 0.93, 1] }, timing))}
-				cx="12"
-				cy="12"
-				r="10"
-				style={centered}
-			/>
-			<motion.path {...part(pose({ scaleY: [1, 1, 0.65, 1] }, timing))} d="M12 16v-4" style={edge(0.5, 1)} />
-			<motion.path {...part(pose({ y: [0, -2.5, 0, 0] }, timing))} d="M12 8h.01" />
-		</>
+		<motion.g {...part(body)} style={pivot(12, 22)}>
+			<circle cx="12" cy="12" r="10" />
+			<motion.path {...part(bounce(2.5, 0.06))} d="M12 16v-4" />
+			<motion.path {...part(bounce(5, 0))} d="M12 8h.01" />
+		</motion.g>
 	),
 });

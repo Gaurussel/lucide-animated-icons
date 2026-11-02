@@ -1,28 +1,29 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, edge, pose } from "../helpers.ts";
+import { pivot, pose, springy } from "../helpers.ts";
+
+const jump = pose(
+	{ y: [0, 1.5, -4, 0] },
+	{ duration: 0.7, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", "easeOut", springy] },
+);
+const flip = pose(
+	{ scaleX: [1, 1, -1, 1.12, 1] },
+	{ duration: 0.7, times: [0, 0.12, 0.38, 0.52, 1], ease: ["easeInOut", "easeIn", "easeOut", springy] },
+);
+const bar = (delay: number) =>
+	pose(
+		{ x: [0, 0, -6, 0], opacity: [1, 1, 0, 1] },
+		{ duration: 0.6, delay, times: [0, 0.3, 0.31, 1], ease: ["easeInOut", "easeInOut", springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "russian-ruble",
 	render: (part) => (
-		<>
-			<motion.path
-				{...part(
-					pose(
-						{ scaleX: [1, 0.8, 1, 1], scaleY: [1, 0.94, 1, 1] },
-						{ duration: 0.7, times: [0, 0.3, 0.6, 1] },
-					),
-				)}
-				d="M6 11h8a4 4 0 0 0 0-8H9v18"
-				style={edge(0, 0.5)}
-			/>
-			<motion.path
-				{...part(
-					pose({ y: [0, 2, -2.5, 0], scaleX: [1, 1, 0.6, 1] }, { duration: 0.7, times: [0, 0.2, 0.55, 1] }),
-				)}
-				d="M6 15h8"
-				style={centered}
-			/>
-		</>
+		<motion.g {...part(jump)}>
+			<motion.g {...part(flip)} style={pivot(12, 12)}>
+				<path d="M6 11h8a4 4 0 0 0 0-8H9v18" />
+			</motion.g>
+			<motion.path {...part(bar(0.04))} d="M6 15h8" />
+		</motion.g>
 	),
 });

@@ -1,40 +1,18 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { centered, pose, snap, springy } from "../helpers.ts";
 
-const timing = { duration: 0.5 };
+const panel = pose({ y: [0, -4, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
+const tile = (delay: number) =>
+	pose({ y: [0, 3, 0], scale: [1, 0.6, 1] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "layout-template",
 	render: (part) => (
 		<>
-			<motion.rect
-				{...part(pose({ scaleY: [1, 0.5, 1] }, timing))}
-				height="7"
-				rx="1"
-				style={edge(0.5, 0)}
-				width="18"
-				x="3"
-				y="3"
-			/>
-			<motion.rect
-				{...part(pose({ scaleX: [1, 1.35, 1] }, { ...timing, delay: 0.2 }))}
-				height="7"
-				rx="1"
-				style={edge(0, 0.5)}
-				width="9"
-				x="3"
-				y="14"
-			/>
-			<motion.rect
-				{...part(pose({ scaleX: [1, 0.5, 1] }, { ...timing, delay: 0.3 }))}
-				height="7"
-				rx="1"
-				style={edge(1, 0.5)}
-				width="5"
-				x="16"
-				y="14"
-			/>
+			<motion.rect {...part(panel)} height="7" rx="1" width="18" x="3" y="3" />
+			<motion.rect {...part(tile(0.06))} height="7" rx="1" style={centered} width="9" x="3" y="14" />
+			<motion.rect {...part(tile(0.14))} height="7" rx="1" style={centered} width="5" x="16" y="14" />
 		</>
 	),
 });

@@ -1,18 +1,20 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const node = (delay: number) => pose({ scale: [1, 0.5, 0.5, 1] }, { duration: 0.8, delay, times: [0, 0.25, 0.55, 1] });
-const trace = (delay: number) =>
-	pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.75, delay, times: [0, 0.25, 0.4, 1] });
+const bead = pose(
+	{ y: [0, 3, -4, 0] },
+	{ duration: 0.75, times: [0, 0.18, 0.36, 1], ease: ["easeInOut", snap, springy] },
+);
+const hit = pose({ y: [0, 0, -2, 0] }, { duration: 0.75, times: [0, 0.3, 0.38, 1], ease: ["easeInOut", snap, ring] });
 
 export default createAnimatedIcon({
 	name: "git-commit-vertical",
 	render: (part) => (
 		<>
-			<motion.path {...part(trace(0))} d="M12 3v6" />
-			<motion.circle {...part(node(0.15))} cx="12" cy="12" r="3" style={centered} />
-			<motion.path {...part(trace(0.05))} d="M12 15v6" />
+			<motion.path {...part(hit)} d="M12 3v6" />
+			<motion.circle {...part(bead)} cx="12" cy="12" r="3" />
+			<motion.path {...part(redraw(0.2, 0.4))} d="M12 15v6" />
 		</>
 	),
 });

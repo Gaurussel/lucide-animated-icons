@@ -1,31 +1,24 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { centered, pose, redraw, ring, snap, springy } from "../helpers.ts";
+
+const shake = pose({ rotate: [0, -12, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
+const twist = pose(
+	{ scale: [1, 0.4, 1], rotate: [0, 0, 360] },
+	{ duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
+);
 
 export default createAnimatedIcon({
 	name: "remove-formatting",
 	render: (part) => (
 		<>
-			<motion.g
-				{...part(
-					pose(
-						{ y: [0, 0, 1, 1, 0], opacity: [1, 1, 0.35, 0.35, 1] },
-						{ duration: 0.8, times: [0, 0.3, 0.55, 0.8, 1] },
-					),
-				)}
-			>
-				<path d="M4 7V4h16v3" />
-				<path d="M5 20h6" />
-				<path d="M13 4 8 20" />
+			<motion.path {...part(shake)} d="M4 7V4h16v3" style={centered} />
+			<path d="M5 20h6" />
+			<motion.path {...part(redraw(0.05, 0.5))} d="M13 4 8 20" />
+			<motion.g {...part(twist)} style={centered}>
+				<path d="m15 15 5 5" />
+				<path d="m20 15-5 5" />
 			</motion.g>
-			<motion.path
-				{...part(pose({ pathLength: [1, 1, 0, 1, 1] }, { duration: 0.8, times: [0, 0.15, 0.3, 0.55, 1] }))}
-				d="m15 15 5 5"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 1, 0, 1, 1] }, { duration: 0.8, times: [0, 0.3, 0.45, 0.7, 1] }))}
-				d="m20 15-5 5"
-			/>
 		</>
 	),
 });

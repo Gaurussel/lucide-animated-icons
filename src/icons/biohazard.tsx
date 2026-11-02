@@ -1,22 +1,19 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pivot, pose } from "../helpers.ts";
+import { centered, pivot, pose, snap, springy } from "../helpers.ts";
+
+const spin = pose(
+	{ rotate: [0, -30, 360] },
+	{ duration: 0.7, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
+);
+const pop = pose({ scale: [1, 0.5, 1] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "biohazard",
 	render: (part) => (
 		<>
-			<motion.circle
-				{...part(pose({ scale: [1, 0.6, 1, 1] }, { duration: 0.8, times: [0, 0.3, 0.6, 1] }))}
-				cx="12"
-				cy="11.9"
-				r="2"
-				style={centered}
-			/>
-			<motion.g
-				{...part(pose({ rotate: [0, -24, 0, 0] }, { duration: 0.8, times: [0, 0.45, 0.8, 1] }))}
-				style={pivot(12, 12)}
-			>
+			<motion.circle {...part(pop)} cx="12" cy="11.9" r="2" style={centered} />
+			<motion.g {...part(spin)} style={pivot(12, 12)}>
 				<path d="M6.7 3.4c-.9 2.5 0 5.2 2.2 6.7C6.5 9 3.7 9.6 2 11.6" />
 				<path d="m8.9 10.1 1.4.8" />
 				<path d="M17.3 3.4c.9 2.5 0 5.2-2.2 6.7 2.4-1.2 5.2-.6 6.9 1.5" />

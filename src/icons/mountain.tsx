@@ -1,21 +1,15 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { edge, pose, snap, springy } from "../helpers.ts";
+
+const rise = pose({ y: [0, -4, 0], rotate: [0, -6, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
+const peak = pose({ pathLength: [1, 0, 1] }, { duration: 0.7, times: [0, 0.01, 1], ease: ["easeInOut", "easeOut"] });
 
 export default createAnimatedIcon({
 	name: "mountain",
 	render: (part) => (
-		<>
-			<motion.path
-				{...part(
-					pose(
-						{ scaleY: [1, 0.84, 1.18, 1], scaleX: [1, 1.06, 0.94, 1] },
-						{ duration: 0.65, times: [0, 0.25, 0.6, 1] },
-					),
-				)}
-				d="m8 3 4 8 5-5 5 15H2L8 3z"
-				style={edge(0.5, 1)}
-			/>
-		</>
+		<motion.g {...part(rise)} style={edge(0.5, 1)}>
+			<motion.path {...part(peak)} d="m8 3 4 8 5-5 5 15H2L8 3z" />
+		</motion.g>
 	),
 });

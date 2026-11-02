@@ -1,16 +1,15 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, redraw, snap, springy } from "../helpers.ts";
+
+const lift = pose({ y: [0, -3, 0], rotate: [0, -6, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "cloud-check",
 	render: (part) => (
-		<motion.g {...part(pose({ y: [0, -1.5, -1.5, 0] }, { duration: 0.75, times: [0, 0.3, 0.7, 1] }))}>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.75, times: [0, 0.2, 0.35, 1] }))}
-				d="m17 15-5.5 5.5L9 18"
-			/>
-			<path d="M5 17.743A7 7 0 1 1 15.71 10h1.79a4.5 4.5 0 0 1 1.5 8.742" />
-		</motion.g>
+		<>
+			<motion.path {...part(lift)} d="M5 17.743A7 7 0 1 1 15.71 10h1.79a4.5 4.5 0 0 1 1.5 8.742" />
+			<motion.path {...part(redraw(0.12, 0.45))} d="m17 15-5.5 5.5L9 18" />
+		</>
 	),
 });

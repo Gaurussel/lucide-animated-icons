@@ -1,21 +1,25 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
-const wave = (delay: number) => pose({ opacity: [1, 0.12, 1] }, { duration: 0.45, delay, times: [0, 0.4, 1] });
+const ping = pose({ y: [0, -3, 0], scale: [1, 2, 1] }, { duration: 0.6, times: [0, 0.25, 1], ease: [snap, springy] });
+const arc = (delay: number) =>
+	pose({ y: [0, -2.5, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "wifi",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ scale: [1, 1.8, 1] }, { duration: 0.35, times: [0, 0.4, 1] }))}
-				d="M12 20h.01"
-				style={centered}
-			/>
-			<motion.path {...part(wave(0.12))} d="M8.5 16.429a5 5 0 0 1 7 0" />
-			<motion.path {...part(wave(0.24))} d="M5 12.859a10 10 0 0 1 14 0" />
-			<motion.path {...part(wave(0.36))} d="M2 8.82a15 15 0 0 1 20 0" />
+			<motion.path {...part(ping)} d="M12 20h.01" style={centered} />
+			<motion.g {...part(arc(0.06))}>
+				<motion.path {...part(redraw(0.06, 0.45))} d="M8.5 16.429a5 5 0 0 1 7 0" />
+			</motion.g>
+			<motion.g {...part(arc(0.12))}>
+				<motion.path {...part(redraw(0.12, 0.45))} d="M5 12.859a10 10 0 0 1 14 0" />
+			</motion.g>
+			<motion.g {...part(arc(0.18))}>
+				<motion.path {...part(redraw(0.18, 0.45))} d="M2 8.82a15 15 0 0 1 20 0" />
+			</motion.g>
 		</>
 	),
 });

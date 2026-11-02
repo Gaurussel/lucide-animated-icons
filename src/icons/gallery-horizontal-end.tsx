@@ -1,17 +1,22 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, snap, springy } from "../helpers.ts";
 
-const card = (x: number, delay: number) =>
-	pose({ x: [0, -1, x, x, 0] }, { duration: 0.8, delay, times: [0, 0.18, 0.5, 0.65, 1] });
+const swipe = pose(
+	{ x: [0, 1.5, -9, 9, 0], opacity: [1, 1, 0, 0, 1] },
+	{ duration: 0.7, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", snap, springy] },
+);
+const shift = pose({ x: [0, 0, 4, 0] }, { duration: 0.7, times: [0, 0.2, 0.4, 1], ease: ["easeInOut", snap, springy] });
 
 export default createAnimatedIcon({
 	name: "gallery-horizontal-end",
 	render: (part) => (
 		<>
-			<motion.path {...part(card(1.5, 0.12))} d="M2 7v10" />
-			<motion.path {...part(card(1.5, 0.06))} d="M6 5v14" />
-			<motion.rect {...part(card(2.5, 0))} height="18" rx="2" width="12" x="10" y="3" />
+			<motion.g {...part(shift)}>
+				<path d="M2 7v10" />
+				<path d="M6 5v14" />
+			</motion.g>
+			<motion.rect {...part(swipe)} height="18" rx="2" width="12" x="10" y="3" />
 		</>
 	),
 });

@@ -1,18 +1,21 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, snap, springy } from "../helpers.ts";
 
-const guide = (x: number, y: number, delay: number) =>
-	pose({ x: [0, x, x, 0], y: [0, y, y, 0] }, { duration: 0.8, delay, times: [0, 0.3, 0.55, 1] });
+const open = (x: number, y: number) =>
+	pose(
+		{ x: [0, -x, 2.5 * x, 0], y: [0, -y, 2.5 * y, 0] },
+		{ duration: 0.7, times: [0, 0.15, 0.38, 1], ease: ["easeInOut", snap, springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "frame",
 	render: (part) => (
 		<>
-			<motion.line {...part(guide(0, 2, 0))} x1="22" x2="2" y1="6" y2="6" />
-			<motion.line {...part(guide(0, -2, 0))} x1="22" x2="2" y1="18" y2="18" />
-			<motion.line {...part(guide(2, 0, 0.2))} x1="6" x2="6" y1="2" y2="22" />
-			<motion.line {...part(guide(-2, 0, 0.2))} x1="18" x2="18" y1="2" y2="22" />
+			<motion.line {...part(open(0, -1))} x1="22" x2="2" y1="6" y2="6" />
+			<motion.line {...part(open(0, 1))} x1="22" x2="2" y1="18" y2="18" />
+			<motion.line {...part(open(-1, 0))} x1="6" x2="6" y1="2" y2="22" />
+			<motion.line {...part(open(1, 0))} x1="18" x2="18" y1="2" y2="22" />
 		</>
 	),
 });

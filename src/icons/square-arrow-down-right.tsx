@@ -1,25 +1,18 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { centered, jelly, pose, springy } from "../helpers.ts";
+
+const fly = pose(
+	{ x: [0, -2, 7, -6, 0], y: [0, -2, 7, -6, 0], opacity: [1, 1, 0, 0, 1] },
+	{ duration: 0.68, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
+);
 
 export default createAnimatedIcon({
 	name: "square-arrow-down-right",
 	render: (part) => (
 		<>
-			<motion.g
-				{...part(pose({ scale: [1, 0.88, 1, 1] }, { duration: 0.7, times: [0, 0.25, 0.5, 1] }))}
-				style={centered}
-			>
-				<rect height="18" rx="2" width="18" x="3" y="3" />
-			</motion.g>
-			<motion.g
-				{...part(
-					pose(
-						{ opacity: [1, 1, 0, 0, 1], x: [0, -0.75, 3, -3, 0], y: [0, -0.75, 3, -3, 0] },
-						{ duration: 0.75, times: [0, 0.18, 0.5, 0.51, 1] },
-					),
-				)}
-			>
+			<motion.rect {...part(jelly(0.4, 0.68))} height="18" rx="2" style={centered} width="18" x="3" y="3" />
+			<motion.g {...part(fly)}>
 				<path d="m8 8 8 8" />
 				<path d="M16 8v8H8" />
 			</motion.g>

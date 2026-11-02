@@ -1,24 +1,17 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { pose, snap, springy } from "../helpers.ts";
+
+const push = (x: number, y: number) =>
+	pose({ x: [0, x, 0], y: [0, y, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "move-vertical",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ y: [0, -1.5, 2, 0] }, { duration: 0.65, times: [0, 0.25, 0.6, 1] }))}
-				d="m8 18 4 4 4-4"
-			/>
-			<motion.path
-				{...part(pose({ y: [0, 1.5, -2, 0] }, { duration: 0.65, times: [0, 0.25, 0.6, 1] }))}
-				d="m8 6 4-4 4 4"
-			/>
-			<motion.path
-				{...part(pose({ scaleY: [1, 0.85, 1.2, 1] }, { duration: 0.65, times: [0, 0.25, 0.6, 1] }))}
-				d="M12 2v20"
-				style={centered}
-			/>
+			<path d="M12 2v20" />
+			<motion.path {...part(push(0, -3))} d="m8 6 4-4 4 4" />
+			<motion.path {...part(push(0, 3))} d="m8 18 4 4 4-4" />
 		</>
 	),
 });

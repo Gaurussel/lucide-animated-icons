@@ -1,19 +1,22 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose } from "../helpers.ts";
+import { pivot, pose, snap, springy } from "../helpers.ts";
+
+const lift = pose({ y: [0, -3, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const turn = pose(
+	{ rotate: [0, -30, 360] },
+	{ duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
+);
 
 export default createAnimatedIcon({
 	name: "cloud-cog",
 	render: (part) => (
 		<>
 			<motion.path
-				{...part(pose({ y: [0, -1, 0] }, { duration: 0.8, times: [0, 0.4, 1] }))}
+				{...part(lift)}
 				d="M4.2 15.1a7 7 0 1 1 9.93-9.858A7 7 0 0 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2"
 			/>
-			<motion.g
-				{...part(pose({ rotate: [0, -14, 360] }, { duration: 0.85, times: [0, 0.2, 1], reset: true }))}
-				style={pivot(12, 17)}
-			>
+			<motion.g {...part(turn)} style={pivot(12, 17)}>
 				<path d="m10.852 19.772-.383.924" />
 				<path d="m13.148 14.228.383-.923" />
 				<path d="M13.148 19.772a3 3 0 1 0-2.296-5.544l-.383-.923" />

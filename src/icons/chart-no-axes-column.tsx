@@ -1,28 +1,26 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pose, redraw, snap, springy } from "../helpers.ts";
 
-const bars = [
-	{ x: "6", y2: "14", delay: 0 },
-	{ x: "12", y2: "4", delay: 0.1 },
-	{ x: "18", y2: "10", delay: 0.2 },
-];
+const land = (delay: number) =>
+	pose(
+		{ y: [0, 0, -5, 0], scaleX: [1, 1, 1.4, 1] },
+		{ duration: 0.7, delay, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "chart-no-axes-column",
 	render: (part) => (
 		<>
-			{bars.map(({ x, y2, delay }) => (
-				<motion.line
-					{...part(pose({ scaleY: [1, 0.2, 0.2, 1] }, { duration: 0.5, delay, times: [0, 0.35, 0.45, 1] }))}
-					key={x}
-					style={edge(0.5, 1)}
-					x1={x}
-					x2={x}
-					y1="20"
-					y2={y2}
-				/>
-			))}
+			<motion.g {...part(land(0.16))}>
+				<motion.line {...part(redraw(0.16, 0.3))} x1="18" x2="18" y1="20" y2="10" />
+			</motion.g>
+			<motion.g {...part(land(0.08))}>
+				<motion.line {...part(redraw(0.08, 0.3))} x1="12" x2="12" y1="20" y2="4" />
+			</motion.g>
+			<motion.g {...part(land(0))}>
+				<motion.line {...part(redraw(0, 0.3))} x1="6" x2="6" y1="20" y2="14" />
+			</motion.g>
 		</>
 	),
 });

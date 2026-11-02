@@ -1,21 +1,28 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pose, snap, springy } from "../helpers.ts";
+
+const dip = pose(
+	{ y: [0, 0, 2, 0] },
+	{ duration: 0.72, times: [0, 0.15, 0.25, 1], ease: ["easeInOut", snap, springy] },
+);
+const pillows = pose(
+	{ y: [0, 1, -3, 0] },
+	{ duration: 0.72, times: [0, 0.18, 0.36, 1], ease: ["easeInOut", "easeInOut", springy] },
+);
 
 export default createAnimatedIcon({
 	name: "bed-double",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ scaleY: [1, 1, 0.75, 1] }, { duration: 0.8, times: [0, 0.3, 0.6, 1] }))}
-				d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"
-				style={edge(0.5, 1)}
-			/>
-			<motion.g {...part(pose({ y: [0, -3, 0, 0] }, { duration: 0.8, times: [0, 0.3, 0.6, 1] }))}>
+			<motion.g {...part(dip)}>
+				<path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+				<path d="M2 18h20" />
+			</motion.g>
+			<motion.g {...part(pillows)}>
 				<path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
 				<path d="M12 4v6" />
 			</motion.g>
-			<path d="M2 18h20" />
 		</>
 	),
 });

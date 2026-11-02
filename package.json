@@ -1,6 +1,6 @@
 {
 	"name": "lucide-animated-icons",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Hover animations for every Lucide icon, built on Motion for React",
 	"license": "ISC",
 	"author": "Nikita Voronov",

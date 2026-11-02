@@ -1,20 +1,18 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { edge, jelly, pivot, pose, springy } from "../helpers.ts";
+
+const lid = pose(
+	{ y: [0, 1, -6, 1, 0], rotate: [0, 0, -14, 3, 0] },
+	{ duration: 0.75, times: [0, 0.1, 0.3, 0.45, 1], ease: ["easeInOut", "easeOut", "easeIn", springy] },
+);
 
 export default createAnimatedIcon({
 	name: "cylinder",
 	render: (part) => (
 		<>
-			<motion.g {...part(pose({ y: [0, -2.5, -2.5, 0] }, { duration: 0.8, times: [0, 0.3, 0.6, 1] }))}>
-				<ellipse cx="12" cy="5" rx="9" ry="3" />
-			</motion.g>
-			<motion.g
-				{...part(pose({ scaleY: [1, 1, 0.94, 1] }, { duration: 0.8, times: [0, 0.55, 0.78, 1] }))}
-				style={edge(0.5, 1)}
-			>
-				<path d="M3 5v14a9 3 0 0 0 18 0V5" />
-			</motion.g>
+			<motion.ellipse {...part(lid)} cx="12" cy="5" rx="9" ry="3" style={pivot(12, 5)} />
+			<motion.path {...part(jelly(0.45, 0.75))} d="M3 5v14a9 3 0 0 0 18 0V5" style={edge(0.5, 1)} />
 		</>
 	),
 });

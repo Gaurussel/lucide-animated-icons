@@ -1,18 +1,16 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pivot, pose, snap, springy } from "../helpers.ts";
 
-const times = [0, 0.2, 0.5, 0.7, 1];
+const wind = pose({ rotate: [0, -25, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const jab = pose({ x: [0, -3, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "undo-2",
 	render: (part) => (
-		<>
-			<motion.path {...part(pose({ x: [0, 1, -2.5, -2.5, 0] }, { duration: 0.75, times }))} d="M9 14 4 9l5-5" />
-			<motion.path
-				{...part(pose({ pathLength: [1, 1, 0.6, 0.6, 1] }, { duration: 0.75, times }))}
-				d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"
-			/>
-		</>
+		<motion.g {...part(wind)} style={pivot(14.5, 14.5)}>
+			<motion.path {...part(jab)} d="M9 14 4 9l5-5" />
+			<path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" />
+		</motion.g>
 	),
 });

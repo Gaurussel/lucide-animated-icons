@@ -1,35 +1,21 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { centered, pivot, pose, springy } from "../helpers.ts";
+
+const spoke = (delay: number) =>
+	pose(
+		{ rotate: [0, -30, 360] },
+		{ duration: 0.58, delay, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
+	);
+const gather = pose({ scale: [1, 0.7, 1] }, { duration: 0.72, times: [0, 0.2, 1], ease: ["easeInOut", springy] });
 
 export default createAnimatedIcon({
 	name: "asterisk",
 	render: (part) => (
-		<>
-			<motion.g
-				{...part(pose({ rotate: [0, 0, -25, 0] }, { duration: 0.8, times: [0, 0.4, 0.8, 1] }))}
-				style={centered}
-			>
-				<motion.path
-					{...part(pose({ scale: [1, 0.55, 1, 1] }, { duration: 0.8, times: [0, 0.25, 0.5, 1] }))}
-					d="M12 6v12"
-					style={centered}
-				/>
-				<motion.path
-					{...part(
-						pose({ scale: [1, 0.55, 1, 1] }, { duration: 0.8, delay: 0.08, times: [0, 0.25, 0.5, 1] }),
-					)}
-					d="M17.196 9 6.804 15"
-					style={centered}
-				/>
-				<motion.path
-					{...part(
-						pose({ scale: [1, 0.55, 1, 1] }, { duration: 0.8, delay: 0.16, times: [0, 0.25, 0.5, 1] }),
-					)}
-					d="m6.804 9 10.392 6"
-					style={centered}
-				/>
-			</motion.g>
-		</>
+		<motion.g {...part(gather)} style={centered}>
+			<motion.path {...part(spoke(0))} d="M12 6v12" style={pivot(12, 12)} />
+			<motion.path {...part(spoke(0.07))} d="M17.196 9 6.804 15" style={pivot(12, 12)} />
+			<motion.path {...part(spoke(0.14))} d="m6.804 9 10.392 6" style={pivot(12, 12)} />
+		</motion.g>
 	),
 });

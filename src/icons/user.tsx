@@ -1,19 +1,22 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pose, snap, springy } from "../helpers.ts";
 
-const times = [0, 0.2, 0.55, 1];
+const head = pose(
+	{ y: [0, 1.5, -4, 0], x: [0, 0, 0.5, 0] },
+	{ duration: 0.72, times: [0, 0.14, 0.32, 1], ease: ["easeInOut", snap, springy] },
+);
+const shoulders = pose(
+	{ y: [0, 0, -2, 0] },
+	{ duration: 0.72, times: [0, 0.24, 0.38, 1], ease: ["easeInOut", snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "user",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ scaleY: [1, 0.92, 1, 1] }, { duration: 0.7, times }))}
-				d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
-				style={edge(0.5, 1)}
-			/>
-			<motion.circle {...part(pose({ y: [0, 1, -2.5, 0] }, { duration: 0.7, times }))} cx="12" cy="7" r="4" />
+			<motion.path {...part(shoulders)} d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+			<motion.circle {...part(head)} cx="12" cy="7" r="4" />
 		</>
 	),
 });

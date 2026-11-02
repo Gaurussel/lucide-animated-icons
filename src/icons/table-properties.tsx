@@ -1,32 +1,26 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { edge, jelly, pose, springy } from "../helpers.ts";
+
+const slideIn = (delay: number) =>
+	pose(
+		{ pathLength: [1, 0, 1], x: [0, -5, 0] },
+		{ duration: 0.45, delay, times: [0, 0.01, 1], ease: ["easeInOut", springy] },
+	);
+const dropIn = (delay: number) =>
+	pose(
+		{ pathLength: [1, 0, 1], y: [0, -5, 0] },
+		{ duration: 0.45, delay, times: [0, 0.01, 1], ease: ["easeInOut", springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "table-properties",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.7, delay: 0.2, times: [0, 0.25, 0.45, 1] }))}
-				d="M15 3v18"
-			/>
-			<motion.rect
-				{...part(pose({ scaleY: [1, 0.94, 1, 1] }, { duration: 0.7, times: [0, 0.25, 0.5, 1] }))}
-				height="18"
-				rx="2"
-				style={centered}
-				width="18"
-				x="3"
-				y="3"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.7, times: [0, 0.25, 0.45, 1] }))}
-				d="M21 9H3"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.7, delay: 0.1, times: [0, 0.25, 0.45, 1] }))}
-				d="M21 15H3"
-			/>
+			<motion.path {...part(dropIn(0.2))} d="M15 3v18" />
+			<motion.rect {...part(jelly(0.55, 0.75))} height="18" rx="2" style={edge(0.5, 1)} width="18" x="3" y="3" />
+			<motion.path {...part(slideIn(0))} d="M21 9H3" />
+			<motion.path {...part(slideIn(0.08))} d="M21 15H3" />
 		</>
 	),
 });

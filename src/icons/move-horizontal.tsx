@@ -1,24 +1,17 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { pose, snap, springy } from "../helpers.ts";
+
+const push = (x: number, y: number) =>
+	pose({ x: [0, x, 0], y: [0, y, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "move-horizontal",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ x: [0, -1.5, 2, 0] }, { duration: 0.65, times: [0, 0.25, 0.6, 1] }))}
-				d="m18 8 4 4-4 4"
-			/>
-			<motion.path
-				{...part(pose({ x: [0, 1.5, -2, 0] }, { duration: 0.65, times: [0, 0.25, 0.6, 1] }))}
-				d="m6 8-4 4 4 4"
-			/>
-			<motion.path
-				{...part(pose({ scaleX: [1, 0.85, 1.2, 1] }, { duration: 0.65, times: [0, 0.25, 0.6, 1] }))}
-				d="M2 12h20"
-				style={centered}
-			/>
+			<path d="M2 12h20" />
+			<motion.path {...part(push(-3, 0))} d="m6 8-4 4 4 4" />
+			<motion.path {...part(push(3, 0))} d="m18 8 4 4-4 4" />
 		</>
 	),
 });

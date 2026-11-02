@@ -1,24 +1,20 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { centered, jelly, pose, redraw, ring, snap } from "../helpers.ts";
+
+const bounce = pose(
+	{ y: [0, 0, -3, 0] },
+	{ duration: 0.72, times: [0, 0.45, 0.58, 1], ease: ["easeInOut", snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "square-m",
 	render: (part) => (
 		<>
-			<motion.rect
-				{...part(pose({ scale: [1, 0.88, 1, 1] }, { duration: 0.7, times: [0, 0.25, 0.5, 1] }))}
-				height="18"
-				rx="2"
-				style={centered}
-				width="18"
-				x="3"
-				y="3"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.7, times: [0, 0.2, 0.4, 1] }))}
-				d="M8 16V8l4 4 4-4v8"
-			/>
+			<motion.rect {...part(jelly(0.58, 0.75))} height="18" rx="2" style={centered} width="18" x="3" y="3" />
+			<motion.g {...part(bounce)}>
+				<motion.path {...part(redraw(0, 0.45))} d="M8 16V8l4 4 4-4v8" />
+			</motion.g>
 		</>
 	),
 });

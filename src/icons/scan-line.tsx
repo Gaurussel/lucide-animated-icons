@@ -1,51 +1,23 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, snap, springy } from "../helpers.ts";
+
+const focus = (x: number, y: number) =>
+	pose({ x: [0, 2 * x, 0], y: [0, 2 * y, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const sweep = pose(
+	{ y: [0, -5, 5, 0] },
+	{ duration: 0.7, times: [0, 0.2, 0.45, 1], ease: ["easeInOut", "easeInOut", springy] },
+);
 
 export default createAnimatedIcon({
 	name: "scan-line",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(
-					pose(
-						{ x: [0, 1.6, 1.6, 0, 0], y: [0, 1.6, 1.6, 0, 0] },
-						{ duration: 0.85, times: [0, 0.15, 0.45, 0.75, 1] },
-					),
-				)}
-				d="M3 7V5a2 2 0 0 1 2-2h2"
-			/>
-			<motion.path
-				{...part(
-					pose(
-						{ x: [0, -1.6, -1.6, 0, 0], y: [0, 1.6, 1.6, 0, 0] },
-						{ duration: 0.85, times: [0, 0.15, 0.45, 0.75, 1] },
-					),
-				)}
-				d="M17 3h2a2 2 0 0 1 2 2v2"
-			/>
-			<motion.path
-				{...part(
-					pose(
-						{ x: [0, -1.6, -1.6, 0, 0], y: [0, -1.6, -1.6, 0, 0] },
-						{ duration: 0.85, times: [0, 0.15, 0.45, 0.75, 1] },
-					),
-				)}
-				d="M21 17v2a2 2 0 0 1-2 2h-2"
-			/>
-			<motion.path
-				{...part(
-					pose(
-						{ x: [0, 1.6, 1.6, 0, 0], y: [0, -1.6, -1.6, 0, 0] },
-						{ duration: 0.85, times: [0, 0.15, 0.45, 0.75, 1] },
-					),
-				)}
-				d="M7 21H5a2 2 0 0 1-2-2v-2"
-			/>
-			<motion.path
-				{...part(pose({ y: [0, -3.5, 3.5, 0, 0] }, { duration: 0.85, times: [0, 0.2, 0.5, 0.8, 1] }))}
-				d="M7 12h10"
-			/>
+			<motion.path {...part(focus(1, 1))} d="M3 7V5a2 2 0 0 1 2-2h2" />
+			<motion.path {...part(focus(-1, 1))} d="M17 3h2a2 2 0 0 1 2 2v2" />
+			<motion.path {...part(focus(-1, -1))} d="M21 17v2a2 2 0 0 1-2 2h-2" />
+			<motion.path {...part(focus(1, -1))} d="M7 21H5a2 2 0 0 1-2-2v-2" />
+			<motion.path {...part(sweep)} d="M7 12h10" />
 		</>
 	),
 });

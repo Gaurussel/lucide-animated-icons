@@ -1,25 +1,18 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { pivot, pose, redraw, springy } from "../helpers.ts";
+
+const roll = (x: number) =>
+	pose(
+		{ x: [0, -x * 0.5, x, 0], rotate: [0, -60, 200, 360] },
+		{ duration: 0.75, times: [0, 0.18, 0.42, 1], ease: ["easeInOut", "easeInOut", springy], reset: true },
+	);
 
 export default createAnimatedIcon({
 	name: "circle",
 	render: (part) => (
-		<motion.g
-			{...part(
-				pose(
-					{ scale: [1, 0.85, 0.85, 1], rotate: [0, -90, -90, 0] },
-					{ duration: 0.7, times: [0, 0.3, 0.4, 1] },
-				),
-			)}
-			style={centered}
-		>
-			<motion.circle
-				{...part(pose({ pathLength: [1, 0, 1] }, { duration: 0.7, times: [0, 0.35, 1] }))}
-				cx="12"
-				cy="12"
-				r="10"
-			/>
+		<motion.g {...part(roll(3))} style={pivot(12, 12)}>
+			<motion.circle {...part(redraw(0.05, 0.55))} cx="12" cy="12" r="10" />
 		</motion.g>
 	),
 });

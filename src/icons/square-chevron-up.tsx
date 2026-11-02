@@ -1,20 +1,18 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { centered, jelly, pose, springy } from "../helpers.ts";
+
+const fly = pose(
+	{ y: [0, 2, -9, 7, 0], opacity: [1, 1, 0, 0, 1] },
+	{ duration: 0.68, times: [0, 0.15, 0.33, 0.34, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
+);
 
 export default createAnimatedIcon({
 	name: "square-chevron-up",
 	render: (part) => (
 		<>
-			<motion.g
-				{...part(pose({ scaleY: [1, 1, 0.94, 1, 1] }, { duration: 0.7, times: [0, 0.2, 0.5, 0.7, 1] }))}
-				style={centered}
-			>
-				<rect height="18" rx="2" width="18" x="3" y="3" />
-			</motion.g>
-			<motion.g {...part(pose({ y: [0, 1, -2.5, -2.5, 0] }, { duration: 0.7, times: [0, 0.2, 0.5, 0.7, 1] }))}>
-				<path d="m8 14 4-4 4 4" />
-			</motion.g>
+			<motion.rect {...part(jelly(0.38, 0.68))} height="18" rx="2" style={centered} width="18" x="3" y="3" />
+			<motion.path {...part(fly)} d="m8 14 4-4 4 4" />
 		</>
 	),
 });

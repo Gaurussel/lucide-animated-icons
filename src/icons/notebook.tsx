@@ -1,24 +1,24 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { edge, pose, redraw, snap, springy } from "../helpers.ts";
+
+const flip = pose(
+	{ y: [0, -4, 0], rotate: [0, -10, 0] },
+	{ duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] },
+);
+const coil = (delay: number) =>
+	pose({ x: [0, -2, 0] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "notebook",
 	render: (part) => (
-		<>
-			<motion.path {...part(pose({ x: [0, 2.5, 0] }, { duration: 0.35 }))} d="M2 6h4" />
-			<motion.path {...part(pose({ x: [0, 2.5, 0] }, { duration: 0.35, delay: 0.06 }))} d="M2 10h4" />
-			<motion.path {...part(pose({ x: [0, 2.5, 0] }, { duration: 0.35, delay: 0.12 }))} d="M2 14h4" />
-			<motion.path {...part(pose({ x: [0, 2.5, 0] }, { duration: 0.35, delay: 0.18 }))} d="M2 18h4" />
-			<motion.g {...part(pose({ y: [0, -2, -2, 0] }, { duration: 0.8, times: [0, 0.3, 0.65, 1] }))}>
-				<rect height="20" rx="2" width="16" x="4" y="2" />
-				<motion.path
-					{...part(
-						pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.65, times: [0, 0.2, 0.45, 1], delay: 0.1 }),
-					)}
-					d="M16 2v20"
-				/>
-			</motion.g>
-		</>
+		<motion.g {...part(flip)} style={edge(0.5, 1)}>
+			<rect height="20" rx="2" width="16" x="4" y="2" />
+			<motion.path {...part(redraw(0.1, 0.45))} d="M16 2v20" />
+			<motion.path {...part(coil(0.05))} d="M2 6h4" />
+			<motion.path {...part(coil(0.1))} d="M2 10h4" />
+			<motion.path {...part(coil(0.15))} d="M2 14h4" />
+			<motion.path {...part(coil(0.2))} d="M2 18h4" />
+		</motion.g>
 	),
 });

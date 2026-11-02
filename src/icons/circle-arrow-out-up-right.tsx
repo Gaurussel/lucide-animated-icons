@@ -1,24 +1,23 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { pivot, pose, snap, springy } from "../helpers.ts";
+
+const shoot = (x: number, y: number) =>
+	pose(
+		{ x: [0, -x * 0.3, x, -x * 0.6, 0], y: [0, -y * 0.3, y, -y * 0.6, 0], opacity: [1, 1, 0, 0, 1] },
+		{ duration: 0.7, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
+	);
+const recoil = pose(
+	{ rotate: [0, 0, -20, 0] },
+	{ duration: 0.7, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "circle-arrow-out-up-right",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ scale: [1, 1, 0.92, 1] }, { duration: 0.75, times: [0, 0.2, 0.5, 1] }))}
-				d="M22 12A10 10 0 1 1 12 2"
-				style={centered}
-			/>
-			<motion.g
-				{...part(
-					pose(
-						{ opacity: [1, 1, 0, 0, 1], x: [0, -1.5, 6, -6, 0], y: [0, 1.5, -6, 6, 0] },
-						{ duration: 0.75, times: [0, 0.18, 0.5, 0.51, 1] },
-					),
-				)}
-			>
+			<motion.path {...part(recoil)} d="M22 12A10 10 0 1 1 12 2" style={pivot(12, 12)} />
+			<motion.g {...part(shoot(6, -6))}>
 				<path d="M22 2 12 12" />
 				<path d="M16 2h6v6" />
 			</motion.g>

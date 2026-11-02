@@ -1,19 +1,24 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const bar = (delay: number) => pose({ scaleX: [1, 0.05, 1] }, { duration: 0.5, delay, times: [0, 0.45, 1] });
-const stroke = (delay: number) => pose({ pathLength: [1, 0, 1] }, { duration: 0.45, delay, times: [0, 0.4, 1] });
+const toss = pose(
+	{ y: [0, 1, -6, 0], scaleX: [1, 1, -1, 1] },
+	{ duration: 0.75, times: [0, 0.1, 0.35, 1], ease: ["easeInOut", snap, springy] },
+);
+const lag = pose({ y: [0, 0, 2, 0] }, { duration: 0.75, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] });
 
 export default createAnimatedIcon({
 	name: "indian-rupee",
 	render: (part) => (
-		<>
-			<motion.path {...part(bar(0))} d="M6 3h12" style={edge(0, 0.5)} />
-			<motion.path {...part(bar(0.06))} d="M6 8h12" style={edge(0, 0.5)} />
-			<motion.path {...part(stroke(0.12))} d="M6 13h3" />
-			<motion.path {...part(stroke(0.18))} d="M9 13c6.667 0 6.667-10 0-10" />
-			<motion.path {...part(stroke(0.24))} d="m6 13 8.5 8" />
-		</>
+		<motion.g {...part(toss)} style={pivot(12, 12)}>
+			<motion.g {...part(lag)}>
+				<path d="M6 3h12" />
+				<path d="M6 8h12" />
+			</motion.g>
+			<path d="m6 13 8.5 8" />
+			<path d="M6 13h3" />
+			<path d="M9 13c6.667 0 6.667-10 0-10" />
+		</motion.g>
 	),
 });

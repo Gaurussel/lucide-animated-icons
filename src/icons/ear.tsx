@@ -1,17 +1,18 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pivot, pose, redraw, rubber, snap } from "../helpers.ts";
+
+const listen = pose(
+	{ rotate: [0, -15, 0], x: [0, -1.5, 0] },
+	{ duration: 0.75, times: [0, 0.22, 1], ease: [snap, rubber] },
+);
 
 export default createAnimatedIcon({
 	name: "ear",
 	render: (part) => (
-		<>
-			<motion.g {...part(pose({ x: [0, -1.5, -1.5, 0] }, { duration: 0.8, times: [0, 0.3, 0.7, 1] }))}>
-				<path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0" />
-				<motion.g {...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.8, times: [0, 0.2, 0.4, 0.8] }))}>
-					<path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4" />
-				</motion.g>
-			</motion.g>
-		</>
+		<motion.g {...part(listen)} style={pivot(12, 20)}>
+			<path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0" />
+			<motion.path {...part(redraw(0.1, 0.45))} d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4" />
+		</motion.g>
 	),
 });

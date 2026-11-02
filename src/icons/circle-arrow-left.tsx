@@ -1,26 +1,20 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { centered, pose, snap, springy } from "../helpers.ts";
+
+const press = pose({ scale: [1, 0.88, 1] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
+const fly = (x: number, y: number) =>
+	pose(
+		{ x: [0, -x * 0.25, x, -x, 0], y: [0, -y * 0.25, y, -y, 0], opacity: [1, 1, 0, 0, 1] },
+		{ duration: 0.7, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "circle-arrow-left",
 	render: (part) => (
 		<>
-			<motion.circle
-				{...part(pose({ scale: [1, 0.88, 1, 1] }, { duration: 0.7, times: [0, 0.25, 0.5, 1] }))}
-				cx="12"
-				cy="12"
-				r="10"
-				style={centered}
-			/>
-			<motion.g
-				{...part(
-					pose(
-						{ opacity: [1, 1, 0, 0, 1], x: [0, 1, -4, 4, 0] },
-						{ duration: 0.75, times: [0, 0.18, 0.5, 0.51, 1] },
-					),
-				)}
-			>
+			<motion.circle {...part(press)} cx="12" cy="12" r="10" style={centered} />
+			<motion.g {...part(fly(-10, 0))}>
 				<path d="m12 8-4 4 4 4" />
 				<path d="M16 12H8" />
 			</motion.g>

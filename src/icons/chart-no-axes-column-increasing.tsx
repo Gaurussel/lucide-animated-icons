@@ -1,39 +1,26 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pose, redraw, snap, springy } from "../helpers.ts";
+
+const land = (delay: number) =>
+	pose(
+		{ y: [0, 0, -5, 0], scaleX: [1, 1, 1.4, 1] },
+		{ duration: 0.7, delay, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "chart-no-axes-column-increasing",
 	render: (part) => (
 		<>
-			<motion.line
-				{...part(
-					pose({ scaleY: [1, 0.02, 0.02, 1] }, { duration: 0.75, delay: 0.09, times: [0, 0.35, 0.5, 1] }),
-				)}
-				style={edge(0.5, 1)}
-				x1="12"
-				x2="12"
-				y1="20"
-				y2="10"
-			/>
-			<motion.line
-				{...part(
-					pose({ scaleY: [1, 0.02, 0.02, 1] }, { duration: 0.75, delay: 0.18, times: [0, 0.35, 0.5, 1] }),
-				)}
-				style={edge(0.5, 1)}
-				x1="18"
-				x2="18"
-				y1="20"
-				y2="4"
-			/>
-			<motion.line
-				{...part(pose({ scaleY: [1, 0.02, 0.02, 1] }, { duration: 0.75, times: [0, 0.35, 0.5, 1] }))}
-				style={edge(0.5, 1)}
-				x1="6"
-				x2="6"
-				y1="20"
-				y2="16"
-			/>
+			<motion.g {...part(land(0.08))}>
+				<motion.line {...part(redraw(0.08, 0.3))} x1="12" x2="12" y1="20" y2="10" />
+			</motion.g>
+			<motion.g {...part(land(0.16))}>
+				<motion.line {...part(redraw(0.16, 0.3))} x1="18" x2="18" y1="20" y2="4" />
+			</motion.g>
+			<motion.g {...part(land(0))}>
+				<motion.line {...part(redraw(0, 0.3))} x1="6" x2="6" y1="20" y2="16" />
+			</motion.g>
 		</>
 	),
 });

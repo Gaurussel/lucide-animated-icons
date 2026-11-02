@@ -1,28 +1,28 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose } from "../helpers.ts";
+import { pivot, pose, snap, springy } from "../helpers.ts";
+
+const tilt = (degrees: number, delay: number) =>
+	pose(
+		{ rotate: [0, degrees, 0], y: [0, -2, 0] },
+		{ duration: 0.7, delay, times: [0, 0.28, 1], ease: [snap, springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "drama",
 	render: (part) => (
 		<>
-			<motion.g
-				{...part(pose({ rotate: [0, -16, -16, 0] }, { duration: 0.8, delay: 0.1, times: [0, 0.3, 0.65, 1] }))}
-				style={pivot(8, 14)}
-			>
-				<path d="M10 11h.01" />
-				<path d="M6.5 13.1h.01" />
-				<path d="M10.1 7.1C9 7.2 7.7 7.7 6 8.6c-3.5 2-4.7 3.9-3.7 5.6 4.5 7.8 9.5 8.4 11.2 7.4.9-.5 1.9-2.1 1.9-4.7" />
-				<path d="M9.1 16.5c.3-1.1 1.4-1.7 2.4-1.4" />
-			</motion.g>
-			<motion.g
-				{...part(pose({ rotate: [0, 16, 16, 0] }, { duration: 0.8, times: [0, 0.3, 0.65, 1] }))}
-				style={pivot(16, 10)}
-			>
+			<motion.g {...part(tilt(15, 0))} style={pivot(16, 10)}>
+				<path d="M22 5c0 9-4 12-6 12s-6-3-6-12c0-2 2-3 6-3s6 1 6 3" />
 				<path d="M14 6h.01" />
 				<path d="M18 6h.01" />
-				<path d="M22 5c0 9-4 12-6 12s-6-3-6-12c0-2 2-3 6-3s6 1 6 3" />
 				<path d="M17.4 9.9c-.8.8-2 .8-2.8 0" />
+			</motion.g>
+			<motion.g {...part(tilt(-15, 0.06))} style={pivot(8, 15)}>
+				<path d="M10.1 7.1C9 7.2 7.7 7.7 6 8.6c-3.5 2-4.7 3.9-3.7 5.6 4.5 7.8 9.5 8.4 11.2 7.4.9-.5 1.9-2.1 1.9-4.7" />
+				<path d="M10 11h.01" />
+				<path d="M6.5 13.1h.01" />
+				<path d="M9.1 16.5c.3-1.1 1.4-1.7 2.4-1.4" />
 			</motion.g>
 		</>
 	),

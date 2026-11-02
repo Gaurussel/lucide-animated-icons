@@ -1,25 +1,26 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
-const erase = (delay: number) =>
-	pose({ pathLength: [1, 1, 0, 1] }, { duration: 0.85, delay, times: [0, 0.4, 0.65, 1] });
+const zoom = pose(
+	{ scale: [1, 1.3, 1], rotate: [0, -15, 0] },
+	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] },
+);
+const twist = pose(
+	{ scale: [1, 0.4, 1], rotate: [0, 0, 360] },
+	{ duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
+);
 
 export default createAnimatedIcon({
 	name: "search-x",
 	render: (part) => (
-		<motion.g
-			{...part(
-				pose(
-					{ x: [0, -2.5, 2, 0], y: [0, -1.5, 1.5, 0], rotate: [0, -8, 8, 0] },
-					{ duration: 0.85, times: [0, 0.3, 0.7, 1] },
-				),
-			)}
-		>
-			<motion.path {...part(erase(0))} d="m13.5 8.5-5 5" />
-			<motion.path {...part(erase(0.06))} d="m8.5 8.5 5 5" />
+		<motion.g {...part(zoom)} style={pivot(11, 11)}>
 			<circle cx="11" cy="11" r="8" />
 			<path d="m21 21-4.3-4.3" />
+			<motion.g {...part(twist)} style={pivot(11, 11)}>
+				<path d="m13.5 8.5-5 5" />
+				<path d="m8.5 8.5 5 5" />
+			</motion.g>
 		</motion.g>
 	),
 });

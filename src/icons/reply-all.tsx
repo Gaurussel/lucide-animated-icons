@@ -1,17 +1,22 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, springy } from "../helpers.ts";
 
-const timing = { duration: 0.65, times: [0, 0.25, 0.6, 1] };
-const head = (delay: number) => pose({ x: [0, 1.5, -2.5, 0] }, { ...timing, delay });
+const dash = (delay: number) =>
+	pose(
+		{ x: [0, 2, -8, 6, 0], opacity: [1, 1, 0, 0, 1] },
+		{ duration: 0.65, delay, times: [0, 0.15, 0.38, 0.39, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "reply-all",
 	render: (part) => (
 		<>
-			<motion.path {...part(head(0.1))} d="m12 17-5-5 5-5" />
-			<motion.path {...part(pose({ x: [0, 0.8, -1, 0] }, timing))} d="M22 18v-2a4 4 0 0 0-4-4H7" />
-			<motion.path {...part(head(0))} d="m7 17-5-5 5-5" />
+			<motion.g {...part(dash(0.08))}>
+				<path d="m12 17-5-5 5-5" />
+				<path d="M22 18v-2a4 4 0 0 0-4-4H7" />
+			</motion.g>
+			<motion.path {...part(dash(0))} d="m7 17-5-5 5-5" />
 		</>
 	),
 });

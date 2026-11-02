@@ -30,35 +30,50 @@
 
 ## Style
 
-- A short scene that shows what the icon means, in 2–3 phases, with several parts on their own timing (`times`,
-  `delay`, holds via repeated keyframes): save presses, its label slides down, its slot lifts; send pulls back,
-  flies out fading, re-enters from the opposite side; mail opens its flap and closes it; eye blinks, then looks
-  left and right. A small pull-back before a move is fine; no overshoot past rest or target, no bounce.
+- **A tiny story in 2–3 beats where the parts react to each other**, cause → effect: the key turns, then the shackle
+  pops; the drop falls, then the cup ripples; the arrow pulls back, dashes out and comes back from the other side.
+  A small wind-up, the main move, then a part that lags or wobbles after the rest has stopped; offset parts by
+  ~60–120 ms instead of moving everything as one block. A scene that only shakes, hops, pulses or squashes the whole
+  icon is not enough. A single-path icon can still tell a story: the stroke traces itself while it moves, flips or
+  swings on a pivot.
+- **Land with the trick that suits the icon**, from `src/helpers.ts`:
+  - `springy` (or `ring`, `rubber`) as the last ease — a damped spring with 2–3 oscillations. For things that swing,
+    turn or stretch: bell, gear, refresh, history, search, pencil, link.
+  - `jelly(at, duration)` on a container — it wobbles when something lands on it: trash, archive, folder, mail,
+    download tray, lock, pin.
+  - `redraw(delay, duration)` on a path — it draws itself in again. For something that appears: the copied sheet, the
+    upload arrow, a check, heading digits.
+  - `hop(duration)` on a wrapper around the whole icon — the icon pops. For actions: send, plus, star, external-link.
+- Start a move with `snap`, dash with `easeIn`; pass one ease per segment.
 - Families share the body motion and give the meaning to the badge: every `file-*` lifts the page, the inner
   symbol does its own thing (check redraws, plus turns, arrow flies out). Copy the scene of an existing relative.
-- 0.5–0.9 s per scene; translate up to ~4 units of the 24-unit viewBox, scale 0.6–1.25.
+- 0.65–0.75 s per scene; give the final spring at least ~40 % of it, and avoid a large move on the first frame (a
+  `snap` segment shorter than ~0.12 s jerks); translate up to ~6 units of the 24-unit viewBox (an exit can fly further while it fades),
+  scale 0.5–1.3. Turns end on a full 360° with `reset: true`, even for symmetric shapes.
 - It must read at 16 px: measure it (below) and keep the score ≥ 0.4. The score under-rates rotations of symmetric
   shapes (`radar`, `radius`, a turning gear) — judge those by eye.
 
 ```tsx
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
+
+const lid = pose({ y: [0, -6, 0], rotate: [0, -35, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
-	name: "send",
+	name: "trash-2",
 	render: (part) => (
-		<motion.g
-			{...part(
-				pose(
-					{ x: [0, -1.5, 9, -7, 0], y: [0, 1.5, -9, 7, 0], opacity: [1, 1, 0, 0, 1] },
-					{ duration: 0.75, times: [0, 0.18, 0.55, 0.56, 1] },
-				),
-			)}
-		>
-			<path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
-			<path d="m21.854 2.147-10.94 10.939" />
-		</motion.g>
+		<>
+			<motion.g {...part(jelly(0.38, 0.65))} style={edge(0.5, 1)}>
+				<path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+				<line x1="10" x2="10" y1="11" y2="17" />
+				<line x1="14" x2="14" y1="11" y2="17" />
+			</motion.g>
+			<motion.g {...part(lid)} style={pivot(3, 6)}>
+				<path d="M3 6h18" />
+				<path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+			</motion.g>
+		</>
 	),
 });
 ```

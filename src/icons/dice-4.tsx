@@ -1,43 +1,23 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { centered, pivot, pose, snap, springy } from "../helpers.ts";
+
+const roll = pose(
+	{ y: [0, -5, 0], rotate: [0, 200, 360] },
+	{ duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy], reset: true },
+);
+const pip = (delay: number) =>
+	pose({ scale: [1, 0, 1] }, { duration: 0.6, delay, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "dice-4",
 	render: (part) => (
-		<>
-			<motion.g
-				{...part(
-					pose({ y: [0, -3, -3, 0], rotate: [0, -10, 6, 0] }, { duration: 0.8, times: [0, 0.35, 0.6, 1] }),
-				)}
-				style={centered}
-			>
-				<rect height="18" rx="2" ry="2" width="18" x="3" y="3" />
-				<motion.g
-					{...part(pose({ scale: [1, 0, 0, 1] }, { duration: 0.75, times: [0, 0.15, 0.5, 1] }))}
-					style={centered}
-				>
-					<path d="M16 8h.01" />
-				</motion.g>
-				<motion.g
-					{...part(pose({ scale: [1, 0, 0, 1] }, { duration: 0.75, delay: 0.04, times: [0, 0.15, 0.5, 1] }))}
-					style={centered}
-				>
-					<path d="M8 8h.01" />
-				</motion.g>
-				<motion.g
-					{...part(pose({ scale: [1, 0, 0, 1] }, { duration: 0.75, delay: 0.08, times: [0, 0.15, 0.5, 1] }))}
-					style={centered}
-				>
-					<path d="M8 16h.01" />
-				</motion.g>
-				<motion.g
-					{...part(pose({ scale: [1, 0, 0, 1] }, { duration: 0.75, delay: 0.12, times: [0, 0.15, 0.5, 1] }))}
-					style={centered}
-				>
-					<path d="M16 16h.01" />
-				</motion.g>
-			</motion.g>
-		</>
+		<motion.g {...part(roll)} style={pivot(12, 12)}>
+			<rect height="18" rx="2" ry="2" width="18" x="3" y="3" />
+			<motion.path {...part(pip(0.1))} d="M16 8h.01" style={centered} />
+			<motion.path {...part(pip(0.14))} d="M8 8h.01" style={centered} />
+			<motion.path {...part(pip(0.18))} d="M16 16h.01" style={centered} />
+			<motion.path {...part(pip(0.22))} d="M8 16h.01" style={centered} />
+		</motion.g>
 	),
 });

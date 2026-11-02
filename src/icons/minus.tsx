@@ -1,14 +1,18 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { centered, pose, ring, snap } from "../helpers.ts";
+
+const shoot = pose(
+	{ x: [0, -4, 3, 0], rotate: [0, 0, -28, 0] },
+	{ duration: 0.65, times: [0, 0.18, 0.34, 1], ease: ["easeInOut", snap, ring] },
+);
+const stretch = pose({ pathLength: [1, 0.2, 1] }, { duration: 0.65, times: [0, 0.18, 1], ease: ["easeInOut", snap] });
 
 export default createAnimatedIcon({
 	name: "minus",
 	render: (part) => (
-		<motion.path
-			{...part(pose({ scaleX: [1, 0.55, 1, 1], y: [0, 0, 1, 0] }, { duration: 0.55, times: [0, 0.35, 0.7, 1] }))}
-			d="M5 12h14"
-			style={centered}
-		/>
+		<motion.g {...part(shoot)} style={centered}>
+			<motion.path {...part(stretch)} d="M5 12h14" />
+		</motion.g>
 	),
 });

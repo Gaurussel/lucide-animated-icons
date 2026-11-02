@@ -1,21 +1,20 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose } from "../helpers.ts";
+import { edge, pose, redraw, snap, springy } from "../helpers.ts";
+
+const roll = pose(
+	{ x: [0, -1.5, 2.5, 0], rotate: [0, -15, 240, 360] },
+	{ duration: 0.72, times: [0, 0.14, 0.4, 1], ease: ["easeInOut", snap, springy], reset: true },
+);
 
 export default createAnimatedIcon({
 	name: "triangle",
 	render: (part) => (
-		<>
+		<motion.g {...part(roll)} style={edge(0.5, 0.62)}>
 			<motion.path
-				{...part(
-					pose(
-						{ rotate: [0, -7, 0, 7, 0], scaleY: [1, 0.94, 1, 0.94, 1] },
-						{ duration: 0.8, times: [0, 0.2, 0.5, 0.8, 1] },
-					),
-				)}
+				{...part(redraw(0.05, 0.6))}
 				d="M13.73 4a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
-				style={pivot(12, 21)}
 			/>
-		</>
+		</motion.g>
 	),
 });

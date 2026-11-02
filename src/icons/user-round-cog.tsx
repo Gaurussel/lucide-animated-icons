@@ -1,12 +1,22 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pivot, pose } from "../helpers.ts";
+import { pivot, pose, snap, springy } from "../helpers.ts";
+
+const head = pose({ y: [0, -4, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const shoulders = pose({ y: [0, -1.5, 0] }, { duration: 0.7, delay: 0.04, times: [0, 0.25, 1], ease: [snap, springy] });
+
+const turn = pose(
+	{ rotate: [0, -30, 360] },
+	{ duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
+);
 
 export default createAnimatedIcon({
 	name: "user-round-cog",
 	render: (part) => (
 		<>
-			<motion.g {...part(pose({ rotate: 90 }, { duration: 0.5, delay: 0.3 }))} style={pivot(18, 18)}>
+			<motion.path {...part(shoulders)} d="M2 21a8 8 0 0 1 10.434-7.62" />
+			<motion.circle {...part(head)} cx="10" cy="8" r="5" />
+			<motion.g {...part(turn)} style={pivot(18, 18)}>
 				<path d="m14.305 19.53.923-.382" />
 				<path d="m15.228 16.852-.923-.383" />
 				<path d="m16.852 15.228-.383-.923" />
@@ -17,17 +27,6 @@ export default createAnimatedIcon({
 				<path d="m20.772 19.148.924.383" />
 				<circle cx="18" cy="18" r="3" />
 			</motion.g>
-			<motion.path
-				{...part(pose({ scaleY: [1, 0.92, 1, 1] }, { duration: 0.8, times: [0, 0.2, 0.55, 1] }))}
-				d="M2 21a8 8 0 0 1 10.434-7.62"
-				style={edge(0.5, 1)}
-			/>
-			<motion.circle
-				{...part(pose({ y: [0, 1, -2.5, 0] }, { duration: 0.8, times: [0, 0.2, 0.55, 1] }))}
-				cx="10"
-				cy="8"
-				r="5"
-			/>
 		</>
 	),
 });

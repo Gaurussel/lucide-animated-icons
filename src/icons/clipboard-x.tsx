@@ -1,29 +1,24 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pivot, pose, snap, springy } from "../helpers.ts";
+
+const clip = pose({ y: [0, -3.5, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
+const board = pose({ rotate: [0, -8, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const twist = pose(
+	{ scale: [1, 0.5, 1], rotate: [0, 0, 360] },
+	{ duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
+);
 
 export default createAnimatedIcon({
 	name: "clipboard-x",
 	render: (part) => (
-		<>
-			<motion.rect
-				{...part(pose({ y: [0, -4.5, -4.5, 0, 0] }, { duration: 0.8, times: [0, 0.25, 0.4, 0.65, 1] }))}
-				height="4"
-				rx="1"
-				ry="1"
-				width="8"
-				x="8"
-				y="2"
-			/>
+		<motion.g {...part(board)} style={pivot(12, 22)}>
+			<motion.rect {...part(clip)} height="4" rx="1" ry="1" width="8" x="8" y="2" />
 			<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.8, times: [0, 0.2, 0.5, 1] }))}
-				d="m15 11-6 6"
-			/>
-			<motion.path
-				{...part(pose({ pathLength: [1, 0, 0, 1] }, { duration: 0.7, delay: 0.1, times: [0, 0.2, 0.5, 1] }))}
-				d="m9 11 6 6"
-			/>
-		</>
+			<motion.g {...part(twist)} style={pivot(12, 14)}>
+				<path d="m15 11-6 6" />
+				<path d="m9 11 6 6" />
+			</motion.g>
+		</motion.g>
 	),
 });

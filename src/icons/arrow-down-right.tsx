@@ -1,15 +1,35 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { centered, pose, redraw, rubber, snap, springy } from "../helpers.ts";
+
+const dash = pose(
+	{ x: [0, -1.6, 8, -6.4, 0], y: [0, -1.6, 8, -6.4, 0], opacity: [1, 1, 0, 0, 1] },
+	{ duration: 0.65, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
+);
+const trail = pose(
+	{ x: [0, -1.6, 8, -6.4, 0], y: [0, -1.6, 8, -6.4, 0], opacity: [1, 1, 0, 0, 1] },
+	{
+		duration: 0.65,
+		delay: 0.07,
+		times: [0, 0.15, 0.35, 0.36, 1],
+		ease: ["easeInOut", "easeIn", "easeInOut", springy],
+	},
+);
+const settle = pose(
+	{ rotate: [0, 0, 12, 0] },
+	{ duration: 0.72, times: [0, 0.45, 0.55, 1], ease: ["easeInOut", snap, rubber] },
+);
 
 export default createAnimatedIcon({
 	name: "arrow-down-right",
 	render: (part) => (
-		<motion.g
-			{...part(pose({ x: [0, -1.5, 2.5, 0], y: [0, -1.5, 2.5, 0] }, { duration: 0.7, times: [0, 0.25, 0.6, 1] }))}
-		>
-			<path d="m7 7 10 10" />
-			<path d="M17 7v10H7" />
+		<motion.g {...part(settle)} style={centered}>
+			<motion.g {...part(dash)}>
+				<path d="M17 7v10H7" />
+			</motion.g>
+			<motion.g {...part(trail)}>
+				<motion.path {...part(redraw(0.3, 0.38))} d="m7 7 10 10" />
+			</motion.g>
 		</motion.g>
 	),
 });

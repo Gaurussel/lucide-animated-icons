@@ -1,21 +1,22 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose } from "../helpers.ts";
+import { pivot, pose, snap, springy } from "../helpers.ts";
+
+const yank = pose(
+	{ x: [0, 1, -4, 0], y: [0, 0, 1, 0] },
+	{ duration: 0.72, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, springy] },
+);
+const follow = pose(
+	{ rotate: [0, 0, -18, 0] },
+	{ duration: 0.72, times: [0, 0.18, 0.38, 1], ease: ["easeInOut", snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "undo",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ rotate: [0, 5, -20, -20, 0] }, { duration: 0.8, times: [0, 0.2, 0.55, 0.7, 1] }))}
-				d="M3 7v6h6"
-				style={pivot(12, 17)}
-			/>
-			<motion.path
-				{...part(pose({ rotate: [0, 4, -14, -14, 0] }, { duration: 0.8, times: [0, 0.2, 0.55, 0.7, 1] }))}
-				d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"
-				style={pivot(12, 17)}
-			/>
+			<motion.path {...part(yank)} d="M3 7v6h6" />
+			<motion.path {...part(follow)} d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13" style={pivot(21, 17)} />
 		</>
 	),
 });

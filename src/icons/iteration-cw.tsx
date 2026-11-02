@@ -1,16 +1,18 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pose } from "../helpers.ts";
+import { pose, redraw, snap, springy } from "../helpers.ts";
 
-const trace = pose({ pathLength: [1, 0, 1] }, { duration: 0.8, times: [0, 0.4, 1] });
-const head = pose({ x: [0, 3, 0] }, { duration: 0.8, times: [0, 0.4, 1] });
+const jab = pose(
+	{ x: [0, 2, -3, 0] },
+	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "iteration-cw",
 	render: (part) => (
 		<>
-			<motion.path {...part(trace)} d="M4 10a8 8 0 1 1 8 8H4" />
-			<motion.path {...part(head)} d="m8 22-4-4 4-4" />
+			<motion.path {...part(redraw(0, 0.65))} d="M4 10a8 8 0 1 1 8 8H4" />
+			<motion.path {...part(jab)} d="m8 22-4-4 4-4" />
 		</>
 	),
 });

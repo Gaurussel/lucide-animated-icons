@@ -1,23 +1,20 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pose } from "../helpers.ts";
+import { centered, pose, redraw, snap, springy } from "../helpers.ts";
+
+const apart = (y: number) =>
+	pose(
+		{ y: [0, y, 0], scale: [1, 1.6, 1] },
+		{ duration: 0.6, delay: 0.12, times: [0, 0.3, 1], ease: [snap, springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "divide",
 	render: (part) => (
 		<>
-			<motion.g {...part(pose({ y: [0, 3, 0] }, { duration: 0.5, times: [0, 0.4, 1] }))}>
-				<circle cx="12" cy="6" r="1" />
-			</motion.g>
-			<motion.g
-				{...part(pose({ scaleX: [1, 1, 0.6, 1] }, { duration: 0.7, times: [0, 0.4, 0.6, 1] }))}
-				style={centered}
-			>
-				<line x1="5" x2="19" y1="12" y2="12" />
-			</motion.g>
-			<motion.g {...part(pose({ y: [0, -3, 0] }, { duration: 0.5, delay: 0.1, times: [0, 0.4, 1] }))}>
-				<circle cx="12" cy="18" r="1" />
-			</motion.g>
+			<motion.line {...part(redraw(0, 0.35))} x1="5" x2="19" y1="12" y2="12" />
+			<motion.circle {...part(apart(-4))} cx="12" cy="6" r="1" style={centered} />
+			<motion.circle {...part(apart(4))} cx="12" cy="18" r="1" style={centered} />
 		</>
 	),
 });

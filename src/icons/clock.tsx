@@ -1,23 +1,19 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pivot, pose } from "../helpers.ts";
+import { centered, pivot, pose, snap, springy } from "../helpers.ts";
+
+const sweep = pose(
+	{ rotate: [0, -30, 360] },
+	{ duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
+);
+const tick = pose({ scale: [1, 0.9, 1] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "clock",
 	render: (part) => (
-		<>
-			<motion.path
-				{...part(pose({ rotate: 360 }, { duration: 0.75, delay: 0.1, reset: true }))}
-				d="M12 6v6l4 2"
-				style={pivot(12, 12)}
-			/>
-			<motion.circle
-				{...part(pose({ scale: [1, 0.9, 1, 0.94, 1] }, { duration: 0.85, times: [0, 0.15, 0.5, 0.85, 1] }))}
-				cx="12"
-				cy="12"
-				r="10"
-				style={centered}
-			/>
-		</>
+		<motion.g {...part(tick)} style={centered}>
+			<motion.path {...part(sweep)} d="M12 6v6l4 2" style={pivot(12, 12)} />
+			<circle cx="12" cy="12" r="10" />
+		</motion.g>
 	),
 });

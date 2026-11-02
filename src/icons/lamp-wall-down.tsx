@@ -1,25 +1,27 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pivot, pose } from "../helpers.ts";
+import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const mount = pose({ scaleX: [1, 0.8, 1, 1] }, { duration: 0.85, times: [0, 0.2, 0.4, 1] });
-const swing = pose({ rotate: [0, -10, 8, 0] }, { duration: 0.85, times: [0, 0.3, 0.65, 1] });
-const glow = pose({ opacity: [1, 1, 0.4, 1] }, { duration: 0.85, times: [0, 0.5, 0.7, 1] });
+const arm = pose(
+	{ rotate: [0, 6, -14, 0] },
+	{ duration: 0.75, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, springy] },
+);
+const shade = pose(
+	{ rotate: [0, 0, 28, 0] },
+	{ duration: 0.75, times: [0, 0.22, 0.38, 1], ease: ["easeInOut", snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "lamp-wall-down",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(mount)}
-				d="M6 3a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"
-				style={edge(0, 0.5)}
-			/>
-			<path d="M8 6h4a2 2 0 0 1 2 2v5" />
-			<motion.g {...part(swing)} style={pivot(14, 13)}>
+			<path d="M6 3a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+			<motion.g {...part(arm)} style={pivot(8, 6)}>
+				<path d="M8 6h4a2 2 0 0 1 2 2v5" />
 				<motion.path
-					{...part(glow)}
+					{...part(shade)}
 					d="M19.929 18.629A1 1 0 0 1 19 20H9a1 1 0 0 1-.928-1.371l2-5A1 1 0 0 1 11 13h6a1 1 0 0 1 .928.629z"
+					style={pivot(14, 13)}
 				/>
 			</motion.g>
 		</>

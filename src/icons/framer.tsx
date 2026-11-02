@@ -1,15 +1,14 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pivot, pose, redraw, springy } from "../helpers.ts";
 
-const flick = pose(
-	{ y: [0, 1, -2.5, -2.5, 0], rotate: [0, 0, -7, -7, 0] },
-	{ duration: 0.75, times: [0, 0.18, 0.5, 0.68, 1] },
-);
+const flip = pose({ scaleX: [1, -1, 1] }, { duration: 0.75, times: [0, 0.35, 1], ease: ["easeInOut", springy] });
 
 export default createAnimatedIcon({
 	name: "framer",
 	render: (part) => (
-		<motion.path {...part(flick)} d="M5 16V9h14V2H5l14 14h-7m-7 0 7 7v-7m-7 0h7" style={edge(0.5, 1)} />
+		<motion.g {...part(flip)} style={pivot(12, 12)}>
+			<motion.path {...part(redraw(0.05, 0.55))} d="M5 16V9h14V2H5l14 14h-7m-7 0 7 7v-7m-7 0h7" />
+		</motion.g>
 	),
 });

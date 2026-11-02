@@ -1,20 +1,29 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pose, snap, springy } from "../helpers.ts";
+
+const dash = (lag: number) =>
+	pose(
+		{ y: [0, 2.5, -11, 9, -1.5, 0], opacity: [1, 1, 0, 0, 1, 1] },
+		{
+			duration: 0.7,
+			times: [0, 0.16, 0.32 + lag, 0.33 + lag, 0.55 + lag, 1],
+			ease: ["easeInOut", "easeIn", "easeInOut", "easeOut", springy],
+		},
+	);
+const trail = pose(
+	{ pathLength: [1, 1, 0.3, 1] },
+	{ duration: 0.7, times: [0, 0.16, 0.3, 1], ease: ["easeInOut", "easeIn", snap] },
+);
 
 export default createAnimatedIcon({
 	name: "move-up",
 	render: (part) => (
 		<>
-			<motion.path
-				{...part(pose({ y: [0, 1.5, -2, 0] }, { duration: 0.65, times: [0, 0.25, 0.6, 1] }))}
-				d="M8 6L12 2L16 6"
-			/>
-			<motion.path
-				{...part(pose({ scaleY: [1, 0.925, 1.1, 1] }, { duration: 0.65, times: [0, 0.25, 0.6, 1] }))}
-				d="M12 2V22"
-				style={edge(0.5, 1)}
-			/>
+			<motion.g {...part(dash(0.08))}>
+				<motion.path {...part(trail)} d="M12 2V22" />
+			</motion.g>
+			<motion.path {...part(dash(0))} d="M8 6L12 2L16 6" />
 		</>
 	),
 });

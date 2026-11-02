@@ -1,19 +1,17 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { edge, pose } from "../helpers.ts";
+import { pivot, pose, redraw, ring } from "../helpers.ts";
+
+const shake = pose(
+	{ y: [0, 1.5, -3, 0], rotate: [0, 8, -20, 0] },
+	{ duration: 0.75, times: [0, 0.12, 0.28, 1], ease: ["easeInOut", "easeInOut", ring] },
+);
 
 export default createAnimatedIcon({
 	name: "thermometer",
 	render: (part) => (
-		<motion.path
-			{...part(
-				pose(
-					{ pathLength: [1, 0.15, 1, 1], scaleY: [1, 1, 0.94, 1] },
-					{ duration: 0.8, times: [0, 0.4, 0.8, 1] },
-				),
-			)}
-			d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"
-			style={edge(0.5, 1)}
-		/>
+		<motion.g {...part(shake)} style={pivot(12, 18)}>
+			<motion.path {...part(redraw(0.1, 0.6))} d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" />
+		</motion.g>
 	),
 });

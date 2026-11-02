@@ -2,7 +2,7 @@ import { MotionConfig, type MotionProps, useAnimationControls, type Variants } f
 import { forwardRef, type ReactNode, type SVGProps, useEffect } from "react";
 import { cx } from "./cx.ts";
 import { initialTarget, startFromCurrent, toTransformVariants } from "./toTransformVariants.ts";
-import { type AnimatedIconHub, useAnimatedIconHub } from "./trigger.ts";
+import { type AnimatedIconHub, type AnimatedIconState, useAnimatedIconHub } from "./trigger.ts";
 import type { AnimatedIconProps } from "./types.ts";
 
 export type PartMotion = (variants: Variants) => MotionProps;
@@ -67,10 +67,21 @@ export const createAnimatedIcon = ({ name, render, svg }: AnimatedIconDef) => {
 			const controls = useAnimationControls();
 
 			useEffect(() => {
-				const initial = hub.getState();
-				if (initial !== "rest") void controls.start(initial);
+				let playing: AnimatedIconState | null = null;
+				let wanted = hub.getState();
+				const play = (state: AnimatedIconState) => {
+					playing = state;
+					void controls.start(state).then(() => {
+						if (playing !== state) return;
+						playing = null;
+						if (wanted !== state) play(wanted);
+					});
+				};
+				if (wanted !== "rest") play(wanted);
 				return hub.subscribe((state) => {
-					void controls.start(state);
+					wanted = state;
+					if (playing === "active" && state !== "open") return;
+					play(state);
 				});
 			}, [hub, controls]);
 

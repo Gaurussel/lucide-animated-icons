@@ -4,6 +4,12 @@
 	"description": "Hover animations for every Lucide icon, built on Motion for React",
 	"license": "ISC",
 	"author": "Nikita Voronov",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Gaurussel/lucide-animated-icons.git"
+	},
+	"homepage": "https://github.com/Gaurussel/lucide-animated-icons#readme",
+	"bugs": "https://github.com/Gaurussel/lucide-animated-icons/issues",
 	"type": "module",
 	"sideEffects": false,
 	"keywords": [
@@ -69,5 +75,9 @@
 		"typescript": "^7.0.2",
 		"vite": "^8.3.5",
 		"vitest": "^5.0.5"
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
 	}
 }

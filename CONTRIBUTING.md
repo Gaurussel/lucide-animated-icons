@@ -78,3 +78,26 @@ measurement at a time. Watch the result in the demo, in a visible tab — a hidd
 `requestAnimationFrame`.
 
 Before a pull request: `bun run generate --check && bun run typecheck && bun run lint && bun run test`.
+
+## Releasing
+
+Releases are published to npm by `.github/workflows/release.yml` when a `v*` tag is pushed. It checks that the tag
+matches `package.json`, runs the same gate as CI, publishes with provenance through npm trusted publishing (no npm
+token in the repository) and creates a GitHub release. A version with a pre-release suffix (`1.2.0-beta.1`) goes to
+the `next` dist-tag, everything else to `latest`.
+
+```sh
+npm version minor      # bumps package.json, commits, tags v0.2.0; add the CHANGELOG entry first
+git push --follow-tags
+```
+
+One-time setup:
+
+1. npm only lets a package that already exists trust a workflow, so publish the first version by hand:
+   `bun run build && npm publish --provenance=false` (with 2FA).
+2. On npmjs.com → the package → Settings → Trusted publishing, add GitHub Actions: owner `Gaurussel`, repository
+   `lucide-animated-icons`, workflow `release.yml`, environment `npm`.
+3. In the GitHub repository create the `npm` environment (Settings → Environments); add required reviewers there if
+   releases should wait for an approval.
+4. Optionally, on npmjs.com set Publishing access to "Require two-factor authentication and disallow tokens", so only
+   the workflow can publish.

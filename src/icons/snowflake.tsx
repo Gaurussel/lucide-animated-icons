@@ -1,0 +1,33 @@
+import { motion } from "motion/react";
+import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
+import { centered, pose } from "../helpers.ts";
+
+export default createAnimatedIcon({
+	name: "snowflake",
+	render: (part) => (
+		<>
+			<motion.g
+				{...part(pose({ scale: [1, 0.88, 1, 1] }, { duration: 0.9, times: [0, 0.3, 0.6, 1] }))}
+				style={centered}
+			>
+				<path d="m10 20-1.25-2.5L6 18" />
+				<path d="M10 4 8.75 6.5 6 6" />
+				<path d="m14 20 1.25-2.5L18 18" />
+				<path d="m14 4 1.25 2.5L18 6" />
+				<path d="m20 10-1.5 2 1.5 2" />
+				<path d="m4 10 1.5 2L4 14" />
+			</motion.g>
+			<motion.g
+				{...part(pose({ rotate: [0, -15, 25, 0] }, { duration: 0.9, times: [0, 0.3, 0.7, 1] }))}
+				style={centered}
+			>
+				<path d="m17 21-3-6h-4" />
+				<path d="m17 3-3 6 1.5 3" />
+				<path d="M2 12h6.5L10 9" />
+				<path d="M22 12h-6.5L14 15" />
+				<path d="m7 21 3-6-1.5-3" />
+				<path d="m7 3 3 6h4" />
+			</motion.g>
+		</>
+	),
+});

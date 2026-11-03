@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.3
+
+- With the system's reduce-motion setting an icon stays static. Before, only transforms were dropped and stroke
+  redraws (`redraw`, `pathLength`) still played.
+
 ## 0.2.2
 
 - `lucide-animated-icons/core`: the runtime (`createAnimatedIcon`, `createLazyAnimatedIcon`, the trigger hub, context and

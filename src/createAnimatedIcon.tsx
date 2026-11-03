@@ -1,4 +1,4 @@
-import { MotionConfig, type MotionProps, useAnimationControls, type Variants } from "motion/react";
+import { type MotionProps, useAnimationControls, useReducedMotion, type Variants } from "motion/react";
 import { forwardRef, type ReactNode, type SVGProps, useEffect } from "react";
 import { cx } from "./cx.ts";
 import { initialTarget, startFromCurrent, toTransformVariants } from "./toTransformVariants.ts";
@@ -94,17 +94,14 @@ export const createAnimatedIcon = ({ name, render, svg }: AnimatedIconDef) => {
 				};
 			};
 
-			return (
-				<MotionConfig reducedMotion="user">
-					<Svg {...svgProps} live part={part} ref={ref} />
-				</MotionConfig>
-			);
+			return <Svg {...svgProps} live part={part} ref={ref} />;
 		},
 	);
 
 	const AnimatedIcon = forwardRef<SVGSVGElement, AnimatedIconProps>((props, ref) => {
 		const hub = useAnimatedIconHub();
-		if (!hub) return <Svg {...props} part={staticPart} ref={ref} />;
+		const reducedMotion = useReducedMotion();
+		if (!hub || reducedMotion) return <Svg {...props} part={staticPart} ref={ref} />;
 		return <LiveIcon {...props} hub={hub} ref={ref} />;
 	});
 	AnimatedIcon.displayName = `AnimatedIcon(${name})`;

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pivot, pose, redraw, snap, springy } from "../helpers.ts";
+import { centered, pivot, pose, redraw, rubber, snap, springy } from "../helpers.ts";
 
 const glance = pose(
 	{ x: [0, -4, 0], y: [0, -2, 0], rotate: [0, -28, 0] },
@@ -8,9 +8,9 @@ const glance = pose(
 );
 const blink = (delay: number) =>
 	pose({ y: [0, -2, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
-const twist = pose(
-	{ scale: [1, 0.5, 1.2, 1], rotate: [0, 0, 270, 360] },
-	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", snap, springy], reset: true },
+const nod = pose(
+	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ duration: 0.7, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 
 export default createAnimatedIcon({
@@ -23,7 +23,7 @@ export default createAnimatedIcon({
 				<motion.line {...part(blink(0.1))} x1="9" x2="9.01" y1="9" y2="9" />
 				<motion.line {...part(blink(0.16))} x1="15" x2="15.01" y1="9" y2="9" />
 			</motion.g>
-			<motion.g {...part(twist)} style={centered}>
+			<motion.g {...part(nod)} style={centered}>
 				<path d="M16 5h6" />
 				<path d="M19 2v6" />
 			</motion.g>

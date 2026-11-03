@@ -1,20 +1,18 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, hop, pose, snap, springy } from "../helpers.ts";
+import { centered, pose, rubber } from "../helpers.ts";
 
-const twist = pose(
-	{ scale: [1, 0.6, 1], rotate: [0, 0, 360] },
-	{ duration: 0.6, times: [0, 0.15, 1], ease: [snap, springy], reset: true },
+const nod = pose(
+	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ duration: 0.7, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 
 export default createAnimatedIcon({
 	name: "plus",
 	render: (part) => (
-		<motion.g {...part(hop(0.6))} style={centered}>
-			<motion.g {...part(twist)} style={centered}>
-				<path d="M5 12h14" />
-				<path d="M12 5v14" />
-			</motion.g>
+		<motion.g {...part(nod)} style={centered}>
+			<path d="M5 12h14" />
+			<path d="M12 5v14" />
 		</motion.g>
 	),
 });

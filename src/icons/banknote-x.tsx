@@ -1,11 +1,8 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pivot, pose, snap, springy } from "../helpers.ts";
+import { centered, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
-const cross = pose(
-	{ scale: [1, 0.6, 1], rotate: [0, 0, 360] },
-	{ duration: 0.65, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
-);
+const strike = pose({ scale: [1, 0.82, 1] }, { duration: 0.65, times: [0, 0.14, 1], ease: [snap, springy] });
 const pop = pose({ scale: [1, 1.5, 1] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
 const wave = pose({ x: [0, -3, 0], rotate: [0, -8, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 
@@ -19,9 +16,9 @@ export default createAnimatedIcon({
 				<path d="M6 12h.01" />
 				<motion.circle {...part(pop)} cx="12" cy="12" r="2" style={centered} />
 			</motion.g>
-			<motion.g {...part(cross)} style={pivot(19.5, 19.5)}>
-				<path d="m17 17 5 5" />
-				<path d="m22 17-5 5" />
+			<motion.g {...part(strike)} style={pivot(19.5, 19.5)}>
+				<motion.path {...part(redraw(0.05, 0.35))} d="m17 17 5 5" />
+				<motion.path {...part(redraw(0.22, 0.35))} d="m22 17-5 5" />
 			</motion.g>
 		</>
 	),

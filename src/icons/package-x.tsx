@@ -6,10 +6,7 @@ const leap = pose(
 	{ y: [0, -4, 0, 0] },
 	{ duration: 0.65, times: [0, 0.22, 0.44, 1], ease: [snap, "easeIn", "easeInOut"] },
 );
-const shake = pose(
-	{ scale: [1, 0.5, 1.2, 1], rotate: [0, 0, 270, 360] },
-	{ duration: 0.65, times: [0, 0.15, 0.4, 1], ease: [snap, "easeOut", springy], reset: true },
-);
+const strike = pose({ scale: [1, 0.82, 1] }, { duration: 0.65, times: [0, 0.14, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "package-x",
@@ -23,7 +20,9 @@ export default createAnimatedIcon({
 					<line x1="12" x2="12" y1="22" y2="12" />
 				</motion.g>
 			</motion.g>
-			<motion.path {...part(shake)} d="m17 13 5 5m-5 0 5-5" style={centered} />
+			<motion.g {...part(strike)} style={centered}>
+				<motion.path {...part(redraw(0.05, 0.5))} d="m17 13 5 5m-5 0 5-5" />
+			</motion.g>
 		</>
 	),
 });

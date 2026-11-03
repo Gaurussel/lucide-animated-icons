@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, jelly, pivot, pose, snap, springy } from "../helpers.ts";
+import { centered, jelly, pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
-const charge = pose(
-	{ scale: [1, 0.6, 1], rotate: [0, 0, 360] },
-	{ duration: 0.6, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
+const nod = pose(
+	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ duration: 0.6, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 const spark = pose(
 	{ x: [0, 0, 2.5, 0] },
@@ -15,7 +15,7 @@ export default createAnimatedIcon({
 	name: "battery-plus",
 	render: (part) => (
 		<>
-			<motion.g {...part(charge)} style={pivot(10, 12)}>
+			<motion.g {...part(nod)} style={pivot(10, 12)}>
 				<path d="M10 9v6" />
 				<path d="M7 12h6" />
 			</motion.g>

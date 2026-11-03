@@ -1,15 +1,12 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, edge, jelly, pose, snap, springy } from "../helpers.ts";
+import { centered, edge, jelly, pose, redraw, snap, springy } from "../helpers.ts";
 
 const screen = pose(
 	{ y: [0, -5, 0.5, 0], rotate: [0, -8, 0, 0] },
 	{ duration: 0.7, times: [0, 0.28, 0.42, 1], ease: [snap, "easeIn", springy] },
 );
-const twist = pose(
-	{ scale: [1, 0.6, 1], rotate: [0, 0, 360] },
-	{ duration: 0.65, times: [0, 0.15, 1], ease: [snap, springy], reset: true },
-);
+const strike = pose({ scale: [1, 0.82, 1] }, { duration: 0.65, times: [0, 0.14, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "monitor-x",
@@ -17,9 +14,9 @@ export default createAnimatedIcon({
 		<>
 			<motion.g {...part(screen)} style={edge(0.5, 1)}>
 				<rect height="14" rx="2" width="20" x="2" y="3" />
-				<motion.g {...part(twist)} style={centered}>
-					<path d="m14.5 12.5-5-5" />
-					<path d="m9.5 12.5 5-5" />
+				<motion.g {...part(strike)} style={centered}>
+					<motion.path {...part(redraw(0.05, 0.35))} d="m14.5 12.5-5-5" />
+					<motion.path {...part(redraw(0.22, 0.35))} d="m9.5 12.5 5-5" />
 				</motion.g>
 			</motion.g>
 			<motion.g {...part(jelly(0.42, 0.7))} style={edge(0.5, 1)}>

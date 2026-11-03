@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1
+
+- The plus and the x no longer spin like a propeller: the plus nods and springs back, the x strikes through stroke by
+  stroke. The same goes for every icon that carries a plus or an x badge.
+
 ## 0.2.0
 
 - Every icon has a new playful scene: a short cause → effect story that lands on a damped spring, with jelly, redraw

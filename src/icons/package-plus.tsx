@@ -1,14 +1,14 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, edge, jelly, pose, redraw, snap, springy } from "../helpers.ts";
+import { centered, edge, jelly, pose, redraw, rubber, snap } from "../helpers.ts";
 
 const leap = pose(
 	{ y: [0, -4, 0, 0] },
 	{ duration: 0.65, times: [0, 0.22, 0.44, 1], ease: [snap, "easeIn", "easeInOut"] },
 );
-const twist = pose(
-	{ scale: [1, 0.5, 1], rotate: [0, 0, 360] },
-	{ duration: 0.65, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
+const nod = pose(
+	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ duration: 0.65, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 
 export default createAnimatedIcon({
@@ -23,7 +23,7 @@ export default createAnimatedIcon({
 					<line x1="12" x2="12" y1="22" y2="12" />
 				</motion.g>
 			</motion.g>
-			<motion.g {...part(twist)} style={centered}>
+			<motion.g {...part(nod)} style={centered}>
 				<path d="M16 16h6" />
 				<path d="M19 13v6" />
 			</motion.g>

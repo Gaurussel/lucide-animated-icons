@@ -1,11 +1,8 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, jelly, pose, snap, springy } from "../helpers.ts";
+import { centered, jelly, pose, redraw, snap, springy } from "../helpers.ts";
 
-const twist = pose(
-	{ scale: [1, 0.5, 1.15, 1], rotate: [0, 0, 270, 360] },
-	{ duration: 0.68, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", snap, springy], reset: true },
-);
+const strike = pose({ scale: [1, 0.82, 1] }, { duration: 0.68, times: [0, 0.14, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "square-x",
@@ -21,9 +18,9 @@ export default createAnimatedIcon({
 				x="3"
 				y="3"
 			/>
-			<motion.g {...part(twist)} style={centered}>
-				<path d="m15 9-6 6" />
-				<path d="m9 9 6 6" />
+			<motion.g {...part(strike)} style={centered}>
+				<motion.path {...part(redraw(0.05, 0.35))} d="m15 9-6 6" />
+				<motion.path {...part(redraw(0.22, 0.35))} d="m9 9 6 6" />
 			</motion.g>
 		</>
 	),

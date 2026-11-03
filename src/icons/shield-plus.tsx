@@ -1,14 +1,14 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { centered, pivot, pose, snap, springy } from "../helpers.ts";
+import { centered, pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const raise = pose(
 	{ y: [0, -3, 0], rotate: [0, -14, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
-const twist = pose(
-	{ scale: [1, 0.5, 1], rotate: [0, 0, 360] },
-	{ duration: 0.65, delay: 0.05, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
+const nod = pose(
+	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ duration: 0.65, delay: 0.05, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 
 export default createAnimatedIcon({
@@ -16,7 +16,7 @@ export default createAnimatedIcon({
 	render: (part) => (
 		<motion.g {...part(raise)} style={pivot(12, 22)}>
 			<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-			<motion.g {...part(twist)} style={centered}>
+			<motion.g {...part(nod)} style={centered}>
 				<path d="M9 12h6" />
 				<path d="M12 9v6" />
 			</motion.g>

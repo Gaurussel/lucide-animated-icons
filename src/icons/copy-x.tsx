@@ -4,10 +4,7 @@ import { centered, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const stamp = pose({ scale: [1, 0.85, 1] }, { duration: 0.65, times: [0, 0.15, 1], ease: [snap, springy] });
 const slide = pose({ x: [0, -3, 0], y: [0, -3, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
-const twist = pose(
-	{ rotate: [0, 0, 360], scale: [1, 0.6, 1] },
-	{ duration: 0.65, times: [0, 0.15, 1], ease: [snap, springy], reset: true },
-);
+const strike = pose({ scale: [1, 0.82, 1] }, { duration: 0.65, times: [0, 0.14, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "copy-x",
@@ -15,9 +12,9 @@ export default createAnimatedIcon({
 		<>
 			<motion.g {...part(stamp)} style={centered}>
 				<rect height="14" rx="2" ry="2" width="14" x="8" y="8" />
-				<motion.g {...part(twist)} style={pivot(15, 15)}>
-					<line x1="12" x2="18" y1="12" y2="18" />
-					<line x1="12" x2="18" y1="18" y2="12" />
+				<motion.g {...part(strike)} style={pivot(15, 15)}>
+					<motion.line {...part(redraw(0.05, 0.35))} x1="12" x2="18" y1="12" y2="18" />
+					<motion.line {...part(redraw(0.22, 0.35))} x1="12" x2="18" y1="18" y2="12" />
 				</motion.g>
 			</motion.g>
 			<motion.g {...part(slide)}>

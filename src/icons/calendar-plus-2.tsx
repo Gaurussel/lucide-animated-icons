@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose, snap, springy } from "../helpers.ts";
+import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const flip = pose(
 	{ rotate: [0, -10, 0], y: [0, -2, 0] },
@@ -8,9 +8,9 @@ const flip = pose(
 );
 const rings = (delay: number) =>
 	pose({ y: [0, -3, 0] }, { duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] });
-const twist = pose(
-	{ scale: [1, 0.5, 1], rotate: [0, 0, 360] },
-	{ duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
+const nod = pose(
+	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ duration: 0.7, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 
 export default createAnimatedIcon({
@@ -21,7 +21,7 @@ export default createAnimatedIcon({
 			<motion.path {...part(rings(0.08))} d="M16 2v4" />
 			<rect height="18" rx="2" width="18" x="3" y="4" />
 			<path d="M3 10h18" />
-			<motion.g {...part(twist)} style={pivot(12, 16)}>
+			<motion.g {...part(nod)} style={pivot(12, 16)}>
 				<path d="M10 16h4" />
 				<path d="M12 14v4" />
 			</motion.g>

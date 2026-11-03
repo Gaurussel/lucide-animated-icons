@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.2
+
+- `lucide-animated-icons/core`: the runtime (`createAnimatedIcon`, `createLazyAnimatedIcon`, the trigger hub, context and
+  hook) without the icons. The package root re-exports every icon, so a bundler has to parse all 1611 of them for any
+  import from it; importing the runtime from `core` skips that.
+- `createLazyAnimatedIcon` is also exported from `core`; `lucide-animated-icons/dynamic` still exports it.
+
 ## 0.2.1
 
 - The plus and the x no longer spin like a propeller: the plus nods and springs back, the x strikes through stroke by

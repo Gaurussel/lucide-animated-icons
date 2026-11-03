@@ -75,13 +75,22 @@ const LazyBell = getLazyAnimatedIcon("bell", Bell);
 `animatedIconLoaders` maps every Lucide name, aliases included (`alert-circle`, `filter`), to a dynamic import.
 `createLazyAnimatedIcon(name, load, Fallback)` does the same for a loader of your own.
 
+### Runtime without the icons
+
+The package root re-exports every icon, so a bundler parses all of them for any import from it. Import the runtime
+from `lucide-animated-icons/core` when the icons come from `dynamic` or from your own loaders:
+
+```tsx
+import { AnimatedIconTriggerContext, createLazyAnimatedIcon, useAnimatedIconTrigger } from "lucide-animated-icons/core";
+```
+
 ### Your own icons
 
 `createAnimatedIcon` and the motion helpers are public; see [CONTRIBUTING.md](CONTRIBUTING.md) for how an icon is
 built:
 
 ```tsx
-import { createAnimatedIcon } from "lucide-animated-icons";
+import { createAnimatedIcon } from "lucide-animated-icons/core";
 import { edge, pose } from "lucide-animated-icons/helpers";
 import { motion } from "motion/react";
 

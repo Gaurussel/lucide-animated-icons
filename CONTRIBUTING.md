@@ -59,7 +59,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
-const lid = pose({ y: [0, -3.6, 0], rotate: [0, -21, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const lid = pose(
+	{ y: [0, -3.6, 0], rotate: [0, -21, 0] },
+	{ duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "trash-2",

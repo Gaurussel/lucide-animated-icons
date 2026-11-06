@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, ring, snap } from "../helpers.ts";
 
 const pull = pose(
-	{ x: [0, 3, 0], y: [0, -3, 0], rotate: [0, 18, 0] },
+	{ x: [0, 1.8, 0], y: [0, -1.8, 0], rotate: [0, 10.8, 0] },
 	{ duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] },
 );
 

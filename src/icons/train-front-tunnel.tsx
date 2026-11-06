@@ -3,16 +3,16 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const emerge = pose(
-	{ scale: [1, 0.55, 1.15, 1] },
+	{ scale: [1, 0.73, 1.09, 1] },
 	{ duration: 0.72, times: [0, 0.22, 0.42, 1], ease: ["easeInOut", snap, springy] },
 );
 const light = (delay: number) =>
 	pose(
-		{ scale: [1, 1, 3, 1] },
+		{ scale: [1, 1, 2.2, 1] },
 		{ duration: 0.72, delay, times: [0, 0.35, 0.48, 1], ease: ["easeInOut", snap, springy] },
 	);
 const rumble = pose(
-	{ rotate: [0, 0, -5, 0] },
+	{ rotate: [0, 0, -3, 0] },
 	{ duration: 0.72, times: [0, 0.38, 0.48, 1], ease: ["easeInOut", snap, ring] },
 );
 

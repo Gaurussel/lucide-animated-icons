@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const lift = pose(
-	{ y: [0, 1, -5, 0], rotate: [0, 0, -16, 0] },
+	{ y: [0, 0.6, -3, 0], rotate: [0, 0, -9.6, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.32, 1], ease: ["easeInOut", snap, springy] },
 );
 const dangle = pose(
-	{ rotate: [0, 0, 30, 0] },
+	{ rotate: [0, 0, 18, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.38, 1], ease: ["easeInOut", snap, ring] },
 );
 

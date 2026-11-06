@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const flap = pose(
-	{ scaleY: [1, -0.7, -0.7, 1] },
+	{ scaleY: [1, -0.02, -0.02, 1] },
 	{ duration: 0.7, times: [0, 0.22, 0.4, 1], ease: [snap, "easeInOut", springy] },
 );
 const tick = pose(
-	{ pathLength: [1, 0, 0, 1], y: [0, 0, -3, 0] },
+	{ pathLength: [1, 0, 0, 1], y: [0, 0, -1.8, 0] },
 	{ duration: 0.7, times: [0, 0.01, 0.2, 1], ease: ["easeInOut", "easeInOut", snap] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const focus = pose(
-	{ rotate: [0, -90, -90, 0], scale: [1, 0.8, 0.8, 1] },
+	{ rotate: [0, -54, -54, 0], scale: [1, 0.88, 0.88, 1] },
 	{ duration: 0.75, times: [0, 0.25, 0.4, 1], ease: [snap, "easeInOut", ring] },
 );
 const recoil = pose(
-	{ rotate: [0, 0, -14, 0], y: [0, 0, 1.5, 0] },
+	{ rotate: [0, 0, -8.4, 0], y: [0, 0, 0.9, 0] },
 	{ duration: 0.75, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 

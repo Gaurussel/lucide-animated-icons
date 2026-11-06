@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
 const swing = pose(
-	{ rotate: [0, 8, -20, 0] },
+	{ rotate: [0, 4.8, -12, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, ring] },
 );
 const lag = pose(
-	{ x: [0, 0, 2, 0], rotate: [0, 0, 20, 0] },
+	{ x: [0, 0, 1.2, 0], rotate: [0, 0, 12, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.38, 1], ease: ["easeInOut", snap, ring] },
 );
 

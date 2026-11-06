@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const stamp = pose(
-	{ y: [0, -5, 1.5, 0] },
+	{ y: [0, -3, 0.9, 0] },
 	{ duration: 0.72, times: [0, 0.18, 0.3, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const jolt = pose(
-	{ y: [0, 0, 2, 0] },
+	{ y: [0, 0, 1.2, 0] },
 	{ duration: 0.72, times: [0, 0.28, 0.36, 1], ease: ["easeInOut", snap, springy] },
 );
 

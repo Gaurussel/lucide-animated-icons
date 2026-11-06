@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const tilt = pose(
-	{ rotate: [0, -15, 10, 0], y: [0, -2, -2, 0] },
+	{ rotate: [0, -9, 6, 0], y: [0, -1.2, -1.2, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.4, 1], ease: [snap, "easeInOut", springy] },
 );
 const wiggle = (direction: number) =>

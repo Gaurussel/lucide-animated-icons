@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, pose, snap, springy } from "../helpers.ts";
 
 const approach = pose(
-	{ scale: [1, 1.25, 1], y: [0, -2, 0] },
+	{ scale: [1, 1.15, 1], y: [0, -1.2, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const beam = (delay: number) =>
-	pose({ scale: [1, 2.5, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.9, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "car-front",

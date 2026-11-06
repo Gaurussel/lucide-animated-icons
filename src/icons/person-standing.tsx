@@ -3,9 +3,9 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const timing = { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] };
-const jump = pose({ y: [0, -4, 0] }, timing);
-const arms = pose({ scaleY: [1, -1.5, 1] }, timing);
-const legs = pose({ scaleX: [1, 1.6, 1] }, timing);
+const jump = pose({ y: [0, -2.4, 0] }, timing);
+const arms = pose({ scaleY: [1, -0.5, 1] }, timing);
+const legs = pose({ scaleX: [1, 1.36, 1] }, timing);
 
 export default createAnimatedIcon({
 	name: "person-standing",

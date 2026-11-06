@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const brake = pose({ rotate: [0, -20, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
-const strike = pose({ scale: [1, 0.82, 1] }, { duration: 0.65, times: [0, 0.14, 1], ease: [snap, springy] });
+const brake = pose({ rotate: [0, -12, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
+const strike = pose({ scale: [1, 0.89, 1] }, { duration: 0.65, times: [0, 0.14, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "octagon-x",

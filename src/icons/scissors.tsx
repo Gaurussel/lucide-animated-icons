@@ -8,7 +8,7 @@ const snip = (degrees: number) =>
 		{ duration: 0.7, times: [0, 0.12, 0.24, 0.36, 1], ease: ["easeInOut", "easeInOut", "easeInOut", springy] },
 	);
 const advance = pose(
-	{ x: [0, 1.5, 3, 0] },
+	{ x: [0, 0.9, 1.8, 0] },
 	{ duration: 0.7, times: [0, 0.18, 0.36, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

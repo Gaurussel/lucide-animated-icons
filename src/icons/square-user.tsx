@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const peek = pose(
-	{ y: [0, 1, -3, 0] },
+	{ y: [0, 0.6, -1.8, 0] },
 	{ duration: 0.62, delay: 0.1, times: [0, 0.2, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 const tilt = pose(
-	{ x: [0, 0, -1.5, 0] },
+	{ x: [0, 0, -0.9, 0] },
 	{ duration: 0.6, delay: 0.15, times: [0, 0.4, 0.55, 1], ease: ["easeInOut", snap, ring] },
 );
 

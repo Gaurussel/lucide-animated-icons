@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
-const tap = pose({ y: [0, 1.5, 0] }, { duration: 0.6, times: [0, 0.15, 1], ease: [snap, springy] });
+const tap = pose({ y: [0, 0.9, 0] }, { duration: 0.6, times: [0, 0.15, 1], ease: [snap, springy] });
 const boot = pose(
-	{ y: [0, 0, -4, 0], rotate: [0, 0, -8, 0] },
+	{ y: [0, 0, -2.4, 0], rotate: [0, 0, -4.8, 0] },
 	{ duration: 0.7, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 

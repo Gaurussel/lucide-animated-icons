@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const pull = pose(
-	{ y: [0, 4, -1, 0] },
+	{ y: [0, 2.4, -0.6, 0] },
 	{ duration: 0.72, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, springy] },
 );
 const sway = pose(
-	{ rotate: [0, 0, -6, 0] },
+	{ rotate: [0, 0, -3.6, 0] },
 	{ duration: 0.72, times: [0, 0.36, 0.46, 1], ease: ["easeInOut", snap, rubber] },
 );
 

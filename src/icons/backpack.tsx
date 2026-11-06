@@ -2,13 +2,16 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
-const hoist = pose({ rotate: [0, -15, 0], y: [0, -2, 0] }, { duration: 0.72, times: [0, 0.15, 1], ease: [snap, ring] });
+const hoist = pose(
+	{ rotate: [0, -9, 0], y: [0, -1.2, 0] },
+	{ duration: 0.72, times: [0, 0.15, 1], ease: [snap, ring] },
+);
 const pocket = pose(
-	{ rotate: [0, 0, 14, 0] },
+	{ rotate: [0, 0, 8.4, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", snap, ring] },
 );
 const strap = pose(
-	{ x: [0, 0, 1.5, 0] },
+	{ x: [0, 0, 0.9, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.25, 1], ease: ["easeInOut", snap, ring] },
 );
 

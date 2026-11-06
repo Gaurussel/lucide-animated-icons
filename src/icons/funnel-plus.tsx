@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, rubber, snap } from "../helpers.ts";
 
-const sift = pose({ y: [0, -4, 0], rotate: [0, 14, 0] }, { duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] });
+const sift = pose(
+	{ y: [0, -2.4, 0], rotate: [0, 8.4, 0] },
+	{ duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] },
+);
 const nod = pose(
-	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ rotate: [0, -12, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.7, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 

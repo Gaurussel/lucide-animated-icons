@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, rubber, snap } from "../helpers.ts";
 
 const roll = (delay: number) =>
-	pose({ x: [0, 2.5, 0], y: [0, -2.5, 0] }, { duration: 0.6, delay, times: [0, 0.25, 1], ease: [snap, rubber] });
+	pose({ x: [0, 1.5, 0], y: [0, -1.5, 0] }, { duration: 0.6, delay, times: [0, 0.25, 1], ease: [snap, rubber] });
 
 export default createAnimatedIcon({
 	name: "train-track",

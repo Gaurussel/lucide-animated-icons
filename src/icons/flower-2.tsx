@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const sway = pose(
-	{ rotate: [0, 8, -14, 0] },
+	{ rotate: [0, 4.8, -8.4, 0] },
 	{ duration: 0.75, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 const twirl = pose(
-	{ rotate: [0, 0, 360] },
+	{ rotate: [0, 0, 0] },
 	{ duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
 const leaf = (direction: number, delay: number) =>

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const leap = pose(
-	{ y: [0, -4, 0, 0] },
+	{ y: [0, -2.4, 0, 0] },
 	{ duration: 0.65, times: [0, 0.22, 0.44, 1], ease: [snap, "easeIn", "easeInOut"] },
 );
 const bounce = pose(
-	{ y: [0, 0, -6, 0], scale: [1, 1, 1.6, 1] },
+	{ y: [0, 0, -3.6, 0], scale: [1, 1, 1.36, 1] },
 	{ duration: 0.7, times: [0, 0.22, 0.42, 1], ease: ["easeInOut", snap, springy] },
 );
 

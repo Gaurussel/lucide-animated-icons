@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const dislike = pose(
-	{ y: [0, -1.5, 4, 0], rotate: [0, 8, -20, 0] },
+	{ y: [0, -0.9, 2.4, 0], rotate: [0, 4.8, -12, 0] },
 	{ duration: 0.72, times: [0, 0.14, 0.34, 1], ease: ["easeInOut", snap, springy] },
 );
 const cuff = pose(
-	{ x: [0, 0, 2, 0] },
+	{ x: [0, 0, 1.2, 0] },
 	{ duration: 0.72, times: [0, 0.3, 0.44, 1], ease: ["easeInOut", snap, springy] },
 );
 

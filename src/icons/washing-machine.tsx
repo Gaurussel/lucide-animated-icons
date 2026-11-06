@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const knob = pose({ x: [0, 2, 0] }, { duration: 0.5, times: [0, 0.3, 1], ease: [snap, springy] });
+const knob = pose({ x: [0, 1.2, 0] }, { duration: 0.5, times: [0, 0.3, 1], ease: [snap, springy] });
 const lamp = pose(
-	{ scale: [1, 1, 3, 1] },
+	{ scale: [1, 1, 2.2, 1] },
 	{ duration: 0.6, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const spin = pose(
@@ -12,7 +12,7 @@ const spin = pose(
 	{ duration: 0.72, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
 const rattle = pose(
-	{ rotate: [0, 0, -6, 0] },
+	{ rotate: [0, 0, -3.6, 0] },
 	{ duration: 0.72, times: [0, 0.25, 0.32, 1], ease: ["easeInOut", snap, ring] },
 );
 

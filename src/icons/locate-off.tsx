@@ -4,7 +4,7 @@ import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const aim = (x: number, y: number) =>
 	pose({ x: [0, x, 0], y: [0, y, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
-const lost = pose({ rotate: [0, -25, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
+const lost = pose({ rotate: [0, -15, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "locate-off",

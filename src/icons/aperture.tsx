@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
 const turn = pose(
-	{ rotate: [0, -20, 360] },
+	{ rotate: [0, 2.43, 0] },
 	{ duration: 0.72, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
 const close = pose(
-	{ scale: [1, 1, 0.5, 1] },
+	{ scale: [1, 1, 0.7, 1] },
 	{ duration: 0.72, times: [0, 0.2, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 const click = pose(
-	{ scale: [1, 1, 1.1, 1] },
+	{ scale: [1, 1, 1.06, 1] },
 	{ duration: 0.72, times: [0, 0.38, 0.46, 1], ease: ["easeInOut", snap, springy] },
 );
 

@@ -3,8 +3,8 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
 const key = (delay: number) =>
-	pose({ y: [0, 1.5, 0], scale: [1, 2.2, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
-const space = pose({ y: [0, 2, 0] }, { duration: 0.55, delay: 0.2, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, 0.9, 0], scale: [1, 1.72, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+const space = pose({ y: [0, 1.2, 0] }, { duration: 0.55, delay: 0.2, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "keyboard",

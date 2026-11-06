@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const alarm = pose(
-	{ rotate: [0, 0, -8, 0] },
+	{ rotate: [0, 0, -4.8, 0] },
 	{ duration: 0.75, times: [0, 0.3, 0.4, 1], ease: ["easeInOut", snap, ring] },
 );
 const drift = pose(
-	{ x: [0, -1.5, 1.5, 0] },
+	{ x: [0, -0.9, 0.9, 0] },
 	{ duration: 0.7, times: [0, 0.25, 0.5, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

@@ -3,8 +3,8 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const blink = (delay: number) =>
-	pose({ scale: [1, 0.5, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
-const jump = pose({ y: [0, -4, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 0.7, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+const jump = pose({ y: [0, -2.4, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "replace",

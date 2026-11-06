@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const tilt = pose({ rotate: [0, -12, 0] }, { duration: 0.72, times: [0, 0.2, 1], ease: [snap, ring] });
+const tilt = pose({ rotate: [0, -7.2, 0] }, { duration: 0.72, times: [0, 0.2, 1], ease: [snap, ring] });
 const drip = (delay: number) =>
 	pose(
-		{ x: [0, 4, -2, 0], y: [0, 4, -2, 0], opacity: [1, 0, 0, 1] },
+		{ x: [0, 2.4, -1.2, 0], y: [0, 2.4, -1.2, 0], opacity: [1, 0, 0, 1] },
 		{ duration: 0.62, delay, times: [0, 0.4, 0.41, 1], ease: ["easeIn", "easeInOut", springy] },
 	);
 

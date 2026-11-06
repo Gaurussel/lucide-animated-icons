@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, pose, snap, springy } from "../helpers.ts";
 
-const rise = pose({ y: [0, -3, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const rise = pose({ y: [0, -1.8, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 const light = (delay: number) =>
-	pose({ scale: [1, 2, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.6, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "building",

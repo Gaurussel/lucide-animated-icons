@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const bounce = pose(
-	{ y: [0, -5, 0, -2, 0] },
+	{ y: [0, -3, 0, -1.2, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.4, 0.55, 1], ease: [snap, "easeIn", "easeOut", springy] },
 );
 const frame = pose(
-	{ y: [0, 0, 1.2, 0] },
+	{ y: [0, 0, 0.72, 0] },
 	{ duration: 0.7, times: [0, 0.4, 0.48, 1], ease: ["easeInOut", "easeOut", springy] },
 );
 

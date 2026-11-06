@@ -3,9 +3,9 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const node = (delay: number) =>
-	pose({ scale: [1, 1.4, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.24, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const swing = pose(
-	{ rotate: [0, 0, -25, 0] },
+	{ rotate: [0, 0, -15, 0] },
 	{ duration: 0.75, times: [0, 0.4, 0.5, 1], ease: ["easeInOut", snap, ring] },
 );
 

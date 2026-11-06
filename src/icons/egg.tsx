@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring } from "../helpers.ts";
 
 const rock = pose(
-	{ rotate: [0, -14, 12, 0, 0], y: [0, 0, 0, -4, 0] },
+	{ rotate: [0, -8.4, 7.2, 0, 0], y: [0, 0, 0, -2.4, 0] },
 	{ duration: 0.75, times: [0, 0.14, 0.28, 0.42, 1], ease: ["easeInOut", "easeInOut", "easeOut", ring] },
 );
 

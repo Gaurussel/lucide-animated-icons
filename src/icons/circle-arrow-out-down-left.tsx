@@ -8,7 +8,7 @@ const shoot = (x: number, y: number) =>
 		{ duration: 0.7, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 	);
 const recoil = pose(
-	{ rotate: [0, 0, -20, 0] },
+	{ rotate: [0, 0, -12, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 

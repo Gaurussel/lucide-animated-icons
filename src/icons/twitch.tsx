@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const chatter = pose(
-	{ y: [0, 1, -2, 0], rotate: [0, 6, -14, 0] },
+	{ y: [0, 0.6, -1.2, 0], rotate: [0, 3.6, -8.4, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.28, 1], ease: ["easeInOut", snap, ring] },
 );
 

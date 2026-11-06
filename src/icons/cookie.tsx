@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
 const roll = pose(
-	{ rotate: [0, -25, 360] },
+	{ rotate: [0, 3.03, 0] },
 	{ duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
 const chip = (delay: number) =>
-	pose({ scale: [1, 2, 1] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.6, 1] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "cookie",

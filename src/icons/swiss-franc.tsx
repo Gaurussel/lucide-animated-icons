@@ -4,10 +4,13 @@ import { pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const bar = (delay: number) =>
 	pose(
-		{ pathLength: [1, 0, 1], x: [0, -4, 0] },
+		{ pathLength: [1, 0, 1], x: [0, -2.4, 0] },
 		{ duration: 0.42, delay, times: [0, 0.01, 1], ease: ["easeInOut", springy] },
 	);
-const land = pose({ y: [0, 0, -2, 0] }, { duration: 0.72, times: [0, 0.45, 0.58, 1], ease: ["easeInOut", snap, ring] });
+const land = pose(
+	{ y: [0, 0, -1.2, 0] },
+	{ duration: 0.72, times: [0, 0.45, 0.58, 1], ease: ["easeInOut", snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "swiss-franc",

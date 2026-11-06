@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const rays = pose(
-	{ rotate: [0, -20, 360], scale: [1, 0.7, 1] },
+	{ rotate: [0, 2.43, 0], scale: [1, 0.82, 1] },
 	{ duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
 const core = pose(
-	{ scale: [1, 0.75, 1.2, 1] },
+	{ scale: [1, 0.85, 1.12, 1] },
 	{ duration: 0.72, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, ring] },
 );
 

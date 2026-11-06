@@ -4,11 +4,11 @@ import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const swing = (delay: number) =>
 	pose(
-		{ rotate: [0, 8, -24, 0] },
+		{ rotate: [0, 4.8, -14.4, 0] },
 		{ duration: 0.72, delay, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, ring] },
 	);
 const hole = pose(
-	{ scale: [1, 1, 3, 1] },
+	{ scale: [1, 1, 2.2, 1] },
 	{ duration: 0.55, delay: 0.15, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 

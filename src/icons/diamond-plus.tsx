@@ -2,13 +2,13 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, hop, pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
-const tilt = pose({ rotate: [0, -15, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const tilt = pose({ rotate: [0, -9, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 const nod = pose(
-	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ rotate: [0, -12, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.65, delay: 0.05, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 const _dot = (delay: number) =>
-	pose({ scale: [1, 2, 1] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.6, 1] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "diamond-plus",

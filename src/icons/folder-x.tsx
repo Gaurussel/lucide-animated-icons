@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, ring, snap } from "../helpers.ts";
 
 const leap = pose(
-	{ y: [0, -4, 0, 0] },
+	{ y: [0, -2.4, 0, 0] },
 	{ duration: 0.65, times: [0, 0.22, 0.44, 1], ease: [snap, "easeIn", "easeInOut"] },
 );
 const shake = pose(
-	{ rotate: [0, 0, -30, 0] },
+	{ rotate: [0, 0, -18, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.32, 1], ease: ["easeInOut", snap, ring] },
 );
 

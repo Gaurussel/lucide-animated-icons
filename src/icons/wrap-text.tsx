@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, rubber, snap, springy } from "../helpers.ts";
 
-const wrap = pose({ x: [0, -5, 0] }, { duration: 0.7, delay: 0.1, times: [0, 0.3, 1], ease: [snap, springy] });
-const drop = pose({ y: [0, 3, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
-const push = pose({ x: [0, 3, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
+const wrap = pose({ x: [0, -3, 0] }, { duration: 0.7, delay: 0.1, times: [0, 0.3, 1], ease: [snap, springy] });
+const drop = pose({ y: [0, 1.8, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const push = pose({ x: [0, 1.8, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
 
 export default createAnimatedIcon({
 	name: "wrap-text",

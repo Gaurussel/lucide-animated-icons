@@ -8,7 +8,7 @@ const fan = (degrees: number, delay: number) =>
 		{ duration: 0.62, delay, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", snap, ring] },
 	);
 const dot = pose(
-	{ scale: [1, 1, 3, 1] },
+	{ scale: [1, 1, 2.2, 1] },
 	{ duration: 0.55, delay: 0.15, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 

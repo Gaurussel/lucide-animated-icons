@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap } from "../helpers.ts";
 
-const tremble = pose({ rotate: [0, -10, 0] }, { duration: 0.75, times: [0, 0.12, 1], ease: [snap, ring] });
-const spark = pose({ scale: [1, 2.2, 1] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, ring] });
+const tremble = pose({ rotate: [0, -6, 0] }, { duration: 0.75, times: [0, 0.12, 1], ease: [snap, ring] });
+const spark = pose({ scale: [1, 1.72, 1] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "bomb",

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const hook = pose(
-	{ rotate: [0, -10, 24, 0], y: [0, 1, -2, 0] },
+	{ rotate: [0, -6, 14.4, 0], y: [0, 0.6, -1.2, 0] },
 	{ duration: 0.75, times: [0, 0.15, 0.38, 1], ease: [snap, "easeInOut", ring] },
 );
 

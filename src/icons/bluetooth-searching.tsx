@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, hop, pose, redraw, ring, snap } from "../helpers.ts";
 
-const signal = pose({ x: [0, 3, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
+const signal = pose({ x: [0, 1.8, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "bluetooth-searching",

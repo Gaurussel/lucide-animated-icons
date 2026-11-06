@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const turn = pose(
-	{ rotate: [0, -30, 360], scale: [1, 1.2, 1] },
+	{ rotate: [0, -30, 360], scale: [1, 1.12, 1] },
 	{ duration: 0.72, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
 const open = (direction: number) =>

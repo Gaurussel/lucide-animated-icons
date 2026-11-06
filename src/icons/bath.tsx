@@ -3,12 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, rubber, snap, springy } from "../helpers.ts";
 
 const drip = pose(
-	{ y: [0, 7, 0], opacity: [1, 0, 1] },
+	{ y: [0, 4.2, 0], opacity: [1, 0, 1] },
 	{ duration: 0.65, times: [0, 0.3, 1], ease: ["easeIn", springy] },
 );
-const ripple = pose({ y: [0, 0, 2, 0] }, { duration: 0.72, times: [0, 0.3, 0.38, 1], ease: ["easeInOut", snap, ring] });
+const ripple = pose(
+	{ y: [0, 0, 1.2, 0] },
+	{ duration: 0.72, times: [0, 0.3, 0.38, 1], ease: ["easeInOut", snap, ring] },
+);
 const rock = pose(
-	{ rotate: [0, 0, -9, 0] },
+	{ rotate: [0, 0, -5.4, 0] },
 	{ duration: 0.72, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, rubber] },
 );
 

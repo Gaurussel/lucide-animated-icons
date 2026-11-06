@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
-const rattle = pose({ rotate: [0, -22, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, ring] });
-const bells = pose({ y: [0, -2.5, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, ring] });
+const rattle = pose({ rotate: [0, -13.2, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, ring] });
+const bells = pose({ y: [0, -1.5, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "alarm-clock-off",

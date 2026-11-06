@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, ring, snap } from "../helpers.ts";
 
-const buzz = pose({ x: [0, -2.5, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
+const buzz = pose({ x: [0, -1.5, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "bell-electric",

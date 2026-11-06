@@ -2,10 +2,13 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
-const bell = pose({ scale: [1, 1.6, 1], y: [0, -2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const bell = pose(
+	{ scale: [1, 1.36, 1], y: [0, -1.2, 0] },
+	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
+);
 const light = (delay: number) =>
-	pose({ scale: [1, 2.6, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
-const door = pose({ y: [0, -1.5, 0] }, { duration: 0.6, delay: 0.1, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.96, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+const door = pose({ y: [0, -0.9, 0] }, { duration: 0.6, delay: 0.1, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "university",

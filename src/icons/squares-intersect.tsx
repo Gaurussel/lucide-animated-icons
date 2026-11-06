@@ -8,7 +8,7 @@ const apart = (direction: number) =>
 		{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, rubber] },
 	);
 const core = pose(
-	{ scale: [1, 1, 1.4, 1] },
+	{ scale: [1, 1, 1.24, 1] },
 	{ duration: 0.7, times: [0, 0.2, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 

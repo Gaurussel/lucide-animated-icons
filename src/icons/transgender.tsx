@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
 const gather = pose(
-	{ scale: [1, 0.75, 1.15, 1] },
+	{ scale: [1, 0.85, 1.09, 1] },
 	{ duration: 0.72, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const burst = (x: number, y: number, delay: number) =>

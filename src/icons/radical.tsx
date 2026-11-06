@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const board = pose(
-	{ rotate: [0, 0, 10, 0] },
+	{ rotate: [0, 0, 6, 0] },
 	{ duration: 0.75, times: [0, 0.5, 0.58, 1], ease: ["easeInOut", snap, ring] },
 );
 

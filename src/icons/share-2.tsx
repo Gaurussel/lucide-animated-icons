@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const sender = pose(
-	{ x: [0, -2, 0], scale: [1, 1.3, 1] },
+	{ x: [0, -1.2, 0], scale: [1, 1.18, 1] },
 	{ duration: 0.6, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const receive = (direction: number) =>
 	pose(
-		{ x: [0, 3, 0], y: [0, 3 * direction, 0], scale: [1, 1.3, 1] },
+		{ x: [0, 1.8, 0], y: [0, 3 * direction, 0], scale: [1, 1.18, 1] },
 		{ duration: 0.55, delay: 0.18, times: [0, 0.3, 1], ease: [snap, springy] },
 	);
 

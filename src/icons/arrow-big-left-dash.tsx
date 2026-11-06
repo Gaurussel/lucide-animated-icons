@@ -16,7 +16,7 @@ const trail = pose(
 	},
 );
 const settle = pose(
-	{ rotate: [0, 0, -10, 0] },
+	{ rotate: [0, 0, -6, 0] },
 	{ duration: 0.72, times: [0, 0.45, 0.55, 1], ease: ["easeInOut", snap, rubber] },
 );
 

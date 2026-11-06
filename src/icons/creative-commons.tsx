@@ -4,11 +4,11 @@ import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
 const spin = (delay: number) =>
 	pose(
-		{ rotate: [0, -40, 360] },
+		{ rotate: [0, 4.79, 0] },
 		{ duration: 0.65, delay, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 	);
 const ringOut = pose(
-	{ scale: [1, 1, 1.1, 1] },
+	{ scale: [1, 1, 1.06, 1] },
 	{ duration: 0.75, times: [0, 0.35, 0.47, 1], ease: ["easeInOut", snap, springy] },
 );
 

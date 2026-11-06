@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, ring } from "../helpers.ts";
 
 const swipe = pose(
-	{ rotate: [0, 12, -22, 0] },
+	{ rotate: [0, 7.2, -13.2, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", "easeIn", ring] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
 const drop = pose(
-	{ y: [0, 1, -7, 0], scale: [1, 1, 2, 1] },
+	{ y: [0, 0.6, -4.2, 0], scale: [1, 1, 1.6, 1] },
 	{ duration: 0.7, times: [0, 0.1, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const ripple = pose(
-	{ scale: [1, 1, 0.88, 1.08, 1] },
+	{ scale: [1, 1, 0.93, 1.05, 1] },
 	{ duration: 0.75, times: [0, 0.35, 0.45, 0.58, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
 

@@ -5,7 +5,7 @@ import { centered, pose, snap, springy } from "../helpers.ts";
 const swap = (direction: number) =>
 	pose({ x: [0, 4 * direction, 0] }, { duration: 0.68, times: [0, 0.3, 1], ease: [snap, springy] });
 const lens = pose(
-	{ rotate: [0, 0, 360], scale: [1, 0.6, 1] },
+	{ rotate: [0, 0, 360], scale: [1, 0.76, 1] },
 	{ duration: 0.7, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
 

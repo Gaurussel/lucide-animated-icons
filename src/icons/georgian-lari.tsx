@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
 const toss = pose(
-	{ y: [0, -6, 0], rotate: [0, 200, 360] },
+	{ y: [0, -3.6, 0], rotate: [0, -13.79, 0] },
 	{ duration: 0.75, times: [0, 0.35, 1], ease: [snap, springy], reset: true },
 );
 

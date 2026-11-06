@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const roll = pose(
-	{ rotate: [0, -15, 10, 0], x: [0, -2, 1, 0] },
+	{ rotate: [0, -9, 6, 0], x: [0, -1.2, 0.6, 0] },
 	{ duration: 0.72, times: [0, 0.25, 0.5, 1], ease: ["easeInOut", "easeInOut", rubber] },
 );
 const hoop = pose(
-	{ y: [0, 0, 1.5, -1, 0] },
+	{ y: [0, 0, 0.9, -0.6, 0] },
 	{ duration: 0.72, times: [0, 0.25, 0.35, 0.5, 1], ease: ["easeInOut", snap, "easeInOut", springy] },
 );
 

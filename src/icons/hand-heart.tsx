@@ -2,8 +2,14 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
-const offer = pose({ y: [0, 2, 0], rotate: [0, 6, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
-const float = pose({ y: [0, -4, 0], scale: [1, 1.3, 1] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const offer = pose(
+	{ y: [0, 1.2, 0], rotate: [0, 3.6, 0] },
+	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
+);
+const float = pose(
+	{ y: [0, -2.4, 0], scale: [1, 1.18, 1] },
+	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "hand-heart",

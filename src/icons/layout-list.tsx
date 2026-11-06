@@ -3,7 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const tile = (delay: number) =>
-	pose({ x: [0, -3, 0], scale: [1, 0.7, 1] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose(
+		{ x: [0, -1.8, 0], scale: [1, 0.82, 1] },
+		{ duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "layout-list",

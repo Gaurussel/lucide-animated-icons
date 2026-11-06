@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
-const sit = pose({ y: [0, 2, 0] }, { duration: 0.65, times: [0, 0.2, 1], ease: [snap, springy] });
-const lean = pose({ rotate: [0, -16, 0] }, { duration: 0.62, delay: 0.08, times: [0, 0.3, 1], ease: [snap, springy] });
-const rock = pose({ rotate: [0, -8, 0] }, { duration: 0.6, delay: 0.12, times: [0, 0.3, 1], ease: [snap, rubber] });
+const sit = pose({ y: [0, 1.2, 0] }, { duration: 0.65, times: [0, 0.2, 1], ease: [snap, springy] });
+const lean = pose({ rotate: [0, -9.6, 0] }, { duration: 0.62, delay: 0.08, times: [0, 0.3, 1], ease: [snap, springy] });
+const rock = pose({ rotate: [0, -4.8, 0] }, { duration: 0.6, delay: 0.12, times: [0, 0.3, 1], ease: [snap, rubber] });
 
 export default createAnimatedIcon({
 	name: "armchair",

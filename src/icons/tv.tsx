@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const antenna = pose({ rotate: [0, -30, 0] }, { duration: 0.72, times: [0, 0.15, 1], ease: [snap, ring] });
+const antenna = pose({ rotate: [0, -18, 0] }, { duration: 0.72, times: [0, 0.15, 1], ease: [snap, ring] });
 const jump = pose(
-	{ y: [0, 0, -2.5, 0], rotate: [0, 0, 5, 0] },
+	{ y: [0, 0, -1.5, 0], rotate: [0, 0, 3, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 

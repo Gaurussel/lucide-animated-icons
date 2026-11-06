@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const bounce = pose(
-	{ y: [0, -6, 0, -2, 0], rotate: [0, 140, 260, 310, 360] },
+	{ y: [0, -3.6, 0, -1.2, 0], rotate: [0, -13.16, -10.72, -5.92, 0] },
 	{ duration: 0.75, times: [0, 0.25, 0.45, 0.6, 1], ease: [snap, "easeIn", "easeOut", springy], reset: true },
 );
 

@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pose, redraw, ring, snap } from "../helpers.ts";
 
-const beat = pose({ y: [0, 0, -2.5, 0] }, { duration: 0.72, times: [0, 0.3, 0.4, 1], ease: ["easeInOut", snap, ring] });
+const beat = pose({ y: [0, 0, -1.5, 0] }, { duration: 0.72, times: [0, 0.3, 0.4, 1], ease: ["easeInOut", snap, ring] });
 
 export default createAnimatedIcon({
 	name: "square-activity",

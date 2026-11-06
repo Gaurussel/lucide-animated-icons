@@ -2,11 +2,11 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
-const head = pose({ y: [0, -4, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
-const shoulders = pose({ y: [0, -1.5, 0] }, { duration: 0.7, delay: 0.04, times: [0, 0.25, 1], ease: [snap, springy] });
+const head = pose({ y: [0, -2.4, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const shoulders = pose({ y: [0, -0.9, 0] }, { duration: 0.7, delay: 0.04, times: [0, 0.25, 1], ease: [snap, springy] });
 
 const zoom = pose(
-	{ scale: [1, 1.35, 1], rotate: [0, -20, 0] },
+	{ scale: [1, 1.21, 1], rotate: [0, -12, 0] },
 	{ duration: 0.7, delay: 0.05, times: [0, 0.25, 1], ease: [snap, rubber] },
 );
 

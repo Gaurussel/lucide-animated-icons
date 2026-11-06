@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const speak = pose(
-	{ y: [0, 1, -2, 0] },
+	{ y: [0, 0.6, -1.2, 0] },
 	{ duration: 0.6, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const ripple = (delay: number, scale: number) =>

@@ -8,7 +8,7 @@ const point = (direction: number, delay: number) =>
 		{ duration: 0.62, delay, times: [0, 0.28, 1], ease: [snap, springy] },
 	);
 
-const bob = pose({ y: [0, -2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const bob = pose({ y: [0, -1.2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "signpost-big",

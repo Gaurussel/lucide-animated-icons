@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, redraw, snap, springy } from "../helpers.ts";
 
 const leap = pose(
-	{ y: [0, -4, 0, 0] },
+	{ y: [0, -2.4, 0, 0] },
 	{ duration: 0.65, times: [0, 0.22, 0.44, 1], ease: [snap, "easeIn", "easeInOut"] },
 );
 const toss = pose(
-	{ x: [0, 6, -4, 0], opacity: [1, 0, 0, 1] },
+	{ x: [0, 3.6, -2.4, 0], opacity: [1, 0, 0, 1] },
 	{ duration: 0.65, times: [0, 0.25, 0.26, 1], ease: ["easeIn", "easeInOut", springy] },
 );
 

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, springy } from "../helpers.ts";
 
 const swipe = pose(
-	{ x: [0, -3, 3, 0], y: [0, 1, -1, 0], rotate: [0, -10, 8, 0] },
+	{ x: [0, -1.8, 1.8, 0], y: [0, 0.6, -0.6, 0], rotate: [0, -6, 4.8, 0] },
 	{ duration: 0.75, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

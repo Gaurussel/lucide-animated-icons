@@ -3,7 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const wilt = (at: number) =>
-	pose({ rotate: [0, -4, 26, 0] }, { duration: 0.72, times: [0, at, at + 0.12, 1], ease: ["easeInOut", snap, ring] });
+	pose(
+		{ rotate: [0, -2.4, 15.6, 0] },
+		{ duration: 0.72, times: [0, at, at + 0.12, 1], ease: ["easeInOut", snap, ring] },
+	);
 
 export default createAnimatedIcon({
 	name: "wheat-off",

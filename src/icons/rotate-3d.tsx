@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, springy } from "../helpers.ts";
 
 const spinY = pose(
-	{ scaleX: [1, 1, -1, 1.12, 1] },
+	{ scaleX: [1, 1, -0.2, 1.07, 1] },
 	{ duration: 0.7, times: [0, 0.1, 0.38, 0.52, 1], ease: ["easeInOut", "easeIn", "easeOut", springy] },
 );
 const spinX = pose(
-	{ scaleY: [1, 1, -1, 1.12, 1] },
+	{ scaleY: [1, 1, -0.2, 1.07, 1] },
 	{ duration: 0.65, delay: 0.1, times: [0, 0.1, 0.4, 0.52, 1], ease: ["easeInOut", "easeIn", "easeOut", springy] },
 );
 

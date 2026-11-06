@@ -8,7 +8,7 @@ const curtain = (side: number) =>
 		{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, rubber] },
 	);
 const cheer = (delay: number) =>
-	pose({ y: [0, -2.5, 0] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -1.5, 0] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "theater",

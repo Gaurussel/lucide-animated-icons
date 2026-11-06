@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const blink = (delay: number) =>
-	pose({ scale: [1, 0.3, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 0.58, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const dot = (delay: number) =>
 	pose(
-		{ scale: [1, 0, 2.5, 1] },
+		{ scale: [1, 0.4, 1.9, 1] },
 		{ duration: 0.4, delay, times: [0, 0.1, 0.4, 1], ease: ["easeIn", "easeOut", springy] },
 	);
 

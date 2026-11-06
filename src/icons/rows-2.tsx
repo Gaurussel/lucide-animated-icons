@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, rubber, snap, springy } from "../helpers.ts";
 
 const flick = pose(
-	{ y: [0, 1.5, -5, 0] },
+	{ y: [0, 0.9, -3, 0] },
 	{ duration: 0.65, times: [0, 0.15, 0.38, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const recoil = pose(
-	{ y: [0, 0, -1.2, 0] },
+	{ y: [0, 0, -0.72, 0] },
 	{ duration: 0.75, times: [0, 0.35, 0.43, 1], ease: ["easeInOut", snap, rubber] },
 );
 

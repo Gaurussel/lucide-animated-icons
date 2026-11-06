@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const peel = pose(
-	{ rotate: [0, -12, 0], y: [0, -2, 0] },
+	{ rotate: [0, -7.2, 0], y: [0, -1.2, 0] },
 	{ duration: 0.72, times: [0, 0.22, 1], ease: [snap, springy] },
 );
 const corner = pose(
-	{ x: [0, -2, 0], y: [0, 2, 0] },
+	{ x: [0, -1.2, 0], y: [0, 1.2, 0] },
 	{ duration: 0.65, delay: 0.05, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 const blink = (delay: number) =>
-	pose({ y: [0, -1.5, 0] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -0.9, 0] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "sticker",

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, rubber, snap } from "../helpers.ts";
 
 const paint = pose(
-	{ x: [0, -2, 1, 0], y: [0, 2, -1, 0], rotate: [0, 8, -30, 0] },
+	{ x: [0, -1.2, 0.6, 0], y: [0, 1.2, -0.6, 0], rotate: [0, 4.8, -18, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.45, 1], ease: [snap, "easeInOut", rubber] },
 );
 

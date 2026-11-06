@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const chop = pose(
-	{ rotate: [0, -18, 5, 0] },
+	{ rotate: [0, -10.8, 3, 0] },
 	{ duration: 0.72, times: [0, 0.22, 0.36, 1], ease: [snap, "easeIn", springy] },
 );
-const thud = pose({ y: [0, 0, 1.5, 0] }, { duration: 0.72, times: [0, 0.3, 0.4, 1], ease: ["easeInOut", snap, ring] });
+const thud = pose({ y: [0, 0, 0.9, 0] }, { duration: 0.72, times: [0, 0.3, 0.4, 1], ease: ["easeInOut", snap, ring] });
 
 export default createAnimatedIcon({
 	name: "slice",

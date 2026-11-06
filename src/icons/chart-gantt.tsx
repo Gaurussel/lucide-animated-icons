@@ -4,7 +4,7 @@ import { pose, rubber, snap, springy } from "../helpers.ts";
 
 const shift = (x: number, delay: number) =>
 	pose({ x: [0, x, 0] }, { duration: 0.65, delay, times: [0, 0.3, 1], ease: [snap, rubber] });
-const axis = pose({ x: [0, -1.5, 0], y: [0, 1.5, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const axis = pose({ x: [0, -0.9, 0], y: [0, 0.9, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "chart-gantt",

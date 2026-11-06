@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const screen = pose(
-	{ y: [0, -5, 0.5, 0], rotate: [0, -8, 0, 0] },
+	{ y: [0, -3, 0.3, 0], rotate: [0, -4.8, 0, 0] },
 	{ duration: 0.7, times: [0, 0.28, 0.42, 1], ease: [snap, "easeIn", springy] },
 );
 const play = pose(
-	{ x: [0, 0, 2, 0], scale: [1, 1, 1.4, 1] },
+	{ x: [0, 0, 1.2, 0], scale: [1, 1, 1.24, 1] },
 	{ duration: 0.7, times: [0, 0.2, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 

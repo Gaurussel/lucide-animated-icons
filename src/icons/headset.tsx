@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
-const bop = pose({ y: [0, -3, 0], rotate: [0, -14, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
-const mic = pose({ rotate: [0, 25, 0] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, ring] });
+const bop = pose({ y: [0, -1.8, 0], rotate: [0, -8.4, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
+const mic = pose({ rotate: [0, 15, 0] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "headset",

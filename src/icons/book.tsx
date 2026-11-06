@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, springy } from "../helpers.ts";
 
-const lift = pose({ y: [0, -3, 0] }, { duration: 0.72, times: [0, 0.3, 1], ease: ["easeInOut", springy] });
-const flip = pose({ scaleX: [1, -1, 1] }, { duration: 0.72, times: [0, 0.4, 1], ease: ["easeInOut", springy] });
+const lift = pose({ y: [0, -1.8, 0] }, { duration: 0.72, times: [0, 0.3, 1], ease: ["easeInOut", springy] });
+const flip = pose({ scaleX: [1, -0.2, 1] }, { duration: 0.72, times: [0, 0.4, 1], ease: ["easeInOut", springy] });
 
 export default createAnimatedIcon({
 	name: "book",

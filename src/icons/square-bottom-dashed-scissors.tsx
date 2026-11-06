@@ -4,7 +4,7 @@ import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const snip = (direction: number) =>
 	pose({ rotate: [0, 18 * direction, 0] }, { duration: 0.72, times: [0, 0.15, 1], ease: [snap, ring] });
-const slide = pose({ x: [0, 3, 0] }, { duration: 0.72, times: [0, 0.3, 1], ease: [snap, springy] });
+const slide = pose({ x: [0, 1.8, 0] }, { duration: 0.72, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "square-bottom-dashed-scissors",

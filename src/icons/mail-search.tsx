@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
-const flap = pose({ scaleY: [1, -0.7, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const flap = pose({ scaleY: [1, -0.02, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 const zoom = pose(
-	{ scale: [1, 1.4, 1], rotate: [0, -20, 0] },
+	{ scale: [1, 1.24, 1], rotate: [0, -12, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] },
 );
 

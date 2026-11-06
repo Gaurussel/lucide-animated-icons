@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const twist = pose(
-	{ rotate: [0, 0, 360], scale: [1, 0.7, 1] },
+	{ rotate: [0, 0, 0], scale: [1, 0.82, 1] },
 	{ duration: 0.7, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
-const digit = pose({ y: [0, 4, 0] }, { duration: 0.65, delay: 0.08, times: [0, 0.28, 1], ease: [snap, springy] });
+const digit = pose({ y: [0, 2.4, 0] }, { duration: 0.65, delay: 0.08, times: [0, 0.28, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "subscript",

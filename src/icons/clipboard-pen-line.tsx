@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
-const clip = pose({ y: [0, -3.5, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
-const board = pose({ rotate: [0, -8, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const clip = pose({ y: [0, -2.1, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
+const board = pose({ rotate: [0, -4.8, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 const write = pose(
-	{ x: [0, -2, 2, 0], y: [0, -2, 1, 0], rotate: [0, -12, 8, 0] },
+	{ x: [0, -1.2, 1.2, 0], y: [0, -1.2, 0.6, 0], rotate: [0, -7.2, 4.8, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.4, 1], ease: [snap, "easeInOut", springy] },
 );
 

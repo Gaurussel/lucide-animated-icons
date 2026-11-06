@@ -7,10 +7,10 @@ const sweep = pose(
 	{ duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
 const nod = pose(
-	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ rotate: [0, -12, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.7, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
-const roll = pose({ rotate: [0, -25, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
+const roll = pose({ rotate: [0, -15, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "clock-plus",

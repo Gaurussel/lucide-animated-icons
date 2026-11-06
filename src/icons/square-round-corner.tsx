@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, redraw, snap, springy } from "../helpers.ts";
 
-const bend = pose({ x: [0, 2, 0], y: [0, -2, 0] }, { duration: 0.68, times: [0, 0.28, 1], ease: [snap, springy] });
+const bend = pose({ x: [0, 1.2, 0], y: [0, -1.2, 0] }, { duration: 0.68, times: [0, 0.28, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "square-round-corner",

@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const buzz = pose({ rotate: [0, -6, 0] }, { duration: 0.7, times: [0, 0.1, 1], ease: ["easeInOut", ring] });
-const bit = pose({ x: [0, 4, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
+const buzz = pose({ rotate: [0, -3.6, 0] }, { duration: 0.7, times: [0, 0.1, 1], ease: ["easeInOut", ring] });
+const bit = pose({ x: [0, 2.4, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "drill",

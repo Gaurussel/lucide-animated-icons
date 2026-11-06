@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
-const pointer = pose({ x: [0, -4, 0], y: [0, -5, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
+const pointer = pose({ x: [0, -2.4, 0], y: [0, -3, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "lasso-select",

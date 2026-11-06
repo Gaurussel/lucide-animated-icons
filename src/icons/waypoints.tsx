@@ -4,7 +4,7 @@ import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const arrive = (x: number, y: number, delay: number) =>
 	pose(
-		{ x: [0, x, 0], y: [0, y, 0], scale: [1, 1.35, 1] },
+		{ x: [0, x, 0], y: [0, y, 0], scale: [1, 1.21, 1] },
 		{ duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] },
 	);
 

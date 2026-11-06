@@ -2,8 +2,11 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const sway = pose({ rotate: [0, -14, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
-const sun = pose({ y: [0, -3, 0], scale: [1, 1.3, 1] }, { duration: 0.65, times: [0, 0.28, 1], ease: [snap, springy] });
+const sway = pose({ rotate: [0, -8.4, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
+const sun = pose(
+	{ y: [0, -1.8, 0], scale: [1, 1.18, 1] },
+	{ duration: 0.65, times: [0, 0.28, 1], ease: [snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "tent-tree",

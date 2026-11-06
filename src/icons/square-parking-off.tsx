@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pivot, pose, redraw, springy } from "../helpers.ts";
 
 const sag = pose(
-	{ y: [0, 0, 6, 0], rotate: [0, 0, 25, 0] },
+	{ y: [0, 0, 3.6, 0], rotate: [0, 0, 15, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.38, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

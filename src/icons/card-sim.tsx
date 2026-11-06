@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, rubber, snap, springy } from "../helpers.ts";
 
 const insert = pose(
-	{ y: [0, -5, 0], rotate: [0, -12, 0] },
+	{ y: [0, -3, 0], rotate: [0, -7.2, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const chip = pose(
-	{ scale: [1, 1, 1.35, 1] },
+	{ scale: [1, 1, 1.21, 1] },
 	{ duration: 0.7, times: [0, 0.2, 0.38, 1], ease: ["easeInOut", snap, rubber] },
 );
 

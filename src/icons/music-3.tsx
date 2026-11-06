@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const bounce = pose(
-	{ y: [0, 2, -6, 0] },
+	{ y: [0, 1.2, -3.6, 0] },
 	{ duration: 0.7, times: [0, 0.14, 0.32, 1], ease: ["easeInOut", snap, springy] },
 );
 const stem = pose(
-	{ rotate: [0, 0, -28, 0] },
+	{ rotate: [0, 0, -16.8, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 

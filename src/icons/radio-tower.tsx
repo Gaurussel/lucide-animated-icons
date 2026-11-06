@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, jelly, pose, redraw, snap, springy } from "../helpers.ts";
 
 const core = pose(
-	{ scale: [1, 0.5, 1.6, 1] },
+	{ scale: [1, 0.7, 1.36, 1] },
 	{ duration: 0.6, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const wave = (x: number, delay: number) =>

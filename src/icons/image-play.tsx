@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const sun = pose(
-	{ y: [0, 2, -3.5, 0] },
+	{ y: [0, 1.2, -2.1, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
 const press = pose(
-	{ x: [0, 0, 2, 0], scale: [1, 0.7, 1.25, 1] },
+	{ x: [0, 0, 1.2, 0], scale: [1, 0.82, 1.15, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 

@@ -4,7 +4,7 @@ import { edge, jelly, pose, redraw, springy } from "../helpers.ts";
 
 const drop = (delay: number) =>
 	pose(
-		{ pathLength: [1, 0, 1], y: [0, -6, 0] },
+		{ pathLength: [1, 0, 1], y: [0, -3.6, 0] },
 		{ duration: 0.5, delay, times: [0, 0.01, 1], ease: ["easeInOut", springy] },
 	);
 

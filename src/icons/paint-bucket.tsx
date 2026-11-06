@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pivot, pose, snap, springy } from "../helpers.ts";
 
-const tip = pose({ rotate: [0, -25, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const tip = pose({ rotate: [0, -15, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 const drip = pose(
-	{ y: [0, -5, 0], scale: [1, 0, 1] },
+	{ y: [0, -3, 0], scale: [1, 0.4, 1] },
 	{ duration: 0.7, times: [0, 0.3, 1], ease: ["easeIn", springy] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, springy } from "../helpers.ts";
 
 const sweep = pose(
-	{ rotate: [0, 6, -18, 0] },
+	{ rotate: [0, 3.6, -10.8, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const bristles = pose(
-	{ rotate: [0, -8, 20, 0] },
+	{ rotate: [0, -4.8, 12, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.48, 1], ease: ["easeInOut", "easeOut", ring] },
 );
 

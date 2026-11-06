@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, springy } from "../helpers.ts";
 
 const stroke = pose(
-	{ rotate: [0, -8, 22, 0] },
+	{ rotate: [0, -4.8, 13.2, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const bristles = pose(
-	{ rotate: [0, 6, -16, 0] },
+	{ rotate: [0, 3.6, -9.6, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.48, 1], ease: ["easeInOut", "easeOut", ring] },
 );
 

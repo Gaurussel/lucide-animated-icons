@@ -7,7 +7,7 @@ const launch = pose(
 	{ duration: 0.7, times: [0, 0.18, 0.4, 0.41, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
 const flame = pose(
-	{ scale: [1, 1.5, 1, 1] },
+	{ scale: [1, 1.3, 1, 1] },
 	{ duration: 0.7, times: [0, 0.18, 0.4, 1], ease: ["easeInOut", "easeIn", "easeInOut"] },
 );
 

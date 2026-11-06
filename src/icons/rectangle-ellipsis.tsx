@@ -4,11 +4,11 @@ import { pose, snap, springy } from "../helpers.ts";
 
 const dot = (delay: number) =>
 	pose(
-		{ y: [0, 1, -5, 0] },
+		{ y: [0, 0.6, -3, 0] },
 		{ duration: 0.45, delay, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeOut", springy] },
 	);
 const dip = pose(
-	{ y: [0, 0, 1.5, 0] },
+	{ y: [0, 0, 0.9, 0] },
 	{ duration: 0.75, times: [0, 0.45, 0.52, 1], ease: ["easeInOut", snap, springy] },
 );
 

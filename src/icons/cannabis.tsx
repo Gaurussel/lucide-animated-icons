@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
-const stem = pose({ rotate: [0, -8, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
+const stem = pose({ rotate: [0, -4.8, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
 const leaf = pose(
-	{ rotate: [0, 0, -20, 0], scale: [1, 0.9, 1.1, 1] },
+	{ rotate: [0, 0, -12, 0], scale: [1, 0.94, 1.06, 1] },
 	{ duration: 0.75, delay: 0.06, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", "easeInOut", ring] },
 );
 

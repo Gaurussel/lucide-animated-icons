@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
 const leap = pose(
-	{ y: [0, -4, 0, 0] },
+	{ y: [0, -2.4, 0, 0] },
 	{ duration: 0.65, times: [0, 0.22, 0.44, 1], ease: [snap, "easeIn", "easeInOut"] },
 );
-const flap = pose({ rotate: [0, -12, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const flap = pose({ rotate: [0, -7.2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "folder-closed",

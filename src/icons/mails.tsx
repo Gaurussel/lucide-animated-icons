@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const front = pose(
-	{ x: [0, 3, 0], y: [0, -4, 0], rotate: [0, 8, 0] },
+	{ x: [0, 1.8, 0], y: [0, -2.4, 0], rotate: [0, 4.8, 0] },
 	{ duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] },
 );
-const fold = pose({ scaleY: [1, -0.7, 1] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const fold = pose({ scaleY: [1, -0.02, 1] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "mails",

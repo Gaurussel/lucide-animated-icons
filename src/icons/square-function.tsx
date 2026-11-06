@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const bar = pose(
-	{ pathLength: [1, 0, 1], x: [0, -6, 0] },
+	{ pathLength: [1, 0, 1], x: [0, -3.6, 0] },
 	{ duration: 0.4, delay: 0.3, times: [0, 0.01, 1], ease: ["easeInOut", springy] },
 );
 const flourish = pose(
-	{ rotate: [0, 0, -22, 0], y: [0, 0, -2, 0] },
+	{ rotate: [0, 0, -13.2, 0], y: [0, 0, -1.2, 0] },
 	{ duration: 0.72, times: [0, 0.4, 0.52, 1], ease: ["easeInOut", snap, ring] },
 );
 

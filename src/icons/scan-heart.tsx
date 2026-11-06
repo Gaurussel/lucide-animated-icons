@@ -5,7 +5,7 @@ import { centered, pose, snap, springy } from "../helpers.ts";
 const focus = (x: number, y: number) =>
 	pose({ x: [0, 2 * x, 0], y: [0, 2 * y, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 const beat = pose(
-	{ scale: [1, 0.7, 1.25, 1] },
+	{ scale: [1, 0.82, 1.15, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: [snap, "easeOut", springy] },
 );
 

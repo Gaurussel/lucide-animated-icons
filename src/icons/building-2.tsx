@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const rise = pose(
-	{ y: [0, 1.5, -4, 0] },
+	{ y: [0, 0.9, -2.4, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 const wing = (delay: number) =>
 	pose(
-		{ y: [0, 0, -2.5, 0] },
+		{ y: [0, 0, -1.5, 0] },
 		{ duration: 0.65, delay, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] },
 	);
 

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, rubber } from "../helpers.ts";
 
 const toss = pose(
-	{ y: [0, 1, -5, 0], rotate: [0, 4, -20, 0] },
+	{ y: [0, 0.6, -3, 0], rotate: [0, 2.4, -12, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", "easeOut", rubber] },
 );
 const tip = (degrees: number) =>

@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const rock = pose({ rotate: [0, -20, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", ring] });
-const pass = pose({ x: [0, -4, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const rock = pose({ rotate: [0, -12, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", ring] });
+const pass = pose({ x: [0, -2.4, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "cloud-moon",

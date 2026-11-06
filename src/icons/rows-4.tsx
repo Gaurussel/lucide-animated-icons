@@ -4,11 +4,11 @@ import { pose, rubber, snap, springy } from "../helpers.ts";
 
 const fall = (delay: number) =>
 	pose(
-		{ y: [0, -1.5, 3, 0] },
+		{ y: [0, -0.9, 1.8, 0] },
 		{ duration: 0.5, delay, times: [0, 0.2, 0.45, 1], ease: ["easeInOut", "easeIn", springy] },
 	);
 const recoil = pose(
-	{ y: [0, 0, 1.2, 0] },
+	{ y: [0, 0, 0.72, 0] },
 	{ duration: 0.75, times: [0, 0.42, 0.5, 1], ease: ["easeInOut", snap, rubber] },
 );
 

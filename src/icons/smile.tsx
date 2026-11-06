@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, hop, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const glance = pose(
-	{ x: [0, -4, 0], y: [0, -2, 0], rotate: [0, -28, 0] },
+	{ x: [0, -2.4, 0], y: [0, -1.2, 0], rotate: [0, -16.8, 0] },
 	{ duration: 0.72, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const blink = (delay: number) =>
-	pose({ y: [0, -2, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -1.2, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "smile",

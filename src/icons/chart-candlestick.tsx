@@ -10,7 +10,7 @@ const candle = (y: number, delay: number) =>
 const wick = (y: number, delay: number) =>
 	pose({ y: [0, 0, y, 0] }, { duration: 0.7, delay, times: [0, 0.2, 0.4, 1], ease: ["easeInOut", snap, ring] });
 const axis = pose(
-	{ x: [0, 0, -1.5, 0], y: [0, 0, 1.5, 0] },
+	{ x: [0, 0, -0.9, 0], y: [0, 0, 0.9, 0] },
 	{ duration: 0.7, times: [0, 0.35, 0.5, 1], ease: ["easeInOut", snap, springy] },
 );
 

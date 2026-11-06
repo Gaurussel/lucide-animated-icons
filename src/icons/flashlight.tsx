@@ -2,8 +2,11 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
-const aim = pose({ y: [0, -2, 0], rotate: [0, -20, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
-const click = pose({ scale: [1, 2.5, 1] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
+const aim = pose(
+	{ y: [0, -1.2, 0], rotate: [0, -12, 0] },
+	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
+);
+const click = pose({ scale: [1, 1.9, 1] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "flashlight",

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, ring, snap } from "../helpers.ts";
 
-const ping = pose({ y: [0, -3, 0], scale: [1, 2, 1] }, { duration: 0.6, times: [0, 0.25, 1], ease: [snap, ring] });
+const ping = pose({ y: [0, -1.8, 0], scale: [1, 1.6, 1] }, { duration: 0.6, times: [0, 0.25, 1], ease: [snap, ring] });
 const droop = (delay: number) =>
-	pose({ y: [0, 2.5, 0] }, { duration: 0.65, delay, times: [0, 0.2, 1], ease: [snap, ring] });
+	pose({ y: [0, 1.5, 0] }, { duration: 0.65, delay, times: [0, 0.2, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "wifi-off",

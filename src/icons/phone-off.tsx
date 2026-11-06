@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const shake = pose({ rotate: [0, -16, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
+const shake = pose({ rotate: [0, -9.6, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
 const drop = pose(
-	{ y: [0, 0, 3, 0] },
+	{ y: [0, 0, 1.8, 0] },
 	{ duration: 0.75, times: [0, 0.36, 0.46, 1], ease: ["easeInOut", snap, springy] },
 );
 

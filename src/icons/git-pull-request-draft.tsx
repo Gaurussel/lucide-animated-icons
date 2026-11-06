@@ -3,9 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
 const node = (delay: number) =>
-	pose({ scale: [1, 1.35, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.21, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const dash = (delay: number) =>
-	pose({ y: [0, -3, 0], opacity: [1, 0.2, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose(
+		{ y: [0, -1.8, 0], opacity: [1, 0.2, 1] },
+		{ duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "git-pull-request-draft",

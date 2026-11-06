@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
 const strike = pose(
-	{ rotate: [0, 10, -14, 0] },
+	{ rotate: [0, 6, -8.4, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", "easeIn", ring] },
 );
 const knocked = pose(
-	{ rotate: [0, 0, -22, 0] },
+	{ rotate: [0, 0, -13.2, 0] },
 	{ duration: 0.75, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 const leaf = pose(
-	{ rotate: [0, 0, 20, 0] },
+	{ rotate: [0, 0, 12, 0] },
 	{ duration: 0.75, delay: 0.1, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 

@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const carry = pose({ y: [0, -4, 0], rotate: [0, -16, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
+const carry = pose(
+	{ y: [0, -2.4, 0], rotate: [0, -9.6, 0] },
+	{ duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] },
+);
 const clasp = pose(
-	{ scale: [1, 1, 3, 1] },
+	{ scale: [1, 1, 2.2, 1] },
 	{ duration: 0.7, times: [0, 0.25, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 

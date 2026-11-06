@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, rubber, snap, springy } from "../helpers.ts";
 
 const pour = pose(
-	{ rotate: [0, -18, 0, 0] },
+	{ rotate: [0, -10.8, 0, 0] },
 	{ duration: 0.72, times: [0, 0.25, 0.55, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 const flinch = pose(
-	{ x: [0, 0, -2.5, 0] },
+	{ x: [0, 0, -1.5, 0] },
 	{ duration: 0.72, times: [0, 0.5, 0.58, 1], ease: ["easeInOut", snap, rubber] },
 );
 

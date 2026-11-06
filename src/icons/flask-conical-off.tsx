@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const swirl = pose(
-	{ rotate: [0, -8, 22, 0] },
+	{ rotate: [0, -4.8, 13.2, 0] },
 	{ duration: 0.75, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 const slosh = pose(
-	{ rotate: [0, 0, -40, 0] },
+	{ rotate: [0, 0, -24, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.38, 1], ease: ["easeInOut", snap, ring] },
 );
 const cork = pose(
-	{ y: [0, 0, -4, 0] },
+	{ y: [0, 0, -2.4, 0] },
 	{ duration: 0.75, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 

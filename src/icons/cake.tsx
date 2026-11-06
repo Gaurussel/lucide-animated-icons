@@ -4,7 +4,7 @@ import { centered, edge, jelly, pose, springy } from "../helpers.ts";
 
 const flame = (delay: number) =>
 	pose(
-		{ y: [0, -3, 0], scale: [1, 2.2, 1] },
+		{ y: [0, -1.8, 0], scale: [1, 1.72, 1] },
 		{ duration: 0.55, delay, times: [0, 0.3, 1], ease: ["easeInOut", springy] },
 	);
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const roll = pose(
-	{ y: [0, -5, 0], rotate: [0, 200, 360] },
+	{ y: [0, -3, 0], rotate: [0, -13.79, 0] },
 	{ duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy], reset: true },
 );
 const bump = pose(
-	{ y: [0, -3, 0], rotate: [0, 15, 0] },
+	{ y: [0, -1.8, 0], rotate: [0, 9, 0] },
 	{ duration: 0.65, delay: 0.08, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 

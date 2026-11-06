@@ -2,7 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, hop, pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
-const glint = pose({ y: [0, -3, 0], rotate: [0, -16, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
+const glint = pose(
+	{ y: [0, -1.8, 0], rotate: [0, -9.6, 0] },
+	{ duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "gem",

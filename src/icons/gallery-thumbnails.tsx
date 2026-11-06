@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, snap, springy } from "../helpers.ts";
 
 const swipe = pose(
-	{ x: [0, 1.5, -9, 9, 0], opacity: [1, 1, 0, 0, 1] },
+	{ x: [0, 0.9, -5.4, 5.4, 0], opacity: [1, 1, 0, 0, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", snap, springy] },
 );
 const scroll = pose(
-	{ x: [0, 0, -5, 0] },
+	{ x: [0, 0, -3, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 

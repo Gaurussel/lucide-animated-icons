@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
-const flip = pose({ rotate: [0, -20, 0], y: [0, 2, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
+const flip = pose({ rotate: [0, -12, 0], y: [0, 1.2, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "bug-off",

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, springy } from "../helpers.ts";
 
 const cherry = pose(
-	{ y: [0, 1, -6, 0] },
+	{ y: [0, 0.6, -3.6, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", "easeOut", springy] },
 );
 const bowl = pose(
-	{ y: [0, 0, 1.5, 0] },
+	{ y: [0, 0, 0.9, 0] },
 	{ duration: 0.7, times: [0, 0.45, 0.55, 1], ease: ["easeInOut", "easeOut", springy] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, redraw, springy } from "../helpers.ts";
 
 const leap = pose(
-	{ y: [0, 1.5, -5, 0, 0] },
+	{ y: [0, 0.9, -3, 0, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.32, 0.48, 1], ease: ["easeInOut", "easeOut", "easeIn", "easeInOut"] },
 );
 const tape = pose(
-	{ y: [0, 1.5, -9, 0] },
+	{ y: [0, 0.9, -5.4, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.42, 1], ease: ["easeInOut", "easeOut", springy] },
 );
 

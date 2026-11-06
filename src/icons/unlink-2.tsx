@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, ring } from "../helpers.ts";
 
 const snapOff = pose(
-	{ y: [0, 1, -2, 0], rotate: [0, 8, -18, 0] },
+	{ y: [0, 0.6, -1.2, 0], rotate: [0, 4.8, -10.8, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.28, 1], ease: ["easeInOut", "easeInOut", ring] },
 );
 

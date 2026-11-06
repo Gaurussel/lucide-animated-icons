@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const slash = pose(
-	{ rotate: [0, 20, -35, 0] },
+	{ rotate: [0, 12, -21, 0] },
 	{ duration: 0.72, times: [0, 0.18, 0.36, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const hilt = pose(
-	{ rotate: [0, 0, 12, 0] },
+	{ rotate: [0, 0, 7.2, 0] },
 	{ duration: 0.6, delay: 0.1, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 

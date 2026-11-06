@@ -4,7 +4,7 @@ import { pose, springy } from "../helpers.ts";
 
 const scurry = (delay: number) =>
 	pose(
-		{ x: [0, -2, 9, -9, 0], opacity: [1, 1, 0, 0, 1] },
+		{ x: [0, -1.2, 5.4, -5.4, 0], opacity: [1, 1, 0, 0, 1] },
 		{ duration: 0.65, delay, times: [0, 0.14, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 	);
 

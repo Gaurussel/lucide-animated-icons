@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const shine = pose(
-	{ scale: [1, 1.35, 1], rotate: [0, 25, 0] },
+	{ scale: [1, 1.21, 1], rotate: [0, 15, 0] },
 	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
 );
-const rise = pose({ y: [0, -3, 0] }, { duration: 0.7, delay: 0.05, times: [0, 0.3, 1], ease: [snap, springy] });
+const rise = pose({ y: [0, -1.8, 0] }, { duration: 0.7, delay: 0.05, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "thermometer-sun",

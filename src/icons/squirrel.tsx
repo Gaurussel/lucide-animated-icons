@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
 const leap = pose(
-	{ y: [0, 1, -5, 0], rotate: [0, 0, 12, 0] },
+	{ y: [0, 0.6, -3, 0], rotate: [0, 0, 7.2, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
-const turn = pose({ scaleX: [1, -1, 1] }, { duration: 0.72, times: [0, 0.4, 1], ease: ["easeInOut", springy] });
+const turn = pose({ scaleX: [1, -0.2, 1] }, { duration: 0.72, times: [0, 0.4, 1], ease: ["easeInOut", springy] });
 const blink = pose(
-	{ scale: [1, 1, 2.5, 1] },
+	{ scale: [1, 1, 1.9, 1] },
 	{ duration: 0.55, delay: 0.15, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 

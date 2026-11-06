@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, rubber, snap } from "../helpers.ts";
 
 const scuttle = pose(
-	{ x: [0, 3, 0], rotate: [0, 10, 0] },
+	{ x: [0, 1.8, 0], rotate: [0, 6, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] },
 );
 const legs = (direction: number) =>
 	pose({ rotate: [0, 18 * direction, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: ["easeInOut", ring] });
-const twitch = pose({ y: [0, -1.5, 0] }, { duration: 0.6, delay: 0.1, times: [0, 0.2, 1], ease: [snap, ring] });
+const twitch = pose({ y: [0, -0.9, 0] }, { duration: 0.6, delay: 0.1, times: [0, 0.2, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "bug",

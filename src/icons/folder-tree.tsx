@@ -4,7 +4,7 @@ import { edge, pose, redraw, springy } from "../helpers.ts";
 
 const sprout = (delay: number) =>
 	pose(
-		{ x: [0, -4, 0], scale: [1, 0.5, 1] },
+		{ x: [0, -2.4, 0], scale: [1, 0.7, 1] },
 		{ duration: 0.5, delay, times: [0, 0.2, 1], ease: ["easeInOut", springy] },
 	);
 

@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const nod = pose(
-	{ y: [0, -3, 0], rotate: [0, -10, 0] },
+	{ y: [0, -1.8, 0], rotate: [0, -6, 0] },
 	{ duration: 0.75, times: [0, 0.25, 1], ease: [snap, springy] },
 );
-const wag = pose({ rotate: [0, -35, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
+const wag = pose({ rotate: [0, -21, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "github",

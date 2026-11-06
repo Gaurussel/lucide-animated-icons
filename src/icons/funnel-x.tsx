@@ -2,7 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
-const sift = pose({ y: [0, -4, 0], rotate: [0, 14, 0] }, { duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] });
+const sift = pose(
+	{ y: [0, -2.4, 0], rotate: [0, 8.4, 0] },
+	{ duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "funnel-x",

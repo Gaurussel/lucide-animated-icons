@@ -2,7 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
-const awning = pose({ y: [0, -3, 0], rotate: [0, -6, 0] }, { duration: 0.72, times: [0, 0.2, 1], ease: [snap, ring] });
+const awning = pose(
+	{ y: [0, -1.8, 0], rotate: [0, -3.6, 0] },
+	{ duration: 0.72, times: [0, 0.2, 1], ease: [snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "store",

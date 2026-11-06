@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const line = (delay: number) =>
-	pose({ x: [0, -3, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ x: [0, -1.8, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const rewind = pose(
 	{ rotate: [0, 30, -360] },
 	{ duration: 0.7, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },

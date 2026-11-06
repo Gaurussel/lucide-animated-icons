@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const drive = pose(
-	{ x: [0, -2, 3, 0], rotate: [0, 3, -8, 0] },
+	{ x: [0, -1.2, 1.8, 0], rotate: [0, 1.8, -4.8, 0] },
 	{ duration: 0.75, times: [0, 0.15, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
 const bump = (delay: number) =>
-	pose({ y: [0, 0, -1.5, 0] }, { duration: 0.75, delay, times: [0, 0.35, 0.45, 1], ease: ["easeInOut", snap, ring] });
+	pose({ y: [0, 0, -0.9, 0] }, { duration: 0.75, delay, times: [0, 0.35, 0.45, 1], ease: ["easeInOut", snap, ring] });
 
 export default createAnimatedIcon({
 	name: "forklift",

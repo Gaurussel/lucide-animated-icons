@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
 const roll = pose(
-	{ y: [0, -5, 0], rotate: [0, 200, 360] },
+	{ y: [0, -3, 0], rotate: [0, -13.79, 0] },
 	{ duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy], reset: true },
 );
 const pip = (delay: number) =>
-	pose({ scale: [1, 0, 1] }, { duration: 0.6, delay, times: [0, 0.2, 1], ease: [snap, springy] });
+	pose({ scale: [1, 0.4, 1] }, { duration: 0.6, delay, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "dice-6",

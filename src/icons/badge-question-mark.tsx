@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, hop, pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const twirl = pose(
-	{ rotate: [0, -30, 360] },
+	{ rotate: [0, 3.62, 0] },
 	{ duration: 0.7, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
-const puzzle = pose({ rotate: [0, -25, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
-const jump = pose({ y: [0, -3, 0] }, { duration: 0.5, delay: 0.2, times: [0, 0.3, 1], ease: [snap, springy] });
+const puzzle = pose({ rotate: [0, -15, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
+const jump = pose({ y: [0, -1.8, 0] }, { duration: 0.5, delay: 0.2, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "badge-question-mark",

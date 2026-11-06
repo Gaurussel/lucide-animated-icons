@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const roll = pose(
-	{ rotate: [0, -40, 0], x: [0, -2, 0] },
+	{ rotate: [0, -24, 0], x: [0, -1.2, 0] },
 	{ duration: 0.72, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 

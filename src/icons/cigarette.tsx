@@ -4,10 +4,10 @@ import { pose, rubber, snap, springy } from "../helpers.ts";
 
 const puff = (delay: number) =>
 	pose(
-		{ y: [0, -5, 4, 0], opacity: [1, 0, 0, 1] },
+		{ y: [0, -3, 2.4, 0], opacity: [1, 0, 0, 1] },
 		{ duration: 0.7, delay, times: [0, 0.35, 0.36, 1], ease: ["easeIn", "easeInOut", springy] },
 	);
-const drag = pose({ x: [0, -2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
+const drag = pose({ x: [0, -1.2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
 
 export default createAnimatedIcon({
 	name: "cigarette",

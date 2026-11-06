@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const bob = (delay: number) =>
-	pose({ y: [0, -4, 0], rotate: [0, -15, 0] }, { duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -2.4, 0], rotate: [0, -9, 0] }, { duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "quote",

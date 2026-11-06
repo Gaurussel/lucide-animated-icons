@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const bump = pose({ x: [0, 3, 0], y: [0, 3, 0] }, { duration: 0.6, times: [0, 0.25, 1], ease: [snap, springy] });
+const bump = pose({ x: [0, 1.8, 0], y: [0, 1.8, 0] }, { duration: 0.6, times: [0, 0.25, 1], ease: [snap, springy] });
 const refuse = pose(
-	{ rotate: [0, 0, -30, 0] },
+	{ rotate: [0, 0, -18, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", snap, ring] },
 );
 

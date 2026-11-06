@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, springy } from "../helpers.ts";
 
 const measure = pose(
-	{ x: [0, 1, -3, 0], y: [0, -1, 3, 0], rotate: [0, 4, -12, 0] },
+	{ x: [0, 0.6, -1.8, 0], y: [0, -0.6, 1.8, 0], rotate: [0, 2.4, -7.2, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.38, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

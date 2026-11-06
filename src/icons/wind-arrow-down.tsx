@@ -3,8 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, rubber, snap, springy } from "../helpers.ts";
 
 const gust = (delay: number) =>
-	pose({ x: [0, 4, 0] }, { duration: 0.6, delay, times: [0, 0.25, 1], ease: [snap, rubber] });
-const drop = pose({ y: [0, -3, 4, 0] }, { duration: 0.65, times: [0, 0.18, 0.38, 1], ease: [snap, "easeIn", springy] });
+	pose({ x: [0, 2.4, 0] }, { duration: 0.6, delay, times: [0, 0.25, 1], ease: [snap, rubber] });
+const drop = pose(
+	{ y: [0, -1.8, 2.4, 0] },
+	{ duration: 0.65, times: [0, 0.18, 0.38, 1], ease: [snap, "easeIn", springy] },
+);
 
 export default createAnimatedIcon({
 	name: "wind-arrow-down",

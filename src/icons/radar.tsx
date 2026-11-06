@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
 const sweep = pose(
-	{ rotate: [0, -20, 360], scale: [1, 0.85, 1] },
+	{ rotate: [0, -20, 360], scale: [1, 0.91, 1] },
 	{ duration: 0.75, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
 const blip = (delay: number) =>
-	pose({ scale: [1, 2.2, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.72, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "radar",

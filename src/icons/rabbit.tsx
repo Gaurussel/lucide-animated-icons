@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const bounce = pose(
-	{ y: [0, 1, -5, 0], rotate: [0, 0, -12, 0] },
+	{ y: [0, 0.6, -3, 0], rotate: [0, 0, -7.2, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", "easeOut", springy] },
 );
-const ear = pose({ rotate: [0, 30, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const ear = pose({ rotate: [0, 18, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "rabbit",

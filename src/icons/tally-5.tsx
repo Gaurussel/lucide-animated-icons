@@ -4,7 +4,7 @@ import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const stroke = (delay: number) =>
 	pose(
-		{ pathLength: [1, 0, 1, 1], y: [0, 0, -6, 0] },
+		{ pathLength: [1, 0, 1, 1], y: [0, 0, -3.6, 0] },
 		{ duration: 0.55, delay, times: [0, 0.01, 0.4, 1], ease: ["easeInOut", snap, springy] },
 	);
 

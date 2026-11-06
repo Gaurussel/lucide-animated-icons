@@ -4,11 +4,11 @@ import { pivot, pose, rubber, springy } from "../helpers.ts";
 
 const spin = (delay: number) =>
 	pose(
-		{ x: [0, -1, 8, -8, 0], opacity: [1, 1, 0, 0, 1] },
+		{ x: [0, -0.6, 4.8, -4.8, 0], opacity: [1, 1, 0, 0, 1] },
 		{ duration: 0.65, delay, times: [0, 0.12, 0.36, 0.37, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 	);
 const lean = pose(
-	{ rotate: [0, 0, -12, 0] },
+	{ rotate: [0, 0, -7.2, 0] },
 	{ duration: 0.75, times: [0, 0.35, 0.5, 1], ease: ["easeInOut", "easeOut", rubber] },
 );
 

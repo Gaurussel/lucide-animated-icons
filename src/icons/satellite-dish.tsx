@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const aim = pose(
-	{ rotate: [0, 10, -25, 0] },
+	{ rotate: [0, 6, -15, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.32, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const wave = (delay: number) =>
-	pose({ x: [0, 2, 0], y: [0, -2, 0] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ x: [0, 1.2, 0], y: [0, -1.2, 0] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "satellite-dish",

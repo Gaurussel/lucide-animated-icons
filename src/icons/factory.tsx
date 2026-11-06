@@ -3,9 +3,9 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
 const light = (delay: number) =>
-	pose({ scale: [1, 2.4, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.84, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const chug = pose(
-	{ y: [0, 0, -3, 0] },
+	{ y: [0, 0, -1.8, 0] },
 	{ duration: 0.75, times: [0, 0.32, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 

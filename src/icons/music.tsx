@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
-const bop = pose({ y: [0, -4, 0], rotate: [0, -14, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
+const bop = pose(
+	{ y: [0, -2.4, 0], rotate: [0, -8.4, 0] },
+	{ duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] },
+);
 const head = (delay: number) =>
-	pose({ scale: [1, 1.35, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.21, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "music",

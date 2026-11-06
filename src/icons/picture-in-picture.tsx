@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, snap, springy } from "../helpers.ts";
 
 const tuck = pose(
-	{ x: [0, 4, -3, 0], y: [0, 4, -3, 0], opacity: [1, 0, 0, 1] },
+	{ x: [0, 2.4, -1.8, 0], y: [0, 2.4, -1.8, 0], opacity: [1, 0, 0, 1] },
 	{ duration: 0.7, times: [0, 0.25, 0.26, 1], ease: ["easeIn", "easeInOut", springy] },
 );
 const grow = pose(
-	{ scale: [1, 1, 1.3, 1] },
+	{ scale: [1, 1, 1.18, 1] },
 	{ duration: 0.7, times: [0, 0.2, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 

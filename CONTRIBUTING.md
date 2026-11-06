@@ -37,20 +37,21 @@
   icon is not enough. A single-path icon can still tell a story: the stroke traces itself while it moves, flips or
   swings on a pivot.
 - **Land with the trick that suits the icon**, from `src/helpers.ts`:
-  - `springy` (or `ring`, `rubber`) as the last ease — a damped spring with 2–3 oscillations. For things that swing,
-    turn or stretch: bell, gear, refresh, history, search, pencil, link.
+  - `springy` (or `ring`, `rubber`) as the last ease — a soft damped spring that settles with a small overshoot. For
+    things that swing, turn or stretch: bell, gear, refresh, history, search, pencil, link.
   - `jelly(at, duration)` on a container — it wobbles when something lands on it: trash, archive, folder, mail,
     download tray, lock, pin.
   - `redraw(delay, duration)` on a path — it draws itself in again. For something that appears: the copied sheet, the
     upload arrow, a check, heading digits.
-  - `hop(duration)` on a wrapper around the whole icon — the icon pops. For actions: send, plus, star, external-link.
+  - `hop(duration)` on a wrapper around the whole icon — the icon pops. For actions: send, star, external-link.
 - Start a move with `snap`, dash with `easeIn`; pass one ease per segment.
 - Families share the body motion and give the meaning to the badge: every `file-*` lifts the page, the inner
-  symbol does its own thing (check redraws, plus turns, arrow flies out). Copy the scene of an existing relative.
+  symbol does its own thing (check redraws, plus nods, x strikes through, arrow flies out). Copy the scene of an existing relative.
 - 0.65–0.75 s per scene; give the final spring at least ~40 % of it, and avoid a large move on the first frame (a
-  `snap` segment shorter than ~0.12 s jerks); translate up to ~6 units of the 24-unit viewBox (an exit can fly further while it fades),
-  scale 0.5–1.3. Turns end on a full 360° with `reset: true`, even for symmetric shapes.
-- It must read at 16 px: measure it (below) and keep the score ≥ 0.4. The score under-rates rotations of symmetric
+  `snap` segment shorter than ~0.12 s jerks); keep it calm, like Telegram: translate up to ~4 units of the 24-unit viewBox (an exit can fly further while it
+  fades), scale 0.8–1.2, tilt up to ~20°. A full 360° turn only for things that rotate by meaning (clock hands, gears,
+  refresh, loaders); it ends with `reset: true`. Anything else tilts instead of spinning.
+- It must read at 16 px: measure it (below) and keep the score ≥ 0.25. The score under-rates rotations of symmetric
   shapes (`radar`, `radius`, a turning gear) — judge those by eye.
 
 ```tsx
@@ -58,7 +59,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
-const lid = pose({ y: [0, -6, 0], rotate: [0, -35, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const lid = pose({ y: [0, -3.6, 0], rotate: [0, -21, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "trash-2",

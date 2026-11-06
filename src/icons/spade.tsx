@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const toss = pose(
-	{ y: [0, 1, -4, 0] },
+	{ y: [0, 0.6, -2.4, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 const flip = pose(
-	{ scaleX: [1, 1, -1, 1] },
+	{ scaleX: [1, 1, -0.2, 1] },
 	{ duration: 0.72, times: [0, 0.12, 0.45, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 const stem = pose(
-	{ y: [0, 0, 2, 0] },
+	{ y: [0, 0, 1.2, 0] },
 	{ duration: 0.6, delay: 0.1, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 

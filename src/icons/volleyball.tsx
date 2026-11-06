@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const bounce = pose(
-	{ y: [0, 1, -5, 0] },
+	{ y: [0, 0.6, -3, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.32, 1], ease: ["easeInOut", snap, springy] },
 );
 const spin = pose(
-	{ rotate: [0, 0, 200, 360] },
+	{ rotate: [0, 0, -13.79, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.4, 1], ease: ["easeInOut", snap, springy], reset: true },
 );
 

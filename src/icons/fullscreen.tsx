@@ -4,7 +4,7 @@ import { centered, pose, snap, springy } from "../helpers.ts";
 
 const spread = (x: number, y: number) =>
 	pose({ x: [0, 2 * x, 0], y: [0, 2 * y, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
-const fill = pose({ scale: [1, 1.3, 1] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
+const fill = pose({ scale: [1, 1.18, 1] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "fullscreen",

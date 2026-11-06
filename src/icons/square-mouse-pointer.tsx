@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, pose, snap, springy } from "../helpers.ts";
 
 const click = pose(
-	{ x: [0, 4, -2, 0], y: [0, 4, -2, 0], scale: [1, 1, 0.8, 1] },
+	{ x: [0, 2.4, -1.2, 0], y: [0, 2.4, -1.2, 0], scale: [1, 1, 0.88, 1] },
 	{ duration: 0.7, times: [0, 0.25, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 const flinch = pose(
-	{ scale: [1, 1, 0.9, 1] },
+	{ scale: [1, 1, 0.94, 1] },
 	{ duration: 0.7, times: [0, 0.32, 0.42, 1], ease: ["easeInOut", snap, springy] },
 );
 

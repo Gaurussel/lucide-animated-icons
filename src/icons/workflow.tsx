@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
-const send = pose({ scale: [1, 0.75, 1] }, { duration: 0.6, times: [0, 0.25, 1], ease: [snap, springy] });
+const send = pose({ scale: [1, 0.85, 1] }, { duration: 0.6, times: [0, 0.25, 1], ease: [snap, springy] });
 const receive = pose(
-	{ scale: [1, 1, 1.3, 1], rotate: [0, 0, 15, 0] },
+	{ scale: [1, 1, 1.18, 1], rotate: [0, 0, 9, 0] },
 	{ duration: 0.7, times: [0, 0.35, 0.5, 1], ease: ["easeInOut", snap, springy] },
 );
 

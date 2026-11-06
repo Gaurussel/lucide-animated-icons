@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
-const lean = pose({ rotate: [0, 18, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
+const lean = pose({ rotate: [0, 10.8, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
 const slide = (direction: number) =>
 	pose({ x: [0, 3 * direction, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
 

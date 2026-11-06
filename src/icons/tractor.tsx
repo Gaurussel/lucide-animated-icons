@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const wheelie = pose(
-	{ x: [0, -1.5, 3, 0], rotate: [0, 3, -15, 0] },
+	{ x: [0, -0.9, 1.8, 0], rotate: [0, 1.8, -9, 0] },
 	{ duration: 0.72, times: [0, 0.14, 0.34, 1], ease: ["easeInOut", snap, springy] },
 );
 const roof = pose(
-	{ rotate: [0, 0, 14, 0] },
+	{ rotate: [0, 0, 8.4, 0] },
 	{ duration: 0.72, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 const bump = pose(
-	{ y: [0, 0, -2, 0] },
+	{ y: [0, 0, -1.2, 0] },
 	{ duration: 0.72, times: [0, 0.4, 0.52, 1], ease: ["easeInOut", snap, springy] },
 );
 

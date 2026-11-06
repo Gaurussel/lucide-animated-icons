@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const drop = pose(
-	{ y: [0, -1.5, 7, 0] },
+	{ y: [0, -0.9, 4.2, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const nudge = pose(
-	{ y: [0, 0, -3, 0] },
+	{ y: [0, 0, -1.8, 0] },
 	{ duration: 0.72, times: [0, 0.25, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
 const board = pose(
-	{ rotate: [0, 0, 5, 0] },
+	{ rotate: [0, 0, 3, 0] },
 	{ duration: 0.72, times: [0, 0.28, 0.4, 1], ease: ["easeInOut", snap, ring] },
 );
 

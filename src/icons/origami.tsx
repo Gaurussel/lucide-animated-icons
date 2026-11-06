@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
 const glide = pose(
-	{ x: [0, -2, 3, 0], y: [0, 1, -5, 0], rotate: [0, 6, -10, 0] },
+	{ x: [0, -1.2, 1.8, 0], y: [0, 0.6, -3, 0], rotate: [0, 3.6, -6, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeOut", springy] },
 );
-const flap = pose({ rotate: [0, -35, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const flap = pose({ rotate: [0, -21, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "origami",

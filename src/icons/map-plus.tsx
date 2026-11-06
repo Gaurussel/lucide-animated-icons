@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, hop, pose, redraw, rubber, snap, springy } from "../helpers.ts";
 
 const unfold = pose(
-	{ y: [0, -4, 0], rotate: [0, -10, 0] },
+	{ y: [0, -2.4, 0], rotate: [0, -6, 0] },
 	{ duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] },
 );
 const nod = pose(
-	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ rotate: [0, -12, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.65, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 

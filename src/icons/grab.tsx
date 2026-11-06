@@ -2,8 +2,11 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
-const lift = pose({ y: [0, -4, 0], rotate: [0, -10, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
-const clench = pose({ y: [0, 2.5, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
+const lift = pose(
+	{ y: [0, -2.4, 0], rotate: [0, -6, 0] },
+	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
+);
+const clench = pose({ y: [0, 1.5, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "grab",

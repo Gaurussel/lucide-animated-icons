@@ -6,7 +6,7 @@ const launch = pose(
 	{ y: [0, -10, 0], opacity: [1, 0, 1] },
 	{ duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] },
 );
-const dip = pose({ y: [0, 2, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
+const dip = pose({ y: [0, 1.2, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "cloud-upload",

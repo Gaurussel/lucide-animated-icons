@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const roll = pose(
-	{ x: [0, -3, 2, 0], rotate: [0, -10, 4, 0] },
+	{ x: [0, -1.8, 1.2, 0], rotate: [0, -6, 2.4, 0] },
 	{ duration: 0.7, times: [0, 0.22, 0.4, 1], ease: [snap, "easeInOut", springy] },
 );
-const handle = pose({ y: [0, -4, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const handle = pose({ y: [0, -2.4, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "luggage",

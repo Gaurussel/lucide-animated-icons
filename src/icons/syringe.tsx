@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, snap, springy } from "../helpers.ts";
 
 const jab = pose(
-	{ x: [0, 1, -3, 0], y: [0, -1, 3, 0] },
+	{ x: [0, 0.6, -1.8, 0], y: [0, -0.6, 1.8, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.32, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const plunge = pose(
-	{ x: [0, 0, -2.5, 0], y: [0, 0, 2.5, 0] },
+	{ x: [0, 0, -1.5, 0], y: [0, 0, 1.5, 0] },
 	{ duration: 0.7, times: [0, 0.32, 0.5, 1], ease: ["easeInOut", snap, springy] },
 );
 

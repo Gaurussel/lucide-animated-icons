@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, pose, redraw, snap, springy } from "../helpers.ts";
 
-const screen = pose({ x: [0, 2, 0], y: [0, -2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
-const source = pose({ scale: [1, 2.5, 1] }, { duration: 0.5, times: [0, 0.3, 1], ease: [snap, springy] });
+const screen = pose({ x: [0, 1.2, 0], y: [0, -1.2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const source = pose({ scale: [1, 1.9, 1] }, { duration: 0.5, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "cast",

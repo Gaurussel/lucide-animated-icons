@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, springy } from "../helpers.ts";
 
 const topple = (delay: number) =>
-	pose({ rotate: [0, 14, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: ["easeIn", springy] });
+	pose({ rotate: [0, 8.4, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: ["easeIn", springy] });
 
 export default createAnimatedIcon({
 	name: "fence",

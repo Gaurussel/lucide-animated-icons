@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const wake = pose(
-	{ y: [0, -2.5, 1, 0], rotate: [0, -6, 12, 0] },
+	{ y: [0, -1.5, 0.6, 0], rotate: [0, -3.6, 7.2, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.42, 1], ease: [snap, "easeIn", springy] },
 );
 const antenna = pose(
-	{ rotate: [0, -25, 60, 0] },
+	{ rotate: [0, -15, 36, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.45, 1], ease: [snap, "easeIn", ring] },
 );
 

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, springy } from "../helpers.ts";
 
-const flip = pose({ scaleX: [1, -1, 1] }, { duration: 0.7, times: [0, 0.35, 1], ease: ["easeInOut", springy] });
+const flip = pose({ scaleX: [1, -0.2, 1] }, { duration: 0.7, times: [0, 0.35, 1], ease: ["easeInOut", springy] });
 const roll = pose(
-	{ rotate: [0, 0, 360] },
+	{ rotate: [0, 0, 0] },
 	{ duration: 0.7, delay: 0.1, times: [0, 0.3, 1], ease: ["easeInOut", springy], reset: true },
 );
 

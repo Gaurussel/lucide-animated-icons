@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const shake = pose({ rotate: [0, -30, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
+const shake = pose({ rotate: [0, -18, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
 const node = (delay: number) =>
-	pose({ scale: [1, 1.35, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.21, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "git-pull-request-closed",

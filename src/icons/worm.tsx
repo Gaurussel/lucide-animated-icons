@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const crawl = pose(
-	{ x: [0, -1, 2.5, 0], rotate: [0, 6, -14, 0] },
+	{ x: [0, -0.6, 1.5, 0], rotate: [0, 3.6, -8.4, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, ring] },
 );
 const tail = (degrees: number) =>

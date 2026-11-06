@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const cross = pose({ rotate: [0, -25, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: ["easeInOut", ring] });
-const steeple = pose({ y: [0, -2.5, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const cross = pose({ rotate: [0, -15, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: ["easeInOut", ring] });
+const steeple = pose({ y: [0, -1.5, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "church",

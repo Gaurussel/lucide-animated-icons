@@ -4,7 +4,7 @@ import { pivot, pose, springy } from "../helpers.ts";
 
 const flip = (delay: number) =>
 	pose(
-		{ y: [0, 1, -5, 0], rotate: [0, 0, 180, 360] },
+		{ y: [0, 0.6, -3, 0], rotate: [0, 0, -14, 0] },
 		{ duration: 0.7, delay, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", "easeOut", springy], reset: true },
 	);
 

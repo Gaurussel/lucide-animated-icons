@@ -7,7 +7,7 @@ const steer = pose(
 	{ duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
 const hub = pose(
-	{ scale: [1, 1, 1.6, 1] },
+	{ scale: [1, 1, 1.36, 1] },
 	{ duration: 0.7, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, ring] },
 );
 

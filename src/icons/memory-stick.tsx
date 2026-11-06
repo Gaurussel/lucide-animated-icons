@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, redraw, snap, springy } from "../helpers.ts";
 
 const plug = pose(
-	{ y: [0, -4, 2, 0], rotate: [0, -6, 0, 0] },
+	{ y: [0, -2.4, 1.2, 0], rotate: [0, -3.6, 0, 0] },
 	{ duration: 0.7, times: [0, 0.22, 0.36, 1], ease: [snap, "easeIn", springy] },
 );
 const spark = (delay: number) =>
-	pose({ y: [0, 0, 2, 0] }, { duration: 0.5, delay, times: [0, 0.01, 0.2, 1], ease: ["easeInOut", snap, springy] });
+	pose({ y: [0, 0, 1.2, 0] }, { duration: 0.5, delay, times: [0, 0.01, 0.2, 1], ease: ["easeInOut", snap, springy] });
 
 export default createAnimatedIcon({
 	name: "memory-stick",

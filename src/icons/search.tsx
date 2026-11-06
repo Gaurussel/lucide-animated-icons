@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, snap } from "../helpers.ts";
 
 const zoom = pose(
-	{ scale: [1, 1.3, 1], rotate: [0, -15, 0] },
+	{ scale: [1, 1.18, 1], rotate: [0, -9, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] },
 );
 

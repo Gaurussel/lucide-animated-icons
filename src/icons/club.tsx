@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, springy } from "../helpers.ts";
 
 const leap = pose(
-	{ y: [0, 1.5, -6, 0], rotate: [0, 0, -15, 0] },
+	{ y: [0, 0.9, -3.6, 0], rotate: [0, 0, -9, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", "easeOut", springy] },
 );
 

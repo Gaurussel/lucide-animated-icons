@@ -13,9 +13,9 @@ export const spring = (damping: number, oscillations: number): EasingFunction =>
 	};
 };
 
-export const springy = spring(0.3, 2.2);
-export const ring = spring(0.16, 3.2);
-export const rubber = spring(0.22, 2.6);
+export const springy = spring(0.5, 1.6);
+export const ring = spring(0.3, 2.4);
+export const rubber = spring(0.4, 1.9);
 export const centered = { originX: 0.5, originY: 0.5, transformBox: "fill-box" } as const;
 export const edge = (originX: number, originY: number) => ({ originX, originY, transformBox: "fill-box" }) as const;
 export const pivot = (x: number, y: number) =>
@@ -62,12 +62,12 @@ export const wiggle = (degrees = 8) => pose({ rotate: [0, -degrees, degrees * 0.
 
 export const jelly = (at: number, duration: number) =>
 	pose(
-		{ scaleX: [1, 1, 1.16, 0.92, 1.04, 1], scaleY: [1, 1, 0.84, 1.08, 0.96, 1] },
+		{ scaleX: [1, 1, 1.1, 0.95, 1.02, 1], scaleY: [1, 1, 0.9, 1.05, 0.98, 1] },
 		{ duration, times: [0, at, at + 0.1, at + 0.22, at + 0.34, 1] },
 	);
 
 export const hop = (duration: number) =>
-	pose({ scale: [1, 1.18, 1] }, { duration, times: [0, 0.15, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.1, 1] }, { duration, times: [0, 0.15, 1], ease: [snap, springy] });
 
 export const redraw = (delay: number, duration: number) =>
 	pose({ pathLength: [1, 0, 1] }, { duration, delay, times: [0, 0.01, 1], ease: ["easeInOut", snap] });

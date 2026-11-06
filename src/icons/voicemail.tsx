@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const reel = (delay: number) =>
-	pose({ scale: [1, 1.35, 1], y: [0, -2, 0] }, { duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.21, 1], y: [0, -1.2, 0] }, { duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "voicemail",

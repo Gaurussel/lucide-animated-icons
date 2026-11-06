@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, snap, springy } from "../helpers.ts";
 
 const screen = pose(
-	{ y: [0, -4, 0], rotate: [0, -8, 0] },
+	{ y: [0, -2.4, 0], rotate: [0, -4.8, 0] },
 	{ duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] },
 );
 const phone = pose(
-	{ y: [0, -5, 0], rotate: [0, 14, 0] },
+	{ y: [0, -3, 0], rotate: [0, 8.4, 0] },
 	{ duration: 0.6, delay: 0.1, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 

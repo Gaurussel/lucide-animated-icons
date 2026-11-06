@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const shrug = pose({ rotate: [0, -12, 0] }, { duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] });
-const mouth = pose({ rotate: [0, 20, 0] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, springy] });
-const roll = pose({ x: [0, 2, 0], y: [0, -2, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy] });
+const shrug = pose({ rotate: [0, -7.2, 0] }, { duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] });
+const mouth = pose({ rotate: [0, 12, 0] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, springy] });
+const roll = pose({ x: [0, 1.2, 0], y: [0, -1.2, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "meh",

@@ -3,11 +3,14 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
 const cloche = pose(
-	{ y: [0, -5, 0], rotate: [0, -18, 0] },
+	{ y: [0, -3, 0], rotate: [0, -10.8, 0] },
 	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 
-const body = pose({ y: [0, 2, 0], rotate: [0, 6, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const body = pose(
+	{ y: [0, 1.2, 0], rotate: [0, 3.6, 0] },
+	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "hand-platter",

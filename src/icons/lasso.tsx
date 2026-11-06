@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const swing = pose({ rotate: [0, -28, 0] }, { duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] });
-const loop = pose({ scale: [1, 1.2, 1] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy] });
+const swing = pose({ rotate: [0, -16.8, 0] }, { duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] });
+const loop = pose({ scale: [1, 1.12, 1] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "lasso",

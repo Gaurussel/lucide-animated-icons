@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, springy } from "../helpers.ts";
 
 const press = pose(
-	{ y: [0, 2, -1.5, 0], rotate: [0, 0, -6, 0] },
+	{ y: [0, 1.2, -0.9, 0], rotate: [0, 0, -3.6, 0] },
 	{ duration: 0.75, times: [0, 0.15, 0.45, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

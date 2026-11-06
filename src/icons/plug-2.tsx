@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, snap, springy } from "../helpers.ts";
 
 const push = pose(
-	{ y: [0, 2, -4, 0] },
+	{ y: [0, 1.2, -2.4, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.38, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const prongs = pose(
-	{ y: [0, 0, -2.5, 0] },
+	{ y: [0, 0, -1.5, 0] },
 	{ duration: 0.7, times: [0, 0.3, 0.44, 1], ease: ["easeInOut", snap, springy] },
 );
 

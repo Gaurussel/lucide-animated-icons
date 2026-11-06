@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const strike = pose(
-	{ rotate: [0, -30, 8, 0] },
+	{ rotate: [0, -18, 4.8, 0] },
 	{ duration: 0.75, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const recoil = pose(
-	{ rotate: [0, 0, -18, 0] },
+	{ rotate: [0, 0, -10.8, 0] },
 	{ duration: 0.75, times: [0, 0.4, 0.5, 1], ease: ["easeInOut", snap, ring] },
 );
 

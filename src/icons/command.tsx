@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, springy } from "../helpers.ts";
 
 const twist = pose(
-	{ rotate: [0, -30, 360] },
+	{ rotate: [0, 3.62, 0] },
 	{ duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
 

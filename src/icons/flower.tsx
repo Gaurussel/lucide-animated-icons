@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const bloom = pose(
-	{ scale: [1, 0.7, 1], rotate: [0, -30, 360] },
+	{ scale: [1, 0.82, 1], rotate: [0, 3.62, 0] },
 	{ duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
-const bud = pose({ scale: [1, 1.5, 1] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, springy] });
+const bud = pose({ scale: [1, 1.3, 1] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "flower",

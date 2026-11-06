@@ -7,7 +7,7 @@ const sail = pose(
 	{ duration: 0.7, times: [0, 0.15, 0.36, 0.37, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
 const puff = pose(
-	{ y: [0, 0, -2, 0] },
+	{ y: [0, 0, -1.2, 0] },
 	{ duration: 0.7, times: [0, 0.37, 0.55, 1], ease: ["easeInOut", "easeOut", springy] },
 );
 

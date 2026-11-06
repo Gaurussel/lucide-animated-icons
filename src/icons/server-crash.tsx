@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
-import { pivot, pose, redraw, ring } from "../helpers.ts";
+import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const jolt = (direction: number) =>
 	pose(
@@ -8,8 +8,8 @@ const jolt = (direction: number) =>
 		{ duration: 0.72, times: [0, 0.22, 0.32, 1], ease: ["easeInOut", "easeIn", ring] },
 	);
 const strike = pose(
-	{ y: [0, -6, 0], opacity: [1, 0, 1] },
-	{ duration: 0.3, times: [0, 0.01, 1], ease: ["easeInOut", "easeIn"] },
+	{ y: [0, -3.6, 0], opacity: [1, 0, 1] },
+	{ duration: 0.3, times: [0, 0.01, 1], ease: ["easeInOut", snap] },
 );
 
 export default createAnimatedIcon({

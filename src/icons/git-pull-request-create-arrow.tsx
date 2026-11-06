@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const jab = pose(
-	{ x: [0, 2, -3, 0] },
+	{ x: [0, 1.2, -1.8, 0] },
 	{ duration: 0.7, times: [0, 0.18, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
 const twist = pose(
-	{ scale: [1, 0.5, 1], rotate: [0, 0, 360] },
+	{ scale: [1, 0.7, 1], rotate: [0, 0, 0] },
 	{ duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
 );
 

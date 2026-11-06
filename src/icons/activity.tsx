@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, ring, snap } from "../helpers.ts";
 
 const kick = pose(
-	{ y: [0, 0, -2.5, 0] },
+	{ y: [0, 0, -1.5, 0] },
 	{ duration: 0.72, times: [0, 0.3, 0.38, 1], ease: ["easeInOut", snap, ring] },
 );
 

@@ -3,14 +3,14 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const roll = pose(
-	{ x: [0, -1.5, 3, 0] },
+	{ x: [0, -0.9, 1.8, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 const wheel = pose(
-	{ rotate: [0, -30, 360] },
+	{ rotate: [0, 3.62, 0] },
 	{ duration: 0.7, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
-const wave = pose({ rotate: [0, -25, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const wave = pose({ rotate: [0, -15, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "accessibility",

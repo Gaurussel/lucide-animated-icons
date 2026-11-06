@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const float = pose(
-	{ x: [0, 1, -5, 0], y: [0, 1, -4, 0], scale: [1, 1, 1.15, 1] },
+	{ x: [0, 0.6, -3, 0], y: [0, 0.6, -2.4, 0], scale: [1, 1, 1.09, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.38, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const nudge = pose(
-	{ x: [0, 0, -1.5, 0], y: [0, 0, -1, 0] },
+	{ x: [0, 0, -0.9, 0], y: [0, 0, -0.6, 0] },
 	{ duration: 0.75, times: [0, 0.5, 0.58, 1], ease: ["easeInOut", snap, rubber] },
 );
 

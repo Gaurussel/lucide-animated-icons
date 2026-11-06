@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, ring, snap } from "../helpers.ts";
 
-const jump = pose({ y: [0, -5, 1.5, 0] }, { duration: 0.72, times: [0, 0.2, 0.36, 1], ease: [snap, "easeIn", ring] });
+const jump = pose({ y: [0, -3, 0.9, 0] }, { duration: 0.72, times: [0, 0.2, 0.36, 1], ease: [snap, "easeIn", ring] });
 const trampoline = pose(
-	{ y: [0, 0, 3, 0] },
+	{ y: [0, 0, 1.8, 0] },
 	{ duration: 0.72, times: [0, 0.3, 0.4, 1], ease: ["easeInOut", snap, ring] },
 );
 

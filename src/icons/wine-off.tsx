@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const topple = pose(
-	{ rotate: [0, 0, 26, 0] },
+	{ rotate: [0, 0, 15.6, 0] },
 	{ duration: 0.72, times: [0, 0.22, 0.36, 1], ease: ["easeInOut", snap, ring] },
 );
 const spill = pose(
-	{ rotate: [0, 0, -30, 0] },
+	{ rotate: [0, 0, -18, 0] },
 	{ duration: 0.72, times: [0, 0.3, 0.44, 1], ease: ["easeInOut", snap, ring] },
 );
 

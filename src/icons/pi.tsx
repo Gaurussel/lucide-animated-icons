@@ -4,12 +4,12 @@ import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const drop = (delay: number) =>
 	pose(
-		{ y: [0, -9, 0], opacity: [1, 0, 1] },
+		{ y: [0, -5.4, 0], opacity: [1, 0, 1] },
 		{ duration: 0.5, delay, times: [0, 0.02, 1], ease: ["easeIn", springy] },
 	);
 
 const bounce = pose(
-	{ y: [0, 0, 2.5, 0] },
+	{ y: [0, 0, 1.5, 0] },
 	{ duration: 0.75, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, springy] },
 );
 

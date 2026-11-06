@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pose, rubber } from "../helpers.ts";
 
 const nod = pose(
-	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ rotate: [0, -12, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.68, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 

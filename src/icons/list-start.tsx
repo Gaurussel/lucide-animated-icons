@@ -3,9 +3,9 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const line = (delay: number) =>
-	pose({ x: [0, -4.5, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ x: [0, -2.7, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const tip = pose(
-	{ x: [0, 0, -5, 0] },
+	{ x: [0, 0, -3, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.4, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

@@ -2,7 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const lift = pose({ y: [0, -5, 0], rotate: [0, -8, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
+const lift = pose(
+	{ y: [0, -3, 0], rotate: [0, -4.8, 0] },
+	{ duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] },
+);
 const temple = (x: number, direction: number) => ({
 	variants: pose({ rotate: [0, 30 * direction, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] }),
 	style: pivot(x, 13),

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
-const flap = pose({ scaleY: [1, -0.7, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const flap = pose({ scaleY: [1, -0.02, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 const flick = pose(
-	{ x: [0, -2, 5, 0], opacity: [1, 1, 0, 1] },
+	{ x: [0, -1.2, 3, 0], opacity: [1, 1, 0, 1] },
 	{ duration: 0.65, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
 const trunk = pose(
-	{ rotate: [0, 3, -8, 0] },
+	{ rotate: [0, 1.8, -4.8, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.26, 1], ease: ["easeInOut", snap, ring] },
 );
 const frond = (degrees: number, at: number) =>

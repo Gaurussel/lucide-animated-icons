@@ -2,13 +2,16 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, pose, snap, springy } from "../helpers.ts";
 
-const jump = pose({ y: [0, -4, 0], rotate: [0, -20, 0] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
+const jump = pose(
+	{ y: [0, -2.4, 0], rotate: [0, -12, 0] },
+	{ duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] },
+);
 const roll = pose(
-	{ rotate: [0, -20, 360] },
+	{ rotate: [0, 2.43, 0] },
 	{ duration: 0.62, delay: 0.08, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
 const bounce = pose(
-	{ scale: [1, 1.35, 1] },
+	{ scale: [1, 1.21, 1] },
 	{ duration: 0.58, delay: 0.16, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 

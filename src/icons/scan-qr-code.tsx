@@ -4,7 +4,7 @@ import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const focus = (x: number, y: number) =>
 	pose({ x: [0, 2 * x, 0], y: [0, 2 * y, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
-const blink = pose({ scale: [1, 0.4, 1] }, { duration: 0.6, delay: 0.05, times: [0, 0.3, 1], ease: [snap, springy] });
+const blink = pose({ scale: [1, 0.64, 1] }, { duration: 0.6, delay: 0.05, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "scan-qr-code",

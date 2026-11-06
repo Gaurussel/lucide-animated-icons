@@ -5,7 +5,7 @@ import { centered, pivot, pose, redraw, ring, snap, springy } from "../helpers.t
 const twistEnd = (degrees: number) =>
 	pose({ rotate: [0, degrees, 0] }, { duration: 0.6, times: [0, 0.2, 1], ease: [snap, ring] });
 const dodge = pose(
-	{ x: [0, 0, -2.5, 0], y: [0, 0, 2.5, 0], rotate: [0, -20, -30, 0] },
+	{ x: [0, 0, -1.5, 0], y: [0, 0, 1.5, 0], rotate: [0, -12, -18, 0] },
 	{ duration: 0.75, times: [0, 0.18, 0.4, 1], ease: [snap, "easeInOut", springy] },
 );
 

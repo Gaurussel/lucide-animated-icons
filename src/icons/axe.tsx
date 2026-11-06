@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const chop = pose(
-	{ rotate: [0, -25, 12, 0] },
+	{ rotate: [0, -15, 7.2, 0] },
 	{ duration: 0.72, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const quiver = pose(
-	{ rotate: [0, 0, 14, 0] },
+	{ rotate: [0, 0, 8.4, 0] },
 	{ duration: 0.72, times: [0, 0.42, 0.5, 1], ease: ["easeInOut", snap, ring] },
 );
 

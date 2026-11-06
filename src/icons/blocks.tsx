@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const stack = pose(
-	{ y: [0, -5.5, 0.8, 0], rotate: [0, 25, 0, 0] },
+	{ y: [0, -3.3, 0.48, 0], rotate: [0, 15, 0, 0] },
 	{ duration: 0.65, times: [0, 0.25, 0.4, 1], ease: [snap, "easeIn", springy] },
 );
 

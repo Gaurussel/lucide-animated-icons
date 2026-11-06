@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const turn = pose(
-	{ x: [0, 1.5, 1.5, 0], y: [0, -1.5, -1.5, 0], rotate: [0, 0, -60, 0] },
+	{ x: [0, 0.9, 0.9, 0], y: [0, -0.9, -0.9, 0], rotate: [0, 0, -36, 0] },
 	{ duration: 0.75, times: [0, 0.18, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 const click = pose(
-	{ rotate: [0, 0, 25, 0] },
+	{ rotate: [0, 0, 15, 0] },
 	{ duration: 0.75, times: [0, 0.38, 0.48, 1], ease: ["easeInOut", snap, ring] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const swing = pose(
-	{ rotate: [0, 15, -30, 0] },
+	{ rotate: [0, 9, -18, 0] },
 	{ duration: 0.7, times: [0, 0.18, 0.36, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const shiver = pose(
-	{ rotate: [0, 0, 10, 0] },
+	{ rotate: [0, 0, 6, 0] },
 	{ duration: 0.7, times: [0, 0.36, 0.44, 1], ease: ["easeInOut", snap, ring] },
 );
 

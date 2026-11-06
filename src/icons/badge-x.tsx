@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, hop, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const twirl = pose(
-	{ rotate: [0, -30, 360] },
+	{ rotate: [0, 3.62, 0] },
 	{ duration: 0.7, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
-const strike = pose({ scale: [1, 0.82, 1] }, { duration: 0.65, times: [0, 0.14, 1], ease: [snap, springy] });
+const strike = pose({ scale: [1, 0.89, 1] }, { duration: 0.65, times: [0, 0.14, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "badge-x",

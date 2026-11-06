@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const spin = pose(
-	{ x: [0, -1, 7, -7, 0], opacity: [1, 1, 0, 0, 1] },
+	{ x: [0, -0.6, 4.2, -4.2, 0], opacity: [1, 1, 0, 0, 1] },
 	{ duration: 0.7, times: [0, 0.12, 0.36, 0.37, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
-const shackle = pose({ y: [0, -3.5, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const shackle = pose({ y: [0, -2.1, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "earth-lock",

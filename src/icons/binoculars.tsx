@@ -4,7 +4,7 @@ import { pose, snap, springy } from "../helpers.ts";
 
 const look = (delay: number) =>
 	pose(
-		{ x: [0, -3, 3, 0], y: [0, -1.5, -1.5, 0] },
+		{ x: [0, -1.8, 1.8, 0], y: [0, -0.9, -0.9, 0] },
 		{ duration: 0.65, delay, times: [0, 0.18, 0.42, 1], ease: [snap, "easeInOut", springy] },
 	);
 

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
 const pop = pose(
-	{ x: [0, -3, 0], y: [0, -2, 0], rotate: [0, -12, 0] },
+	{ x: [0, -1.8, 0], y: [0, -1.2, 0], rotate: [0, -7.2, 0] },
 	{ duration: 0.68, times: [0, 0.28, 1], ease: [snap, springy] },
 );
 

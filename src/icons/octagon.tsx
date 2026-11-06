@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
 const halt = pose(
-	{ x: [0, -3, 2, 0], rotate: [0, -12, 8, 0] },
+	{ x: [0, -1.8, 1.2, 0], rotate: [0, -7.2, 4.8, 0] },
 	{ duration: 0.75, times: [0, 0.18, 0.32, 1], ease: ["easeInOut", snap, ring] },
 );
 const trace = pose({ pathLength: [1, 0.1, 1] }, { duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", snap] });

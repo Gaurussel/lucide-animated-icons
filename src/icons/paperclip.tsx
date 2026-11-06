@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, springy } from "../helpers.ts";
 
 const clip = pose(
-	{ y: [0, 1, -4, 0], rotate: [0, 8, -25, 0] },
+	{ y: [0, 0.6, -2.4, 0], rotate: [0, 4.8, -15, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
-const step = pose({ y: [0, -5, 0], rotate: [0, -20, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const step = pose({ y: [0, -3, 0], rotate: [0, -12, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 const toe = (delay: number) =>
-	pose({ scale: [1, 0, 1] }, { duration: 0.5, delay, times: [0, 0.25, 1], ease: ["easeIn", springy] });
+	pose({ scale: [1, 0.4, 1] }, { duration: 0.5, delay, times: [0, 0.25, 1], ease: ["easeIn", springy] });
 
 export default createAnimatedIcon({
 	name: "paw-print",

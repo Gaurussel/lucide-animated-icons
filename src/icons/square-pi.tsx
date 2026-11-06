@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pose, snap, springy } from "../helpers.ts";
 
 const jump = pose(
-	{ y: [0, -4, 0], rotate: [0, -12, 0] },
+	{ y: [0, -2.4, 0], rotate: [0, -7.2, 0] },
 	{ duration: 0.65, times: [0, 0.28, 1], ease: [snap, springy] },
 );
 

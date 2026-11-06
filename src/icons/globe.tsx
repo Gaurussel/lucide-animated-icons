@@ -6,7 +6,7 @@ const turn = pose(
 	{ rotate: [0, -30, 360] },
 	{ duration: 0.75, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
-const meridian = pose({ x: [0, 4, 0] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, ring] });
+const meridian = pose({ x: [0, 2.4, 0] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "globe",

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const press = pose({ y: [0, 2, 0] }, { duration: 0.5, times: [0, 0.3, 1], ease: [snap, springy] });
-const stall = pose({ rotate: [0, 70, 0] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, ring] });
-const alarm = pose({ rotate: [0, -16, 0] }, { duration: 0.75, times: [0, 0.12, 1], ease: [snap, ring] });
+const press = pose({ y: [0, 1.2, 0] }, { duration: 0.5, times: [0, 0.3, 1], ease: [snap, springy] });
+const stall = pose({ rotate: [0, 42, 0] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, ring] });
+const alarm = pose({ rotate: [0, -9.6, 0] }, { duration: 0.75, times: [0, 0.12, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "timer-off",

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
-const wind = pose({ rotate: [0, -35, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const wind = pose({ rotate: [0, -21, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 const bounce = pose(
-	{ y: [0, 0, -4, 0] },
+	{ y: [0, 0, -2.4, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 

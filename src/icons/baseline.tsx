@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, rubber, snap, springy } from "../helpers.ts";
 
 const leap = pose(
-	{ y: [0, 1.5, -5.5, 1, 0] },
+	{ y: [0, 0.9, -3.3, 0.6, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.3, 0.42, 1], ease: ["easeInOut", snap, "easeIn", springy] },
 );
 const give = pose(
-	{ y: [0, 0, 2, 0] },
+	{ y: [0, 0, 1.2, 0] },
 	{ duration: 0.72, times: [0, 0.4, 0.48, 1], ease: ["easeInOut", snap, springy] },
 );
 const bar = pose(
-	{ y: [0, 0, 1.5, 0] },
+	{ y: [0, 0, 0.9, 0] },
 	{ duration: 0.72, times: [0, 0.42, 0.5, 1], ease: ["easeInOut", snap, rubber] },
 );
 

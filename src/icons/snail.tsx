@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, rubber, snap } from "../helpers.ts";
 
-const crawl = pose({ x: [0, 4, 0] }, { duration: 0.75, times: [0, 0.35, 1], ease: ["easeInOut", rubber] });
-const shell = pose({ rotate: [0, -20, 0] }, { duration: 0.75, times: [0, 0.35, 1], ease: ["easeInOut", rubber] });
+const crawl = pose({ x: [0, 2.4, 0] }, { duration: 0.75, times: [0, 0.35, 1], ease: ["easeInOut", rubber] });
+const shell = pose({ rotate: [0, -12, 0] }, { duration: 0.75, times: [0, 0.35, 1], ease: ["easeInOut", rubber] });
 const feel = (direction: number) =>
 	pose({ rotate: [0, 25 * direction, 0] }, { duration: 0.7, delay: 0.05, times: [0, 0.2, 1], ease: [snap, ring] });
 

@@ -4,7 +4,7 @@ import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const apart = (y: number) =>
 	pose(
-		{ y: [0, y, 0], scale: [1, 1.6, 1] },
+		{ y: [0, y, 0], scale: [1, 1.36, 1] },
 		{ duration: 0.6, delay: 0.12, times: [0, 0.3, 1], ease: [snap, springy] },
 	);
 

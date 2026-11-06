@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, springy } from "../helpers.ts";
 
 const flip = pose(
-	{ y: [0, 1, -5, 0], rotate: [0, 10, -180, -360] },
+	{ y: [0, 0.6, -3, 0], rotate: [0, 1.22, -14, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.4, 1], ease: ["easeInOut", "easeOut", springy], reset: true },
 );
 const bone = pose(
-	{ rotate: [0, 0, 18, 0] },
+	{ rotate: [0, 0, 10.8, 0] },
 	{ duration: 0.7, delay: 0.08, times: [0, 0.35, 0.5, 1], ease: ["easeInOut", "easeOut", ring] },
 );
 

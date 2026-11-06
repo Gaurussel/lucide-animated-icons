@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
-const flex = pose({ rotate: [0, -10, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
-const pop = pose({ scale: [1, 1.3, 1] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
+const flex = pose({ rotate: [0, -6, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
+const pop = pose({ scale: [1, 1.18, 1] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "biceps-flexed",

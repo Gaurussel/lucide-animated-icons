@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, snap, springy } from "../helpers.ts";
 
-const type = pose({ x: [0, 5, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const type = pose({ x: [0, 3, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 const blink = pose({ opacity: [1, 1, 0.15, 1] }, { duration: 0.7, times: [0, 0.3, 0.42, 0.56] });
 
 export default createAnimatedIcon({

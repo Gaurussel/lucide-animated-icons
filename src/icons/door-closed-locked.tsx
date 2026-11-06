@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
-const shackle = pose({ y: [0, -3.5, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
-const knock = pose({ x: [0, -1.5, 0] }, { duration: 0.65, times: [0, 0.2, 1], ease: [snap, springy] });
+const shackle = pose({ y: [0, -2.1, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const knock = pose({ x: [0, -0.9, 0] }, { duration: 0.65, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "door-closed-locked",

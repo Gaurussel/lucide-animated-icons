@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, snap, springy } from "../helpers.ts";
 
 const bounce = pose(
-	{ y: [0, -4.5, 4.5, 0] },
+	{ y: [0, -2.7, 2.7, 0] },
 	{ duration: 0.72, times: [0, 0.2, 0.45, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 const bump = (d: number, at: number) =>

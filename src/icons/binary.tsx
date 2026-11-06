@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, springy } from "../helpers.ts";
 
 const flip = (delay: number) =>
-	pose({ scaleX: [1, -1, 1] }, { duration: 0.48, delay, times: [0, 0.4, 1], ease: ["easeInOut", springy] });
+	pose({ scaleX: [1, -0.2, 1] }, { duration: 0.48, delay, times: [0, 0.4, 1], ease: ["easeInOut", springy] });
 
 export default createAnimatedIcon({
 	name: "binary",

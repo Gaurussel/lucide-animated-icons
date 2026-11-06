@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
 const toss = pose(
-	{ y: [0, 1.5, -5, 0.8, 0] },
+	{ y: [0, 0.9, -3, 0.48, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.35, 0.5, 1], ease: ["easeInOut", snap, "easeIn", springy] },
 );
 const spin = pose(
-	{ rotate: [0, 0, 360] },
+	{ rotate: [0, 0, 0] },
 	{ duration: 0.72, times: [0, 0.12, 1], ease: ["easeInOut", springy], reset: true },
 );
 

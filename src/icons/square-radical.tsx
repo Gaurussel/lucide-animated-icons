@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const settle = pose(
-	{ rotate: [0, 0, -10, 0] },
+	{ rotate: [0, 0, -6, 0] },
 	{ duration: 0.72, times: [0, 0.42, 0.55, 1], ease: ["easeInOut", snap, ring] },
 );
 

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
-const toss = pose({ y: [0, -5, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy] });
+const toss = pose({ y: [0, -3, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy] });
 const spin = pose(
-	{ rotate: [0, -30, 360] },
+	{ rotate: [0, 3.62, 0] },
 	{ duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
 

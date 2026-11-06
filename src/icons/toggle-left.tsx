@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pose, rubber } from "../helpers.ts";
 
-const flick = pose({ x: [0, 6, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: ["easeInOut", rubber] });
+const flick = pose({ x: [0, 3.6, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: ["easeInOut", rubber] });
 
 export default createAnimatedIcon({
 	name: "toggle-left",

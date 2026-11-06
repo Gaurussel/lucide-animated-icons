@@ -3,9 +3,9 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const node = (delay: number) =>
-	pose({ scale: [1, 1.8, 1] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.48, 1] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const tilt = pose(
-	{ rotate: [0, -10, 0], y: [0, -2, 0] },
+	{ rotate: [0, -6, 0], y: [0, -1.2, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 

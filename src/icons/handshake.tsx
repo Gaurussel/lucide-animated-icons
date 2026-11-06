@@ -4,7 +4,10 @@ import { pose, ring, snap, springy } from "../helpers.ts";
 
 const reach = (direction: number) =>
 	pose({ x: [0, 3 * direction, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: ["easeInOut", springy] });
-const pump = pose({ y: [0, 0, -3, 0] }, { duration: 0.75, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] });
+const pump = pose(
+	{ y: [0, 0, -1.8, 0] },
+	{ duration: 0.75, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "handshake",

@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const pillar = (delay: number) =>
-	pose({ y: [0, -4.5, 0] }, { duration: 0.4, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -2.7, 0] }, { duration: 0.4, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 const settle = pose(
-	{ y: [0, 0, 3, 0] },
+	{ y: [0, 0, 1.8, 0] },
 	{ duration: 0.75, times: [0, 0.42, 0.52, 1], ease: ["easeInOut", snap, springy] },
 );
 

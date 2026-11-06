@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, redraw, snap, springy } from "../helpers.ts";
 
 const glow = pose(
-	{ scale: [1, 1.25, 1], rotate: [0, -10, 0] },
+	{ scale: [1, 1.15, 1], rotate: [0, -6, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 

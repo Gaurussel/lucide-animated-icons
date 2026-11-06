@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const head = (delay: number) =>
-	pose({ x: [0, 0, 3, 0] }, { duration: 0.7, delay, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] });
+	pose({ x: [0, 0, 1.8, 0] }, { duration: 0.7, delay, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] });
 
 export default createAnimatedIcon({
 	name: "shuffle",

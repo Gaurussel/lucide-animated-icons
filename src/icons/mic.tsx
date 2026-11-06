@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, snap, springy } from "../helpers.ts";
 
 const speak = pose(
-	{ y: [0, -3, 0], rotate: [0, -12, 0] },
+	{ y: [0, -1.8, 0], rotate: [0, -7.2, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const pulse = pose(
-	{ scale: [1, 1, 1.2, 1] },
+	{ scale: [1, 1, 1.12, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 

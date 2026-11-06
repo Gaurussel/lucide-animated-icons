@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const tilt = pose(
-	{ rotate: [0, -18, 0], x: [0, -2.5, 0] },
+	{ rotate: [0, -10.8, 0], x: [0, -1.5, 0] },
 	{ duration: 0.7, times: [0, 0.2, 1], ease: [snap, rubber] },
 );
-const grumble = pose({ rotate: [0, 15, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
+const grumble = pose({ rotate: [0, 9, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
 const roll = pose(
-	{ x: [0, 0, 2, 0], y: [0, -3, -3, 0] },
+	{ x: [0, 0, 1.2, 0], y: [0, -1.8, -1.8, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.45, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

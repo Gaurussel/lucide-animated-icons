@@ -4,16 +4,16 @@ import { edge, pose, snap, springy } from "../helpers.ts";
 
 const bar = (delay: number) =>
 	pose(
-		{ scaleX: [1, 0.1, 1.15, 1] },
+		{ scaleX: [1, 0.46, 1.09, 1] },
 		{ duration: 0.7, delay, times: [0, 0.22, 0.42, 1], ease: ["easeIn", snap, springy] },
 	);
 const stack = (delay: number) =>
 	pose(
-		{ y: [0, 0, -5, 0], opacity: [1, 0, 0, 1] },
+		{ y: [0, 0, -3, 0], opacity: [1, 0, 0, 1] },
 		{ duration: 0.65, delay, times: [0, 0.2, 0.4, 1], ease: ["easeInOut", "easeInOut", springy] },
 	);
 const axis = pose(
-	{ x: [0, 0, -1.5, 0], y: [0, 0, 1.5, 0] },
+	{ x: [0, 0, -0.9, 0], y: [0, 0, 0.9, 0] },
 	{ duration: 0.7, times: [0, 0.35, 0.5, 1], ease: ["easeInOut", snap, springy] },
 );
 

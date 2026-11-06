@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, ring, snap, springy } from "../helpers.ts";
 
-const shake = pose({ rotate: [0, -25, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
+const shake = pose({ rotate: [0, -15, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
 const fly = (x: number, y: number) =>
 	pose(
 		{ x: [0, x, -x, 0], y: [0, y, -y, 0], opacity: [1, 0, 0, 1] },

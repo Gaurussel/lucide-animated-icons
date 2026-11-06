@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, springy } from "../helpers.ts";
 
 const strike = pose(
-	{ y: [0, -5, 3, 0], rotate: [0, -8, 6, 0] },
+	{ y: [0, -3, 1.8, 0], rotate: [0, -4.8, 3.6, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.32, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

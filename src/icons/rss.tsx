@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const charge = pose(
-	{ scale: [1, 0.4, 2, 1], x: [0, 0, -1, 0], y: [0, 0, 1, 0] },
+	{ scale: [1, 0.64, 1.6, 1], x: [0, 0, -0.6, 0], y: [0, 0, 0.6, 0] },
 	{ duration: 0.65, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const wave = (delay: number) =>
-	pose({ x: [0, 2, 0], y: [0, -2, 0] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ x: [0, 1.2, 0], y: [0, -1.2, 0] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "rss",

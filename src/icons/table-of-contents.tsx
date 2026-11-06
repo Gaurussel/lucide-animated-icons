@@ -3,9 +3,9 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
 const slide = (delay: number) =>
-	pose({ x: [0, -4, 0] }, { duration: 0.55, delay, times: [0, 0.28, 1], ease: [snap, springy] });
+	pose({ x: [0, -2.4, 0] }, { duration: 0.55, delay, times: [0, 0.28, 1], ease: [snap, springy] });
 const bullet = (delay: number) =>
-	pose({ scale: [1, 2.5, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.9, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "table-of-contents",

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const swipe = pose(
-	{ y: [0, 1.5, -9, 9, 0], opacity: [1, 1, 0, 0, 1] },
+	{ y: [0, 0.9, -5.4, 5.4, 0], opacity: [1, 1, 0, 0, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", snap, springy] },
 );
 

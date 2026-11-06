@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const rock = pose({ y: [0, -2, 0], rotate: [0, -10, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
+const rock = pose({ y: [0, -1.2, 0], rotate: [0, -6, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
 const light = (delay: number) =>
-	pose({ scale: [1, 2.4, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.84, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "tram-front",

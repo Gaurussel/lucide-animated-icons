@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
-const recoil = pose({ rotate: [0, 12, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
+const recoil = pose({ rotate: [0, 7.2, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
 const burst = (x: number, y: number) =>
 	pose(
 		{ x: [0, -x, 0], y: [0, -y, 0], opacity: [1, 0, 1] },

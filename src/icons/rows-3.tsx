@@ -8,7 +8,7 @@ const swap = (y: number, delay: number) =>
 		{ duration: 0.62, delay, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeIn", springy] },
 	);
 const recoil = pose(
-	{ y: [0, 0, 1, 0] },
+	{ y: [0, 0, 0.6, 0] },
 	{ duration: 0.75, times: [0, 0.4, 0.48, 1], ease: ["easeInOut", snap, rubber] },
 );
 

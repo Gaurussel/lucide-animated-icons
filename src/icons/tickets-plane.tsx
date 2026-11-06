@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
 const lift = pose(
-	{ y: [0, -3, 0], rotate: [0, -16, 0] },
+	{ y: [0, -1.8, 0], rotate: [0, -9.6, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const flight = pose(
-	{ x: [0, -1, 9, -7, 0], y: [0, 1, -7, 5, 0], opacity: [1, 1, 0, 0, 1] },
+	{ x: [0, -0.6, 5.4, -4.2, 0], y: [0, 0.6, -4.2, 3, 0], opacity: [1, 1, 0, 0, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.38, 0.39, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
 

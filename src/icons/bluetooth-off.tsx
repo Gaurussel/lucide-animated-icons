@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, rubber, snap } from "../helpers.ts";
 
-const refuse = pose({ x: [0, -2.5, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, rubber] });
+const refuse = pose({ x: [0, -1.5, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, rubber] });
 
 export default createAnimatedIcon({
 	name: "bluetooth-off",

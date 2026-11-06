@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const drop = pose(
-	{ y: [0, -5, 1, 0], rotate: [0, -12, 0, 0] },
+	{ y: [0, -3, 0.6, 0], rotate: [0, -7.2, 0, 0] },
 	{ duration: 0.7, times: [0, 0.28, 0.42, 1], ease: [snap, "easeIn", springy] },
 );
 

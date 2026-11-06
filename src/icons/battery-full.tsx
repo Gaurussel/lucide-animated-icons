@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, hop, pose, redraw, snap, springy } from "../helpers.ts";
 
 const spark = pose(
-	{ x: [0, 0, 2, 0] },
+	{ x: [0, 0, 1.2, 0] },
 	{ duration: 0.65, times: [0, 0.5, 0.58, 1], ease: ["easeInOut", snap, springy] },
 );
 

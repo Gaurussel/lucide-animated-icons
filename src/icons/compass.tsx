@@ -7,7 +7,7 @@ const seek = pose(
 	{ duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
 const housing = pose(
-	{ scale: [1, 1, 1.1, 1], rotate: [0, 0, 8, 0] },
+	{ scale: [1, 1, 1.06, 1], rotate: [0, 0, 4.8, 0] },
 	{ duration: 0.75, times: [0, 0.35, 0.48, 1], ease: ["easeInOut", snap, ring] },
 );
 

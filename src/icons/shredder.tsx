@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pose, ring, snap, springy } from "../helpers.ts";
 
 const feed = pose(
-	{ y: [0, -1.5, 4, 0] },
+	{ y: [0, -0.9, 2.4, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const strip = (delay: number) =>
 	pose(
-		{ pathLength: [1, 0, 1, 1], y: [0, 0, 3, 0] },
+		{ pathLength: [1, 0, 1, 1], y: [0, 0, 1.8, 0] },
 		{ duration: 0.5, delay, times: [0, 0.01, 0.4, 1], ease: ["easeInOut", snap, ring] },
 	);
 

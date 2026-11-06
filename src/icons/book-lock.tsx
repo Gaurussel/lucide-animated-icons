@@ -2,8 +2,11 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
-const lift = pose({ y: [0, -3, 0], rotate: [0, -10, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
-const shackle = pose({ y: [0, -2.5, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const lift = pose(
+	{ y: [0, -1.8, 0], rotate: [0, -6, 0] },
+	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
+);
+const shackle = pose({ y: [0, -1.5, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "book-lock",

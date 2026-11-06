@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, springy } from "../helpers.ts";
 
 const launch = pose(
-	{ x: [0, -2, 4, 0] },
+	{ x: [0, -1.2, 2.4, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.38, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

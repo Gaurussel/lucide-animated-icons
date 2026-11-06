@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, ring, snap, springy } from "../helpers.ts";
 
 const lift = pose(
-	{ y: [0, 1, -3, 0] },
+	{ y: [0, 0.6, -1.8, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const buzz = pose(
-	{ rotate: [0, 0, -16, 0] },
+	{ rotate: [0, 0, -9.6, 0] },
 	{ duration: 0.72, times: [0, 0.18, 0.3, 1], ease: ["easeInOut", snap, ring] },
 );
 const ping = pose(
-	{ scale: [1, 1, 3, 1] },
+	{ scale: [1, 1, 2.2, 1] },
 	{ duration: 0.65, delay: 0.05, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 

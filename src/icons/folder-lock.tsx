@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const shackle = pose(
-	{ y: [0, 1, -4, 0] },
+	{ y: [0, 0.6, -2.4, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const clack = pose(
-	{ rotate: [0, 0, 14, 0] },
+	{ rotate: [0, 0, 8.4, 0] },
 	{ duration: 0.7, times: [0, 0.38, 0.46, 1], ease: ["easeInOut", snap, ring] },
 );
 

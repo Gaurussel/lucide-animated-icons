@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pivot, pose, ring, springy } from "../helpers.ts";
 
 const ride = pose(
-	{ x: [0, -1, 3, 0], rotate: [0, 0, -10, 0] },
+	{ x: [0, -0.6, 1.8, 0], rotate: [0, 0, -6, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 const handle = pose(
-	{ rotate: [0, 0, 20, 0] },
+	{ rotate: [0, 0, 12, 0] },
 	{ duration: 0.72, times: [0, 0.2, 0.42, 1], ease: ["easeInOut", "easeInOut", ring] },
 );
 const roll = pose(
-	{ x: [0, -1, 1, 0] },
+	{ x: [0, -0.6, 0.6, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

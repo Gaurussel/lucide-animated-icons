@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const shake = pose({ rotate: [0, -18, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
-const mouth = pose({ scale: [1, 1.35, 1] }, { duration: 0.75, times: [0, 0.22, 1], ease: [snap, springy] });
-const squint = pose({ y: [0, -1.5, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, springy] });
+const shake = pose({ rotate: [0, -10.8, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
+const mouth = pose({ scale: [1, 1.21, 1] }, { duration: 0.75, times: [0, 0.22, 1], ease: [snap, springy] });
+const squint = pose({ y: [0, -0.9, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "laugh",

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pose, springy } from "../helpers.ts";
 
 const turn = pose(
-	{ rotate: [0, -20, 360] },
+	{ rotate: [0, 2.43, 0] },
 	{ duration: 0.72, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
 const swap = (direction: number) =>

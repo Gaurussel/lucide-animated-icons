@@ -4,7 +4,7 @@ import { pivot, pose, springy } from "../helpers.ts";
 
 const chase = (delay: number) =>
 	pose(
-		{ rotate: [0, -30, 360], scale: [1, 0.8, 1] },
+		{ rotate: [0, -30, 360], scale: [1, 0.88, 1] },
 		{ duration: 0.65, delay, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 	);
 

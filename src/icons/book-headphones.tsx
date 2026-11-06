@@ -2,8 +2,11 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
-const lift = pose({ y: [0, -3, 0], rotate: [0, -10, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
-const bop = pose({ rotate: [0, -15, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
+const lift = pose(
+	{ y: [0, -1.8, 0], rotate: [0, -6, 0] },
+	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
+);
+const bop = pose({ rotate: [0, -9, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
 
 export default createAnimatedIcon({
 	name: "book-headphones",

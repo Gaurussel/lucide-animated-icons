@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, springy } from "../helpers.ts";
 
 const orbit = pose(
-	{ x: [0, -2, 0, 2, 0], y: [0, 0, -2, 0, 0] },
+	{ x: [0, -1.2, 0, 1.2, 0], y: [0, 0, -1.2, 0, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.3, 0.45, 1], ease: ["easeInOut", "easeInOut", "easeInOut", springy] },
 );
 

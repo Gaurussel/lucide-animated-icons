@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const alarm = pose({ rotate: [0, -16, 0] }, { duration: 0.75, times: [0, 0.12, 1], ease: [snap, ring] });
+const alarm = pose({ rotate: [0, -9.6, 0] }, { duration: 0.75, times: [0, 0.12, 1], ease: [snap, ring] });
 const dot = pose(
-	{ y: [0, 0, 2.5, 0] },
+	{ y: [0, 0, 1.5, 0] },
 	{ duration: 0.75, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, springy] },
 );
 

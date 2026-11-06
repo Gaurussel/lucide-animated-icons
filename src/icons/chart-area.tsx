@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const flood = pose(
-	{ y: [0, 4, -1.5, 0] },
+	{ y: [0, 2.4, -0.9, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 const axis = pose(
-	{ x: [0, 0, -1.5, 0], y: [0, 0, 1.5, 0] },
+	{ x: [0, 0, -0.9, 0], y: [0, 0, 0.9, 0] },
 	{ duration: 0.7, times: [0, 0.35, 0.5, 1], ease: ["easeInOut", snap, springy] },
 );
 

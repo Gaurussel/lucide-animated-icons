@@ -4,7 +4,7 @@ import { pivot, pose, redraw, springy } from "../helpers.ts";
 
 const roll = (x: number) =>
 	pose(
-		{ x: [0, -x * 0.5, x, 0], rotate: [0, -60, 200, 360] },
+		{ x: [0, -x * 0.5, x, 0], rotate: [0, 7, -13.79, 0] },
 		{ duration: 0.75, times: [0, 0.18, 0.42, 1], ease: ["easeInOut", "easeInOut", springy], reset: true },
 	);
 

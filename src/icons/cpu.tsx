@@ -5,7 +5,7 @@ import { pivot, pose, snap, springy } from "../helpers.ts";
 const pins = (x: number, y: number, delay: number) =>
 	pose({ x: [0, x, 0], y: [0, y, 0] }, { duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const core = pose(
-	{ rotate: [0, 0, 360], scale: [1, 0.6, 1] },
+	{ rotate: [0, 0, 0], scale: [1, 0.76, 1] },
 	{ duration: 0.7, times: [0, 0.15, 1], ease: [snap, springy], reset: true },
 );
 

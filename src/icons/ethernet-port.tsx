@@ -2,7 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
-const plug = pose({ y: [0, -3.5, 1, 0] }, { duration: 0.7, times: [0, 0.2, 0.32, 1], ease: [snap, "easeIn", springy] });
+const plug = pose(
+	{ y: [0, -2.1, 0.6, 0] },
+	{ duration: 0.7, times: [0, 0.2, 0.32, 1], ease: [snap, "easeIn", springy] },
+);
 
 export default createAnimatedIcon({
 	name: "ethernet-port",

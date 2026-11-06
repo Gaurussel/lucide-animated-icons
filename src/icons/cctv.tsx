@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const pan = pose(
-	{ rotate: [0, -26, -20, 0] },
+	{ rotate: [0, -15.6, -12, 0] },
 	{ duration: 0.75, times: [0, 0.25, 0.45, 1], ease: [snap, "easeInOut", ring] },
 );
 const spot = pose(
-	{ scale: [1, 1, 2.2, 1] },
+	{ scale: [1, 1, 1.72, 1] },
 	{ duration: 0.7, times: [0, 0.25, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
 const mount = pose(
-	{ x: [0, 0, -1, 0] },
+	{ x: [0, 0, -0.6, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 

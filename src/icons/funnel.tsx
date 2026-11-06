@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const sift = pose(
-	{ y: [0, -3, 1, 0], rotate: [0, 10, -4, 0] },
+	{ y: [0, -1.8, 0.6, 0], rotate: [0, 6, -2.4, 0] },
 	{ duration: 0.75, times: [0, 0.22, 0.4, 1], ease: [snap, "easeIn", ring] },
 );
 

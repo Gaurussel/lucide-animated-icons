@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const flash = pose(
-	{ y: [0, -3, 0], rotate: [0, -10, 0] },
+	{ y: [0, -1.8, 0], rotate: [0, -6, 0] },
 	{ duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] },
 );
-const nod = pose({ y: [0, -2.5, 0] }, { duration: 0.6, delay: 0.1, times: [0, 0.3, 1], ease: [snap, springy] });
+const nod = pose({ y: [0, -1.5, 0] }, { duration: 0.6, delay: 0.1, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "id-card",

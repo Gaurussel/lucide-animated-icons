@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const jab = pose(
-	{ x: [0, -2, 4, 0] },
+	{ x: [0, -1.2, 2.4, 0] },
 	{ duration: 0.65, times: [0, 0.18, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
 

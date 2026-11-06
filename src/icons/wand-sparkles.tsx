@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
-const swish = pose({ rotate: [0, -18, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const swish = pose({ rotate: [0, -10.8, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 const twinkle = (delay: number) =>
 	pose(
-		{ scale: [1, 0.2, 1.5, 1], rotate: [0, 0, 90, 0] },
+		{ scale: [1, 0.52, 1.3, 1], rotate: [0, 0, 54, 0] },
 		{ duration: 0.6, delay, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", snap, springy] },
 	);
 

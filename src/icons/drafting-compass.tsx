@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
-const press = pose({ y: [0, 1.5, 0] }, { duration: 0.6, times: [0, 0.15, 1], ease: [snap, springy] });
+const press = pose({ y: [0, 0.9, 0] }, { duration: 0.6, times: [0, 0.15, 1], ease: [snap, springy] });
 const leg = (degrees: number) =>
 	pose({ rotate: [0, degrees, 0] }, { duration: 0.7, delay: 0.08, times: [0, 0.28, 1], ease: [snap, springy] });
 

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
-const seat = pose({ x: [0, 4, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
+const seat = pose({ x: [0, 2.4, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
 const fan = (delay: number) =>
-	pose({ scale: [1, 0.4, 1] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 0.64, 1] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "gpu",

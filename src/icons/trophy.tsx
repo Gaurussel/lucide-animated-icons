@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const raise = pose(
-	{ y: [0, 1, -4, 0], rotate: [0, 4, -10, 0] },
+	{ y: [0, 0.6, -2.4, 0], rotate: [0, 2.4, -6, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.32, 1], ease: ["easeInOut", snap, springy] },
 );
 const flap = (degrees: number) =>

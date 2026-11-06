@@ -8,7 +8,7 @@ const push = (direction: number) =>
 		{ duration: 0.7, times: [0, 0.2, 0.38, 1], ease: ["easeInOut", "easeIn", springy] },
 	);
 const spread = pose(
-	{ scaleY: [1, 1, 0.6, 1] },
+	{ scaleY: [1, 1, 0.76, 1] },
 	{ duration: 0.7, times: [0, 0.2, 0.38, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pose, snap, springy } from "../helpers.ts";
 
 const turn = pose(
-	{ rotate: [0, 0, 360] },
+	{ rotate: [0, 0, 0] },
 	{ duration: 0.68, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
 const apart = (direction: number) =>

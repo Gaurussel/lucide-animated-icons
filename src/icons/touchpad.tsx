@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const click = pose({ y: [0, 3, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
+const click = pose({ y: [0, 1.8, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
 const tilt = pose(
-	{ rotate: [0, 0, -9, 0] },
+	{ rotate: [0, 0, -5.4, 0] },
 	{ duration: 0.7, times: [0, 0.14, 0.28, 1], ease: ["easeInOut", snap, ring] },
 );
 

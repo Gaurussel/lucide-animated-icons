@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, rubber } from "../helpers.ts";
 
 const tumble = pose(
-	{ y: [0, 1, -3, 0], rotate: [0, -4, 14, 0] },
+	{ y: [0, 0.6, -1.8, 0], rotate: [0, -2.4, 8.4, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", "easeOut", rubber] },
 );
 

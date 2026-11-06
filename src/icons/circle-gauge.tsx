@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
-const needle = pose({ rotate: [0, -110, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, ring] });
+const needle = pose({ rotate: [0, -66, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, ring] });
 const dial = pose(
-	{ rotate: [0, 40, 0], scale: [1, 0.85, 1] },
+	{ rotate: [0, 24, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.75, times: [0, 0.3, 1], ease: [snap, ring] },
 );
 

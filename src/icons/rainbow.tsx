@@ -3,7 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const rise = (delay: number) =>
-	pose({ y: [0, 0, -3, 0] }, { duration: 0.45, delay, times: [0, 0.4, 0.6, 1], ease: ["easeInOut", snap, springy] });
+	pose(
+		{ y: [0, 0, -1.8, 0] },
+		{ duration: 0.45, delay, times: [0, 0.4, 0.6, 1], ease: ["easeInOut", snap, springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "rainbow",

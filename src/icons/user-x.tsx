@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const head = pose(
-	{ y: [0, 1.5, -4, 0], x: [0, 0, 0.5, 0] },
+	{ y: [0, 0.9, -2.4, 0], x: [0, 0, 0.3, 0] },
 	{ duration: 0.72, times: [0, 0.14, 0.32, 1], ease: ["easeInOut", snap, springy] },
 );
 const shoulders = pose(
-	{ y: [0, 0, -2, 0] },
+	{ y: [0, 0, -1.2, 0] },
 	{ duration: 0.72, times: [0, 0.24, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
 
-const strike = pose({ scale: [1, 0.82, 1] }, { duration: 0.72, times: [0, 0.14, 1], ease: [snap, springy] });
+const strike = pose({ scale: [1, 0.89, 1] }, { duration: 0.72, times: [0, 0.14, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "user-x",

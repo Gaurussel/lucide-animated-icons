@@ -8,7 +8,7 @@ const snip = (direction: number) =>
 		{ duration: 0.72, times: [0, 0.15, 0.3, 0.45, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 	);
 const advance = pose(
-	{ x: [0, 0, 2, 3, 0] },
+	{ x: [0, 0, 1.2, 1.8, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.3, 0.45, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
 

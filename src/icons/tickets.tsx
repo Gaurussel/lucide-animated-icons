@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
 const lift = pose(
-	{ y: [0, -3, 0], rotate: [0, -16, 0] },
+	{ y: [0, -1.8, 0], rotate: [0, -9.6, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 

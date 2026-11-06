@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const dig = pose(
-	{ x: [0, 1, -2, -1, 0], y: [0, -2, 3, 1, 0], rotate: [0, 8, 0, -20, 0] },
+	{ x: [0, 0.6, -1.2, -0.6, 0], y: [0, -1.2, 1.8, 0.6, 0], rotate: [0, 4.8, 0, -12, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.3, 0.5, 1], ease: ["easeInOut", "easeIn", snap, springy] },
 );
 const blade = pose(
-	{ rotate: [0, 0, 0, -10, 0] },
+	{ rotate: [0, 0, 0, -6, 0] },
 	{ duration: 0.72, times: [0, 0.3, 0.45, 0.58, 1], ease: ["easeInOut", "easeInOut", snap, ring] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const charge = pose(
-	{ scale: [1, 0.4, 1.3, 1] },
+	{ scale: [1, 0.64, 1.18, 1] },
 	{ duration: 0.7, times: [0, 0.18, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const kickback = pose(
-	{ x: [0, 0, -2, 0] },
+	{ x: [0, 0, -1.2, 0] },
 	{ duration: 0.7, times: [0, 0.22, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const ray = (x: number, y: number, delay: number) =>

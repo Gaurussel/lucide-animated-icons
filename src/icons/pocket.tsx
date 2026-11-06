@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, redraw, springy } from "../helpers.ts";
 
 const dive = pose(
-	{ y: [0, -3, 5, 0], opacity: [1, 1, 0, 1] },
+	{ y: [0, -1.8, 3, 0], opacity: [1, 1, 0, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.36, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

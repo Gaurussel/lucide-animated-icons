@@ -5,7 +5,7 @@ import { pose, snap, springy } from "../helpers.ts";
 const focus = (x: number, y: number) =>
 	pose({ x: [0, 2 * x, 0], y: [0, 2 * y, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 const sweep = pose(
-	{ y: [0, -5, 5, 0] },
+	{ y: [0, -3, 3, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.45, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

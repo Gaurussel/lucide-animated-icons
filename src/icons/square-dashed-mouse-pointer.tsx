@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, ring, springy } from "../helpers.ts";
 
 const drag = pose(
-	{ x: [0, -3, 2.5, 0], y: [0, -3, 2.5, 0] },
+	{ x: [0, -1.8, 1.5, 0], y: [0, -1.8, 1.5, 0] },
 	{ duration: 0.72, times: [0, 0.25, 0.5, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 const follow = pose(
-	{ x: [0, 0, 2, 0], y: [0, 0, 2, 0] },
+	{ x: [0, 0, 1.2, 0], y: [0, 0, 1.2, 0] },
 	{ duration: 0.72, times: [0, 0.32, 0.55, 1], ease: ["easeInOut", "easeInOut", ring] },
 );
 

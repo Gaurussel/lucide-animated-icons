@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
-const shove = pose({ x: [0, -4, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
+const shove = pose({ x: [0, -2.4, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
 const twist = pose(
-	{ rotate: [0, 0, 360], scale: [1, 0.5, 1] },
+	{ rotate: [0, 0, 0], scale: [1, 0.7, 1] },
 	{ duration: 0.65, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
 );
 

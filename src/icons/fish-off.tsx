@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const bump = pose(
-	{ x: [0, -2, 4, -2.5, 0], rotate: [0, 0, 0, 16, 0] },
+	{ x: [0, -1.2, 2.4, -1.5, 0], rotate: [0, 0, 0, 9.6, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.3, 0.42, 1], ease: ["easeInOut", "easeIn", snap, ring] },
 );
 

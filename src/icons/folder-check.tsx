@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const drop = pose(
-	{ y: [0, -9, 0, 0], opacity: [1, 0, 1, 1] },
+	{ y: [0, -5.4, 0, 0], opacity: [1, 0, 1, 1] },
 	{ duration: 0.7, times: [0, 0.08, 0.35, 1], ease: ["easeInOut", "easeIn", "easeInOut"] },
 );
 const absorb = pose(
-	{ y: [0, 0, 2, 0] },
+	{ y: [0, 0, 1.2, 0] },
 	{ duration: 0.7, times: [0, 0.33, 0.43, 1], ease: ["easeInOut", snap, springy] },
 );
 const stamp = pose(
-	{ scale: [1, 1, 1.4, 1] },
+	{ scale: [1, 1, 1.24, 1] },
 	{ duration: 0.7, times: [0, 0.35, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 

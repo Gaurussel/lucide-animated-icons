@@ -4,7 +4,7 @@ import { pose, snap, springy } from "../helpers.ts";
 
 const dash = (lag: number) =>
 	pose(
-		{ x: [0, -1.8, 7.7, -6.3, 1, 0], y: [0, -1.8, 7.7, -6.3, 1, 0], opacity: [1, 1, 0, 0, 1, 1] },
+		{ x: [0, -1.08, 4.62, -3.78, 0.6, 0], y: [0, -1.08, 4.62, -3.78, 0.6, 0], opacity: [1, 1, 0, 0, 1, 1] },
 		{
 			duration: 0.7,
 			times: [0, 0.16, 0.32 + lag, 0.33 + lag, 0.55 + lag, 1],

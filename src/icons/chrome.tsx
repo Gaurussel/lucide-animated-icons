@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, rubber, snap, springy } from "../helpers.ts";
 
 const spin = pose(
-	{ rotate: [0, -40, 360] },
+	{ rotate: [0, 4.79, 0] },
 	{ duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
-const core = pose({ scale: [1, 0.6, 1] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
+const core = pose({ scale: [1, 0.76, 1] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
 
 export default createAnimatedIcon({
 	name: "chrome",

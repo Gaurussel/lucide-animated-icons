@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, rubber, snap, springy } from "../helpers.ts";
 
 const lift = pose(
-	{ y: [0, 1, -4, 0], rotate: [0, 0, -5, 0] },
+	{ y: [0, 0.6, -2.4, 0], rotate: [0, 0, -3, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 const zoom = pose(
-	{ scale: [1, 1.35, 1], rotate: [0, -15, 0] },
+	{ scale: [1, 1.21, 1], rotate: [0, -9, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] },
 );
 

@@ -5,7 +5,7 @@ import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 const relay = (x: number, y: number, delay: number) =>
 	pose({ x: [0, x, 0], y: [0, y, 0] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const twist = pose(
-	{ rotate: [0, 0, -20, 0] },
+	{ rotate: [0, 0, -12, 0] },
 	{ duration: 0.72, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 

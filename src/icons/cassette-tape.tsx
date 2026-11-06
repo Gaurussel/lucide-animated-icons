@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, pose, snap, springy } from "../helpers.ts";
 
 const eject = pose(
-	{ y: [0, -4, 0], rotate: [0, -6, 0] },
+	{ y: [0, -2.4, 0], rotate: [0, -3.6, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const reel = (direction: number) =>
 	pose(
-		{ x: [0, 1.5 * direction, 0], scale: [1, 0.6, 1] },
+		{ x: [0, 1.5 * direction, 0], scale: [1, 0.76, 1] },
 		{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
 	);
 

@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const tilt = pose({ rotate: [0, -30, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
-const press = pose({ y: [0, 1.5, 0] }, { duration: 0.6, delay: 0.1, times: [0, 0.25, 1], ease: [snap, springy] });
+const tilt = pose({ rotate: [0, -18, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
+const press = pose({ y: [0, 0.9, 0] }, { duration: 0.6, delay: 0.1, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "joystick",

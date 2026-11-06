@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const shine = pose(
-	{ scale: [1, 1.25, 1], rotate: [0, 25, 0] },
+	{ scale: [1, 1.15, 1], rotate: [0, 15, 0] },
 	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
 );
-const pass = pose({ x: [0, -3, 0], y: [0, 1.5, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const pass = pose({ x: [0, -1.8, 0], y: [0, 0.9, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "cloud-sun",
@@ -19,7 +19,7 @@ export default createAnimatedIcon({
 				<path d="m19.07 4.93-1.41 1.41" />
 			</motion.g>
 			<motion.path
-				{...part(pose({ rotate: [0, 25, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] }))}
+				{...part(pose({ rotate: [0, 15, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] }))}
 				d="M15.947 12.65a4 4 0 0 0-5.925-4.128"
 				style={pivot(12, 12)}
 			/>

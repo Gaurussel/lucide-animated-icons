@@ -2,7 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, ring, snap } from "../helpers.ts";
 
-const sway = pose({ y: [0, -2, 0], rotate: [0, -18, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
+const sway = pose(
+	{ y: [0, -1.2, 0], rotate: [0, -10.8, 0] },
+	{ duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "lamp-floor",

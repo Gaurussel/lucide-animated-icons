@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const drop = pose(
-	{ y: [0, -4, 4, 0], opacity: [1, 1, 0.4, 1] },
+	{ y: [0, -2.4, 2.4, 0], opacity: [1, 1, 0.4, 1] },
 	{ duration: 0.7, times: [0, 0.2, 0.38, 1], ease: [snap, "easeIn", springy] },
 );
 const absorb = pose(
-	{ y: [0, 0, 2, 0] },
+	{ y: [0, 0, 1.2, 0] },
 	{ duration: 0.7, times: [0, 0.36, 0.46, 1], ease: ["easeInOut", snap, springy] },
 );
 

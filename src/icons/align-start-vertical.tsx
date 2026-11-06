@@ -8,7 +8,7 @@ const align = (x: number, y: number, delay = 0) =>
 		{ duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] },
 	);
 const plate = pose(
-	{ x: [0, 0, -1.5, 0] },
+	{ x: [0, 0, -0.9, 0] },
 	{ duration: 0.7, times: [0, 0.3, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const sway = pose(
-	{ rotate: [0, 6, -12, 0] },
+	{ rotate: [0, 3.6, -7.2, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", snap, ring] },
 );
 const prong = (delay: number) =>
-	pose({ rotate: [0, -18, 0] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ rotate: [0, -10.8, 0] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "antenna",

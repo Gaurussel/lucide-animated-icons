@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, snap, springy } from "../helpers.ts";
 
-const lift = pose({ y: [0, -4, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
-const fold = pose({ scaleY: [1, -0.6, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const lift = pose({ y: [0, -2.4, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const fold = pose({ scaleY: [1, 0.04, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "mail-open",

@@ -2,11 +2,11 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const rock = pose({ rotate: [0, -20, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", ring] });
-const lift = pose({ y: [0, -2.5, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const rock = pose({ rotate: [0, -12, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", ring] });
+const lift = pose({ y: [0, -1.5, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 const fall = (delay: number) =>
 	pose(
-		{ y: [0, -1, 6, -4, 0], opacity: [1, 1, 0, 0, 1] },
+		{ y: [0, -0.6, 3.6, -2.4, 0], opacity: [1, 1, 0, 0, 1] },
 		{ duration: 0.65, delay, times: [0, 0.12, 0.4, 0.41, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 	);
 

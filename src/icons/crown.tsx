@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, springy } from "../helpers.ts";
 
 const crowned = pose(
-	{ y: [0, 1, -6, 1, 0], rotate: [0, 0, -14, 2, 0] },
+	{ y: [0, 0.6, -3.6, 0.6, 0], rotate: [0, 0, -8.4, 1.2, 0] },
 	{ duration: 0.75, times: [0, 0.1, 0.3, 0.45, 1], ease: ["easeInOut", "easeOut", "easeIn", springy] },
 );
 const cushion = pose(
-	{ scaleX: [1, 1, 1.3, 1] },
+	{ scaleX: [1, 1, 1.18, 1] },
 	{ duration: 0.75, times: [0, 0.42, 0.5, 1], ease: ["easeInOut", "easeOut", springy] },
 );
 

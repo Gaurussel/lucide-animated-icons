@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, springy } from "../helpers.ts";
 
-const twist = pose({ scaleX: [1, -1, 1] }, { duration: 0.75, times: [0, 0.4, 1], ease: ["easeInOut", springy] });
+const twist = pose({ scaleX: [1, -0.2, 1] }, { duration: 0.75, times: [0, 0.4, 1], ease: ["easeInOut", springy] });
 
 export default createAnimatedIcon({
 	name: "dna",

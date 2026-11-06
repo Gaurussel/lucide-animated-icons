@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
 const rock = pose(
-	{ rotate: [0, 6, -18, 0] },
+	{ rotate: [0, 3.6, -10.8, 0] },
 	{ duration: 0.75, times: [0, 0.1, 0.25, 1], ease: ["easeInOut", snap, ring] },
 );
 const back = pose(
-	{ rotate: [0, 0, -10, 0] },
+	{ rotate: [0, 0, -6, 0] },
 	{ duration: 0.75, times: [0, 0.22, 0.34, 1], ease: ["easeInOut", snap, ring] },
 );
 

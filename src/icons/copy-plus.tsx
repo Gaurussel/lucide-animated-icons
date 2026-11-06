@@ -2,10 +2,13 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, rubber, snap, springy } from "../helpers.ts";
 
-const stamp = pose({ scale: [1, 0.85, 1] }, { duration: 0.65, times: [0, 0.15, 1], ease: [snap, springy] });
-const slide = pose({ x: [0, -3, 0], y: [0, -3, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
+const stamp = pose({ scale: [1, 0.91, 1] }, { duration: 0.65, times: [0, 0.15, 1], ease: [snap, springy] });
+const slide = pose(
+	{ x: [0, -1.8, 0], y: [0, -1.8, 0] },
+	{ duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] },
+);
 const nod = pose(
-	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ rotate: [0, -12, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.65, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 

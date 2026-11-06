@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, snap, springy } from "../helpers.ts";
 
-const grow = pose({ scale: [1, 1.25, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const grow = pose({ scale: [1, 1.15, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 const leap = pose(
-	{ y: [0, -6, 0], rotate: [0, -20, 0] },
+	{ y: [0, -3.6, 0], rotate: [0, -12, 0] },
 	{ duration: 0.6, delay: 0.08, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
 const swingOpen = pose(
-	{ y: [0, -3, 0], rotate: [0, -28, 0] },
+	{ y: [0, -1.8, 0], rotate: [0, -16.8, 0] },
 	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 const keyhole = pose(
-	{ scale: [1, 1, 2, 1] },
+	{ scale: [1, 1, 1.6, 1] },
 	{ duration: 0.7, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 

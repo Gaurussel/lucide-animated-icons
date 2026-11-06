@@ -10,7 +10,7 @@ const open = (d: number) =>
 		{ duration: 0.75, times: [0, 0.25, 0.45, 1], ease: ["easeInOut", snap, springy] },
 	);
 const turn = pose(
-	{ rotate: [0, -30, 360] },
+	{ rotate: [0, 3.62, 0] },
 	{ duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
 

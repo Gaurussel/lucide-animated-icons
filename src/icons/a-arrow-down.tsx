@@ -9,7 +9,7 @@ export default createAnimatedIcon({
 			<motion.g
 				{...part(
 					pose(
-						{ scale: [1, 1, 0.75, 1] },
+						{ scale: [1, 1, 0.85, 1] },
 						{ duration: 0.65, times: [0, 0.25, 0.45, 1], ease: ["easeInOut", snap, springy] },
 					),
 				)}

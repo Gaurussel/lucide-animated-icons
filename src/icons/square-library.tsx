@@ -3,8 +3,8 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const bob = (delay: number) =>
-	pose({ y: [0, -3, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
-const lean = pose({ rotate: [0, 18, 0] }, { duration: 0.7, delay: 0.1, times: [0, 0.22, 1], ease: [snap, ring] });
+	pose({ y: [0, -1.8, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+const lean = pose({ rotate: [0, 10.8, 0] }, { duration: 0.7, delay: 0.1, times: [0, 0.22, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "square-library",

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
-const swish = pose({ rotate: [0, -25, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const swish = pose({ rotate: [0, -15, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 const burst = pose(
-	{ scale: [1, 0.4, 1.4, 1], rotate: [0, 0, 45, 0] },
+	{ scale: [1, 0.64, 1.24, 1], rotate: [0, 0, 27, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 

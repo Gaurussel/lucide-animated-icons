@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, rubber, snap, springy } from "../helpers.ts";
 
 const write = pose(
-	{ rotate: [0, -12, 6, 0] },
+	{ rotate: [0, -7.2, 3.6, 0] },
 	{ duration: 0.72, times: [0, 0.3, 0.55, 1], ease: ["easeInOut", "easeInOut", rubber] },
 );
 const flick = pose(
-	{ x: [0, 0, 2.5, 0] },
+	{ x: [0, 0, 1.5, 0] },
 	{ duration: 0.72, times: [0, 0.55, 0.65, 1], ease: ["easeInOut", snap, springy] },
 );
 

@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const glide = pose({ x: [0, 4, 0], y: [0, -1, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy] });
-const sway = pose({ rotate: [0, -14, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: ["easeInOut", ring] });
+const glide = pose({ x: [0, 2.4, 0], y: [0, -0.6, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy] });
+const sway = pose({ rotate: [0, -8.4, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: ["easeInOut", ring] });
 const bird = (delay: number) =>
-	pose({ y: [0, -2, 0], scale: [1, 2, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -1.2, 0], scale: [1, 1.6, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "cable-car",

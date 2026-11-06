@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring } from "../helpers.ts";
 
 const swim = pose(
-	{ x: [0, -2.5, 3, 0], rotate: [0, 6, -12, 0] },
+	{ x: [0, -1.5, 1.8, 0], rotate: [0, 3.6, -7.2, 0] },
 	{ duration: 0.75, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeIn", ring] },
 );
 

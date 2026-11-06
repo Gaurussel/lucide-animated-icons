@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, rubber } from "../helpers.ts";
 
 const wave = pose(
-	{ rotate: [0, 6, -16, 0] },
+	{ rotate: [0, 3.6, -9.6, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.32, 1], ease: ["easeInOut", "easeOut", rubber] },
 );
 

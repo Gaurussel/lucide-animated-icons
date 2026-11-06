@@ -4,7 +4,7 @@ import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const shove = (x: number, delay: number) =>
 	pose({ x: [0, x, 0] }, { duration: 0.65, delay, times: [0, 0.25, 1], ease: [snap, rubber] });
-const wobble = pose({ rotate: [0, -8, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const wobble = pose({ rotate: [0, -4.8, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "brick-wall",

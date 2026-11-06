@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring } from "../helpers.ts";
 
 const shake = pose(
-	{ y: [0, 1.5, -3, 0], rotate: [0, 8, -20, 0] },
+	{ y: [0, 0.9, -1.8, 0], rotate: [0, 4.8, -12, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.28, 1], ease: ["easeInOut", "easeInOut", ring] },
 );
 

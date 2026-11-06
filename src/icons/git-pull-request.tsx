@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const tug = pose(
-	{ y: [0, 0, -3, 0], scale: [1, 1, 1.35, 1] },
+	{ y: [0, 0, -1.8, 0], scale: [1, 1, 1.21, 1] },
 	{ duration: 0.75, times: [0, 0.35, 0.48, 1], ease: ["easeInOut", snap, springy] },
 );
-const reach = pose({ x: [0, 2, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, springy] });
+const reach = pose({ x: [0, 1.2, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "git-pull-request",

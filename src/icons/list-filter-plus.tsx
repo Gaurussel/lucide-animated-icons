@@ -5,7 +5,7 @@ import { centered, pose, rubber, snap, springy } from "../helpers.ts";
 const sift = (x: number, delay: number) =>
 	pose({ x: [0, x, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const nod = pose(
-	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ rotate: [0, -12, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.65, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 

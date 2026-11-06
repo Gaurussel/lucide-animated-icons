@@ -4,7 +4,7 @@ import { centered, jelly, pose, ring, snap, springy } from "../helpers.ts";
 
 const dropIn = (delay: number) =>
 	pose(
-		{ pathLength: [1, 0, 1], y: [0, -5, 0] },
+		{ pathLength: [1, 0, 1], y: [0, -3, 0] },
 		{ duration: 0.45, delay, times: [0, 0.01, 1], ease: ["easeInOut", springy] },
 	);
 const push = (direction: number) =>

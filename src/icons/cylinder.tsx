@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, springy } from "../helpers.ts";
 
 const lid = pose(
-	{ y: [0, 1, -6, 1, 0], rotate: [0, 0, -14, 3, 0] },
+	{ y: [0, 0.6, -3.6, 0.6, 0], rotate: [0, 0, -8.4, 1.8, 0] },
 	{ duration: 0.75, times: [0, 0.1, 0.3, 0.45, 1], ease: ["easeInOut", "easeOut", "easeIn", springy] },
 );
 

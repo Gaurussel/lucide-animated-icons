@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, redraw, snap, springy } from "../helpers.ts";
 
 const screen = pose(
-	{ y: [0, -5, 0.5, 0], rotate: [0, -8, 0, 0] },
+	{ y: [0, -3, 0.3, 0], rotate: [0, -4.8, 0, 0] },
 	{ duration: 0.7, times: [0, 0.28, 0.42, 1], ease: [snap, "easeIn", springy] },
 );
 

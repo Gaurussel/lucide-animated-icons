@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const hum = pose({ rotate: [0, -6, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
+const hum = pose({ rotate: [0, -3.6, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
 const plate = pose(
-	{ scale: [1, 0.7, 1], rotate: [0, 0, 360] },
+	{ scale: [1, 0.82, 1], rotate: [0, 0, 0] },
 	{ duration: 0.75, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
 );
 

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const clap = pose({ rotate: [0, -24, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: ["easeInOut", ring] });
+const clap = pose({ rotate: [0, -14.4, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: ["easeInOut", ring] });
 const board = pose(
-	{ y: [0, 0, 1.5, 0] },
+	{ y: [0, 0, 0.9, 0] },
 	{ duration: 0.75, times: [0, 0.3, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
 

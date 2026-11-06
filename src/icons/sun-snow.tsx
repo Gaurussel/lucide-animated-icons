@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
-const flurry = pose({ rotate: [0, -25, 0] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, springy] });
+const flurry = pose({ rotate: [0, -15, 0] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, springy] });
 const shine = (delay: number) =>
 	pose(
-		{ scale: [1, 0, 1.6, 1] },
+		{ scale: [1, 0.4, 1.36, 1] },
 		{ duration: 0.55, delay, times: [0, 0.2, 0.45, 1], ease: ["easeInOut", snap, springy] },
 	);
 

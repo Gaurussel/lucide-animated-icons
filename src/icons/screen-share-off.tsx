@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const strike = pose(
-	{ x: [0, 4, 0], y: [0, -4, 0], rotate: [0, -120, 0], opacity: [1, 0.3, 1] },
+	{ x: [0, 2.4, 0], y: [0, -2.4, 0], rotate: [0, -72, 0], opacity: [1, 0.3, 1] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: ["easeInOut", springy] },
 );
 const jolt = pose(
-	{ y: [0, 0, 1.5, 0] },
+	{ y: [0, 0, 0.9, 0] },
 	{ duration: 0.75, times: [0, 0.33, 0.4, 1], ease: ["easeInOut", snap, rubber] },
 );
 

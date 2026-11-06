@@ -4,12 +4,12 @@ import { edge, jelly, pose, springy } from "../helpers.ts";
 
 const slideIn = (delay: number) =>
 	pose(
-		{ pathLength: [1, 0, 1], x: [0, -5, 0] },
+		{ pathLength: [1, 0, 1], x: [0, -3, 0] },
 		{ duration: 0.45, delay, times: [0, 0.01, 1], ease: ["easeInOut", springy] },
 	);
 const dropIn = (delay: number) =>
 	pose(
-		{ pathLength: [1, 0, 1], y: [0, -5, 0] },
+		{ pathLength: [1, 0, 1], y: [0, -3, 0] },
 		{ duration: 0.45, delay, times: [0, 0.01, 1], ease: ["easeInOut", springy] },
 	);
 

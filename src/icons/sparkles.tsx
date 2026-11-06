@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
 const twirl = pose(
-	{ scale: [1, 0.6, 1.25, 1], rotate: [0, 0, 270, 360] },
+	{ scale: [1, 0.76, 1.15, 1], rotate: [0, 0, -9.9, 0] },
 	{ duration: 0.72, times: [0, 0.14, 0.38, 1], ease: ["easeInOut", snap, springy], reset: true },
 );
 const twinkle = (delay: number) =>
 	pose(
-		{ scale: [1, 0, 1.6, 1], rotate: [0, 0, 45, 0] },
+		{ scale: [1, 0.4, 1.36, 1], rotate: [0, 0, 27, 0] },
 		{ duration: 0.55, delay, times: [0, 0.2, 0.45, 1], ease: ["easeInOut", snap, springy] },
 	);
 

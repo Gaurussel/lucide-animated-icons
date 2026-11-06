@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
 const trunk = pose(
-	{ rotate: [0, 4, -8, 0] },
+	{ rotate: [0, 2.4, -4.8, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.26, 1], ease: ["easeInOut", snap, ring] },
 );
 const crown = pose(
-	{ y: [0, 0, -2, 0], rotate: [0, 0, -18, 0] },
+	{ y: [0, 0, -1.2, 0], rotate: [0, 0, -10.8, 0] },
 	{ duration: 0.72, times: [0, 0.18, 0.36, 1], ease: ["easeInOut", snap, ring] },
 );
 

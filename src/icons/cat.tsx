@@ -3,10 +3,13 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const tilt = pose(
-	{ rotate: [0, -20, 0], y: [0, -3, 0] },
+	{ rotate: [0, -12, 0], y: [0, -1.8, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
-const blink = pose({ y: [0, 0, 1, 0] }, { duration: 0.7, times: [0, 0.4, 0.5, 1], ease: ["easeInOut", snap, springy] });
+const blink = pose(
+	{ y: [0, 0, 0.6, 0] },
+	{ duration: 0.7, times: [0, 0.4, 0.5, 1], ease: ["easeInOut", snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "cat",

@@ -7,7 +7,7 @@ const whip = pose(
 	{ duration: 0.65, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
 const tug = pose(
-	{ rotate: [0, 0, -14, 0] },
+	{ rotate: [0, 0, -8.4, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.32, 1], ease: ["easeInOut", snap, ring] },
 );
 

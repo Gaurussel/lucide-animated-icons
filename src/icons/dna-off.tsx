@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring } from "../helpers.ts";
 
 const twist = pose(
-	{ scaleX: [1, -1, 1, 1] },
+	{ scaleX: [1, -0.2, 1, 1] },
 	{ duration: 0.75, times: [0, 0.3, 0.5, 1], ease: ["easeInOut", "easeIn", "easeOut"] },
 );
 const halt = pose(
-	{ rotate: [0, 0, -10, 0] },
+	{ rotate: [0, 0, -6, 0] },
 	{ duration: 0.75, times: [0, 0.5, 0.58, 1], ease: ["easeInOut", "easeOut", ring] },
 );
 

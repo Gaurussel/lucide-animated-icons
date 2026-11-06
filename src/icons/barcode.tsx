@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const key = (delay: number) =>
-	pose({ y: [0, -5, 0] }, { duration: 0.42, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -3, 0] }, { duration: 0.42, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "barcode",

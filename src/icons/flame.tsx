@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const ignite = pose(
-	{ scale: [1, 0.7, 1.2, 1], rotate: [0, 0, -12, 0] },
+	{ scale: [1, 0.82, 1.12, 1], rotate: [0, 0, -7.2, 0] },
 	{ duration: 0.75, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", snap, ring] },
 );
 

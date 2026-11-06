@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, springy } from "../helpers.ts";
 
 const invert = pose(
-	{ scaleY: [1, 1, -1, 1] },
+	{ scaleY: [1, 1, -0.2, 1] },
 	{ duration: 0.72, times: [0, 0.3, 0.5, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

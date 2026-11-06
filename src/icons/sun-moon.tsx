@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const rock = pose({ rotate: [0, -30, 0] }, { duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] });
+const rock = pose({ rotate: [0, -18, 0] }, { duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] });
 const shine = (delay: number) =>
 	pose(
-		{ scale: [1, 0, 1.4, 1] },
+		{ scale: [1, 0.4, 1.24, 1] },
 		{ duration: 0.55, delay, times: [0, 0.2, 0.45, 1], ease: ["easeInOut", snap, springy] },
 	);
 

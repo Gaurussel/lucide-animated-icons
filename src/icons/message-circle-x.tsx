@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const talk = pose(
-	{ y: [0, -3, 0], rotate: [0, -10, 0], scale: [1, 1.1, 1] },
+	{ y: [0, -1.8, 0], rotate: [0, -6, 0], scale: [1, 1.06, 1] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
-const strike = pose({ scale: [1, 0.82, 1] }, { duration: 0.65, times: [0, 0.14, 1], ease: [snap, springy] });
+const strike = pose({ scale: [1, 0.89, 1] }, { duration: 0.65, times: [0, 0.14, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "message-circle-x",

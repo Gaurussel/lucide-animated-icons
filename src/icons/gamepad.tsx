@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const rumble = pose({ rotate: [0, -14, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
+const rumble = pose({ rotate: [0, -8.4, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
 const press = (delay: number) =>
-	pose({ scale: [1, 3, 1] }, { duration: 0.5, delay, times: [0, 0.25, 1], ease: [snap, springy] });
+	pose({ scale: [1, 2.2, 1] }, { duration: 0.5, delay, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "gamepad",

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const rattle = pose({ rotate: [0, -12, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
+const rattle = pose({ rotate: [0, -7.2, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
 const screw = (delay: number) =>
-	pose({ scale: [1, 2.4, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.84, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "inspection-panel",

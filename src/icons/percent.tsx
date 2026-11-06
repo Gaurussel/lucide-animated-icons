@@ -8,7 +8,7 @@ const slide = (k: number) =>
 		{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", "easeIn", springy] },
 	);
 const twang = pose(
-	{ rotate: [0, 0, -18, 0] },
+	{ rotate: [0, 0, -10.8, 0] },
 	{ duration: 0.75, times: [0, 0.33, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const talk = pose(
-	{ y: [0, -3, 0], rotate: [0, -10, 0], scale: [1, 1.1, 1] },
+	{ y: [0, -1.8, 0], rotate: [0, -6, 0], scale: [1, 1.06, 1] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const typing = (delay: number) =>
-	pose({ y: [0, -3, 0] }, { duration: 0.45, delay, times: [0, 0.35, 1], ease: [snap, springy] });
+	pose({ y: [0, -1.8, 0] }, { duration: 0.45, delay, times: [0, 0.35, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "message-square-more",

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const twirlStick = pose(
-	{ rotate: [0, 10, -25, 0] },
+	{ rotate: [0, 6, -15, 0] },
 	{ duration: 0.75, times: [0, 0.14, 0.32, 1], ease: ["easeInOut", snap, ring] },
 );
 const swirl = pose(
-	{ rotate: [0, 0, 360] },
+	{ rotate: [0, 0, 0] },
 	{ duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
 const trace = pose(

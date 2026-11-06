@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
-const cap = pose({ y: [0, -5, 0], rotate: [0, -20, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const cap = pose({ y: [0, -3, 0], rotate: [0, -12, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "pill-bottle",

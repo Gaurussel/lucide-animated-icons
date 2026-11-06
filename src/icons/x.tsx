@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
-const press = pose({ scale: [1, 0.82, 1] }, { duration: 0.7, times: [0, 0.14, 1], ease: [snap, springy] });
+const press = pose({ scale: [1, 0.89, 1] }, { duration: 0.7, times: [0, 0.14, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "x",

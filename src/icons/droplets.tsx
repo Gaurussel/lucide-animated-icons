@@ -4,7 +4,7 @@ import { pose, springy } from "../helpers.ts";
 
 const drip = (delay: number) =>
 	pose(
-		{ y: [0, -1, 8, -6, 0], opacity: [1, 1, 0, 0, 1] },
+		{ y: [0, -0.6, 4.8, -3.6, 0], opacity: [1, 1, 0, 0, 1] },
 		{ duration: 0.65, delay, times: [0, 0.15, 0.38, 0.39, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 	);
 

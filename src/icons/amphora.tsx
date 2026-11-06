@@ -3,13 +3,13 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, rubber, snap, springy } from "../helpers.ts";
 
 const tip = pose(
-	{ rotate: [0, -18, 8, 0] },
+	{ rotate: [0, -10.8, 4.8, 0] },
 	{ duration: 0.72, times: [0, 0.25, 0.45, 1], ease: ["easeInOut", "easeInOut", rubber] },
 );
 const handle = (degrees: number) =>
 	pose({ rotate: [0, 0, degrees, 0] }, { duration: 0.72, times: [0, 0.2, 0.35, 1], ease: ["easeInOut", snap, ring] });
 const lid = pose(
-	{ y: [0, 0, -2.5, 0] },
+	{ y: [0, 0, -1.5, 0] },
 	{ duration: 0.72, times: [0, 0.38, 0.46, 1], ease: ["easeInOut", snap, springy] },
 );
 

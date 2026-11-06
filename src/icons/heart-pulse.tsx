@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const beat = pose(
-	{ scale: [1, 1, 1.3, 1] },
+	{ scale: [1, 1, 1.18, 1] },
 	{ duration: 0.75, times: [0, 0.25, 0.35, 1], ease: ["easeInOut", snap, ring] },
 );
 

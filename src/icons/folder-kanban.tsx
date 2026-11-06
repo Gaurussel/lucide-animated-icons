@@ -3,7 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const card = (delay: number) =>
-	pose({ y: [0, 1, -5, 0] }, { duration: 0.5, delay, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", snap, springy] });
+	pose(
+		{ y: [0, 0.6, -3, 0] },
+		{ duration: 0.5, delay, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", snap, springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "folder-kanban",

@@ -6,9 +6,9 @@ const turn = pose(
 	{ rotate: [0, -30, 360] },
 	{ duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
-const hub = pose({ scale: [1, 0.5, 1] }, { duration: 0.6, times: [0, 0.2, 1], ease: [snap, springy] });
+const hub = pose({ scale: [1, 0.7, 1] }, { duration: 0.6, times: [0, 0.2, 1], ease: [snap, springy] });
 const base = pose(
-	{ y: [0, 0, 1.2, 0] },
+	{ y: [0, 0, 0.72, 0] },
 	{ duration: 0.75, times: [0, 0.4, 0.5, 1], ease: ["easeInOut", "easeOut", springy] },
 );
 

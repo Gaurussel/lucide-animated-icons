@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, springy } from "../helpers.ts";
 
 const flip = pose(
-	{ y: [0, 1, -3, 0], scaleX: [1, 1, -1, 1] },
+	{ y: [0, 0.6, -1.8, 0], scaleX: [1, 1, -0.2, 1] },
 	{ duration: 0.72, times: [0, 0.1, 0.38, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

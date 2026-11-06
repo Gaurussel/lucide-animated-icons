@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
 const spin = pose(
-	{ rotate: [0, -45, 360], scale: [1, 0.8, 1] },
+	{ rotate: [0, -45, 360], scale: [1, 0.88, 1] },
 	{ duration: 0.75, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
 const dot = pose(
-	{ scale: [1, 0.5, 3, 1] },
+	{ scale: [1, 0.7, 2.2, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 

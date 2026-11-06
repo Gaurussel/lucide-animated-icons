@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const swim = pose(
-	{ x: [0, -2, 3, 0], rotate: [0, 4, -6, 0] },
+	{ x: [0, -1.2, 1.8, 0], rotate: [0, 2.4, -3.6, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
-const wag = pose({ rotate: [0, 28, 0] }, { duration: 0.7, times: [0, 0.15, 1], ease: [snap, ring] });
+const wag = pose({ rotate: [0, 16.8, 0] }, { duration: 0.7, times: [0, 0.15, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "fish",

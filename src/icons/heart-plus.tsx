@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, rubber, snap } from "../helpers.ts";
 
-const beat = pose({ scale: [1, 1.3, 1] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
+const beat = pose({ scale: [1, 1.18, 1] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
 const nod = pose(
-	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ rotate: [0, -12, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.7, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 

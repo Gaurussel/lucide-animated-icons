@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const roll = pose(
-	{ x: [0, -2, 5, 0] },
+	{ x: [0, -1.2, 3, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.38, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const tip = pose(
-	{ rotate: [0, 4, -12, 0] },
+	{ rotate: [0, 2.4, -7.2, 0] },
 	{ duration: 0.72, times: [0, 0.2, 0.46, 1], ease: ["easeInOut", snap, ring] },
 );
 

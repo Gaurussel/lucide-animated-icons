@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const breeze = pose(
-	{ x: [0, -2, 2, 0] },
+	{ x: [0, -1.2, 1.2, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.45, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
-const hum = pose({ y: [0, -1.5, 0] }, { duration: 0.6, times: [0, 0.2, 1], ease: [snap, springy] });
+const hum = pose({ y: [0, -0.9, 0] }, { duration: 0.6, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "air-vent",

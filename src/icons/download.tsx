@@ -2,7 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
-const drop = pose({ y: [0, -3, 4, 0] }, { duration: 0.65, times: [0, 0.18, 0.38, 1], ease: [snap, "easeIn", springy] });
+const drop = pose(
+	{ y: [0, -1.8, 2.4, 0] },
+	{ duration: 0.65, times: [0, 0.18, 0.38, 1], ease: [snap, "easeIn", springy] },
+);
 
 export default createAnimatedIcon({
 	name: "download",

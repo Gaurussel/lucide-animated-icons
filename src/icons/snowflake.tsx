@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const drift = pose(
-	{ y: [0, -2, 3, 0], rotate: [0, -20, 200, 360] },
+	{ y: [0, -1.2, 1.8, 0], rotate: [0, 2.43, -13.79, 0] },
 	{ duration: 0.75, times: [0, 0.15, 0.45, 1], ease: ["easeInOut", "easeInOut", springy], reset: true },
 );
 const bloom = pose(
-	{ scale: [1, 1, 1.25, 1] },
+	{ scale: [1, 1, 1.15, 1] },
 	{ duration: 0.6, delay: 0.12, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, ring] },
 );
 

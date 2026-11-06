@@ -5,7 +5,7 @@ import { pose, snap, springy } from "../helpers.ts";
 const focus = (x: number, y: number) =>
 	pose({ x: [0, 2 * x, 0], y: [0, 2 * y, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 const look = pose(
-	{ x: [0, -3, 3, 0] },
+	{ x: [0, -1.8, 1.8, 0] },
 	{ duration: 0.7, times: [0, 0.18, 0.42, 1], ease: [snap, "easeInOut", springy] },
 );
 

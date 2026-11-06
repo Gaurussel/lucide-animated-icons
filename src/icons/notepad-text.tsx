@@ -4,11 +4,11 @@ import { edge, pose, redraw, snap, springy } from "../helpers.ts";
 
 const binder = (delay: number) =>
 	pose(
-		{ y: [0, 0, -3, 0] },
+		{ y: [0, 0, -1.8, 0] },
 		{ duration: 0.7, times: [0, delay, delay + 0.12, 1], ease: ["easeInOut", snap, springy] },
 	);
 const sheet = pose(
-	{ y: [0, 0, -3, 0], rotate: [0, 0, -8, 0] },
+	{ y: [0, 0, -1.8, 0], rotate: [0, 0, -4.8, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.28, 1], ease: ["easeInOut", snap, springy] },
 );
 

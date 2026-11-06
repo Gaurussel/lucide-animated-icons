@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, ring, snap, springy } from "../helpers.ts";
 
 const lift = pose(
-	{ y: [0, 1, -3, 0] },
+	{ y: [0, 0.6, -1.8, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", "easeOut", springy] },
 );
 const shake = pose(
-	{ rotate: [0, 0, -24, 0] },
+	{ rotate: [0, 0, -14.4, 0] },
 	{ duration: 0.75, times: [0, 0.18, 0.28, 1], ease: ["easeInOut", snap, ring] },
 );
 

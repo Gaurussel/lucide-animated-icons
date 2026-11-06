@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
-const tip = pose({ y: [0, -2, 0], rotate: [0, -12, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const tip = pose(
+	{ y: [0, -1.2, 0], rotate: [0, -7.2, 0] },
+	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
+);
 const coin = pose(
-	{ x: [0, 0, 3, 0], scale: [1, 1, 3, 1] },
+	{ x: [0, 0, 1.8, 0], scale: [1, 1, 2.2, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 

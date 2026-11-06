@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const crank = pose(
-	{ rotate: [0, 12, -42, 0] },
+	{ rotate: [0, 7.2, -25.2, 0] },
 	{ duration: 0.72, times: [0, 0.14, 0.34, 1], ease: ["easeInOut", snap, ring] },
 );
 

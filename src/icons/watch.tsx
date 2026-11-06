@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const glance = pose(
-	{ y: [0, 1, -2, 0], rotate: [0, 6, -18, 0] },
+	{ y: [0, 0.6, -1.2, 0], rotate: [0, 3.6, -10.8, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.28, 1], ease: ["easeInOut", snap, ring] },
 );
 const hands = pose(

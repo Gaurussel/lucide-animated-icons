@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, snap, springy } from "../helpers.ts";
 
 const shoot = (y: number, delay: number) =>
-	pose({ x: [0, 3, 0], y: [0, y, 0] }, { duration: 0.65, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ x: [0, 1.8, 0], y: [0, y, 0] }, { duration: 0.65, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "trending-up-down",

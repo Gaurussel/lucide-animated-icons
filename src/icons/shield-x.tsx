@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const raise = pose(
-	{ y: [0, -3, 0], rotate: [0, -14, 0] },
+	{ y: [0, -1.8, 0], rotate: [0, -8.4, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const strike = pose(
-	{ scale: [1, 0.82, 1] },
+	{ scale: [1, 0.89, 1] },
 	{ duration: 0.65, delay: 0.05, times: [0, 0.14, 1], ease: [snap, springy] },
 );
 

@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const wave = (delay: number) =>
-	pose({ x: [0, -5, 0] }, { duration: 0.65, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ x: [0, -3, 0] }, { duration: 0.65, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 const brace = pose(
-	{ rotate: [0, -8, 0] },
+	{ rotate: [0, -4.8, 0] },
 	{ duration: 0.7, delay: 0.12, times: [0, 0.15, 1], ease: ["easeInOut", ring] },
 );
 

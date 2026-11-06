@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const hose = pose({ rotate: [0, -25, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
-const level = pose({ y: [0, 9, 0] }, { duration: 0.75, times: [0, 0.35, 1], ease: ["easeInOut", springy] });
+const hose = pose({ rotate: [0, -15, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
+const level = pose({ y: [0, 5.4, 0] }, { duration: 0.75, times: [0, 0.35, 1], ease: ["easeInOut", springy] });
 
 export default createAnimatedIcon({
 	name: "fuel",

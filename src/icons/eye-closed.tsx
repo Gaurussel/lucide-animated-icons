@@ -2,7 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, rubber, snap } from "../helpers.ts";
 
-const nod = pose({ y: [0, 3, 0], rotate: [0, -12, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, rubber] });
+const nod = pose(
+	{ y: [0, 1.8, 0], rotate: [0, -7.2, 0] },
+	{ duration: 0.75, times: [0, 0.3, 1], ease: [snap, rubber] },
+);
 
 export default createAnimatedIcon({
 	name: "eye-closed",

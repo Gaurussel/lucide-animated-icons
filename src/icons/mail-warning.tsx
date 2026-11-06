@@ -2,8 +2,11 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const flap = pose({ scaleY: [1, -0.7, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
-const alarm = pose({ rotate: [0, -25, 0], y: [0, -2, 0] }, { duration: 0.7, times: [0, 0.15, 1], ease: [snap, ring] });
+const flap = pose({ scaleY: [1, -0.02, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const alarm = pose(
+	{ rotate: [0, -15, 0], y: [0, -1.2, 0] },
+	{ duration: 0.7, times: [0, 0.15, 1], ease: [snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "mail-warning",

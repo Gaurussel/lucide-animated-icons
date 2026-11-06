@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const brake = pose(
-	{ x: [0, 0, -3, 0], rotate: [0, 0, -24, 0] },
+	{ x: [0, 0, -1.8, 0], rotate: [0, 0, -14.4, 0] },
 	{ duration: 0.75, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 const bar = pose(

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, snap, springy } from "../helpers.ts";
 
 const step = pose(
-	{ x: [0, -1, 4, 0] },
+	{ x: [0, -0.6, 2.4, 0] },
 	{ duration: 0.65, times: [0, 0.15, 0.32, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const follow = pose(
-	{ x: [0, 0, 3, 0] },
+	{ x: [0, 0, 1.8, 0] },
 	{ duration: 0.65, times: [0, 0.22, 0.4, 1], ease: ["easeInOut", snap, springy] },
 );
 

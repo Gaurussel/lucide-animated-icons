@@ -4,7 +4,7 @@ import { centered, pose, snap, springy } from "../helpers.ts";
 
 const pinch = (x: number, y: number, delay: number) =>
 	pose({ x: [0, x, 0], y: [0, y, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
-const grab = pose({ scale: [1, 1.8, 1] }, { duration: 0.5, times: [0, 0.3, 1], ease: [snap, springy] });
+const grab = pose({ scale: [1, 1.48, 1] }, { duration: 0.5, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "grip",

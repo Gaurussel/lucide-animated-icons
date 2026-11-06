@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const leap = pose(
-	{ y: [0, -3, 0.8, 0] },
+	{ y: [0, -1.8, 0.48, 0] },
 	{ duration: 0.65, times: [0, 0.25, 0.4, 1], ease: [snap, "easeIn", springy] },
 );
-const flap = pose({ rotate: [0, -30, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
+const flap = pose({ rotate: [0, -18, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "bird",

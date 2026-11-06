@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, rubber, snap } from "../helpers.ts";
 
-const slice = pose({ x: [0, 3, 0], y: [0, -3, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, rubber] });
-const rest = pose({ x: [0, -1, 0], y: [0, 1, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, rubber] });
+const slice = pose({ x: [0, 1.8, 0], y: [0, -1.8, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, rubber] });
+const rest = pose({ x: [0, -0.6, 0], y: [0, 0.6, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, rubber] });
 
 export default createAnimatedIcon({
 	name: "chart-pie",

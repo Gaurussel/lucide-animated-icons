@@ -4,7 +4,7 @@ import { centered, pose, springy } from "../helpers.ts";
 
 const rise = (y: number, delay: number) =>
 	pose(
-		{ y: [0, y, 0], scale: [1, 1.2, 1] },
+		{ y: [0, y, 0], scale: [1, 1.12, 1] },
 		{ duration: 0.65, delay, times: [0, 0.3, 1], ease: ["easeInOut", springy] },
 	);
 

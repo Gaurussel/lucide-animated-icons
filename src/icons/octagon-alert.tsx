@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const brake = pose({ rotate: [0, -20, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
+const brake = pose({ rotate: [0, -12, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
 const mark = pose(
-	{ y: [0, -3, 0], scale: [1, 1.3, 1] },
+	{ y: [0, -1.8, 0], scale: [1, 1.18, 1] },
 	{ duration: 0.65, delay: 0.05, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 

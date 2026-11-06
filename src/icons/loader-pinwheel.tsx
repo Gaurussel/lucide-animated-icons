@@ -6,7 +6,7 @@ const whirl = pose(
 	{ rotate: [0, -40, 360] },
 	{ duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
-const gust = pose({ scale: [1, 0.85, 1] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, springy] });
+const gust = pose({ scale: [1, 0.91, 1] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "loader-pinwheel",

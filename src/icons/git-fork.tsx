@@ -3,9 +3,9 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const tine = (direction: number) =>
-	pose({ x: [0, 2.5 * direction, 0], y: [0, -2, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ x: [0, 2.5 * direction, 0], y: [0, -1.2, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 const node = (delay: number) =>
-	pose({ scale: [1, 1.35, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.21, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "git-fork",

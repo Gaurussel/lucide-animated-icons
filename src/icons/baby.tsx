@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, rubber, snap, springy } from "../helpers.ts";
 
 const giggle = pose(
-	{ rotate: [0, -12, 8, 0] },
+	{ rotate: [0, -7.2, 4.8, 0] },
 	{ duration: 0.72, times: [0, 0.25, 0.5, 1], ease: ["easeInOut", "easeInOut", rubber] },
 );
 const squint = pose(
-	{ y: [0, 0, -1.5, 0] },
+	{ y: [0, 0, -0.9, 0] },
 	{ duration: 0.72, times: [0, 0.2, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 

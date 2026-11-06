@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
-const buzz = pose({ rotate: [0, -12, 0] }, { duration: 0.75, times: [0, 0.08, 1], ease: [snap, ring] });
+const buzz = pose({ rotate: [0, -7.2, 0] }, { duration: 0.75, times: [0, 0.08, 1], ease: [snap, ring] });
 const wave = (x: number) => pose({ x: [0, x, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({

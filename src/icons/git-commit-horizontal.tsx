@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const bead = pose(
-	{ x: [0, -3, 4, 0] },
+	{ x: [0, -1.8, 2.4, 0] },
 	{ duration: 0.75, times: [0, 0.18, 0.36, 1], ease: ["easeInOut", snap, springy] },
 );
-const hit = pose({ x: [0, 0, 2, 0] }, { duration: 0.75, times: [0, 0.3, 0.38, 1], ease: ["easeInOut", snap, ring] });
+const hit = pose({ x: [0, 0, 1.2, 0] }, { duration: 0.75, times: [0, 0.3, 0.38, 1], ease: ["easeInOut", snap, ring] });
 
 export default createAnimatedIcon({
 	name: "git-commit-horizontal",

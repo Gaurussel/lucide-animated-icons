@@ -3,9 +3,9 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const merlon = (delay: number) =>
-	pose({ y: [0, -4, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -2.4, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const tower = pose(
-	{ y: [0, -4, 0], rotate: [0, -6, 0] },
+	{ y: [0, -2.4, 0], rotate: [0, -3.6, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 

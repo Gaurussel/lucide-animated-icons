@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const sway = pose({ rotate: [0, -16, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
-const shackle = pose({ y: [0, -3.5, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const sway = pose({ rotate: [0, -9.6, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
+const shackle = pose({ y: [0, -2.1, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "globe-lock",

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const tap = pose(
-	{ y: [0, -4, 1, 0], rotate: [0, -15, 0, 0] },
+	{ y: [0, -2.4, 0.6, 0], rotate: [0, -9, 0, 0] },
 	{ duration: 0.7, times: [0, 0.25, 0.4, 1], ease: [snap, "easeIn", springy] },
 );
 

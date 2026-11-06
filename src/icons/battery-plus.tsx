@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const nod = pose(
-	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ rotate: [0, -12, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.6, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 const spark = pose(
-	{ x: [0, 0, 2.5, 0] },
+	{ x: [0, 0, 1.5, 0] },
 	{ duration: 0.72, times: [0, 0.4, 0.48, 1], ease: ["easeInOut", snap, springy] },
 );
 

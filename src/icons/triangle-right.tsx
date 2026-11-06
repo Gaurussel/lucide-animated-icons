@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const ramp = pose(
-	{ x: [0, -1, 2, 0], rotate: [0, 5, -14, 0] },
+	{ x: [0, -0.6, 1.2, 0], rotate: [0, 3, -8.4, 0] },
 	{ duration: 0.72, times: [0, 0.14, 0.34, 1], ease: ["easeInOut", snap, springy] },
 );
 

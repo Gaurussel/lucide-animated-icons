@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const sway = pose(
-	{ rotate: [0, 6, -16, 0] },
+	{ rotate: [0, 3.6, -9.6, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.28, 1], ease: ["easeInOut", snap, ring] },
 );
 const lag = pose(
-	{ rotate: [0, 0, 18, 0] },
+	{ rotate: [0, 0, 10.8, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.38, 1], ease: ["easeInOut", snap, ring] },
 );
 const flip = pose(
-	{ scaleX: [1, 1, -1, 1] },
+	{ scaleX: [1, 1, -0.2, 1] },
 	{ duration: 0.75, times: [0, 0.2, 0.42, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

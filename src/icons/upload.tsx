@@ -7,7 +7,7 @@ const launch = pose(
 	{ duration: 0.65, times: [0, 0.28, 1], ease: [snap, springy] },
 );
 const crouch = pose(
-	{ scaleX: [1, 1.1, 1], scaleY: [1, 0.7, 1] },
+	{ scaleX: [1, 1.06, 1], scaleY: [1, 0.82, 1] },
 	{ duration: 0.65, times: [0, 0.15, 1], ease: [snap, springy] },
 );
 

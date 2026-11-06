@@ -4,7 +4,7 @@ import { pivot, pose, redraw, springy } from "../helpers.ts";
 
 const fall = (direction: number, delay: number) =>
 	pose(
-		{ y: [0, -1.5, 4, 0], rotate: [0, 0, 6 * direction, 0] },
+		{ y: [0, -0.9, 2.4, 0], rotate: [0, 0, 6 * direction, 0] },
 		{ duration: 0.55, delay, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeIn", springy] },
 	);
 

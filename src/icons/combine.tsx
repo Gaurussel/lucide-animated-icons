@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, redraw, springy } from "../helpers.ts";
 
 const merge = pose(
-	{ x: [0, 0, 3, 0], y: [0, -2, 5, 0] },
+	{ x: [0, 0, 1.8, 0], y: [0, -1.2, 3, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

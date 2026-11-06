@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const sprout = pose(
-	{ scale: [1, 0.4, 1.3, 1], rotate: [0, 0, -30, 0] },
+	{ scale: [1, 0.64, 1.18, 1], rotate: [0, 0, -18, 0] },
 	{ duration: 0.72, times: [0, 0.2, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 

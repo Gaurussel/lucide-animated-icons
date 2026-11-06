@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const drift = pose(
-	{ x: [0, 2, 0], y: [0, -2, 0], rotate: [0, 30, 0] },
+	{ x: [0, 1.2, 0], y: [0, -1.2, 0], rotate: [0, 18, 0] },
 	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 

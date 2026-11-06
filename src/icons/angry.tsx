@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
-const fume = pose({ x: [0, -2.5, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, rubber] });
+const fume = pose({ x: [0, -1.5, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, rubber] });
 const brow = (degrees: number) =>
 	pose({ rotate: [0, degrees, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
 

@@ -4,7 +4,7 @@ import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const aim = (x: number, y: number) =>
 	pose({ x: [0, x, 0], y: [0, y, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
-const lock = pose({ scale: [1, 0.8, 1] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
+const lock = pose({ scale: [1, 0.88, 1] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "crosshair",

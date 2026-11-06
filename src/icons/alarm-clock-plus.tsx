@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, rubber, snap } from "../helpers.ts";
 
-const rattle = pose({ rotate: [0, -14, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, ring] });
-const bells = pose({ y: [0, -2.5, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, ring] });
+const rattle = pose({ rotate: [0, -8.4, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, ring] });
+const bells = pose({ y: [0, -1.5, 0] }, { duration: 0.7, times: [0, 0.12, 1], ease: [snap, ring] });
 const nod = pose(
-	{ rotate: [0, -20, 0], scale: [1, 0.85, 1] },
+	{ rotate: [0, -12, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.7, times: [0, 0.2, 1], ease: ["easeInOut", rubber] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const handle = pose(
-	{ y: [0, -4, -4, 0] },
+	{ y: [0, -2.4, -2.4, 0] },
 	{ duration: 0.72, times: [0, 0.18, 0.3, 1], ease: [snap, "easeInOut", springy] },
 );
 const body = pose(
-	{ y: [0, 0, -3, 0, 0] },
+	{ y: [0, 0, -1.8, 0, 0] },
 	{ duration: 0.72, times: [0, 0.1, 0.28, 0.42, 1], ease: ["easeInOut", snap, "easeIn", "easeInOut"] },
 );
 

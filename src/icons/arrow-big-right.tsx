@@ -7,7 +7,7 @@ const dash = pose(
 	{ duration: 0.65, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
 const settle = pose(
-	{ rotate: [0, 0, 10, 0] },
+	{ rotate: [0, 0, 6, 0] },
 	{ duration: 0.72, times: [0, 0.45, 0.55, 1], ease: ["easeInOut", snap, rubber] },
 );
 

@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
-const flick = pose({ x: [0, 4, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const flick = pose({ x: [0, 2.4, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "redo-2",

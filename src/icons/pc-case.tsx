@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, jelly, pose, redraw, snap, springy } from "../helpers.ts";
 
 const led = pose(
-	{ scale: [1, 0.3, 3, 1] },
+	{ scale: [1, 0.58, 2.2, 1] },
 	{ duration: 0.7, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 

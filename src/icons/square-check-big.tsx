@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const tick = pose(
-	{ scale: [1, 1, 1.35, 1] },
+	{ scale: [1, 1, 1.21, 1] },
 	{ duration: 0.72, times: [0, 0.4, 0.55, 1], ease: ["easeInOut", snap, ring] },
 );
 

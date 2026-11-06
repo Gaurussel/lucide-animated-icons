@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
 const wave = pose(
-	{ rotate: [0, -20, 0], scale: [1, 0.8, 1] },
+	{ rotate: [0, -12, 0], scale: [1, 0.88, 1] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const scrawl = pose({ pathLength: [1, 0, 1] }, { duration: 0.6, times: [0, 0.01, 1], ease: ["easeInOut", "easeOut"] });

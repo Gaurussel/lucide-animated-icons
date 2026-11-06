@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const lid = pose(
-	{ y: [0, 1, -4, 0], rotate: [0, 0, -15, 0] },
+	{ y: [0, 0.6, -2.4, 0], rotate: [0, 0, -9, 0] },
 	{ duration: 0.68, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const wave = (delay: number) =>
-	pose({ y: [0, -2, 0] }, { duration: 0.35, delay, times: [0, 0.4, 1], ease: [snap, springy] });
+	pose({ y: [0, -1.2, 0] }, { duration: 0.35, delay, times: [0, 0.4, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "square-dashed-top-solid",

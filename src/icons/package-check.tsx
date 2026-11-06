@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const leap = pose(
-	{ y: [0, 1.5, -5, 0, 0] },
+	{ y: [0, 0.9, -3, 0, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.32, 0.48, 1], ease: ["easeInOut", "easeOut", "easeIn", "easeInOut"] },
 );
 const stamp = pose(
-	{ scale: [1, 1, 1.5, 1], rotate: [0, 0, -15, 0] },
+	{ scale: [1, 1, 1.3, 1], rotate: [0, 0, -9, 0] },
 	{ duration: 0.7, times: [0, 0.46, 0.58, 1], ease: ["easeInOut", snap, springy] },
 );
 

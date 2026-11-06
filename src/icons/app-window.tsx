@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
-const stamp = pose({ scale: [1, 0.85, 1] }, { duration: 0.6, times: [0, 0.2, 1], ease: [snap, springy] });
+const stamp = pose({ scale: [1, 0.91, 1] }, { duration: 0.6, times: [0, 0.2, 1], ease: [snap, springy] });
 const tick = (delay: number) =>
-	pose({ y: [0, -3, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -1.8, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "app-window",

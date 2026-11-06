@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const flare = pose(
-	{ scale: [1, 1.3, 1], rotate: [0, -14, 0], y: [0, -2, 0] },
+	{ scale: [1, 1.18, 1], rotate: [0, -8.4, 0], y: [0, -1.2, 0] },
 	{ duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] },
 );
-const shove = pose({ x: [0, -2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const shove = pose({ x: [0, -1.2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "brick-wall-fire",

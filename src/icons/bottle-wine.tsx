@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const pour = pose(
-	{ rotate: [0, 38, 0], x: [0, -2, 0] },
+	{ rotate: [0, 22.8, 0], x: [0, -1.2, 0] },
 	{ duration: 0.75, times: [0, 0.35, 1], ease: [snap, springy] },
 );
-const label = pose({ x: [0, 1.5, 0] }, { duration: 0.7, delay: 0.05, times: [0, 0.35, 1], ease: [snap, springy] });
+const label = pose({ x: [0, 0.9, 0] }, { duration: 0.7, delay: 0.05, times: [0, 0.35, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "bottle-wine",

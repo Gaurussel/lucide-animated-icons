@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pose, snap, springy } from "../helpers.ts";
 
 const press = pose(
-	{ x: [0, 3, 0], scale: [1, 1.35, 1] },
+	{ x: [0, 1.8, 0], scale: [1, 1.21, 1] },
 	{ duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 

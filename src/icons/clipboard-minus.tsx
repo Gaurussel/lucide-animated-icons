@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
-const clip = pose({ y: [0, -3.5, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
-const board = pose({ rotate: [0, -8, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
-const tear = pose({ x: [0, 4, 0], opacity: [1, 0.2, 1] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, rubber] });
+const clip = pose({ y: [0, -2.1, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
+const board = pose({ rotate: [0, -4.8, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const tear = pose(
+	{ x: [0, 2.4, 0], opacity: [1, 0.2, 1] },
+	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, rubber] },
+);
 
 export default createAnimatedIcon({
 	name: "clipboard-minus",

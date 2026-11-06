@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const rock = pose({ y: [0, -4, 0], rotate: [0, -40, 0] }, { duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] });
+const rock = pose(
+	{ y: [0, -2.4, 0], rotate: [0, -24, 0] },
+	{ duration: 0.75, times: [0, 0.22, 1], ease: [snap, ring] },
+);
 const twinkle = pose(
-	{ scale: [1, 0.4, 1.4, 1], rotate: [0, 0, 180, 360] },
+	{ scale: [1, 0.64, 1.24, 1], rotate: [0, 0, -14, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: [snap, "easeInOut", springy], reset: true },
 );
 

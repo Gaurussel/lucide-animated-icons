@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const aim = pose({ y: [0, -3, 0], rotate: [0, 10, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
-const whip = pose({ rotate: [0, -25, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
-const squeeze = pose({ rotate: [0, 25, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
+const aim = pose({ y: [0, -1.8, 0], rotate: [0, 6, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const whip = pose({ rotate: [0, -15, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
+const squeeze = pose({ rotate: [0, 15, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "fire-extinguisher",

@@ -2,13 +2,13 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const turn = pose({ scaleX: [1, -1, 1] }, { duration: 0.72, times: [0, 0.4, 1], ease: ["easeInOut", springy] });
+const turn = pose({ scaleX: [1, -0.2, 1] }, { duration: 0.72, times: [0, 0.4, 1], ease: ["easeInOut", springy] });
 const sway = pose(
-	{ rotate: [0, 0, -10, 0] },
+	{ rotate: [0, 0, -6, 0] },
 	{ duration: 0.72, times: [0, 0.35, 0.48, 1], ease: ["easeInOut", snap, ring] },
 );
 const cap = pose(
-	{ y: [0, 0, -2, 0] },
+	{ y: [0, 0, -1.2, 0] },
 	{ duration: 0.6, delay: 0.1, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 

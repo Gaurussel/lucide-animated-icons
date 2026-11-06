@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, rubber, snap, springy } from "../helpers.ts";
 
 const dash = pose(
-	{ x: [0, 1.6, -8, 6.4, 0], y: [0, -1.6, 8, -6.4, 0], opacity: [1, 1, 0, 0, 1] },
+	{ x: [0, 0.96, -4.8, 3.84, 0], y: [0, -0.96, 4.8, -3.84, 0], opacity: [1, 1, 0, 0, 1] },
 	{ duration: 0.65, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
 const trail = pose(
-	{ x: [0, 1.6, -8, 6.4, 0], y: [0, -1.6, 8, -6.4, 0], opacity: [1, 1, 0, 0, 1] },
+	{ x: [0, 0.96, -4.8, 3.84, 0], y: [0, -0.96, 4.8, -3.84, 0], opacity: [1, 1, 0, 0, 1] },
 	{
 		duration: 0.65,
 		delay: 0.07,
@@ -16,7 +16,7 @@ const trail = pose(
 	},
 );
 const settle = pose(
-	{ rotate: [0, 0, -12, 0] },
+	{ rotate: [0, 0, -7.2, 0] },
 	{ duration: 0.72, times: [0, 0.45, 0.55, 1], ease: ["easeInOut", snap, rubber] },
 );
 

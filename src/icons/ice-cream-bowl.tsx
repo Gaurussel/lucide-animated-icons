@@ -4,13 +4,13 @@ import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
 const toss = (delay: number, spin: number, x: number, y: number) => ({
 	variants: pose(
-		{ y: [0, -6, 0], rotate: [0, spin, 0] },
+		{ y: [0, -3.6, 0], rotate: [0, spin, 0] },
 		{ duration: 0.55, delay, times: [0, 0.35, 1], ease: [snap, springy] },
 	),
 	style: pivot(x, y),
 });
 const catchBowl = pose(
-	{ y: [0, 0, 2, 0] },
+	{ y: [0, 0, 1.2, 0] },
 	{ duration: 0.75, times: [0, 0.4, 0.5, 1], ease: ["easeInOut", snap, springy] },
 );
 

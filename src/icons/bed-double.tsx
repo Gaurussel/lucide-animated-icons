@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, snap, springy } from "../helpers.ts";
 
 const dip = pose(
-	{ y: [0, 0, 2, 0] },
+	{ y: [0, 0, 1.2, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.25, 1], ease: ["easeInOut", snap, springy] },
 );
 const pillows = pose(
-	{ y: [0, 1, -3, 0] },
+	{ y: [0, 0.6, -1.8, 0] },
 	{ duration: 0.72, times: [0, 0.18, 0.36, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, jelly, pose, redraw, snap, springy } from "../helpers.ts";
 
-const roof = pose({ y: [0, -4, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
-const bell = pose({ scale: [1, 1.5, 1] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const roof = pose({ y: [0, -2.4, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const bell = pose({ scale: [1, 1.3, 1] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "school",

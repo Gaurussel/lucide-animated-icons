@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, springy } from "../helpers.ts";
 
 const sway = pose(
-	{ rotate: [0, 8, -10, 0] },
+	{ rotate: [0, 4.8, -6, 0] },
 	{ duration: 0.75, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", "easeInOut", rubber] },
 );
 const twirl = pose(
-	{ rotate: [0, -30, 360] },
+	{ rotate: [0, 3.62, 0] },
 	{ duration: 0.7, delay: 0.08, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 );
 

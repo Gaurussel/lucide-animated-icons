@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const deal = pose(
-	{ x: [0, 4, 0], y: [0, -4, 0], rotate: [0, 12, 0] },
+	{ x: [0, 2.4, 0], y: [0, -2.4, 0], rotate: [0, 7.2, 0] },
 	{ duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, rubber, snap } from "../helpers.ts";
 
 const leap = pose(
-	{ y: [0, -4, 0, 0] },
+	{ y: [0, -2.4, 0, 0] },
 	{ duration: 0.65, times: [0, 0.22, 0.44, 1], ease: [snap, "easeIn", "easeInOut"] },
 );
 const zoom = pose(
-	{ x: [0, -2, 0], scale: [1, 1.4, 1], rotate: [0, -20, 0] },
+	{ x: [0, -1.2, 0], scale: [1, 1.24, 1], rotate: [0, -12, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] },
 );
 

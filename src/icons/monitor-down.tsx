@@ -3,10 +3,13 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const screen = pose(
-	{ y: [0, -5, 0.5, 0], rotate: [0, -8, 0, 0] },
+	{ y: [0, -3, 0.3, 0], rotate: [0, -4.8, 0, 0] },
 	{ duration: 0.7, times: [0, 0.28, 0.42, 1], ease: [snap, "easeIn", springy] },
 );
-const drop = pose({ y: [0, -3, 3, 0] }, { duration: 0.7, times: [0, 0.18, 0.38, 1], ease: [snap, "easeIn", springy] });
+const drop = pose(
+	{ y: [0, -1.8, 1.8, 0] },
+	{ duration: 0.7, times: [0, 0.18, 0.38, 1], ease: [snap, "easeIn", springy] },
+);
 
 export default createAnimatedIcon({
 	name: "monitor-down",

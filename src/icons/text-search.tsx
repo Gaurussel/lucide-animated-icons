@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const scan = pose(
-	{ x: [0, 1, -7, 0], y: [0, 0, -3, 0], rotate: [0, 8, -15, 0] },
+	{ x: [0, 0.6, -4.2, 0], y: [0, 0, -1.8, 0], rotate: [0, 4.8, -9, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.4, 1], ease: ["easeInOut", "easeInOut", rubber] },
 );
 const found = (at: number) =>
-	pose({ x: [0, 0, -2.5, 0] }, { duration: 0.75, times: [0, at, at + 0.12, 1], ease: ["easeInOut", snap, springy] });
+	pose({ x: [0, 0, -1.5, 0] }, { duration: 0.75, times: [0, at, at + 0.12, 1], ease: ["easeInOut", snap, springy] });
 
 export default createAnimatedIcon({
 	name: "text-search",

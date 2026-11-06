@@ -4,7 +4,7 @@ import { pose, ring } from "../helpers.ts";
 
 const drop = (delay: number) =>
 	pose(
-		{ y: [0, -6, 2, 0], opacity: [1, 0, 1, 1] },
+		{ y: [0, -3.6, 1.2, 0], opacity: [1, 0, 1, 1] },
 		{ duration: 0.55, delay, times: [0, 0.12, 0.42, 1], ease: ["easeInOut", "easeIn", ring] },
 	);
 

@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
-const slam = pose({ y: [0, -5, 1, 0] }, { duration: 0.7, times: [0, 0.25, 0.38, 1], ease: [snap, "easeIn", springy] });
+const slam = pose(
+	{ y: [0, -3, 0.6, 0] },
+	{ duration: 0.7, times: [0, 0.25, 0.38, 1], ease: [snap, "easeIn", springy] },
+);
 const brace = pose(
-	{ y: [0, 0, 1.5, 0] },
+	{ y: [0, 0, 0.9, 0] },
 	{ duration: 0.7, times: [0, 0.38, 0.46, 1], ease: ["easeInOut", "easeOut", springy] },
 );
 

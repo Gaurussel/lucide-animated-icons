@@ -4,7 +4,7 @@ import { pose, rubber, snap, springy } from "../helpers.ts";
 
 const frame = (y: number) => pose({ y: [0, y, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] });
 const look = pose(
-	{ x: [0, -3.5, 3.5, 0] },
+	{ x: [0, -2.1, 2.1, 0] },
 	{ duration: 0.7, times: [0, 0.18, 0.42, 1], ease: [snap, "easeInOut", springy] },
 );
 

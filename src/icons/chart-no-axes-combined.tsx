@@ -4,11 +4,11 @@ import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const land = (delay: number) =>
 	pose(
-		{ y: [0, 0, -2.5, 0] },
+		{ y: [0, 0, -1.5, 0] },
 		{ duration: 0.7, delay, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, springy] },
 	);
 const trend = pose(
-	{ rotate: [0, 0, -8, 0], y: [0, 0, -2, 0] },
+	{ rotate: [0, 0, -4.8, 0], y: [0, 0, -1.2, 0] },
 	{ duration: 0.75, times: [0, 0.45, 0.58, 1], ease: ["easeInOut", snap, springy] },
 );
 

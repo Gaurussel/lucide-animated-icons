@@ -6,7 +6,7 @@ const blow = pose(
 	{ rotate: [0, -30, 720] },
 	{ duration: 0.75, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
-const hub = pose({ scale: [1, 3, 1] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
+const hub = pose({ scale: [1, 2.2, 1] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "fan",

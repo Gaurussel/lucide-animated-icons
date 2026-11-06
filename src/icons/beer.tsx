@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const cheers = pose({ rotate: [0, -15, 0] }, { duration: 0.7, times: [0, 0.15, 1], ease: [snap, ring] });
-const foam = pose({ y: [0, -2.5, 0] }, { duration: 0.6, delay: 0.1, times: [0, 0.3, 1], ease: [snap, springy] });
+const cheers = pose({ rotate: [0, -9, 0] }, { duration: 0.7, times: [0, 0.15, 1], ease: [snap, ring] });
+const foam = pose({ y: [0, -1.5, 0] }, { duration: 0.6, delay: 0.1, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "beer",

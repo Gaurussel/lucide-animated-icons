@@ -4,7 +4,7 @@ import { pivot, pose, springy } from "../helpers.ts";
 
 const roll = (direction: number, delay: number) =>
 	pose(
-		{ rotate: [0, -30, 360], x: [0, 3 * direction, 0], y: [0, 3 * direction, 0] },
+		{ rotate: [0, 3.62, 0], x: [0, 3 * direction, 0], y: [0, 3 * direction, 0] },
 		{ duration: 0.65, delay, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 	);
 

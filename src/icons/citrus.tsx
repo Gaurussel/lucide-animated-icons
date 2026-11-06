@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const spin = pose(
-	{ rotate: [0, 20, -360], scale: [1, 0.85, 1] },
+	{ rotate: [0, 2.43, 0], scale: [1, 0.91, 1] },
 	{ duration: 0.75, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
 );
 

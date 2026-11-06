@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, springy } from "../helpers.ts";
 
 const shoot = pose(
-	{ x: [0, -2.5, 9, -7, 0], y: [0, 2.5, -9, 7, 0], opacity: [1, 1, 0, 0, 1] },
+	{ x: [0, -1.5, 5.4, -4.2, 0], y: [0, 1.5, -5.4, 4.2, 0], opacity: [1, 1, 0, 0, 1] },
 	{ duration: 0.75, times: [0, 0.22, 0.4, 0.41, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
-const flex = pose({ rotate: [0, -6, 0] }, { duration: 0.75, times: [0, 0.22, 1], ease: ["easeInOut", rubber] });
+const flex = pose({ rotate: [0, -3.6, 0] }, { duration: 0.75, times: [0, 0.22, 1], ease: ["easeInOut", rubber] });
 
 export default createAnimatedIcon({
 	name: "bow-arrow",

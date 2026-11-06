@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
-const strum = pose({ rotate: [0, -18, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
-const twang = pose({ x: [0, 1.5, 0], y: [0, 1.5, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
+const strum = pose({ rotate: [0, -10.8, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
+const twang = pose({ x: [0, 0.9, 0], y: [0, 0.9, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "guitar",

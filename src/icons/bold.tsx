@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const stamp = pose(
-	{ scale: [1, 1, 1.3, 1] },
+	{ scale: [1, 1, 1.18, 1] },
 	{ duration: 0.72, times: [0, 0.45, 0.55, 1], ease: ["easeInOut", snap, springy] },
 );
 

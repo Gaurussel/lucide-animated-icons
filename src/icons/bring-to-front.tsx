@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, rubber, snap, springy } from "../helpers.ts";
 
 const lift = pose(
-	{ scale: [1, 0.7, 1.3, 1] },
+	{ scale: [1, 0.82, 1.18, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 const away = (direction: number) =>

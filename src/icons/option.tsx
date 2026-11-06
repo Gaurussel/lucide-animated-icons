@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
-const toggle = pose({ x: [0, 5, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const toggle = pose({ x: [0, 3, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "option",

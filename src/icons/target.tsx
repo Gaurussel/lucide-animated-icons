@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, ring, snap, springy } from "../helpers.ts";
 
 const impact = pose(
-	{ scale: [1, 0.4, 1.4, 1] },
+	{ scale: [1, 0.64, 1.24, 1] },
 	{ duration: 0.65, times: [0, 0.12, 0.3, 1], ease: [snap, "easeInOut", springy] },
 );
 const ripple = (scale: number, delay: number) =>
@@ -11,7 +11,10 @@ const ripple = (scale: number, delay: number) =>
 		{ scale: [1, 1, scale, 1] },
 		{ duration: 0.55, delay, times: [0, 0.2, 0.45, 1], ease: ["easeInOut", snap, springy] },
 	);
-const jolt = pose({ x: [0, 0, 2, 0] }, { duration: 0.72, times: [0, 0.12, 0.22, 1], ease: ["easeInOut", snap, ring] });
+const jolt = pose(
+	{ x: [0, 0, 1.2, 0] },
+	{ duration: 0.72, times: [0, 0.12, 0.22, 1], ease: ["easeInOut", snap, ring] },
+);
 
 export default createAnimatedIcon({
 	name: "target",

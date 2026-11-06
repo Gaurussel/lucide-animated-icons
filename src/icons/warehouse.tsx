@@ -3,8 +3,8 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, snap, springy } from "../helpers.ts";
 
 const shutter = (delay: number) =>
-	pose({ y: [0, -6, 0], opacity: [1, 0, 1] }, { duration: 0.65, delay, times: [0, 0.3, 1], ease: [snap, springy] });
-const roof = pose({ y: [0, -3, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
+	pose({ y: [0, -3.6, 0], opacity: [1, 0, 1] }, { duration: 0.65, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+const roof = pose({ y: [0, -1.8, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "warehouse",

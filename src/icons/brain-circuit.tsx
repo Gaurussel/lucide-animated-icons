@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, rubber, snap, springy } from "../helpers.ts";
 
 const think = pose(
-	{ rotate: [0, -12, 0], x: [0, -1.5, 0] },
+	{ rotate: [0, -7.2, 0], x: [0, -0.9, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] },
 );
 const spark = (delay: number) =>
 	pose(
-		{ scale: [1, 1, 3, 1] },
+		{ scale: [1, 1, 2.2, 1] },
 		{ duration: 0.55, delay, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, springy] },
 	);
 

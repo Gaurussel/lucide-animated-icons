@@ -4,11 +4,11 @@ import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
 const stud = (rotate: number, delay: number) =>
 	pose(
-		{ y: [0, -5, 0], rotate: [0, rotate, 0] },
+		{ y: [0, -3, 0], rotate: [0, rotate, 0] },
 		{ duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] },
 	);
 const follow = pose(
-	{ y: [0, 0, -3, 0, 0] },
+	{ y: [0, 0, -1.8, 0, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.3, 0.45, 1], ease: ["easeInOut", snap, "easeIn", "easeInOut"] },
 );
 

@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const flinch = pose(
-	{ rotate: [0, 0, -10, 0] },
+	{ rotate: [0, 0, -6, 0] },
 	{ duration: 0.75, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 const fall = (delay: number) =>
 	pose(
-		{ y: [0, 0, 3, 0], opacity: [1, 1, 0.3, 1] },
+		{ y: [0, 0, 1.8, 0], opacity: [1, 1, 0.3, 1] },
 		{ duration: 0.65, delay, times: [0, 0.35, 0.5, 1], ease: ["easeInOut", "easeIn", springy] },
 	);
 

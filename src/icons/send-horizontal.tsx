@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, hop, pose, springy } from "../helpers.ts";
 
 const flight = pose(
-	{ x: [0, -2, 16, -12, 0], scale: [1, 1, 0.5, 0.5, 1], opacity: [1, 1, 0, 0, 1] },
+	{ x: [0, -2, 16, -12, 0], scale: [1, 1, 0.7, 0.7, 1], opacity: [1, 1, 0, 0, 1] },
 	{ duration: 0.65, times: [0, 0.15, 0.38, 0.39, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
 

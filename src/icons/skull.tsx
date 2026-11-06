@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const cackle = pose(
-	{ rotate: [0, -16, 0], y: [0, -2, 0] },
+	{ rotate: [0, -9.6, 0], y: [0, -1.2, 0] },
 	{ duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] },
 );
 const glare = (delay: number) =>
-	pose({ y: [0, -2, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -1.2, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "skull",

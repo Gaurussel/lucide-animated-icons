@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const blast = pose(
-	{ x: [0, -2, 1, 0], rotate: [0, 10, -16, 0], scale: [1, 0.9, 1.15, 1] },
+	{ x: [0, -1.2, 0.6, 0], rotate: [0, 6, -9.6, 0], scale: [1, 0.94, 1.09, 1] },
 	{ duration: 0.75, times: [0, 0.16, 0.3, 1], ease: ["easeInOut", snap, ring] },
 );
 const handle = pose(
-	{ rotate: [0, 0, 22, 0] },
+	{ rotate: [0, 0, 13.2, 0] },
 	{ duration: 0.75, times: [0, 0.22, 0.4, 1], ease: ["easeInOut", snap, ring] },
 );
 

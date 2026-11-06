@@ -8,7 +8,7 @@ const flick = (degrees: number, delay: number) =>
 		{ duration: 0.6, delay, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", "easeIn", springy] },
 	);
 const recoil = pose(
-	{ rotate: [0, 0, 6, -4, 0] },
+	{ rotate: [0, 0, 3.6, -2.4, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.3, 0.45, 1], ease: ["easeInOut", snap, "easeInOut", ring] },
 );
 

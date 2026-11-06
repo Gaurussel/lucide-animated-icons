@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, redraw, rubber, snap } from "../helpers.ts";
 
 const ding = pose(
-	{ rotate: [0, 0, -16, 0] },
+	{ rotate: [0, 0, -9.6, 0] },
 	{ duration: 0.72, times: [0, 0.45, 0.55, 1], ease: ["easeInOut", snap, rubber] },
 );
 

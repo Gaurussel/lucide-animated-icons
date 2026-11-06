@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const toss = pose(
-	{ y: [0, -6, 0], rotate: [0, -20, 0] },
+	{ y: [0, -3.6, 0], rotate: [0, -12, 0] },
 	{ duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy] },
 );
-const tassel = pose({ rotate: [0, 40, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, ring] });
+const tassel = pose({ rotate: [0, 24, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "graduation-cap",

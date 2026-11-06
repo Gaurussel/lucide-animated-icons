@@ -7,7 +7,7 @@ const dash = pose(
 	{ duration: 0.7, times: [0, 0.15, 0.35, 0.36, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
 const bump = pose(
-	{ x: [0, 0, 3, 0] },
+	{ x: [0, 0, 1.8, 0] },
 	{ duration: 0.7, times: [0, 0.22, 0.32, 1], ease: ["easeInOut", snap, springy] },
 );
 

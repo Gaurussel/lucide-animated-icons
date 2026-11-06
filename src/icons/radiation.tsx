@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const spin = pose(
-	{ rotate: [0, -30, 360] },
+	{ rotate: [0, 3.62, 0] },
 	{ duration: 0.75, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
 const burst = (x: number, y: number, delay: number) =>
 	pose({ x: [0, x, 0], y: [0, y, 0] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
-const core = pose({ scale: [1, 3, 1] }, { duration: 0.5, times: [0, 0.3, 1], ease: [snap, springy] });
+const core = pose({ scale: [1, 2.2, 1] }, { duration: 0.5, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "radiation",

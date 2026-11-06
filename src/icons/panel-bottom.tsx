@@ -4,11 +4,11 @@ import { pose, rubber, snap, springy } from "../helpers.ts";
 
 const dash = (delay = 0) =>
 	pose(
-		{ y: [0, -1.5, 5, 0] },
+		{ y: [0, -0.9, 3, 0] },
 		{ duration: 0.65, delay, times: [0, 0.18, 0.4, 1], ease: ["easeInOut", "easeIn", springy] },
 	);
 const recoil = pose(
-	{ y: [0, 0, 1.5, 0] },
+	{ y: [0, 0, 0.9, 0] },
 	{ duration: 0.75, times: [0, 0.38, 0.46, 1], ease: ["easeInOut", snap, rubber] },
 );
 

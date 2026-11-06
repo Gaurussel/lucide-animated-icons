@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, hop, pose, redraw, snap, springy } from "../helpers.ts";
 
 const bar = (delay: number) =>
-	pose({ x: [0, -5, 0] }, { duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ x: [0, -3, 0] }, { duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "euro",

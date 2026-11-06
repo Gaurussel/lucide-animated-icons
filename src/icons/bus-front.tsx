@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const approach = pose(
-	{ scale: [1, 1.25, 1], y: [0, -2, 0] },
+	{ scale: [1, 1.15, 1], y: [0, -1.2, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const mirror = (direction: number) =>

@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
-const aim = pose({ rotate: [0, -10, 0], y: [0, -2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const aim = pose(
+	{ rotate: [0, -6, 0], y: [0, -1.2, 0] },
+	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
+);
 const shutter = pose(
-	{ scale: [1, 1, 0.3, 1] },
+	{ scale: [1, 1, 0.58, 1] },
 	{ duration: 0.7, times: [0, 0.2, 0.32, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

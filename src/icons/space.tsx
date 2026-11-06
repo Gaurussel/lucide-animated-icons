@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, ring } from "../helpers.ts";
 
 const press = pose(
-	{ y: [0, -1.5, 3, 0] },
+	{ y: [0, -0.9, 1.8, 0] },
 	{ duration: 0.65, times: [0, 0.15, 0.3, 1], ease: ["easeInOut", "easeIn", ring] },
 );
 

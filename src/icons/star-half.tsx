@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, hop, pivot, pose, springy } from "../helpers.ts";
 
-const mirror = pose({ scaleX: [1, -1, 1] }, { duration: 0.72, times: [0, 0.38, 1], ease: ["easeInOut", springy] });
+const mirror = pose({ scaleX: [1, -0.2, 1] }, { duration: 0.72, times: [0, 0.38, 1], ease: ["easeInOut", springy] });
 
 export default createAnimatedIcon({
 	name: "star-half",

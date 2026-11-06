@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, rubber, snap, springy } from "../helpers.ts";
 
-const climb = pose({ y: [0, -4, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
-const roll = pose({ x: [0, 3, 0] }, { duration: 0.7, delay: 0.05, times: [0, 0.3, 1], ease: [snap, rubber] });
+const climb = pose({ y: [0, -2.4, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+const roll = pose({ x: [0, 1.8, 0] }, { duration: 0.7, delay: 0.05, times: [0, 0.3, 1], ease: [snap, rubber] });
 
 export default createAnimatedIcon({
 	name: "waves-ladder",

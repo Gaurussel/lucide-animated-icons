@@ -4,7 +4,7 @@ import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const fall = (degrees: number, delay: number) =>
 	pose(
-		{ rotate: [0, degrees, 0], x: [0, 2, 0] },
+		{ rotate: [0, degrees, 0], x: [0, 1.2, 0] },
 		{ duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] },
 	);
 

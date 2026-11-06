@@ -7,7 +7,7 @@ const plug = (y: number, degrees: number, delay: number) =>
 		{ y: [0, -y * 0.3, y, 0], rotate: [0, 0, degrees, 0] },
 		{ duration: 0.7, delay, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, springy] },
 	);
-const zap = pose({ x: [0, 0, 1.5, 0] }, { duration: 0.7, times: [0, 0.35, 0.45, 1], ease: ["easeInOut", snap, ring] });
+const zap = pose({ x: [0, 0, 0.9, 0] }, { duration: 0.7, times: [0, 0.35, 0.45, 1], ease: ["easeInOut", snap, ring] });
 
 export default createAnimatedIcon({
 	name: "cable",

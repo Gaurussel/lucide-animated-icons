@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, jelly, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
-const ping = pose({ scale: [1, 2.2, 1] }, { duration: 0.5, times: [0, 0.25, 1], ease: [snap, springy] });
+const ping = pose({ scale: [1, 1.72, 1] }, { duration: 0.5, times: [0, 0.25, 1], ease: [snap, springy] });
 
 const receive = pose(
-	{ y: [0, 0, -4, 0], rotate: [0, 0, -8, 0] },
+	{ y: [0, 0, -2.4, 0], rotate: [0, 0, -4.8, 0] },
 	{ duration: 0.75, times: [0, 0.32, 0.45, 1], ease: ["easeInOut", snap, springy] },
 );
 

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, redraw, snap, springy } from "../helpers.ts";
 
 const letter = pose(
-	{ y: [0, -3, 0], scale: [1, 1.3, 1] },
+	{ y: [0, -1.8, 0], scale: [1, 1.18, 1] },
 	{ duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] },
 );
 

@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, rubber, snap, springy } from "../helpers.ts";
 
 const zoom = pose(
-	{ scale: [1, 1.3, 1], rotate: [0, -15, 0] },
+	{ scale: [1, 1.18, 1], rotate: [0, -9, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] },
 );
-const strike = pose({ scale: [1, 0.82, 1] }, { duration: 0.7, times: [0, 0.14, 1], ease: [snap, springy] });
+const strike = pose({ scale: [1, 0.89, 1] }, { duration: 0.7, times: [0, 0.14, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "search-x",

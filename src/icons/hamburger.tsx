@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
-const bun = pose({ y: [0, -5, 0], rotate: [0, -14, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const bun = pose({ y: [0, -3, 0], rotate: [0, -8.4, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "hamburger",

@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const press = pose({ y: [0, -3, 3, 0] }, { duration: 0.7, times: [0, 0.2, 0.32, 1], ease: [snap, "easeIn", springy] });
+const press = pose(
+	{ y: [0, -1.8, 1.8, 0] },
+	{ duration: 0.7, times: [0, 0.2, 0.32, 1], ease: [snap, "easeIn", springy] },
+);
 const handle = pose(
-	{ y: [0, 0, 1.5, 0] },
+	{ y: [0, 0, 0.9, 0] },
 	{ duration: 0.6, delay: 0.08, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, ring] },
 );
 

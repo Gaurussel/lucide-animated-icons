@@ -7,7 +7,7 @@ const drive = pose(
 	{ duration: 0.72, times: [0, 0.15, 0.38, 0.39, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 );
 const lean = pose(
-	{ rotate: [0, 0, -7, -7, 9, 0] },
+	{ rotate: [0, 0, -4.2, -4.2, 5.4, 0] },
 	{
 		duration: 0.72,
 		times: [0, 0.1, 0.25, 0.39, 0.6, 1],

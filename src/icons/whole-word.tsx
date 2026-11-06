@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const spring = pose({ y: [0, 2.5, 0] }, { duration: 0.72, times: [0, 0.14, 1], ease: [snap, ring] });
+const spring = pose({ y: [0, 1.5, 0] }, { duration: 0.72, times: [0, 0.14, 1], ease: [snap, ring] });
 const launch = (at: number, rotate: number) =>
 	pose(
-		{ y: [0, 0, -5, 0], rotate: [0, 0, rotate, 0] },
+		{ y: [0, 0, -3, 0], rotate: [0, 0, rotate, 0] },
 		{ duration: 0.72, times: [0, at, at + 0.18, 1], ease: ["easeInOut", snap, springy] },
 	);
 

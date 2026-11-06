@@ -5,7 +5,7 @@ import { pose, snap, springy } from "../helpers.ts";
 const apart = (direction: number) =>
 	pose({ y: [0, 3 * direction, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 const dash = (delay: number) =>
-	pose({ x: [0, 2, 0] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ x: [0, 1.2, 0] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "table-rows-split",

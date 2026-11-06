@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
-const wail = pose({ rotate: [0, -10, 0], y: [0, -2, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
-const flash = pose({ scale: [1, 1.4, 1] }, { duration: 0.65, delay: 0.08, times: [0, 0.25, 1], ease: [snap, ring] });
+const wail = pose({ rotate: [0, -6, 0], y: [0, -1.2, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
+const flash = pose({ scale: [1, 1.24, 1] }, { duration: 0.65, delay: 0.08, times: [0, 0.25, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "siren",

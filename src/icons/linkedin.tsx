@@ -3,8 +3,8 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, snap, springy } from "../helpers.ts";
 
 const hopIn = (delay: number) =>
-	pose({ y: [0, -5, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
-const nod = pose({ rotate: [0, -12, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
+	pose({ y: [0, -3, 0] }, { duration: 0.55, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+const nod = pose({ rotate: [0, -7.2, 0] }, { duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "linkedin",

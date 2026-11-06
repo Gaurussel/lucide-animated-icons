@@ -8,7 +8,7 @@ const pole = (direction: number, delay: number) =>
 		{ duration: 0.65, delay, times: [0, 0.15, 0.32, 1], ease: ["easeInOut", snap, ring] },
 	);
 const flap = pose(
-	{ x: [0, 0, 1.5, 0] },
+	{ x: [0, 0, 0.9, 0] },
 	{ duration: 0.6, delay: 0.1, times: [0, 0.35, 0.5, 1], ease: ["easeInOut", snap, ring] },
 );
 

@@ -3,13 +3,13 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const flip = pose(
-	{ rotate: [0, -10, 0], y: [0, -2, 0] },
+	{ rotate: [0, -6, 0], y: [0, -1.2, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const rings = (delay: number) =>
-	pose({ y: [0, -3, 0] }, { duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -1.8, 0] }, { duration: 0.6, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const zoom = pose(
-	{ scale: [1, 1.35, 1], rotate: [0, -20, 0] },
+	{ scale: [1, 1.21, 1], rotate: [0, -12, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, rubber] },
 );
 

@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, snap, springy } from "../helpers.ts";
 
 const lean = pose(
-	{ rotate: [0, 0, 20, 0], y: [0, -3, -1, 0] },
+	{ rotate: [0, 0, 12, 0], y: [0, -1.8, -0.6, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.4, 1], ease: [snap, "easeInOut", springy] },
 );
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const flag = pose(
-	{ rotate: [0, 12, -85, 0] },
+	{ rotate: [0, 7.2, -51, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, ring] },
 );
 const door = pose(
-	{ scaleX: [1, 1, -0.6, 1] },
+	{ scaleX: [1, 1, 0.04, 1] },
 	{ duration: 0.75, times: [0, 0.08, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 

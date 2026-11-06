@@ -3,9 +3,9 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const key = (delay: number) =>
-	pose({ y: [0, 1.5, 0], scale: [1, 2.2, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, 0.9, 0], scale: [1, 1.72, 1] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
-const body = pose({ y: [0, -2, 0], rotate: [0, -10, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
+const body = pose({ y: [0, -1.2, 0], rotate: [0, -6, 0] }, { duration: 0.75, times: [0, 0.18, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "keyboard-off",

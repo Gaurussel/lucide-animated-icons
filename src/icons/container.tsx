@@ -2,7 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
-const hoist = pose({ y: [0, -4, 0], rotate: [0, -8, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const hoist = pose(
+	{ y: [0, -2.4, 0], rotate: [0, -4.8, 0] },
+	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "container",

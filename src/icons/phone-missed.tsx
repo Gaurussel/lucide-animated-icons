@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, ring, snap, springy } from "../helpers.ts";
 
-const shake = pose({ rotate: [0, -25, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
+const shake = pose({ rotate: [0, -15, 0] }, { duration: 0.75, times: [0, 0.1, 1], ease: [snap, ring] });
 const twist = pose(
-	{ scale: [1, 0.4, 1], rotate: [0, 0, 360] },
+	{ scale: [1, 0.64, 1], rotate: [0, 0, 0] },
 	{ duration: 0.75, times: [0, 0.2, 1], ease: [snap, springy], reset: true },
 );
 

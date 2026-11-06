@@ -4,9 +4,9 @@ import { centered, pose, snap, springy } from "../helpers.ts";
 
 const aim = (x: number, y: number) =>
 	pose({ x: [0, x, 0], y: [0, y, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
-const lockOn = pose({ scale: [1, 0.75, 1] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const lockOn = pose({ scale: [1, 0.85, 1] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 const dot = pose(
-	{ scale: [1, 0.3, 1.5, 1] },
+	{ scale: [1, 0.58, 1.3, 1] },
 	{ duration: 0.7, times: [0, 0.25, 0.45, 1], ease: [snap, "easeInOut", springy] },
 );
 

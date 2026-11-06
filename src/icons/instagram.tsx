@@ -2,13 +2,13 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
-const flash = pose({ scale: [1, 3, 1] }, { duration: 0.5, times: [0, 0.2, 1], ease: [snap, springy] });
+const flash = pose({ scale: [1, 2.2, 1] }, { duration: 0.5, times: [0, 0.2, 1], ease: [snap, springy] });
 const shutter = pose(
-	{ scale: [1, 1, 0.4, 1] },
+	{ scale: [1, 1, 0.64, 1] },
 	{ duration: 0.75, times: [0, 0.12, 0.28, 1], ease: ["easeInOut", snap, springy] },
 );
 const recoil = pose(
-	{ y: [0, 0, 2, 0], rotate: [0, 0, 6, 0] },
+	{ y: [0, 0, 1.2, 0], rotate: [0, 0, 3.6, 0] },
 	{ duration: 0.75, times: [0, 0.25, 0.36, 1], ease: ["easeInOut", snap, springy] },
 );
 

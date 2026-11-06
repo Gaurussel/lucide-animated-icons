@@ -3,11 +3,14 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const tilt = pose(
-	{ rotate: [0, -14, 0], y: [0, -2, 0] },
+	{ rotate: [0, -8.4, 0], y: [0, -1.2, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
-const antenna = pose({ rotate: [0, 30, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: ["easeInOut", ring] });
-const blink = pose({ y: [0, 0, 1, 0] }, { duration: 0.7, times: [0, 0.4, 0.5, 1], ease: ["easeInOut", snap, springy] });
+const antenna = pose({ rotate: [0, 18, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: ["easeInOut", ring] });
+const blink = pose(
+	{ y: [0, 0, 0.6, 0] },
+	{ duration: 0.7, times: [0, 0.4, 0.5, 1], ease: ["easeInOut", snap, springy] },
+);
 const ear = (direction: number) =>
 	pose({ x: [0, 2 * direction, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
 

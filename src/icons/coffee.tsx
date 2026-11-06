@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
-const sip = pose({ rotate: [0, -10, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
+const sip = pose({ rotate: [0, -6, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] });
 const steam = (delay: number) =>
 	pose(
-		{ y: [0, 1, -5, 3, 0], opacity: [1, 1, 0, 0, 1] },
+		{ y: [0, 0.6, -3, 1.8, 0], opacity: [1, 1, 0, 0, 1] },
 		{ duration: 0.65, delay, times: [0, 0.12, 0.4, 0.41, 1], ease: ["easeInOut", "easeIn", "easeInOut", springy] },
 	);
 

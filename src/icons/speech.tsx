@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const talk = pose(
-	{ rotate: [0, -10, 0], x: [0, -1, 0] },
+	{ rotate: [0, -6, 0], x: [0, -0.6, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 const wave = (delay: number) =>
 	pose(
-		{ x: [0, 4, -2, 0], opacity: [1, 0, 0, 1] },
+		{ x: [0, 2.4, -1.2, 0], opacity: [1, 0, 0, 1] },
 		{ duration: 0.6, delay, times: [0, 0.35, 0.36, 1], ease: ["easeIn", "easeInOut", springy] },
 	);
 

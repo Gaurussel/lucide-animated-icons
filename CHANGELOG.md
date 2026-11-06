@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.4
+
+- Calmer scenes, closer to Telegram: every move is about 40 % smaller, `springy`, `ring` and `rubber` settle with a
+  smaller overshoot, `hop` and `jelly` are gentler.
+- Only icons that rotate by meaning (clocks, gears, refresh, loaders) still make a full turn; the rest tilt instead
+  of spinning, `star` among them.
+
 ## 0.2.3
 
 - With the system's reduce-motion setting an icon stays static. Before, only transforms were dropped and stroke

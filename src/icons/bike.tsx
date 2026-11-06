@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, snap, springy } from "../helpers.ts";
 
 const drive = pose(
-	{ x: [0, -1.5, 3, 0] },
+	{ x: [0, -0.9, 1.8, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.4, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
-const pedal = pose({ y: [0, -2, 0] }, { duration: 0.6, delay: 0.08, times: [0, 0.3, 1], ease: [snap, springy] });
+const pedal = pose({ y: [0, -1.2, 0] }, { duration: 0.6, delay: 0.08, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "bike",

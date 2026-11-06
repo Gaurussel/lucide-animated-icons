@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pose, springy } from "../helpers.ts";
 
 const plug = pose(
-	{ x: [0, 2.5, -0.8, 0] },
+	{ x: [0, 1.5, -0.48, 0] },
 	{ duration: 0.72, times: [0, 0.25, 0.38, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

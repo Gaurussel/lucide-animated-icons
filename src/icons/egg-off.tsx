@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const rock = pose({ rotate: [0, -10, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: ["easeInOut", ring] });
+const rock = pose({ rotate: [0, -6, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: ["easeInOut", ring] });
 const split = (x: number) =>
 	pose({ x: [0, 0, x, 0] }, { duration: 0.75, times: [0, 0.35, 0.5, 1], ease: ["easeInOut", snap, springy] });
 

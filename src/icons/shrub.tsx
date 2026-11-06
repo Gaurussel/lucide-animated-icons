@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
 const gust = pose(
-	{ rotate: [0, 4, -16, 0] },
+	{ rotate: [0, 2.4, -9.6, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, ring] },
 );
 const trunk = pose(
-	{ rotate: [0, 0, -8, 0] },
+	{ rotate: [0, 0, -4.8, 0] },
 	{ duration: 0.65, delay: 0.08, times: [0, 0.2, 0.35, 1], ease: ["easeInOut", snap, ring] },
 );
 const twig = pose(
-	{ rotate: [0, 0, 30, 0] },
+	{ rotate: [0, 0, 18, 0] },
 	{ duration: 0.6, delay: 0.14, times: [0, 0.25, 0.4, 1], ease: ["easeInOut", snap, ring] },
 );
 

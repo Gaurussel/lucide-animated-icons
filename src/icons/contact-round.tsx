@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, redraw, snap, springy } from "../helpers.ts";
 
-const rings = pose({ y: [0, -3, 0] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
+const rings = pose({ y: [0, -1.8, 0] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
 const head = pose(
-	{ y: [0, 1, -4, 0] },
+	{ y: [0, 0.6, -2.4, 0] },
 	{ duration: 0.65, delay: 0.08, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", "easeOut", springy] },
 );
 

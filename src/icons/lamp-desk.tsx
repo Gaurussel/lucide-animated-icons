@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const reach = pose(
-	{ rotate: [0, -4, 14, 0] },
+	{ rotate: [0, -2.4, 8.4, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const nod = pose(
-	{ rotate: [0, 0, -32, 0] },
+	{ rotate: [0, 0, -19.2, 0] },
 	{ duration: 0.75, times: [0, 0.25, 0.4, 1], ease: ["easeInOut", snap, ring] },
 );
 

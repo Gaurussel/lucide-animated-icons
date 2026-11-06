@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pose, redraw, snap, springy } from "../helpers.ts";
 
 const bolt = pose(
-	{ y: [0, -5, 2, 0] },
+	{ y: [0, -3, 1.2, 0] },
 	{ duration: 0.72, times: [0, 0.2, 0.32, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 const spark = pose(
-	{ x: [0, 0, 2.5, 0] },
+	{ x: [0, 0, 1.5, 0] },
 	{ duration: 0.72, times: [0, 0.36, 0.44, 1], ease: ["easeInOut", snap, springy] },
 );
 

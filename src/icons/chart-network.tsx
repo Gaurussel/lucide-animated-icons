@@ -4,11 +4,11 @@ import { centered, pose, redraw, snap, springy } from "../helpers.ts";
 
 const node = (delay: number) =>
 	pose(
-		{ scale: [1, 0.6, 1.35, 1] },
+		{ scale: [1, 0.76, 1.21, 1] },
 		{ duration: 0.5, delay, times: [0, 0.2, 0.4, 1], ease: ["easeInOut", snap, springy] },
 	);
 const axis = pose(
-	{ x: [0, 0, -1.5, 0], y: [0, 0, 1.5, 0] },
+	{ x: [0, 0, -0.9, 0], y: [0, 0, 0.9, 0] },
 	{ duration: 0.7, times: [0, 0.35, 0.5, 1], ease: ["easeInOut", snap, springy] },
 );
 

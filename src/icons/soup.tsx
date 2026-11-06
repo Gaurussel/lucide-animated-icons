@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const stir = pose({ rotate: [0, -25, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
+const stir = pose({ rotate: [0, -15, 0] }, { duration: 0.75, times: [0, 0.2, 1], ease: [snap, ring] });
 const steam = (delay: number) =>
 	pose(
-		{ y: [0, -6, 4, 0], opacity: [1, 0, 0, 1] },
+		{ y: [0, -3.6, 2.4, 0], opacity: [1, 0, 0, 1] },
 		{ duration: 0.62, delay, times: [0, 0.35, 0.36, 1], ease: ["easeIn", "easeInOut", springy] },
 	);
 

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pose, snap, springy } from "../helpers.ts";
 
 const stamp = pose(
-	{ rotate: [0, -30, 360] },
+	{ rotate: [0, 3.62, 0] },
 	{ duration: 0.55, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
 const land = pose(
-	{ y: [0, -3, 0.8, 0], scale: [1, 1.1, 0.88, 1] },
+	{ y: [0, -1.8, 0.48, 0], scale: [1, 1.06, 0.93, 1] },
 	{ duration: 0.72, times: [0, 0.25, 0.42, 1], ease: [snap, "easeIn", springy] },
 );
 

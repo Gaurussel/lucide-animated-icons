@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, springy } from "../helpers.ts";
 
 const flick = pose(
-	{ x: [0, -2, 3, 0], y: [0, 1, -1.5, 0] },
+	{ x: [0, -1.2, 1.8, 0], y: [0, 0.6, -0.9, 0] },
 	{ duration: 0.7, times: [0, 0.18, 0.42, 1], ease: ["easeInOut", "easeIn", springy] },
 );
 

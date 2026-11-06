@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const boom = pose(
-	{ scale: [1, 1.3, 0.9, 1.2, 1] },
+	{ scale: [1, 1.18, 0.94, 1.12, 1] },
 	{ duration: 0.72, times: [0, 0.12, 0.25, 0.38, 1], ease: [snap, "easeInOut", "easeInOut", springy] },
 );
 const tweet = pose(
-	{ scale: [1, 1, 2.5, 1] },
+	{ scale: [1, 1, 1.9, 1] },
 	{ duration: 0.6, delay: 0.1, times: [0, 0.25, 0.4, 1], ease: ["easeInOut", snap, ring] },
 );
 const rattle = pose(
-	{ rotate: [0, 0, -6, 0] },
+	{ rotate: [0, 0, -3.6, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.28, 1], ease: ["easeInOut", snap, ring] },
 );
 

@@ -3,12 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const press = pose(
-	{ y: [0, -2, 2, 0] },
+	{ y: [0, -1.2, 1.2, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.22, 1], ease: ["easeInOut", snap, springy] },
 );
 const node = (delay: number) =>
 	pose(
-		{ y: [0, 0, -4, 0] },
+		{ y: [0, 0, -2.4, 0] },
 		{ duration: 0.7, times: [0, delay, delay + 0.14, 1], ease: ["easeInOut", snap, springy] },
 	);
 

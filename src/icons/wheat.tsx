@@ -3,9 +3,12 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
 const ripple = (at: number) =>
-	pose({ rotate: [0, 0, -14, 0] }, { duration: 0.72, times: [0, at, at + 0.12, 1], ease: ["easeInOut", snap, ring] });
+	pose(
+		{ rotate: [0, 0, -8.4, 0] },
+		{ duration: 0.72, times: [0, at, at + 0.12, 1], ease: ["easeInOut", snap, ring] },
+	);
 const sway = pose(
-	{ rotate: [0, 4, -10, 0] },
+	{ rotate: [0, 2.4, -6, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.26, 1], ease: ["easeInOut", snap, ring] },
 );
 

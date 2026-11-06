@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
-const shake = pose({ rotate: [0, -14, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
+const shake = pose({ rotate: [0, -8.4, 0] }, { duration: 0.75, times: [0, 0.15, 1], ease: [snap, ring] });
 const mist = (delay: number) =>
 	pose(
-		{ x: [0, -3, 2, 0], opacity: [1, 0, 0, 1] },
+		{ x: [0, -1.8, 1.2, 0], opacity: [1, 0, 0, 1] },
 		{ duration: 0.55, delay, times: [0, 0.35, 0.36, 1], ease: ["easeIn", "easeInOut", springy] },
 	);
 

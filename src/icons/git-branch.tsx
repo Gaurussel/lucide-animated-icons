@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
-const swing = pose({ rotate: [0, -22, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
+const swing = pose({ rotate: [0, -13.2, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
 const node = (delay: number) =>
-	pose({ scale: [1, 1.35, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.21, 1] }, { duration: 0.5, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "git-branch",

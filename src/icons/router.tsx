@@ -3,13 +3,13 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, jelly, pose, redraw, snap, springy } from "../helpers.ts";
 
 const led = (delay: number) =>
-	pose({ scale: [1, 2.2, 1] }, { duration: 0.4, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.72, 1] }, { duration: 0.4, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 const antenna = pose(
-	{ y: [0, 0, -2.5, 0] },
+	{ y: [0, 0, -1.5, 0] },
 	{ duration: 0.7, times: [0, 0.18, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const wave = (delay: number) =>
-	pose({ y: [0, -2, 0] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -1.2, 0] }, { duration: 0.45, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "router",

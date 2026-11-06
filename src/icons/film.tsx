@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const roll = pose(
-	{ rotate: [0, -16, 0], x: [0, -2, 0] },
+	{ rotate: [0, -9.6, 0], x: [0, -1.2, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
-const advance = pose({ y: [0, 4.5, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
+const advance = pose({ y: [0, 2.7, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "film",

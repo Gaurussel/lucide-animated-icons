@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const lift = pose(
-	{ y: [0, 1, -4, 0], rotate: [0, 0, -5, 0] },
+	{ y: [0, 0.6, -2.4, 0], rotate: [0, 0, -3, 0] },
 	{ duration: 0.75, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
-const _shackle = pose({ y: [0, -3, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const _shackle = pose({ y: [0, -1.8, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "file-archive",
@@ -18,7 +18,7 @@ export default createAnimatedIcon({
 			<motion.path {...part(redraw(0.14, 0.3))} d="M10 12v-1" />
 			<motion.path {...part(redraw(0.2, 0.3))} d="M10 18v-2" />
 			<motion.circle
-				{...part(pose({ y: [0, 2.5, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] }))}
+				{...part(pose({ y: [0, 1.5, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] }))}
 				cx="10"
 				cy="20"
 				r="2"

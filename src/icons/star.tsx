@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, hop, pose, snap, springy } from "../helpers.ts";
 
 const twirl = pose(
-	{ scale: [1, 0.7, 1.3, 1], rotate: [0, 0, 216, 360] },
+	{ scale: [1, 0.82, 1.18, 1], rotate: [0, 0, -13.31, 0] },
 	{ duration: 0.7, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", snap, springy], reset: true },
 );
 

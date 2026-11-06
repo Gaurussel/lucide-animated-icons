@@ -6,7 +6,7 @@ const revolve = pose(
 	{ rotate: [0, -20, 360] },
 	{ duration: 0.75, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
-const core = pose({ scale: [1, 0.5, 1] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, springy] });
+const core = pose({ scale: [1, 0.7, 1] }, { duration: 0.75, times: [0, 0.25, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "orbit",

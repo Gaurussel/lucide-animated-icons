@@ -5,7 +5,7 @@ import { pivot, pose, snap, springy } from "../helpers.ts";
 const burst = (x: number, y: number) =>
 	pose({ x: [0, x, 0], y: [0, y, 0] }, { duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] });
 const turn = pose(
-	{ rotate: [0, 0, 360] },
+	{ rotate: [0, 0, 0] },
 	{ duration: 0.7, times: [0, 0.15, 1], ease: ["easeInOut", springy], reset: true },
 );
 

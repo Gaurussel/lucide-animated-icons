@@ -2,8 +2,11 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, snap, springy } from "../helpers.ts";
 
-const wave = pose({ x: [0, -3, 0], rotate: [0, -8, 0] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
-const pop = pose({ scale: [1, 1.5, 1] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
+const wave = pose(
+	{ x: [0, -1.8, 0], rotate: [0, -4.8, 0] },
+	{ duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] },
+);
+const pop = pose({ scale: [1, 1.3, 1] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "banknote",

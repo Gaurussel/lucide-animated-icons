@@ -3,15 +3,15 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap } from "../helpers.ts";
 
 const flick = pose(
-	{ rotate: [0, 8, -22, 0], y: [0, 1, -3, 0] },
+	{ rotate: [0, 4.8, -13.2, 0], y: [0, 0.6, -1.8, 0] },
 	{ duration: 0.72, times: [0, 0.15, 0.35, 1], ease: ["easeInOut", snap, ring] },
 );
 const paddle = pose(
-	{ rotate: [0, 0, 30, 0] },
+	{ rotate: [0, 0, 18, 0] },
 	{ duration: 0.6, delay: 0.1, times: [0, 0.3, 0.45, 1], ease: ["easeInOut", snap, ring] },
 );
 const tail = pose(
-	{ rotate: [0, 0, -25, 0] },
+	{ rotate: [0, 0, -15, 0] },
 	{ duration: 0.6, delay: 0.06, times: [0, 0.25, 0.4, 1], ease: ["easeInOut", snap, ring] },
 );
 

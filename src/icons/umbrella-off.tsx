@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const knocked = pose(
-	{ y: [0, 0, 2, 0], rotate: [0, 0, 24, 0] },
+	{ y: [0, 0, 1.2, 0], rotate: [0, 0, 14.4, 0] },
 	{ duration: 0.72, times: [0, 0.22, 0.36, 1], ease: ["easeInOut", snap, ring] },
 );
 

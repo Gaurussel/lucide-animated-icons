@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
-const apply = pose({ rotate: [0, -30, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
+const apply = pose({ rotate: [0, -18, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
 const dot = (delay: number) =>
-	pose({ y: [0, -2, 0] }, { duration: 0.4, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ y: [0, -1.2, 0] }, { duration: 0.4, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "bandage",

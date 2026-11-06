@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const grow = pose(
-	{ y: [0, 1, -3, 0], scale: [1, 0.95, 1.15, 1] },
+	{ y: [0, 0.6, -1.8, 0], scale: [1, 0.97, 1.09, 1] },
 	{ duration: 0.7, times: [0, 0.12, 0.35, 1], ease: ["easeInOut", snap, springy] },
 );
 const tick = pose(
-	{ scale: [1, 1, 1.4, 1] },
+	{ scale: [1, 1, 1.24, 1] },
 	{ duration: 0.7, times: [0, 0.5, 0.62, 1], ease: ["easeInOut", snap, ring] },
 );
 

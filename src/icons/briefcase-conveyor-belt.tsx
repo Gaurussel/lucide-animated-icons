@@ -6,7 +6,7 @@ const ride = pose(
 	{ x: [0, 10, -10, 0], opacity: [1, 0, 0, 1] },
 	{ duration: 0.75, times: [0, 0.3, 0.31, 1], ease: ["easeIn", "easeInOut", springy] },
 );
-const rollers = pose({ x: [0, 1.5, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: ["easeIn", springy] });
+const rollers = pose({ x: [0, 0.9, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: ["easeIn", springy] });
 
 export default createAnimatedIcon({
 	name: "briefcase-conveyor-belt",

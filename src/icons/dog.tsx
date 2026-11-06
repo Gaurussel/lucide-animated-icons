@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
 const tilt = pose(
-	{ y: [0, -3, 0], rotate: [0, -16, 0] },
+	{ y: [0, -1.8, 0], rotate: [0, -9.6, 0] },
 	{ duration: 0.75, times: [0, 0.22, 1], ease: [snap, rubber] },
 );
 const sniff = pose(
-	{ y: [0, -1.5, 0], scale: [1, 1.8, 1] },
+	{ y: [0, -0.9, 0], scale: [1, 1.48, 1] },
 	{ duration: 0.6, delay: 0.1, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 

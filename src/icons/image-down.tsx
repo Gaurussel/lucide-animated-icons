@@ -3,16 +3,16 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const sun = pose(
-	{ y: [0, 2, -3.5, 0] },
+	{ y: [0, 1.2, -2.1, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
 const drop = pose(
-	{ y: [0, -3, 2.5, 0] },
+	{ y: [0, -1.8, 1.5, 0] },
 	{ duration: 0.65, times: [0, 0.18, 0.38, 1], ease: [snap, "easeIn", springy] },
 );
 
 const tilt = pose(
-	{ y: [0, -3, 0], rotate: [0, -10, 0] },
+	{ y: [0, -1.8, 0], rotate: [0, -6, 0] },
 	{ duration: 0.7, times: [0, 0.28, 1], ease: [snap, springy] },
 );
 

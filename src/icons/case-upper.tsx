@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, redraw, snap, springy } from "../helpers.ts";
 
 const grow = pose(
-	{ scale: [1, 0.8, 1.35, 1] },
+	{ scale: [1, 0.88, 1.21, 1] },
 	{ duration: 0.7, times: [0, 0.15, 0.32, 1], ease: ["easeInOut", snap, springy] },
 );
 const bumped = pose(
-	{ x: [0, 0, 3, 0], rotate: [0, 0, 14, 0] },
+	{ x: [0, 0, 1.8, 0], rotate: [0, 0, 8.4, 0] },
 	{ duration: 0.7, times: [0, 0.22, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
 

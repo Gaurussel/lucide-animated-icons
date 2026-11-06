@@ -5,7 +5,7 @@ import { pose, snap, springy } from "../helpers.ts";
 const spread = (direction: number) =>
 	pose({ x: [0, 3 * direction, 0] }, { duration: 0.68, times: [0, 0.28, 1], ease: [snap, springy] });
 const bounce = (delay: number) =>
-	pose({ y: [0, 0, 3, 0] }, { duration: 0.6, delay, times: [0, 0.2, 0.38, 1], ease: ["easeInOut", snap, springy] });
+	pose({ y: [0, 0, 1.8, 0] }, { duration: 0.6, delay, times: [0, 0.2, 0.38, 1], ease: ["easeInOut", snap, springy] });
 
 export default createAnimatedIcon({
 	name: "square-dashed-bottom-code",

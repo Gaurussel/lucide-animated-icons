@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const bumped = pose(
-	{ x: [0, 0, -2.5, 0] },
+	{ x: [0, 0, -1.5, 0] },
 	{ duration: 0.75, times: [0, 0.35, 0.48, 1], ease: ["easeInOut", snap, springy] },
 );
 const arrive = pose(
-	{ x: [0, 0, 4, 0], opacity: [1, 0, 0, 1] },
+	{ x: [0, 0, 2.4, 0], opacity: [1, 0, 0, 1] },
 	{ duration: 0.65, delay: 0.1, times: [0, 0.05, 0.3, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

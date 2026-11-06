@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
-const lift = pose({ y: [0, -5, 0], rotate: [0, -8, 0] }, { duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy] });
+const lift = pose(
+	{ y: [0, -3, 0], rotate: [0, -4.8, 0] },
+	{ duration: 0.75, times: [0, 0.3, 1], ease: [snap, springy] },
+);
 const rotor = pose(
-	{ rotate: [0, 0, 360] },
+	{ rotate: [0, 0, 0] },
 	{ duration: 0.75, times: [0, 0.05, 1], ease: ["easeInOut", springy], reset: true },
 );
 

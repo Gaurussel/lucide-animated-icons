@@ -3,7 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
 const handle = (direction: number) =>
-	pose({ y: [0, -3, 0], x: [0, 1.5 * direction, 0] }, { duration: 0.68, times: [0, 0.25, 1], ease: [snap, springy] });
+	pose(
+		{ y: [0, -1.8, 0], x: [0, 1.5 * direction, 0] },
+		{ duration: 0.68, times: [0, 0.25, 1], ease: [snap, springy] },
+	);
 
 export default createAnimatedIcon({
 	name: "shopping-basket",

@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const yank = pose(
-	{ x: [0, 1, -4, 0], y: [0, 0, 1, 0] },
+	{ x: [0, 0.6, -2.4, 0], y: [0, 0, 0.6, 0] },
 	{ duration: 0.72, times: [0, 0.12, 0.3, 1], ease: ["easeInOut", snap, springy] },
 );
 const follow = pose(
-	{ rotate: [0, 0, -18, 0] },
+	{ rotate: [0, 0, -10.8, 0] },
 	{ duration: 0.72, times: [0, 0.18, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
 

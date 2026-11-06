@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
-const kick = pose({ y: [0, -3, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
+const kick = pose({ y: [0, -1.8, 0] }, { duration: 0.65, times: [0, 0.25, 1], ease: [snap, springy] });
 const press = pose(
-	{ scale: [1, 0.6, 1], rotate: [0, -30, 0] },
+	{ scale: [1, 0.76, 1], rotate: [0, -18, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 

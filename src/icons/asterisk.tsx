@@ -4,10 +4,10 @@ import { centered, pivot, pose, springy } from "../helpers.ts";
 
 const spoke = (delay: number) =>
 	pose(
-		{ rotate: [0, -30, 360] },
+		{ rotate: [0, 3.62, 0] },
 		{ duration: 0.58, delay, times: [0, 0.2, 1], ease: ["easeInOut", springy], reset: true },
 	);
-const gather = pose({ scale: [1, 0.7, 1] }, { duration: 0.72, times: [0, 0.2, 1], ease: ["easeInOut", springy] });
+const gather = pose({ scale: [1, 0.82, 1] }, { duration: 0.72, times: [0, 0.2, 1], ease: ["easeInOut", springy] });
 
 export default createAnimatedIcon({
 	name: "asterisk",

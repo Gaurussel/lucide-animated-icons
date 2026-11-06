@@ -4,7 +4,7 @@ import { centered, pose, snap, springy } from "../helpers.ts";
 
 const spread = (x: number, y: number) =>
 	pose(
-		{ x: [0, x, 0], y: [0, y, 0], scale: [1, 0.6, 1], rotate: [0, 45, 0] },
+		{ x: [0, x, 0], y: [0, y, 0], scale: [1, 0.76, 1], rotate: [0, 27, 0] },
 		{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
 	);
 

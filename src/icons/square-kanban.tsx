@@ -4,7 +4,7 @@ import { centered, jelly, pose, springy } from "../helpers.ts";
 
 const drop = (delay: number) =>
 	pose(
-		{ y: [0, -5, 0], opacity: [1, 0, 1] },
+		{ y: [0, -3, 0], opacity: [1, 0, 1] },
 		{ duration: 0.55, delay, times: [0, 0.2, 1], ease: ["easeInOut", springy] },
 	);
 

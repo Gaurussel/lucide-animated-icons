@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, pivot, pose, redraw, snap, springy } from "../helpers.ts";
 
 const sun = pose(
-	{ x: [0, 3, 0], y: [0, -3, 0], scale: [1, 1.4, 1] },
+	{ x: [0, 1.8, 0], y: [0, -1.8, 0], scale: [1, 1.24, 1] },
 	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 const screen = pose(
-	{ y: [0, -2, 0], rotate: [0, -8, 0] },
+	{ y: [0, -1.2, 0], rotate: [0, -4.8, 0] },
 	{ duration: 0.7, times: [0, 0.25, 1], ease: [snap, springy] },
 );
 

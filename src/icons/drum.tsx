@@ -8,7 +8,7 @@ const stick = (degrees: number, delay: number) =>
 		{ duration: 0.6, delay, times: [0, 0.3, 0.45, 1], ease: [snap, "easeIn", springy] },
 	);
 const skin = pose(
-	{ y: [0, 0, 1.5, 0, 1.5, 0] },
+	{ y: [0, 0, 0.9, 0, 0.9, 0] },
 	{
 		duration: 0.75,
 		times: [0, 0.36, 0.42, 0.5, 0.56, 1],

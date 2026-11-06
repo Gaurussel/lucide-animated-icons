@@ -4,7 +4,7 @@ import { pose, redraw, snap, springy } from "../helpers.ts";
 
 const land = (delay: number) =>
 	pose(
-		{ y: [0, 0, -5, 0], scaleX: [1, 1, 1.4, 1] },
+		{ y: [0, 0, -3, 0], scaleX: [1, 1, 1.24, 1] },
 		{ duration: 0.7, delay, times: [0, 0.3, 0.42, 1], ease: ["easeInOut", snap, springy] },
 	);
 

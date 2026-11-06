@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const strike = pose(
-	{ rotate: [0, 8, -9, 0] },
+	{ rotate: [0, 4.8, -5.4, 0] },
 	{ duration: 0.7, times: [0, 0.15, 0.28, 1], ease: ["easeInOut", snap, springy] },
 );
 const struck = pose(
-	{ rotate: [0, 0, 14, 0] },
+	{ rotate: [0, 0, 8.4, 0] },
 	{ duration: 0.7, times: [0, 0.26, 0.38, 1], ease: ["easeInOut", snap, ring] },
 );
 const slosh = (degrees: number, at: number) =>

@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, edge, jelly, pose, snap, springy } from "../helpers.ts";
 
-const drop = pose({ y: [0, -3, 4, 0] }, { duration: 0.65, times: [0, 0.18, 0.38, 1], ease: [snap, "easeIn", springy] });
+const drop = pose(
+	{ y: [0, -1.8, 2.4, 0] },
+	{ duration: 0.65, times: [0, 0.18, 0.38, 1], ease: [snap, "easeIn", springy] },
+);
 const blink = (delay: number) =>
-	pose({ scale: [1, 2.2, 1] }, { duration: 0.4, delay, times: [0, 0.3, 1], ease: [snap, springy] });
+	pose({ scale: [1, 1.72, 1] }, { duration: 0.4, delay, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "hard-drive-download",

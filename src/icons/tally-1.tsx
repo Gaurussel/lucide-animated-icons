@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap } from "../helpers.ts";
 
 const tip = pose(
-	{ rotate: [0, 0, 20, 0] },
+	{ rotate: [0, 0, 12, 0] },
 	{ duration: 0.72, times: [0, 0.35, 0.48, 1], ease: ["easeInOut", snap, ring] },
 );
 

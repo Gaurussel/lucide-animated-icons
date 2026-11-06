@@ -2,9 +2,12 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pivot, pose, rubber, snap, springy } from "../helpers.ts";
 
-const slam = pose({ y: [0, -4, 0.8, 0] }, { duration: 0.7, times: [0, 0.25, 0.4, 1], ease: [snap, "easeIn", springy] });
+const slam = pose(
+	{ y: [0, -2.4, 0.48, 0] },
+	{ duration: 0.7, times: [0, 0.25, 0.4, 1], ease: [snap, "easeIn", springy] },
+);
 const horn = pose(
-	{ rotate: [0, 0, -16, 0] },
+	{ rotate: [0, 0, -9.6, 0] },
 	{ duration: 0.7, times: [0, 0.38, 0.48, 1], ease: ["easeInOut", snap, rubber] },
 );
 

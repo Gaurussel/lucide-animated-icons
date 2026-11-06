@@ -7,8 +7,8 @@ const sweep = pose(
 	{ duration: 0.75, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 );
 
-const alarm = pose({ rotate: [0, -14, 0] }, { duration: 0.75, times: [0, 0.12, 1], ease: [snap, ring] });
-const bang = pose({ y: [0, -4, 0] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
+const alarm = pose({ rotate: [0, -8.4, 0] }, { duration: 0.75, times: [0, 0.12, 1], ease: [snap, ring] });
+const bang = pose({ y: [0, -2.4, 0] }, { duration: 0.6, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "clock-alert",

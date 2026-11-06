@@ -4,7 +4,7 @@ import { pose, springy } from "../helpers.ts";
 
 const press = (delay: number) =>
 	pose(
-		{ y: [0, -2.5, 4, 0] },
+		{ y: [0, -1.5, 2.4, 0] },
 		{ duration: 0.6, delay, times: [0, 0.18, 0.36, 1], ease: ["easeInOut", "easeIn", springy] },
 	);
 

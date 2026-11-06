@@ -8,7 +8,7 @@ const swingOut = (y: number, at: number) =>
 		{ duration: 0.75, times: [0, at, at + 0.15, 1], ease: ["easeInOut", "easeOut", springy] },
 	);
 const knock = pose(
-	{ y: [0, -0.8, 0.8, 0] },
+	{ y: [0, -0.48, 0.48, 0] },
 	{ duration: 0.75, times: [0, 0.2, 0.32, 1], ease: ["easeInOut", "easeInOut", springy] },
 );
 

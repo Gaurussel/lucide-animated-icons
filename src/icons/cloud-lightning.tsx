@@ -2,8 +2,11 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pose, redraw, ring, snap, springy } from "../helpers.ts";
 
-const rumble = pose({ x: [0, -2, 0], y: [0, -1, 0] }, { duration: 0.7, times: [0, 0.1, 1], ease: ["easeInOut", ring] });
-const strike = pose({ y: [0, 3, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
+const rumble = pose(
+	{ x: [0, -1.2, 0], y: [0, -0.6, 0] },
+	{ duration: 0.7, times: [0, 0.1, 1], ease: ["easeInOut", ring] },
+);
+const strike = pose({ y: [0, 1.8, 0] }, { duration: 0.7, times: [0, 0.2, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "cloud-lightning",

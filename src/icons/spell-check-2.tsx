@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, redraw, snap, springy } from "../helpers.ts";
 
 const grow = pose(
-	{ scale: [1, 1, 1.25, 1] },
+	{ scale: [1, 1, 1.15, 1] },
 	{ duration: 0.68, times: [0, 0.15, 0.38, 1], ease: ["easeInOut", snap, springy] },
 );
-const squiggle = pose({ x: [0, -2, 0] }, { duration: 0.68, times: [0, 0.3, 1], ease: [snap, springy] });
+const squiggle = pose({ x: [0, -1.2, 0] }, { duration: 0.68, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "spell-check-2",

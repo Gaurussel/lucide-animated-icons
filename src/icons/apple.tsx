@@ -3,10 +3,10 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const fall = pose(
-	{ y: [0, -4, 0.8, 0] },
+	{ y: [0, -2.4, 0.48, 0] },
 	{ duration: 0.65, times: [0, 0.25, 0.4, 1], ease: [snap, "easeIn", springy] },
 );
-const stem = pose({ rotate: [0, -30, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, ring] });
+const stem = pose({ rotate: [0, -18, 0] }, { duration: 0.7, times: [0, 0.3, 1], ease: [snap, ring] });
 
 export default createAnimatedIcon({
 	name: "apple",

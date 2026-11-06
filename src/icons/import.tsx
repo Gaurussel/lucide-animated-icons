@@ -2,9 +2,15 @@ import { motion } from "motion/react";
 import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, jelly, pose, snap, springy } from "../helpers.ts";
 
-const shaft = pose({ y: [0, -3, 4, 0] }, { duration: 0.7, times: [0, 0.18, 0.36, 1], ease: [snap, "easeIn", springy] });
-const head = pose({ y: [0, -4, 5, 0] }, { duration: 0.7, times: [0, 0.2, 0.4, 1], ease: [snap, "easeIn", springy] });
-const dip = pose({ y: [0, 0, 2, 0] }, { duration: 0.7, times: [0, 0.34, 0.44, 1], ease: ["easeInOut", snap, springy] });
+const shaft = pose(
+	{ y: [0, -1.8, 2.4, 0] },
+	{ duration: 0.7, times: [0, 0.18, 0.36, 1], ease: [snap, "easeIn", springy] },
+);
+const head = pose({ y: [0, -2.4, 3, 0] }, { duration: 0.7, times: [0, 0.2, 0.4, 1], ease: [snap, "easeIn", springy] });
+const dip = pose(
+	{ y: [0, 0, 1.2, 0] },
+	{ duration: 0.7, times: [0, 0.34, 0.44, 1], ease: ["easeInOut", snap, springy] },
+);
 
 export default createAnimatedIcon({
 	name: "import",

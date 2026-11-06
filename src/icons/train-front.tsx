@@ -3,7 +3,7 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { edge, pose, redraw, snap, springy } from "../helpers.ts";
 
 const approach = pose(
-	{ y: [0, 2, 0], scale: [1, 1.22, 1] },
+	{ y: [0, 1.2, 0], scale: [1, 1.13, 1] },
 	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 

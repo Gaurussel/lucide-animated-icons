@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, snap, springy } from "../helpers.ts";
 
 const hopUp = pose(
-	{ y: [0, -4, 0], rotate: [0, -10, 0] },
+	{ y: [0, -2.4, 0], rotate: [0, -6, 0] },
 	{ duration: 0.7, times: [0, 0.3, 1], ease: [snap, springy] },
 );
 const wag = pose(
-	{ rotate: [0, 40, -25, 0] },
+	{ rotate: [0, 24, -15, 0] },
 	{ duration: 0.7, times: [0, 0.2, 0.4, 1], ease: [snap, "easeInOut", springy] },
 );
 

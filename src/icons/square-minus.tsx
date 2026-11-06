@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { centered, jelly, pivot, pose, ring, snap, springy } from "../helpers.ts";
 
 const swipe = pose(
-	{ pathLength: [1, 0, 1], x: [0, -5, 0] },
+	{ pathLength: [1, 0, 1], x: [0, -3, 0] },
 	{ duration: 0.5, times: [0, 0.01, 1], ease: ["easeInOut", springy] },
 );
 const wobble = pose(
-	{ rotate: [0, 0, -12, 0] },
+	{ rotate: [0, 0, -7.2, 0] },
 	{ duration: 0.7, times: [0, 0.35, 0.48, 1], ease: ["easeInOut", snap, ring] },
 );
 

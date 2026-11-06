@@ -7,7 +7,7 @@ const orbit = (turn: number) =>
 		{ rotate: [0, -turn / 12, turn] },
 		{ duration: 0.7, times: [0, 0.18, 1], ease: ["easeInOut", springy], reset: true },
 	);
-const core = pose({ scale: [1, 2, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
+const core = pose({ scale: [1, 1.6, 1] }, { duration: 0.65, times: [0, 0.3, 1], ease: [snap, springy] });
 
 export default createAnimatedIcon({
 	name: "atom",

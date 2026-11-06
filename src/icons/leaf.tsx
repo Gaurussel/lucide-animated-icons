@@ -3,11 +3,11 @@ import { createAnimatedIcon } from "../createAnimatedIcon.tsx";
 import { pivot, pose, redraw, ring, snap, springy } from "../helpers.ts";
 
 const gust = pose(
-	{ rotate: [0, 8, -24, 0] },
+	{ rotate: [0, 4.8, -14.4, 0] },
 	{ duration: 0.75, times: [0, 0.14, 0.32, 1], ease: ["easeInOut", snap, ring] },
 );
 const blade = pose(
-	{ rotate: [0, 0, 12, 0] },
+	{ rotate: [0, 0, 7.2, 0] },
 	{ duration: 0.75, times: [0, 0.24, 0.42, 1], ease: ["easeInOut", snap, springy] },
 );
 
